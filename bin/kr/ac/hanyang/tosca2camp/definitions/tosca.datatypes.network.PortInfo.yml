@@ -1,0 +1,15 @@
+tosca.datatypes.network.PortInfo: 
+  derived_from: tosca.datatypes.Root
+  properties: 
+    port_name: 
+      type: string
+    port_id: 
+      type: string
+    network_id: 
+      type: string
+    mac_address: 
+      type: string
+    addresses: 
+      type: list 
+      entry_schema: 
+        type: string

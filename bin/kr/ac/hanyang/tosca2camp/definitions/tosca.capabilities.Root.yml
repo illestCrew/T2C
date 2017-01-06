@@ -1,0 +1,2 @@
+tosca.capabilities.Root:
+    description: This is the default (root) TOSCA Capability Type definition that all other TOSCA Capability Types derive from.

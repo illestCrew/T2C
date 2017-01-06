@@ -1,0 +1,7 @@
+tosca.artifacts.Deployment.Image.VM:
+    derived_from: tosca.artifacts.Deployment.Image
+    description: >
+      This artifact represents the parent type for all Virtual Machine (VM) image and container formatted deployment artifacts.
+      These images contain a stateful capture of a machine (e.g., server) including operating system and installed software along with any
+      configurations and can be run on another machine using a hypervisor which virtualizes typical server (i.e., hardware) resources.
+      Virtual Machine (VM) Image

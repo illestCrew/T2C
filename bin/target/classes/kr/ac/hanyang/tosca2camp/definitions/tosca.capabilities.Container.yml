@@ -1,0 +1,32 @@
+tosca.capabilities.Container:
+    derived_from: tosca.capabilities.Root
+    description: >
+      The Container capability, when included on a Node Type or Template definition, indicates that the node can act as a container for (or a host for)
+      one or more other declared Node Types.
+    properties:
+      num_cpus:
+        type: integer
+        description: Number of (actual or virtual) CPUs associated with the Compute node.
+        required: false
+        constraints:
+          - greater_or_equal: 1
+      cpu_frequency:
+        type: scalar-unit.frequency
+        description: >
+          Specifies the operating frequency of CPU's core.  This property expresses the expected frequency of one (1) CPU as provided by the property
+          “num_cpus”.
+        required: false
+        constraints:
+          - greater_or_equal: 0.1 GHz
+      disk_size:
+        type: scalar-unit.size
+        description: Size of the local disk available to applications running on the Compute node (default unit is MB).
+        required: false
+        constraints:
+          - greater_or_equal: 0 MB
+      mem_size:
+        type: scalar-unit.size
+        description: Size of memory available to applications running on the Compute node (default unit is MB).
+        required: false
+        constraints:
+          - greater_or_equal: 0 MB

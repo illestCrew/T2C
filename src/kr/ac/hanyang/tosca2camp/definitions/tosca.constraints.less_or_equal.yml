@@ -1,0 +1,3 @@
+tosca.constraints.less_or_equal: 
+  value: scalar
+  value_type: [integer, float, string, scalar, timestamp, version]

@@ -1,0 +1,243 @@
+tosca_definitions_version: 1.1.tosca_simple_yaml_1
+
+description: > 
+  TOSCA simple profile is an attempt at a microservice definition.
+      
+node_types:
+  My_webapplication:
+    derived_from: tosca.nodes.WebApplication
+    requirements:
+      - database_endpoint: 
+            capability: tosca.capabilities.Endpoint.Database
+            node: tosca.nodes.Database
+            relationship: tosca.relationships.ConnectsTo
+
+  My_scalable_webserver:
+    derived_from: tosca.nodes.WebServer
+    properties:
+      min_instances: 
+        type: integer 
+        default: 1
+      max_instances: 
+        type: integer 
+        default: 1
+      default_instances: 
+        type: integer
+    capabilities:
+      scalable:
+        type: tosca.capabilities.Scalable
+  
+policy_types:
+  Data_placement_policy:
+    derived_from: tosca.policies.Placement
+    properties:
+      location:
+        type: list
+        entry_schema:
+          type: string
+        required: true
+        constraints:
+        - valid_values: [rackspace-cloudservers-uk]
+  
+  Webservice_placement_policy:
+    derived_from: tosca.policies.Placement
+    properties:
+      location:
+        type: list
+        entry_schema:
+          type: string
+        required: true
+        constraints:
+        - valid_values: [AWS Virginia (us-east-1), AWS Tokyo (ap-northeast-1)]     
+  
+  Webservice_scaling_policy:
+    derived_from: tosca.policies.Scaling
+    properties:
+      min_instances: 
+        type: integer 
+        default: 1
+      max_instances: 
+        type: integer 
+        default: 1
+      default_instances: 
+        type: integer
+  
+topology_template: 
+  inputs: 
+    cpus: 
+      type: integer 
+      description: Number of CPUs for the server.
+    db_name: 
+      type: string
+      description: The name of the database.
+    db_user: 
+      type: string 
+      description: The username of the DB user.
+    db_pwd: 
+      type: string 
+      description: The WordPress database admin account password.
+    db_root_pwd: 
+      type: string 
+      description: Root password for MySQL.
+    db_port: 
+      type: PortDef 
+      description: Port for the MySQL database
+    min_instances:
+      type: integer
+      description: Minimum instances of web cluster
+    max_instances: 
+      type: integer
+      description: Maximum instances of web cluster 
+    context_root:
+      type: string
+      description: web server context root    
+  
+  node_templates: 
+    
+    loadbalancer: 
+      type: tosca.nodes.LoadBalancer
+      properties:
+        algorithm: roundrobin
+      capabilities:
+        client:
+          properties:
+            protocol: tcp
+            port: 8080
+      requirements:
+        - application: 
+            capability: tosca.capabilities.Endpoint
+            relationship: tosca.relationships.RoutesTo
+            node: wordpress
+          
+    wordpress: 
+      type: My_webapplication 
+      properties: 
+        context_root: { get_input: context_root }
+      capabilities:
+        app_endpoint:
+          properties: 
+            protocol: tcp
+            port: 8080
+      requirements: 
+        - host: 
+            node: webserver 
+        - database_endpoint: 
+            node: mysql_database
+      interfaces: 
+        Standard: 
+          create: wordpress_install.sh 
+          configure: 
+            implementation: wordpress_configure.sh 
+            inputs: 
+              wp_db_name: { get_property: [ mysql_database, name ] } 
+              wp_db_user: { get_property: [ mysql_database, user ] } 
+              wp_db_password: { get_property: [ mysql_database, password ] } 
+              wp_db_port: { get_property: [ mysql_database, port ] }
+              
+    mysql_database: 
+      type: tosca.nodes.Database 
+      properties: 
+        name: { get_input: db_name } 
+        user: { get_input: db_user } 
+        password: { get_input: db_pwd } 
+        port: { get_input: db_port }
+      capabilities: 
+        database_endpoint:
+          properties: 
+            port: { get_input: db_port }
+      requirements: 
+        - host: 
+            node: mysql_dbms
+      interfaces: 
+        Standard: 
+          configure: mysql_database_configure.sh
+          
+    mysql_dbms: 
+      type: tosca.nodes.DBMS 
+      properties: 
+        root_password: { get_input: db_root_pwd } 
+        port: { get_input: db_port }
+      requirements: 
+        - host: 
+            node: server1
+      interfaces: 
+        Standard: 
+          inputs: 
+            db_root_password: { get_property: [ mysql_dbms, root_password ] }
+          create: mysql_dbms_install.sh 
+          start: mysql_dbms_start.sh 
+          configure: mysql_dbms_configure.sh
+        
+    webserver: 
+      type: My_scalable_webserver 
+      properties:
+          min_instances: { get_property: [ WebServerScaling, min_instances ] }  
+          max_instances: { get_property: [ WebServerScaling, max_instances ] }  
+      capabilities:
+        scalable: 
+          properties:
+            min_instances: { get_property: [ WebServerScaling, min_instances ] }  
+            max_instances: { get_property: [ WebServerScaling, max_instances ] }    
+      requirements: 
+        - host: 
+            node: server2
+      interfaces: 
+        Standard: 
+          create: webserver_install.sh 
+          start: webserver_start.sh
+             
+    server1: 
+      type: tosca.nodes.Compute 
+      capabilities: 
+        host: 
+          properties: 
+            disk_size: 10 GB 
+            num_cpus: { get_input: cpus } 
+            mem_size: 4096 MB
+        os: 
+          properties: 
+            architecture: x86_64
+            type: linux 
+            #distribution: fedora 
+            #version: 17.0
+                
+    server2: 
+      type: tosca.nodes.Compute 
+      capabilities: 
+        host: 
+          properties: 
+            disk_size: 10 GB 
+            num_cpus: { get_input: cpus } 
+            mem_size: 4096 MB
+        os: 
+          properties: 
+            architecture: x86_64
+            type: linux 
+            #distribution: fedora 
+            #version: 17.0       
+  
+  policies:
+    WebServerScaling:
+      type: Webservice_scaling_policy
+      properties:
+        min_instances: { get_input: min_instances }
+        max_instances: { get_input: max_instances }
+      targets: [ webserver ]
+    
+    WebServerPlacement:
+      type: Webservice_placement_policy
+      properties:
+        location: [ AWS Virginia (us-east-1), AWS Tokyo (ap-northeast-1) ]
+      targets: [ webserver ]
+      
+    StoragePlacement:
+      type: Data_placement_policy
+      properties:
+        location: [ rackspace-cloudservers-uk ]
+      targets: [ mysql_dbms ]
+      
+                    
+  outputs: 
+    website_url: 
+      description: URL for Wordpress wiki. 
+      value: { get_attribute: [server, public_address] }

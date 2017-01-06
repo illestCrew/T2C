@@ -1,0 +1,3 @@
+tosca.datatypes.scalar:  
+  derived_from: java.lang.Object
+  description: scalar datatype

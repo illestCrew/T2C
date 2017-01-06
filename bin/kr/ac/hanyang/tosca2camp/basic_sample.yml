@@ -1,0 +1,25 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+ 
+description: 
+  TOSCA simple profile with server and attached block storage using the normative AttachesTo Relationship Type.
+ 
+relationship_types:
+  MyCustomAttachesTo:
+    derived_from: AttachesTo
+
+topology_template:
+ 
+  node_templates:
+    my_application:
+      type: tosca.nodes.WebApplication
+      properties:
+        context_root: /test
+      requirements:
+        - host:
+            node: my_server       
+ 
+    my_server:
+      type: tosca.nodes.WebServer
+     
+ 
+ 

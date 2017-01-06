@@ -1,0 +1,7 @@
+tosca.functions.get_nodes_of_type:
+  parameters: 
+    node_type_name: 
+      type: string
+      required: true
+
+      

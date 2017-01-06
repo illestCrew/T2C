@@ -1,0 +1,6 @@
+tosca.functions.concat:
+  parameters: 
+    string_value_expressions: 
+      type: list
+      required: true
+      

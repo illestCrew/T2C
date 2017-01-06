@@ -1,0 +1,10 @@
+tosca.nodes.Container.Runtime:
+    derived_from: tosca.nodes.SoftwareComponent
+    description: >
+      The TOSCA Container Runtime node represents operating system-level virtualization technology used to run multiple application services on a
+      single Compute host.
+    capabilities:
+      host:
+        type: tosca.capabilities.Container
+      scalable:
+        type: tosca.capabilities.Scalable

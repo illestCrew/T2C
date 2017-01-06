@@ -1,0 +1,3 @@
+tosca.constraints.equal: 
+  value: scalar
+  value_type: []

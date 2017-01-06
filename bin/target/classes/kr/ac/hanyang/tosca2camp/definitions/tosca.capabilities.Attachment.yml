@@ -1,0 +1,5 @@
+tosca.capabilities.Attachment:
+    derived_from: tosca.capabilities.Root
+    description: >
+      This is the default TOSCA type that should be used or extended to define an attachment capability of a (logical) infrastructure device node
+      (e.g., BlockStorage node).

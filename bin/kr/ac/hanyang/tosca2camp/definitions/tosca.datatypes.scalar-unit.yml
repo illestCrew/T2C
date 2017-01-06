@@ -1,0 +1,10 @@
+tosca.datatypes.scalar-unit:  
+  description: Scalar datatype
+  properties:       
+    scalar: 
+      type: scalar               
+      required: true    
+    unit:        
+      type: string        
+      required: true                
+      

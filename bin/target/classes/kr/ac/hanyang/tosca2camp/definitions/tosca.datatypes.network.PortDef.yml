@@ -1,0 +1,7 @@
+tosca.datatypes.network.PortDef: 
+  derived_from: tosca.datatypes.Integer   
+  properties: 
+    value:
+      type: integer   
+      constraints:      
+        - in_range: [ 1, 65535 ]

@@ -1,0 +1,3 @@
+tosca.constraints.in_range: 
+  value: range
+  value_type: [integer, float, string, scalar, timestamp, version, range]

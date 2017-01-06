@@ -1,0 +1,4 @@
+tosca.artifacts.File:
+    derived_from: tosca.artifacts.Root
+    description: >
+      This artifact type is used when an artifact definition needs to have its associated file simply treated as a file and no special handling/handlers are invoked.

@@ -1,0 +1,2 @@
+tosca.policies.Root:
+    description: The TOSCA Policy Type all other TOSCA Policy Types derive from

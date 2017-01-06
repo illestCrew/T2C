@@ -1,0 +1,527 @@
+id: ServiceTemplate,
+version: 1.1.tosca_simple_yaml_1,
+meta_data: null,
+description: TOSCA simple profile with WordPress, a web server, a MySQL DBMS hosting the  application’s database content on the same server. Does not have input defaults or  constraints.
+,
+repositories: ,
+imports: ,
+artifact types: ,
+data types: ,
+capability types: ,
+interfaces: ,
+relationship types: ,
+node types: ,
+group types: ,
+policy types: ,
+topology template: ,
+	name: null,
+	type: null,
+	derived_from: null,
+	description: null,
+	directives: ,
+	inputs: ,	
+		cpus: 
+			typeName: tosca.datatypes.integer,
+			value: 0,	
+		db_name: 
+			typeName: tosca.datatypes.string,
+			value: ,	
+		db_user: 
+			typeName: tosca.datatypes.string,
+			value: ,	
+		db_pwd: 
+			typeName: tosca.datatypes.string,
+			value: ,	
+		db_root_pwd: 
+			typeName: tosca.datatypes.string,
+			value: ,	
+		db_port: 
+			typeName: tosca.datatypes.network.PortDef,
+			value: 0,
+	node tempates: ,	
+		name: loadbalancer,
+		type: tosca.nodes.LoadBalancer,
+		derived_from: tosca.nodes.Root,
+		properties: ,		
+			algorithm: 
+				typeName: tosca.datatypes.string,
+				value: ,
+		capabilities: ,		
+			name: feature,
+			type: tosca.capabilities.Node,
+			derived_from: tosca.capabilities.Root,
+			properties: ,		
+			name: client,
+			type: tosca.capabilities.Endpoint.Public,
+			derived_from: null,
+			properties: ,
+		requirements: ,		
+			name: dependency,
+			capability: tosca.capabilities.Node,
+			node: tosca.nodes.Root,
+			relationship: dependency,		
+			name: application,
+			capability: tosca.capabilities.Endpoint,
+			node: wordpress,
+			relationship: application,	
+		name: wordpress,
+		type: tosca.nodes.WebApplication,
+		derived_from: tosca.nodes.Root,
+		properties: ,		
+			context_root: 
+				typeName: tosca.datatypes.string,
+				value: ,
+		capabilities: ,		
+			name: feature,
+			type: tosca.capabilities.Node,
+			derived_from: tosca.capabilities.Root,
+			properties: ,		
+			name: app_endpoint,
+			type: tosca.capabilities.Endpoint,
+			derived_from: tosca.capabilities.Root,
+			properties: ,
+				protocol: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				port: 
+					typeName: tosca.datatypes.network.PortDef,
+					value: 0,
+				secure: 
+					typeName: tosca.datatypes.boolean,
+					value: false,
+				url_path: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				port_name: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				network_name: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				initiator: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				ports: 
+					typeName: tosca.datatypes.map,
+					value: {},
+		requirements: ,		
+			name: dependency,
+			capability: tosca.capabilities.Node,
+			node: tosca.nodes.Root,
+			relationship: dependency,		
+			name: host,
+			capability: tosca.capabilities.Container,
+			node: tosca.nodes.WebServer,
+			relationship: host,	
+		name: mysql_database,
+		type: tosca.nodes.Database,
+		derived_from: tosca.nodes.Root,
+		properties: ,		
+			name: 
+				typeName: tosca.datatypes.string,
+				value: ,		
+			port: 
+				typeName: tosca.datatypes.integer,
+				value: 0,		
+			user: 
+				typeName: tosca.datatypes.string,
+				value: ,		
+			password: 
+				typeName: tosca.datatypes.string,
+				value: ,
+		capabilities: ,		
+			name: feature,
+			type: tosca.capabilities.Node,
+			derived_from: tosca.capabilities.Root,
+			properties: ,		
+			name: database_endpoint,
+			type: tosca.capabilities.Endpoint.Database,
+			derived_from: tosca.capabilities.Endpoint,
+			properties: ,
+				protocol: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				port: 
+					typeName: tosca.datatypes.network.PortDef,
+					value: 0,
+				secure: 
+					typeName: tosca.datatypes.boolean,
+					value: false,
+				url_path: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				port_name: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				network_name: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				initiator: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				ports: 
+					typeName: tosca.datatypes.map,
+					value: {},
+		requirements: ,		
+			name: dependency,
+			capability: tosca.capabilities.Node,
+			node: tosca.nodes.Root,
+			relationship: dependency,		
+			name: host,
+			capability: tosca.capabilities.Container,
+			node: null,
+			relationship: host,	
+		name: mysql_dbms,
+		type: tosca.nodes.DBMS,
+		derived_from: tosca.nodes.SoftwareComponent,
+		properties: ,		
+			component_version: 
+				typeName: tosca.datatypes.version,
+				properties: ,
+					major_version: 
+						typeName: tosca.datatypes.integer,
+						value: 0,
+					minor_version: 
+						typeName: tosca.datatypes.integer,
+						value: 0,
+					fix_version: 
+						typeName: tosca.datatypes.integer,
+						value: 0,
+					qualifier: 
+						typeName: tosca.datatypes.string,
+						value: ,
+					build_version: 
+						typeName: tosca.datatypes.integer,
+						value: 0,		
+			admin_credential: 
+				typeName: tosca.datatypes.Credential,
+				properties: ,
+					protocol: 
+						typeName: tosca.datatypes.string,
+						value: ,
+					token_type: 
+						typeName: tosca.datatypes.string,
+						value: ,
+					token: 
+						typeName: tosca.datatypes.string,
+						value: ,
+					keys: 
+						typeName: tosca.datatypes.map,
+						value: {},
+					user: 
+						typeName: tosca.datatypes.string,
+						value: ,		
+			root_password: 
+				typeName: tosca.datatypes.string,
+				value: ,		
+			port: 
+				typeName: tosca.datatypes.integer,
+				value: 0,
+		capabilities: ,		
+			name: feature,
+			type: tosca.capabilities.Node,
+			derived_from: tosca.capabilities.Root,
+			properties: ,		
+			name: host,
+			type: tosca.capabilities.Container,
+			derived_from: tosca.capabilities.Root,
+			properties: ,
+				num_cpus: 
+					typeName: tosca.datatypes.integer,
+					value: 0,
+				cpu_frequency: 
+					typeName: tosca.datatypes.scalar-unit.frequency,
+					properties: ,
+						scalar: 
+							typeName: tosca.datatypes.scalar,
+							value: java.lang.Object@6a370f4,
+						unit: 
+							typeName: tosca.datatypes.string,
+							value: ,
+				disk_size: 
+					typeName: tosca.datatypes.scalar-unit.size,
+					properties: ,
+						scalar: 
+							typeName: tosca.datatypes.scalar,
+							value: java.lang.Object@6a370f4,
+						unit: 
+							typeName: tosca.datatypes.string,
+							value: ,
+				mem_size: 
+					typeName: tosca.datatypes.scalar-unit.size,
+					properties: ,
+						scalar: 
+							typeName: tosca.datatypes.scalar,
+							value: java.lang.Object@6a370f4,
+						unit: 
+							typeName: tosca.datatypes.string,
+							value: ,
+		requirements: ,		
+			name: dependency,
+			capability: tosca.capabilities.Node,
+			node: tosca.nodes.Root,
+			relationship: dependency,		
+			name: host,
+			capability: tosca.capabilities.Container,
+			node: tosca.nodes.Compute,
+			relationship: host,	
+		name: server1,
+		type: tosca.nodes.Compute,
+		derived_from: tosca.nodes.Root,
+		properties: ,
+		capabilities: ,		
+			name: feature,
+			type: tosca.capabilities.Node,
+			derived_from: tosca.capabilities.Root,
+			properties: ,		
+			name: host,
+			type: tosca.capabilities.Container,
+			derived_from: tosca.capabilities.Root,
+			properties: ,
+				num_cpus: 
+					typeName: tosca.datatypes.integer,
+					value: 0,
+				cpu_frequency: 
+					typeName: tosca.datatypes.scalar-unit.frequency,
+					properties: ,
+						scalar: 
+							typeName: tosca.datatypes.scalar,
+							value: java.lang.Object@6a370f4,
+						unit: 
+							typeName: tosca.datatypes.string,
+							value: ,
+				disk_size: 
+					typeName: tosca.datatypes.scalar-unit.size,
+					properties: ,
+						scalar: 
+							typeName: tosca.datatypes.scalar,
+							value: java.lang.Object@6a370f4,
+						unit: 
+							typeName: tosca.datatypes.string,
+							value: ,
+				mem_size: 
+					typeName: tosca.datatypes.scalar-unit.size,
+					properties: ,
+						scalar: 
+							typeName: tosca.datatypes.scalar,
+							value: java.lang.Object@6a370f4,
+						unit: 
+							typeName: tosca.datatypes.string,
+							value: ,		
+			name: os,
+			type: tosca.capabilities.OperatingSystem,
+			derived_from: tosca.capabilities.Root,
+			properties: ,
+				architecture: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				type: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				distribution: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				version: 
+					typeName: tosca.datatypes.version,
+					properties: ,
+						major_version: 
+							typeName: tosca.datatypes.integer,
+							value: 0,
+						minor_version: 
+							typeName: tosca.datatypes.integer,
+							value: 0,
+						fix_version: 
+							typeName: tosca.datatypes.integer,
+							value: 0,
+						qualifier: 
+							typeName: tosca.datatypes.string,
+							value: ,
+						build_version: 
+							typeName: tosca.datatypes.integer,
+							value: 0,		
+			name: endpoint,
+			type: tosca.capabilities.Endpoint.Admin,
+			derived_from: tosca.capabilities.Endpoint,
+			properties: ,
+				protocol: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				port: 
+					typeName: tosca.datatypes.network.PortDef,
+					value: 0,
+				secure: 
+					typeName: tosca.datatypes.boolean,
+					value: false,
+				url_path: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				port_name: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				network_name: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				initiator: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				ports: 
+					typeName: tosca.datatypes.map,
+					value: {},		
+			name: scalable,
+			type: tosca.capabilities.Scalable,
+			derived_from: tosca.capabilities.Root,
+			properties: ,
+				min_instances: 
+					typeName: tosca.datatypes.integer,
+					value: 0,
+				max_instances: 
+					typeName: tosca.datatypes.integer,
+					value: 0,
+				default_instances: 
+					typeName: tosca.datatypes.integer,
+					value: 0,		
+			name: binding,
+			type: tosca.capabilities.network.Bindable,
+			derived_from: tosca.capabilities.Node,
+			properties: ,
+		requirements: ,		
+			name: dependency,
+			capability: tosca.capabilities.Node,
+			node: tosca.nodes.Root,
+			relationship: dependency,		
+			name: local_storage,
+			capability: tosca.capabilities.Attachment,
+			node: tosca.nodes.BlockStorage,
+			relationship: local_storage,	
+		name: server2,
+		type: tosca.nodes.Compute,
+		derived_from: tosca.nodes.Root,
+		properties: ,
+		capabilities: ,		
+			name: feature,
+			type: tosca.capabilities.Node,
+			derived_from: tosca.capabilities.Root,
+			properties: ,		
+			name: host,
+			type: tosca.capabilities.Container,
+			derived_from: tosca.capabilities.Root,
+			properties: ,
+				num_cpus: 
+					typeName: tosca.datatypes.integer,
+					value: 0,
+				cpu_frequency: 
+					typeName: tosca.datatypes.scalar-unit.frequency,
+					properties: ,
+						scalar: 
+							typeName: tosca.datatypes.scalar,
+							value: java.lang.Object@6a370f4,
+						unit: 
+							typeName: tosca.datatypes.string,
+							value: ,
+				disk_size: 
+					typeName: tosca.datatypes.scalar-unit.size,
+					properties: ,
+						scalar: 
+							typeName: tosca.datatypes.scalar,
+							value: java.lang.Object@6a370f4,
+						unit: 
+							typeName: tosca.datatypes.string,
+							value: ,
+				mem_size: 
+					typeName: tosca.datatypes.scalar-unit.size,
+					properties: ,
+						scalar: 
+							typeName: tosca.datatypes.scalar,
+							value: java.lang.Object@6a370f4,
+						unit: 
+							typeName: tosca.datatypes.string,
+							value: ,		
+			name: os,
+			type: tosca.capabilities.OperatingSystem,
+			derived_from: tosca.capabilities.Root,
+			properties: ,
+				architecture: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				type: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				distribution: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				version: 
+					typeName: tosca.datatypes.version,
+					properties: ,
+						major_version: 
+							typeName: tosca.datatypes.integer,
+							value: 0,
+						minor_version: 
+							typeName: tosca.datatypes.integer,
+							value: 0,
+						fix_version: 
+							typeName: tosca.datatypes.integer,
+							value: 0,
+						qualifier: 
+							typeName: tosca.datatypes.string,
+							value: ,
+						build_version: 
+							typeName: tosca.datatypes.integer,
+							value: 0,		
+			name: endpoint,
+			type: tosca.capabilities.Endpoint.Admin,
+			derived_from: tosca.capabilities.Endpoint,
+			properties: ,
+				protocol: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				port: 
+					typeName: tosca.datatypes.network.PortDef,
+					value: 0,
+				secure: 
+					typeName: tosca.datatypes.boolean,
+					value: false,
+				url_path: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				port_name: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				network_name: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				initiator: 
+					typeName: tosca.datatypes.string,
+					value: ,
+				ports: 
+					typeName: tosca.datatypes.map,
+					value: {},		
+			name: scalable,
+			type: tosca.capabilities.Scalable,
+			derived_from: tosca.capabilities.Root,
+			properties: ,
+				min_instances: 
+					typeName: tosca.datatypes.integer,
+					value: 0,
+				max_instances: 
+					typeName: tosca.datatypes.integer,
+					value: 0,
+				default_instances: 
+					typeName: tosca.datatypes.integer,
+					value: 0,		
+			name: binding,
+			type: tosca.capabilities.network.Bindable,
+			derived_from: tosca.capabilities.Node,
+			properties: ,
+		requirements: ,		
+			name: dependency,
+			capability: tosca.capabilities.Node,
+			node: tosca.nodes.Root,
+			relationship: dependency,		
+			name: local_storage,
+			capability: tosca.capabilities.Attachment,
+			node: tosca.nodes.BlockStorage,
+			relationship: local_storage,
+	relationship templates: ,
+	groups: ,
+	policies: ,
+	outputs: 

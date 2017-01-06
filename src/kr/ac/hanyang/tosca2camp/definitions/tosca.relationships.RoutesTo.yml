@@ -1,0 +1,4 @@
+tosca.relationships.RoutesTo:
+    derived_from: tosca.relationships.ConnectsTo
+    description: This type represents an intentional network routing between two Endpoints in different networks.
+    valid_target_types: [ tosca.capabilities.Endpoint ]

@@ -1,0 +1,9 @@
+tosca.datatypes.range:  
+  description: Range datatype
+  properties:       
+    lower_bound:        
+      type: integer        
+      required: true              
+    upper_bound:        
+      type: integer        
+      required: true                

@@ -1,0 +1,3 @@
+tosca.constraints.min_length: 
+  value: scalar
+  value_type: [string, list, map]

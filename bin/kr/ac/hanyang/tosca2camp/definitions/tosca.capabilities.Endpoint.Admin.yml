@@ -1,0 +1,10 @@
+tosca.capabilities.Endpoint.Admin:
+    derived_from: tosca.capabilities.Endpoint
+    description: This is the default TOSCA type that should be used or extended to define a specialized administrator endpoint capability.
+    properties:
+      # Change Endpoint secure indicator to true from its default of false
+      secure:
+        type: boolean
+        default: true
+        constraints:
+          - equal: true

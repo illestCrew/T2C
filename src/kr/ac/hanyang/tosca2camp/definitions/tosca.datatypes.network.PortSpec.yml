@@ -1,0 +1,25 @@
+tosca.datatypes.network.PortSpec:
+  derived_from: tosca.datatypes.Root  
+  properties:       
+    protocol:        
+      type: string        
+      required: true        
+      default: tcp        
+      constraints:          
+        - valid_values: [ udp, tcp, igmp ]      
+    target:         
+      type: integer        
+      entry_schema:          
+        type: network.PortDef      
+    target_range:        
+      type: range        
+      constraints:          
+        - in_range: [ 1, 65535 ]      
+    source:        
+      type: integer        
+      entry_schema:          
+        type: network.PortDef      
+    source_range:        
+      type: range        
+      constraints:          
+        - in_range: [ 1, 65535 ]

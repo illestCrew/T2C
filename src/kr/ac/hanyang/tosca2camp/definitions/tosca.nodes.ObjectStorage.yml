@@ -1,0 +1,19 @@
+tosca.nodes.ObjectStorage:
+    derived_from: tosca.nodes.Root
+    properties:
+      name:
+        type: string
+        required: true
+      size:
+        type: scalar-unit.size
+        constraints:
+          - greater_or_equal: 0 GB
+        required: false
+      maxsize:
+        type: scalar-unit.size
+        constraints:
+          - greater_or_equal: 0 GB
+        required: false
+    capabilities:
+      storage_endpoint:
+        type: tosca.capabilities.Endpoint

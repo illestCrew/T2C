@@ -1,0 +1,3 @@
+tosca.datatypes.boolean: 
+  derived_from: java.lang.Boolean 
+  description: Boolean datatype

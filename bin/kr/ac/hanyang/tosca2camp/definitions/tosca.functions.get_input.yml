@@ -1,0 +1,6 @@
+tosca.functions.get_input:
+  parameters: 
+    input_property_name: 
+      type: string
+      required: true
+      

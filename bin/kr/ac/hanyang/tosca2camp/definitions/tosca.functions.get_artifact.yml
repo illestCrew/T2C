@@ -1,0 +1,15 @@
+tosca.functions.get_artifact:
+  parameters: 
+    modelable_entity_name: 
+      type: string
+      required: true
+    artifact_name: 
+      type: string
+      required: true
+    location: 
+      type: string
+      required: false
+    remove: 
+      type: boolean
+      required: false
+      

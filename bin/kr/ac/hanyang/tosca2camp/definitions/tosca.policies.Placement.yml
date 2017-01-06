@@ -1,0 +1,3 @@
+tosca.policies.Placement:
+    derived_from: tosca.policies.Root
+    description: The TOSCA Policy Type definition that is used to govern placement of TOSCA nodes or groups of nodes.

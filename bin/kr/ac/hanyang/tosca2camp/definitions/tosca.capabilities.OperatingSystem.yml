@@ -1,0 +1,29 @@
+tosca.capabilities.OperatingSystem:
+    derived_from: tosca.capabilities.Root
+    description: This is the default TOSCA type that should be used to express an Operating System capability for a node.
+    properties:
+      architecture:
+        type: string
+        description: >
+          The Operating System (OS) architecture.
+          Examples of valid values include:
+          x86_32, x86_64, etc.
+        required: false
+      type:
+        type: string
+        description: >
+          The Operating System (OS) type.
+          Examples of valid values include:
+          linux, aix, mac, windows, etc.
+        required: false
+      distribution:
+        type: string
+        description: >
+          The Operating System (OS) distribution.
+          Examples of valid values for an “type” of “Linux” would include:  debian, fedora, rhel and ubuntu.
+        required: false
+      version:
+        type: version
+        description: >
+          The Operating System version.
+        required: false

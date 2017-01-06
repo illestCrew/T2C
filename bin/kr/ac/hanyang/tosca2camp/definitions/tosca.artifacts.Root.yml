@@ -1,0 +1,2 @@
+tosca.artifacts.Root:
+    description: The TOSCA Artifact Type all other TOSCA Artifact Types derive from

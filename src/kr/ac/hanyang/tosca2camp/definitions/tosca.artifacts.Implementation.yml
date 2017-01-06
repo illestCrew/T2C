@@ -1,0 +1,3 @@
+tosca.artifacts.Implementation:
+    derived_from: tosca.artifacts.Root
+    description: TOSCA base type for implementation artifacts
