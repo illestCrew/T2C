@@ -1,0 +1,18 @@
+tosca.nodes.WebApplication:
+    derived_from: tosca.nodes.Root
+    description: >
+      The TOSCA WebApplication node represents a software application that can be managed and run by a TOSCA WebServer node.
+      Specific types of web applications such as Java, etc. could be derived from this type.
+    properties:
+      context_root:
+        type: string
+        required: false
+        description: The web application’s context root which designates the application’s URL path within the web server it is hosted on.
+    capabilities:
+      app_endpoint:
+        type: tosca.capabilities.Endpoint
+    requirements:
+      - host:
+          capability: tosca.capabilities.Container
+          node: tosca.nodes.WebServer
+          relationship: tosca.relationships.HostedOn

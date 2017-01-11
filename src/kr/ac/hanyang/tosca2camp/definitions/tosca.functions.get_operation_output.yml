@@ -1,0 +1,15 @@
+tosca.functions.get_operation_output:
+  parameters: 
+    modelable_entity_name: 
+      type: string
+      required: true
+    interface_name: 
+      type: string
+      required: false
+    operation_name: 
+      type: string
+      required: true
+    output_variable_name: 
+      type: string #string or integer type but I am only considering string
+      required: true
+      

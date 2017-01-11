@@ -1,0 +1,2 @@
+tosca.interfaces.Root:
+    description: The TOSCA root Interface Type all other TOSCA base Interface Types derive from.

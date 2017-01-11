@@ -1,0 +1,13 @@
+tosca.nodes.WebServer:
+    derived_from: tosca.nodes.SoftwareComponent
+    description: >
+      This TOSCA WebServer Node Type represents an abstract software component or service that is capable of hosting and providing management operations
+      for one or more WebApplication nodes.
+    capabilities:
+      data_endpoint: 
+        type: tosca.capabilities.Endpoint
+      admin_endpoint: 
+        type: tosca.capabilities.Endpoint.Admin
+      host:
+        type: tosca.capabilities.Container
+        valid_source_types: [ tosca.nodes.WebApplication ]

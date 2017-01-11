@@ -1,0 +1,3 @@
+tosca.constraints.valid_values: 
+  value: list
+  value_type: []

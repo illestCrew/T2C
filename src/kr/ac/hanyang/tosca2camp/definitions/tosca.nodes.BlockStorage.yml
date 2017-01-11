@@ -1,0 +1,29 @@
+tosca.nodes.BlockStorage:
+    abstract: true
+    derived_from: tosca.nodes.Root
+    description: >
+      The TOSCA BlockStorage node currently represents a server-local block storage device (i.e., not shared)
+      offering evenly sized blocks of data from which raw storage volumes can be created.
+    tags:
+      icon: /images/volume.png
+    properties:
+      size:
+        type: scalar-unit.size
+        description: >
+          The requested storage size (default unit is MB).
+          Note:
+          - Required when an existing volume (i.e., volume_id) is not available.
+          - If volume_id is provided, size is ignored.  Resize of existing volumes is not considered at this time.
+        constraints:
+          - greater_or_equal: 1 MB
+      volume_id:
+        type: string
+        description: ID of an existing volume (that is in the accessible scope of the requesting application).
+        required: false
+      snapshot_id:
+        type: string
+        description: Some identifier that represents an existing snapshot that should be used when creating the block storage (volume).
+        required: false
+    capabilities:
+      attachment:
+        type: tosca.capabilities.Attachment

@@ -1,0 +1,3 @@
+tosca.policies.Performance:
+    derived_from: tosca.policies.Root
+    description: The TOSCA Policy Type definition that is used to declare performance requirements for TOSCA nodes or groups of nodes.

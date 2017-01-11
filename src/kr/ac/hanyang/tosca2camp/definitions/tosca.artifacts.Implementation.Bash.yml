@@ -1,0 +1,5 @@
+tosca.artifacts.Implementation.Bash:
+    derived_from: tosca.artifacts.Implementation
+    description: Script artifact for the Unix Bash shell
+    mime_type: application/x-sh
+    file_ext: [ sh ]

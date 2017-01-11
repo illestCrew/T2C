@@ -1,0 +1,3 @@
+tosca.interfaces.service_template.lifecycle.Standard:
+    derived_from: tosca.interfaces.node.lifecycle.Standard
+ 

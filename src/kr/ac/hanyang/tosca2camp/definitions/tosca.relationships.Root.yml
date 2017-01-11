@@ -1,0 +1,19 @@
+tosca.relationships.Root:
+    description: The TOSCA root Relationship Type all other TOSCA base Relationship Types derive from
+    attributes:
+      tosca_id:
+        type: string
+        description: A unique identifier of the realized instance of a Relationship Template that derives from any TOSCA normative type.
+      tosca_name:
+        type: string
+        description: >
+          This attribute reflects the name of the Relationship Template as defined in the TOSCA service template.
+          This name is not unique to the realized instance model of corresponding deployed application as each template in the model can result in one or
+          more instances (e.g., scaled) when orchestrated to a provider environment.
+      state:
+        type: string
+        description: The state of the relationship instance.
+        default: initial
+    interfaces:
+      Configure:
+        type: tosca.interfaces.relationship.Configure

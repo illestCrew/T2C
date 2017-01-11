@@ -1,0 +1,15 @@
+tosca.functions.get_attribute:
+  parameters: 
+    modelable_entity_name: 
+      type: string
+      required: true
+    optional_req_or_cap_name: 
+      type: string
+      required: false
+    attribute_name: 
+      type: string
+      required: true
+    nested_attribute_name_or_index: 
+      type: string #string or integer type but I am only considering string
+      required: true
+      
