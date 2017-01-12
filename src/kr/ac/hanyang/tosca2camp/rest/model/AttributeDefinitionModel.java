@@ -3,6 +3,9 @@ package kr.ac.hanyang.tosca2camp.rest.model;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
+/**
+ * @model kind="class"
+ */
 
 public class AttributeDefinitionModel {
 	
@@ -25,26 +28,41 @@ public class AttributeDefinitionModel {
 	public AttributeDefinitionModel defaultValue(DataModel defaultValue){	this.defaultValue = defaultValue; 	return this; 	}
 	public AttributeDefinitionModel properties(String status){	this.status = status; 	return this; 	}
 
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="name")
 	public String getName(){
 		return name;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="type")
 	public String getType(){
 		return type;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="description")
 	public String getDescription(){
 		return description;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="defaultValue")
 	public DataModel getDataValue(){
 		return defaultValue;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="status")
 	public String getStatus(){
 		return status;

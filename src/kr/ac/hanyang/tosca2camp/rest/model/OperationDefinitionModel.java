@@ -3,7 +3,9 @@ package kr.ac.hanyang.tosca2camp.rest.model;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
-
+/**
+ * @model kind="class"
+ */
 public class OperationDefinitionModel {
 	
 	private String description;
@@ -22,21 +24,33 @@ public class OperationDefinitionModel {
 	public OperationDefinitionModel inputs_prop_definitions(List<PropertyModel> inputs_prop_definitions){	this.inputs_prop_definitions = inputs_prop_definitions; 	return this; 	}
 	public OperationDefinitionModel inputs_prop_assignments(List<PropertyAssignmentModel> inputs_prop_assignments){	this.inputs_prop_assignments = inputs_prop_assignments; 	return this; 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="description")
 	public String getDescription(){
 		return description;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="implementation")
 	public String getImplementation(){
 		return implementation;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="inputs_prop_definitions")
 	public List<PropertyModel> getInputs_definitions(){
 		return inputs_prop_definitions;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="inputs_prop_assignments")
 	public List<PropertyAssignmentModel> getInputs_assignments(){
 		return inputs_prop_assignments;

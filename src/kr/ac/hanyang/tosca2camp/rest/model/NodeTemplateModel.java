@@ -2,7 +2,11 @@ package kr.ac.hanyang.tosca2camp.rest.model;
 
 import java.util.List;
 
+
 import javax.xml.bind.annotation.XmlElement;
+/**
+ * @model kind="class"
+ */
 
 public class NodeTemplateModel {
 	
@@ -35,51 +39,91 @@ public class NodeTemplateModel {
 	public NodeTemplateModel interfaces(List<InterfaceDefinitionModel> interfaces){	this.interfaces = interfaces; 	return this; 	}
 	public NodeTemplateModel artifacts(List<ArtifactTypeModel> artifacts){	this.artifacts = artifacts; 	return this; 	}
 	
+	/**
+	 * 
+	 * @model
+	 */
 	@XmlElement(name="name")
 	public String getName(){
 		return name;
 	}
 	
+	/**
+	 * 
+	 * @model
+	 */
 	@XmlElement(name="type")
 	public String getType(){
 		return type;
 	}
 	
+	/**
+	 * 
+	 * @model
+	 */
 	@XmlElement(name="directives")
 	public String getDirectives(){
 		return directives;
 	}
 	
+	/**
+	 * 
+	 * @model
+	 */
 	@XmlElement(name="description")
 	public String getDescription(){
 		return description;
 	}
 	
+	/**
+	 * 
+	 * @model
+	 */
 	@XmlElement(name="properties")
 	public List<PropertyModel> getProperties(){
 		return properties;
 	}
 	
+	/**
+	 * 
+	 * @model
+	 */
 	@XmlElement(name="attributes")
 	public List<AttributeAssignmentModel> getAttributes(){
 		return attributes;
 	}
 	
+	/**
+	 * 
+	 * @model
+	 */
 	@XmlElement(name="requirements")
 	public List<RequirementAssignmentModel> getRequirements(){
 		return requirements;
 	}
 	
+	/**
+	 * 
+	 * @model
+	 */
 	@XmlElement(name="capabilities")
 	public List<CapabilityAssignmentModel> getCapabilities(){
 		return capabilities;
 	}
 	
+	/**
+	 * 
+	 * @model
+	 */
 	@XmlElement(name="interfaces")
 	public List<InterfaceDefinitionModel> getInterfaces(){
 		return interfaces;
 	}
 	
+	/**
+	 * 
+	 * @model
+	 */
 	@XmlElement(name="artifacts")
 	public List<ArtifactTypeModel> getArtifacts(){
 		return artifacts;

@@ -1,7 +1,9 @@
 package kr.ac.hanyang.tosca2camp.rest.model;
 
 import javax.xml.bind.annotation.XmlElement;
-
+/**
+ * @model kind="class"
+ */
 public class RequirementDefinitionModel {
 	
 	private String capability;
@@ -24,21 +26,33 @@ public class RequirementDefinitionModel {
 	public RequirementDefinitionModel relationship_definition(RelationshipDefinitionModel relationship_definition){	this.relationship_definition = relationship_definition; 	return this; 	}
 	//public RequirementAssignmentModel properties(List<PropertyDefinitionModel> properties){	this.properties = properties; 	return this; 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="capability")
 	public String getCapability(){
 		return capability;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="node")
 	public String getNode(){
 		return node;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="relationship_type_name")
 	public String getRelationship_type(){
 		return relationship_type_name;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="relationship_definition")
 	public RelationshipDefinitionModel getRelationship_definition(){
 		return relationship_definition;

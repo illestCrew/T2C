@@ -3,7 +3,9 @@ package kr.ac.hanyang.tosca2camp.rest.model;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
-
+/**
+ * @model kind="class"
+ */
 public class TopologyTemplateModel {
 
 	private String description;
@@ -30,36 +32,57 @@ public class TopologyTemplateModel {
 	public TopologyTemplateModel outputs(List<ParameterDefinitionModel> outputs){	this.outputs = outputs; 	return this; 	}
 	
 
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="description")
 	public String getDescription(){
 		return description;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="inputs")
 	public List<ParameterDefinitionModel> getInputs(){
 		return inputs;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="node_templates")
 	public List<NodeTemplateModel> getNodeTemplates(){
 		return node_templates;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="relationship_templates")
 	public List<RelationshipTemplateModel> getRelationshipTemplates(){
 		return relationship_templates;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="groups")
 	public List<GroupDefinitionModel> getGroups(){
 		return groups;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="policies")
 	public List<PolicyDefinitionModel> getPolicies(){
 		return policies;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="outputs")
 	public List<ParameterDefinitionModel> getOutputs(){
 		return outputs;

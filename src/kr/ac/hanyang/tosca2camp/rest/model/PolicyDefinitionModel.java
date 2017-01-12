@@ -5,7 +5,9 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 
 import kr.ac.hanyang.tosca2camp.templates.ServiceTemplate;
-
+/**
+ * @model kind="class"
+ */
 public class PolicyDefinitionModel {
 	
 	private String name;
@@ -27,26 +29,41 @@ public class PolicyDefinitionModel {
 	public PolicyDefinitionModel properties(List<PropertyAssignmentModel> properties){	this.properties = properties; 	return this; 	}
 	public PolicyDefinitionModel targets(String[] targets){	this.targets = targets; 	return this; 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="name")
 	public String getName(){
 		return name;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="type")
 	public String getType(){
 		return type;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="description")
 	public String getDescription(){
 		return description;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="properties")
 	public List<PropertyAssignmentModel> getProperties(){
 		return properties;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="targets")
 	public String[] getTargets(){
 		return targets;

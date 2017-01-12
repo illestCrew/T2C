@@ -237,6 +237,14 @@ public class TopologyTemplate implements Cloneable{
 	
 	public List<PropertyDef> getOutputs() {return outputs;}
 	
+//	public List<NodeDef> getConnectedNodes(NodeDef node){
+//		List<NodeDef> toReturn = new ArrayList<NodeDef>();
+//		for (RelationshipDef relDef: relationshipTemplates){
+//			if (relDef.)
+//		}
+//	}
+	
+	
 	public Object evaluateFunction(Function function){
 		return null; //TODO
 	}

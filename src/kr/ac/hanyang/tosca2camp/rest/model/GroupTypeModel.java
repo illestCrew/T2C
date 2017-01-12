@@ -3,7 +3,9 @@ package kr.ac.hanyang.tosca2camp.rest.model;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
-
+/**
+ * @model kind="class"
+ */
 public class GroupTypeModel {
 	
 	private String typeName;
@@ -29,36 +31,57 @@ public class GroupTypeModel {
 	public GroupTypeModel members(String[] members){	this.members = members; 	return this; 	}
 	public GroupTypeModel interfaces(List<InterfaceTypeModel> interfaces){	this.interfaces = interfaces; 	return this; 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="typeName")
 	public String getTypeName(){
 		return typeName;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="derived_from")
 	public String getDerivedFrom(){
 		return derived_from;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="version")
 	public VersionModel getVersion(){
 		return version;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="description")
 	public String getDescription(){
 		return description;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="properties")
 	public List<PropertyModel> getProperties(){
 		return properties;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="members")
 	public String[] getMembers(){
 		return members;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="interfaces")
 	public List<InterfaceTypeModel> getInterfaces(){
 		return interfaces;

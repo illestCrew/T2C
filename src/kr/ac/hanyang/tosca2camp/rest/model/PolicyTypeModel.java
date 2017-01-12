@@ -3,7 +3,9 @@ package kr.ac.hanyang.tosca2camp.rest.model;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
-
+/**
+ * @model kind="class"
+ */
 public class PolicyTypeModel {
 	
 	private String typeName;
@@ -27,31 +29,49 @@ public class PolicyTypeModel {
 	public PolicyTypeModel properties(List<PropertyModel> properties){	this.properties = properties; 	return this; 	}
 	public PolicyTypeModel targets(String[] targets){	this.targets = targets; 	return this; 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="typeName")
 	public String getTypeName(){
 		return typeName;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="derived_from")
 	public String getDerivedFrom(){
 		return derived_from;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="version")
 	public VersionModel getVersion(){
 		return version;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="description")
 	public String getDescription(){
 		return description;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="properties")
 	public List<PropertyModel> getProperties(){
 		return properties;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="targets")
 	public String[] getTargets(){
 		return targets;

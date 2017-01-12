@@ -4,7 +4,9 @@ import java.util.Map;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-
+/**
+ * @model kind="class"
+ */
 @XmlRootElement
 public class ServiceTemplateModel {
 
@@ -46,71 +48,113 @@ public class ServiceTemplateModel {
 	public ServiceTemplateModel topologyTemplates(TopologyTemplateModel topology_template){	this.topology_template = topology_template; 	return this; 	}
 
 
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="tosca_definitions_version")
 	public String getVersion(){
 		return tosca_definitions_version;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="metadata")
 	public Map<String, String> getMetaData(){
 		return metadata;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="description")
 	public String getDescription(){
 		return description;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="repositories")
 	public List<RepositoryDefinitionModel> getRepositories(){
 		return repositories;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="imports")
 	public List<ImportDefinitionModel> getImports(){
 		return imports;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="artifact_types")
 	public List<ArtifactTypeModel> getArtifactTypes(){
 		return artifact_types;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="data_types")
 	public List<DatatypeDefinitionModel> getDataTypes(){
 		return data_types;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="capability_types")
 	public List<CapabilityDefinitionModel> getCapabilityTypes(){
 		return capability_types;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="interface_types")
 	public List<InterfaceTypeModel> getInterfaceTypes(){
 		return interface_types;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="relationship_types")
 	public List<RelationshipDefinitionModel> getRelationshipTypes(){
 		return relationship_types;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="node_types")
 	public List<NodeDefinitionModel> getNodeTypes(){
 		return node_types;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="group_types")
 	public List<GroupDefinitionModel> getGroupTypes(){
 		return group_types;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="policy_types")
 	public List<PolicyDefinitionModel> getPolicyTypes(){
 		return policy_types;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="topology_template")
 	public TopologyTemplateModel getTopologyTemplate(){
 		return topology_template;

@@ -3,7 +3,9 @@ package kr.ac.hanyang.tosca2camp.rest.model;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
-
+/**
+ * @model kind="class"
+ */
 public class RelationshipDefinitionModel {
 	
 	
@@ -32,41 +34,65 @@ public class RelationshipDefinitionModel {
 	public RelationshipDefinitionModel interfaces(List<InterfaceTypeModel> interfaces){	this.interfaces = interfaces; 	return this; 	}
 	public RelationshipDefinitionModel validTargetTypes(String[] valid_target_types){	this.valid_target_types = valid_target_types; 	return this; 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="typeName")
 	public String getTypeName(){
 		return typeName;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="derived_from")
 	public String getDerivedFrom(){
 		return derived_from;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="version")
 	public VersionModel getVersion(){
 		return version;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="description")
 	public String getDescription(){
 		return description;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="properties")
 	public List<PropertyModel> getProperties(){
 		return properties;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="attributes")
 	public List<AttributeDefinitionModel> getAttributes(){
 		return attributes;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="interfaces")
 	public List<InterfaceTypeModel> getInterfaces(){
 		return interfaces;
 	}
 
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="valid_target_types")
 	public String[] getValidTargetTypes(){
 		return valid_target_types;

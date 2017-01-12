@@ -5,7 +5,9 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 
 import kr.ac.hanyang.tosca2camp.templates.ServiceTemplate;
-
+/**
+ * @model kind="class"
+ */
 public class GroupDefinitionModel {
 	
 	private String name;
@@ -29,31 +31,49 @@ public class GroupDefinitionModel {
 	public GroupDefinitionModel members(List<NodeTemplateModel> members){	this.members = members; 	return this; 	}
 	public GroupDefinitionModel interfaces(List<InterfaceTypeModel> interfaces){	this.interfaces = interfaces; 	return this; 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="name")
 	public String getName(){
 		return name;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="type")
 	public String getType(){
 		return type;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="description")
 	public String getDescription(){
 		return description;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="properties")
 	public List<PropertyAssignmentModel> getProperties(){
 		return properties;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="members")
 	public List<NodeTemplateModel> getMembers(){
 		return members;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="interfaces")
 	public List<InterfaceTypeModel> getInterfaces(){
 		return interfaces;

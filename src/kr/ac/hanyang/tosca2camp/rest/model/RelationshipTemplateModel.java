@@ -5,7 +5,9 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 
 import kr.ac.hanyang.tosca2camp.templates.ServiceTemplate;
-
+/**
+ * @model kind="class"
+ */
 public class RelationshipTemplateModel {
 	
 	
@@ -32,36 +34,57 @@ public class RelationshipTemplateModel {
 	public RelationshipTemplateModel interfaces(List<InterfaceDefinitionModel> interfaces){	this.interfaces = interfaces; 	return this; 	}
 	public RelationshipTemplateModel copy(String copy){	this.copy = copy; 	return this; 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="name")
 	public String getName(){
 		return name;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="typeName")
 	public String getTypeName(){
 		return type;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="description")
 	public String getDescription(){
 		return description;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="properties")
 	public List<PropertyModel> getProperties(){
 		return properties;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="attributes")
 	public List<AttributeAssignmentModel> getAttributes(){
 		return attributes;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="interfaces")
 	public List<InterfaceDefinitionModel> getInterfaces(){
 		return interfaces;
 	}
 
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="copy")
 	public String getCopy(){
 		return copy;

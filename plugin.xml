@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated NodeTemplate -->
+      <package
+            uri="http:///kr/ac/hanyang/tosca2camp/rest/model.ecore"
+            class="kr.ac.hanyang.tosca2camp.rest.model.ModelPackage"
+            genModel="src/kr/ac/hanyang/tosca2camp/atl/modelGen/NodeTemplate.genmodel"/>
+   </extension>
+
+</plugin>

@@ -3,7 +3,9 @@ package kr.ac.hanyang.tosca2camp.rest.model;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
-
+/**
+ * @model kind="class"
+ */
 public class CapabilityDefinitionModel {
 	
 	
@@ -30,36 +32,57 @@ public class CapabilityDefinitionModel {
 	public CapabilityDefinitionModel attributes(List<AttributeDefinitionModel> attributes){	this.attributes = attributes; 	return this; 	}
 	public CapabilityDefinitionModel validSources(String[] valid_sources){	this.valid_sources = valid_sources; 	return this; 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="typeName")
 	public String getTypeName(){
 		return typeName;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="derived_from")
 	public String getDerivedFrom(){
 		return derived_from;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="version")
 	public VersionModel getVersion(){
 		return version;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="description")
 	public String getDescription(){
 		return description;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="properties")
 	public List<PropertyModel> getProperties(){
 		return properties;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="attributes")
 	public List<AttributeDefinitionModel> getAttributes(){
 		return attributes;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="valid_sources")
 	public String[] getValidSources(){
 		return valid_sources;

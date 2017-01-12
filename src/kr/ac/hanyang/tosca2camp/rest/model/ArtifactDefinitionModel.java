@@ -3,7 +3,9 @@ package kr.ac.hanyang.tosca2camp.rest.model;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
-
+/**
+ * @model kind="class"
+ */
 public class ArtifactDefinitionModel {
 	
 	private String type;
@@ -26,26 +28,41 @@ public class ArtifactDefinitionModel {
 	public ArtifactDefinitionModel description(String description){	this.description = description; 	return this; 	}
 	public ArtifactDefinitionModel deploy_path(String deploy_path){	this.deploy_path = deploy_path; 	return this; 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="type")
 	public String getType(){
 		return type;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="file")
 	public String getFile(){
 		return file;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="repository")
 	public String getRepository(){
 		return repository;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="description")
 	public String getDescription(){
 		return description;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="deploy_path")
 	public String getDeploy_path(){
 		return deploy_path;

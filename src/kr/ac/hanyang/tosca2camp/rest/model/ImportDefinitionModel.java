@@ -3,6 +3,9 @@ package kr.ac.hanyang.tosca2camp.rest.model;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
+/**
+ * @model kind="class"
+ */
 
 public class ImportDefinitionModel {
 	
@@ -25,21 +28,33 @@ public class ImportDefinitionModel {
 	public ImportDefinitionModel namespace_uri(String namespace_uri){	this.namespace_uri = namespace_uri; 	return this; 	}
 	public ImportDefinitionModel namespace_prefix(String namespace_prefix){	this.namespace_prefix = namespace_prefix; 	return this; 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="file")
 	public String getFile(){
 		return file;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="repository")
 	public String getRepository(){
 		return repository;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="namespace_uri")
 	public String getNamespaceUri(){
 		return namespace_uri;
 	}
 	
+	/**
+	 * @model 
+	 */
 	@XmlElement(name="namespace_prefix")
 	public String getNamespacePrefix(){
 		return namespace_prefix;
