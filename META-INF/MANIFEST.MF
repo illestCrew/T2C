@@ -7,8 +7,12 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: kr.ac.hanyang.tosca2camp.rest.model,
- kr.ac.hanyang.tosca2camp.rest.model.impl
+Export-Package: kr.ac.hanyang.tosca2camp,
+ kr.ac.hanyang.tosca2camp.rest.model,
+ kr.ac.hanyang.tosca2camp.rest.model.impl,
+ kr.ac.hanyang.tosca2camp.rest.model.util,
+ kr.ac.hanyang.tosca2camp.rest.resources
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.m2m.atl.core
