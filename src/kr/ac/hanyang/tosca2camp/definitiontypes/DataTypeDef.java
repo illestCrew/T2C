@@ -207,6 +207,9 @@ public class DataTypeDef implements Cloneable{
 		return primitiveValue;
 	}
 	
+	public DataType getTypeStored(){
+		return storedData;
+	}
 	
 	public Object getValueStored(){
 		switch(storedData){

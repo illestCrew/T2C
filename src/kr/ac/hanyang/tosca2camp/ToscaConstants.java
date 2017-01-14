@@ -1,8 +1,8 @@
 package kr.ac.hanyang.tosca2camp;
 
 public class ToscaConstants {
-	public static final String BASE_FILEPATH = "C:\\Users\\kenax\\git\\T2C\\src\\kr\\ac\\hanyang\\tosca2camp\\"; //"/Users/kena/git/T2C/T2C/src/kr/ac/hanyang/tosca2camp/";
-	public static final String FILEPATH = "C:\\Users\\kenax\\git\\T2C\\src\\kr\\ac\\hanyang\\tosca2camp\\definitions\\"; //"/Users/kena/git/T2C/T2C/src/kr/ac/hanyang/tosca2camp/definitions/";
+	public static final String BASE_FILEPATH = /*"C:\\Users\\kenax\\git\\T2C\\src\\kr\\ac\\hanyang\\tosca2camp\\";*/ "/Users/kena/git/T2C/src/kr/ac/hanyang/tosca2camp/";
+	public static final String FILEPATH = /*"C:\\Users\\kenax\\git\\T2C\\src\\kr\\ac\\hanyang\\tosca2camp\\definitions\\";*/ "/Users/kena/git/T2C/src/kr/ac/hanyang/tosca2camp/definitions/";
 	public static final String TYPEPREFIX = "tosca.datatypes.";
 	
 	public static final String[] NODEDEF_FILENAMES = {"tosca.nodes.Root","tosca.nodes.BlockStorage","tosca.nodes.Compute",

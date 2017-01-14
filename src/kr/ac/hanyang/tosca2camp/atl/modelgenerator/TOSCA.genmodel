@@ -69,6 +69,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//DatatypeDefinitionModel/constraints"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//DatatypeDefinitionModel/properties"/>
     </genClasses>
+    <genClasses ecoreClass="TOSCA.ecore#//FunctionModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//FunctionModel/typeName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//FunctionModel/parameters"/>
+    </genClasses>
     <genClasses ecoreClass="TOSCA.ecore#//GroupDefinitionModel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//GroupDefinitionModel/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//GroupDefinitionModel/type"/>
@@ -234,5 +238,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//TopologyTemplateModel/policies"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//TopologyTemplateModel/outputs"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="TOSCA.ecore#//Serializable"/>
   </genPackages>
 </genmodel:GenModel>

@@ -1,53 +1,64 @@
 package kr.ac.hanyang.tosca2camp.rest.model;
 
-import java.util.List;
-
+import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * @model kind="class"
  */
 
-public class CapabilityAssignmentModel {
+public interface CapabilityAssignmentModel extends EObject, Serializable{//  implements EObject, Serializable{
 	
-	private String name;
-	private List<PropertyAssignmentModel> properties;
-	private List<AttributeAssignmentModel> attributes;
-	
-	
-	private CapabilityAssignmentModel(){ }
-	
-	public static CapabilityAssignmentModel of(){
-		return new CapabilityAssignmentModel();
-	}
-	
-	public CapabilityAssignmentModel name(String name){	this.name = name; 	return this; 	}
-	public CapabilityAssignmentModel properties(List<PropertyAssignmentModel> properties){	this.properties = properties; 	return this; 	}
-	public CapabilityAssignmentModel attributes(List<AttributeAssignmentModel> attributes){	this.attributes = attributes; 	return this; 	}
+	/**
+	 * 
+	 */
+//	private static final long serialVersionUID = -2810897848163755187L;
+//	private String name;
+//	private List<PropertyAssignmentModel> properties;
+//	private List<AttributeAssignmentModel> attributes;
+//	
+//	
+//	private CapabilityAssignmentModel(){ }
+//	
+//	public static CapabilityAssignmentModel of(){
+//		return new CapabilityAssignmentModel();
+//	}
+//	
+//	public CapabilityAssignmentModel name(String name){	this.name = name; 	return this; 	}
+//	public CapabilityAssignmentModel properties(List<PropertyAssignmentModel> properties){	this.properties = properties; 	return this; 	}
+//	public CapabilityAssignmentModel attributes(List<AttributeAssignmentModel> attributes){	this.attributes = attributes; 	return this; 	}
 	
 	/**
 	 * @model 
 	 */
 	@XmlElement(name="name")
-	public String getName(){
-		return name;
-	}
+	public String getName();
 	
+	/**
+	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.CapabilityAssignmentModel#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
 	/**
 	 * @model 
 	 */
 	@XmlElement(name="properties")
-	public List<PropertyAssignmentModel> getProperties(){
-		return properties;
-	}
+	public EList<PropertyAssignmentModel> getProperties();
 	
 	/**
 	 * @model 
 	 */
 	@XmlElement(name="attributes")
-	public List<AttributeAssignmentModel> getAttributes(){
-		return attributes;
-	}
+	public EList<AttributeAssignmentModel> getAttributes();
+	
+	public void eSet(int featureID, Object newValue);
 	
 	
 }

@@ -96,6 +96,10 @@ public class Function implements Cloneable{
 		return null;
 	}
 	
+	public List<PropertyDef> getParameters(){
+		return parameters;
+	}
+	
 
 	private int tabNum;
 	
