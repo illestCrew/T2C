@@ -131,7 +131,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifacts" upperBound="-1"
         eType="#//ArtifactTypeModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NodeTemplateModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="NodeTemplateModel" instanceTypeName="NodeTemplateModel"
+      eSuperTypes="#//Serializable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="directives" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -254,41 +255,42 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="repositories" upperBound="-1"
-        eType="#//RepositoryDefinitionModel"/>
+        eType="#//RepositoryDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
-        eType="#//ImportDefinitionModel"/>
+        eType="#//ImportDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifactTypes" upperBound="-1"
-        eType="#//ArtifactTypeModel"/>
+        eType="#//ArtifactTypeModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataTypes" upperBound="-1"
-        eType="#//DatatypeDefinitionModel"/>
+        eType="#//DatatypeDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="capabilityTypes" upperBound="-1"
-        eType="#//CapabilityDefinitionModel"/>
+        eType="#//CapabilityDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceTypes" upperBound="-1"
-        eType="#//InterfaceTypeModel"/>
+        eType="#//InterfaceTypeModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relationshipTypes" upperBound="-1"
-        eType="#//RelationshipDefinitionModel"/>
+        eType="#//RelationshipDefinitionModel" transient="true" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nodeTypes" upperBound="-1"
-        eType="#//NodeDefinitionModel"/>
+        eType="#//NodeDefinitionModel" transient="true" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="groupTypes" upperBound="-1"
-        eType="#//GroupDefinitionModel"/>
+        eType="#//GroupDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="policyTypes" upperBound="-1"
-        eType="#//PolicyDefinitionModel"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="topologyTemplate" eType="#//TopologyTemplateModel"/>
+        eType="#//PolicyDefinitionModel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topologyTemplate" eType="#//TopologyTemplateModel"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TopologyTemplateModel" eSuperTypes="#//Serializable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
-        eType="#//ParameterDefinitionModel"/>
+        eType="#//ParameterDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nodeTemplates" upperBound="-1"
-        eType="#//NodeTemplateModel"/>
+        eType="#//NodeTemplateModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relationshipTemplates"
-        upperBound="-1" eType="#//RelationshipTemplateModel"/>
+        upperBound="-1" eType="#//RelationshipTemplateModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="groups" upperBound="-1"
-        eType="#//GroupDefinitionModel"/>
+        eType="#//GroupDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="policies" upperBound="-1"
-        eType="#//PolicyDefinitionModel"/>
+        eType="#//PolicyDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" upperBound="-1"
-        eType="#//ParameterDefinitionModel"/>
+        eType="#//ParameterDefinitionModel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Serializable" instanceClassName="java.io.Serializable"
       abstract="true" interface="true"/>

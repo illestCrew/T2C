@@ -14,7 +14,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import kr.ac.hanyang.tosca2camp.Tosca2CampLauncher;
 import kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel;
-import kr.ac.hanyang.tosca2camp.rest.resources.ServiceTemplateResource;
+import kr.ac.hanyang.tosca2camp.rest.resources.ServiceTemplateTransformer;
 
 @Path("/service-template")
 @Api("service-template")
@@ -36,7 +36,7 @@ public class ServiceTemplateApi {
     @GET
     @Path("service")    
     public ServiceTemplateModel getServiceTemplate(@QueryParam(value = "id") String id){
-    	return ServiceTemplateResource.getServiceTemplate(id); 
+    	return ServiceTemplateTransformer.getServiceTemplate(id); 
     }
     
 //    @GET
