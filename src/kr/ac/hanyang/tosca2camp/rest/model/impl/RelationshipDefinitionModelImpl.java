@@ -2,6 +2,7 @@
  */
 package kr.ac.hanyang.tosca2camp.rest.model.impl;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import kr.ac.hanyang.tosca2camp.rest.model.AttributeDefinitionModel;
@@ -42,7 +43,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class RelationshipDefinitionModelImpl extends MinimalEObjectImpl.Container implements RelationshipDefinitionModel {
+public class RelationshipDefinitionModelImpl extends MinimalEObjectImpl.Container implements RelationshipDefinitionModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

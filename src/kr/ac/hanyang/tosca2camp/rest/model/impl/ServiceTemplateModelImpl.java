@@ -2,6 +2,7 @@
  */
 package kr.ac.hanyang.tosca2camp.rest.model.impl;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Map;
 
@@ -57,7 +58,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container implements ServiceTemplateModel {
+public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container implements ServiceTemplateModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,15 +86,15 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	 */
 	protected String version = VERSION_EDEFAULT;
 
-	/**
-	 * The cached value of the '{@link #getMetaData() <em>Meta Data</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMetaData()
-	 * @generated
-	 * @ordered
-	 */
-	protected Map<String, String> metaData;
+//	/**
+//	 * The cached value of the '{@link #getMetaData() <em>Meta Data</em>}' attribute.
+//	 * <!-- begin-user-doc -->
+//	 * <!-- end-user-doc -->
+//	 * @see #getMetaData()
+//	 * @generated
+//	 * @ordered
+//	 */
+//	protected Map<String, String> metaData;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -265,26 +266,26 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SERVICE_TEMPLATE_MODEL__VERSION, oldVersion, version));
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Map<String, String> getMetaData() {
-		return metaData;
-	}
+//	/**
+//	 * <!-- begin-user-doc -->
+//	 * <!-- end-user-doc -->
+//	 * @generated
+//	 */
+//	public Map<String, String> getMetaData() {
+//		return metaData;
+//	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMetaData(Map<String, String> newMetaData) {
-		Map<String, String> oldMetaData = metaData;
-		metaData = newMetaData;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SERVICE_TEMPLATE_MODEL__META_DATA, oldMetaData, metaData));
-	}
+//	/**
+//	 * <!-- begin-user-doc -->
+//	 * <!-- end-user-doc -->
+//	 * @generated
+//	 */
+//	public void setMetaData(Map<String, String> newMetaData) {
+//		Map<String, String> oldMetaData = metaData;
+//		metaData = newMetaData;
+//		if (eNotificationRequired())
+//			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SERVICE_TEMPLATE_MODEL__META_DATA, oldMetaData, metaData));
+//	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -475,8 +476,8 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 		switch (featureID) {
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__VERSION:
 				return getVersion();
-			case ModelPackage.SERVICE_TEMPLATE_MODEL__META_DATA:
-				return getMetaData();
+//			case ModelPackage.SERVICE_TEMPLATE_MODEL__META_DATA:
+//				return getMetaData();
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__DESCRIPTION:
 				return getDescription();
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__REPOSITORIES:
@@ -518,9 +519,9 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__VERSION:
 				setVersion((String)newValue);
 				return;
-			case ModelPackage.SERVICE_TEMPLATE_MODEL__META_DATA:
-				setMetaData((Map<String, String>)newValue);
-				return;
+//			case ModelPackage.SERVICE_TEMPLATE_MODEL__META_DATA:
+//				setMetaData((Map<String, String>)newValue);
+//				return;
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
@@ -582,9 +583,9 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__VERSION:
 				setVersion(VERSION_EDEFAULT);
 				return;
-			case ModelPackage.SERVICE_TEMPLATE_MODEL__META_DATA:
-				setMetaData((Map<String, String>)null);
-				return;
+//			case ModelPackage.SERVICE_TEMPLATE_MODEL__META_DATA:
+//				setMetaData((Map<String, String>)null);
+//				return;
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
@@ -635,8 +636,8 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 		switch (featureID) {
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__VERSION:
 				return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
-			case ModelPackage.SERVICE_TEMPLATE_MODEL__META_DATA:
-				return metaData != null;
+//			case ModelPackage.SERVICE_TEMPLATE_MODEL__META_DATA:
+//				return metaData != null;
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__REPOSITORIES:
@@ -678,7 +679,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 		result.append(" (version: ");
 		result.append(version);
 		result.append(", metaData: ");
-		result.append(metaData);
+//		result.append(metaData);
 		result.append(", description: ");
 		result.append(description);
 		result.append(')');

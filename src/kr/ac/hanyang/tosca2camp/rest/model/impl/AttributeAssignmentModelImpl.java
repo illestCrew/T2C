@@ -6,6 +6,8 @@ import kr.ac.hanyang.tosca2camp.rest.model.AttributeAssignmentModel;
 import kr.ac.hanyang.tosca2camp.rest.model.DataModel;
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -29,7 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class AttributeAssignmentModelImpl extends MinimalEObjectImpl.Container implements AttributeAssignmentModel {
+public class AttributeAssignmentModelImpl extends MinimalEObjectImpl.Container implements AttributeAssignmentModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -2439,15 +2439,15 @@ public interface ModelPackage extends EPackage {
 	 */
 	int STRING_ARRAY = 32;
 
-	/**
-	 * The meta object id for the '<em>Map</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see java.util.Map
-	 * @see kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl#getMap()
-	 * @generated
-	 */
-	int MAP = 33;
+//	/**
+//	 * The meta object id for the '<em>Map</em>' data type.
+//	 * <!-- begin-user-doc -->
+//	 * <!-- end-user-doc -->
+//	 * @see java.util.Map
+//	 * @see kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl#getMap()
+//	 * @generated
+//	 */
+//	int MAP = 33;
 
 
 	/**
@@ -4606,16 +4606,16 @@ public interface ModelPackage extends EPackage {
 	 */
 	EDataType getStringArray();
 
-	/**
-	 * Returns the meta object for data type '{@link java.util.Map <em>Map</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Map</em>'.
-	 * @see java.util.Map
-	 * @model instanceClass="java.util.Map" typeParameters="T T1"
-	 * @generated
-	 */
-	EDataType getMap();
+//	/**
+//	 * Returns the meta object for data type '{@link java.util.Map <em>Map</em>}'.
+//	 * <!-- begin-user-doc -->
+//	 * <!-- end-user-doc -->
+//	 * @return the meta object for data type '<em>Map</em>'.
+//	 * @see java.util.Map
+//	 * @model instanceClass="java.util.Map" typeParameters="T T1"
+//	 * @generated
+//	 */
+//	EDataType getMap();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -6297,15 +6297,15 @@ public interface ModelPackage extends EPackage {
 		 */
 		EDataType STRING_ARRAY = eINSTANCE.getStringArray();
 
-		/**
-		 * The meta object literal for the '<em>Map</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see java.util.Map
-		 * @see kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl#getMap()
-		 * @generated
-		 */
-		EDataType MAP = eINSTANCE.getMap();
+//		/**
+//		 * The meta object literal for the '<em>Map</em>' data type.
+//		 * <!-- begin-user-doc -->
+//		 * <!-- end-user-doc -->
+//		 * @see java.util.Map
+//		 * @see kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl#getMap()
+//		 * @generated
+//		 */
+//		EDataType MAP = eINSTANCE.getMap();
 
 	}
 

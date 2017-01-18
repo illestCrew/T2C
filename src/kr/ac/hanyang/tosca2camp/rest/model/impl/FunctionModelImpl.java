@@ -2,6 +2,7 @@
  */
 package kr.ac.hanyang.tosca2camp.rest.model.impl;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import kr.ac.hanyang.tosca2camp.rest.model.FunctionModel;
@@ -33,7 +34,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class FunctionModelImpl extends MinimalEObjectImpl.Container implements FunctionModel {
+public class FunctionModelImpl extends MinimalEObjectImpl.Container implements FunctionModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

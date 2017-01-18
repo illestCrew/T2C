@@ -2,14 +2,14 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="http:///kr/ac/hanyang/tosca2camp/rest/model.ecore"
     nsPrefix="kr.ac.hanyang.tosca2camp.rest.model">
-  <eClassifiers xsi:type="ecore:EClass" name="ArtifactDefinitionModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="ArtifactDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="repository" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="deploy_path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ArtifactTypeModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="ArtifactTypeModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//VersionModel"/>
@@ -19,26 +19,26 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
         eType="#//PropertyModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AttributeAssignmentModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeAssignmentModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//DataModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AttributeDefinitionModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataValue" eType="#//DataModel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CapabilityAssignmentModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="CapabilityAssignmentModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
         eType="#//PropertyAssignmentModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//AttributeAssignmentModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CapabilityDefinitionModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="CapabilityDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//VersionModel"/>
@@ -49,14 +49,14 @@
         eType="#//AttributeDefinitionModel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="validSources" eType="#//StringArray"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConstraintModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="ConstraintModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//DataModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DataModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="DataModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DatatypeDefinitionModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="DatatypeDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -66,12 +66,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
         eType="#//PropertyModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FunctionModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
         eType="#//PropertyModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GroupDefinitionModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="GroupDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -82,7 +82,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
         eType="#//InterfaceTypeModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GroupTypeModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="GroupTypeModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//VersionModel"/>
@@ -93,17 +93,17 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
         eType="#//InterfaceTypeModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ImportDefinitionModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="ImportDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="repository" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="namespaceUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="namespacePrefix" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InterfaceDefinitionModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
         eType="#//PropertyModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InterfaceTypeModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceTypeModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//VersionModel"/>
@@ -113,7 +113,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
         eType="#//OperationDefinitionModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NodeDefinitionModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="NodeDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//VersionModel"/>
@@ -131,8 +131,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifacts" upperBound="-1"
         eType="#//ArtifactTypeModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NodeTemplateModel" instanceTypeName="NodeTemplateModel"
-      eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="NodeTemplateModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="directives" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -150,7 +149,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifacts" upperBound="-1"
         eType="#//ArtifactTypeModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OperationDefinitionModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="OperationDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implementation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs_definitions" upperBound="-1"
@@ -158,7 +157,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs_assignments" upperBound="-1"
         eType="#//PropertyAssignmentModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParameterDefinitionModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterDefinitionModel">
     <eOperations name="getRequired" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -170,7 +169,7 @@
         eType="#//ConstraintModel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="entrySchema" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PolicyDefinitionModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="PolicyDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -178,7 +177,7 @@
         eType="#//PropertyAssignmentModel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targets" eType="#//StringArray"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PolicyTypeModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="PolicyTypeModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//VersionModel"/>
@@ -187,11 +186,11 @@
         eType="#//PropertyModel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targets" eType="#//StringArray"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PropertyAssignmentModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyAssignmentModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//DataModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PropertyModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyModel">
     <eOperations name="getRequired" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -203,7 +202,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="entrySchema" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//DataModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RelationshipDefinitionModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="RelationshipDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//VersionModel"/>
@@ -216,7 +215,7 @@
         eType="#//InterfaceTypeModel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="validTargetTypes" eType="#//StringArray"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RelationshipTemplateModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="RelationshipTemplateModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -228,76 +227,65 @@
         eType="#//InterfaceDefinitionModel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="copy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RepositoryDefinitionModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="RepositoryDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="credential" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RequirementAssignmentModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="RequirementAssignmentModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="capability" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="node" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="relationship" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RequirementDefinitionModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="RequirementDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="capability" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="node" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="relationship_type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relationship_definition"
         eType="#//RelationshipDefinitionModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ServiceTemplateModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceTemplateModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="metaData">
-      <eGenericType eClassifier="#//Map">
-        <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-        <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eGenericType>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="repositories" upperBound="-1"
-        eType="#//RepositoryDefinitionModel" containment="true"/>
+        eType="#//RepositoryDefinitionModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
-        eType="#//ImportDefinitionModel" containment="true"/>
+        eType="#//ImportDefinitionModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifactTypes" upperBound="-1"
-        eType="#//ArtifactTypeModel" containment="true"/>
+        eType="#//ArtifactTypeModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataTypes" upperBound="-1"
-        eType="#//DatatypeDefinitionModel" containment="true"/>
+        eType="#//DatatypeDefinitionModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="capabilityTypes" upperBound="-1"
-        eType="#//CapabilityDefinitionModel" containment="true"/>
+        eType="#//CapabilityDefinitionModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceTypes" upperBound="-1"
-        eType="#//InterfaceTypeModel" containment="true"/>
+        eType="#//InterfaceTypeModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relationshipTypes" upperBound="-1"
-        eType="#//RelationshipDefinitionModel" transient="true" containment="true"/>
+        eType="#//RelationshipDefinitionModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nodeTypes" upperBound="-1"
-        eType="#//NodeDefinitionModel" transient="true" containment="true"/>
+        eType="#//NodeDefinitionModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="groupTypes" upperBound="-1"
-        eType="#//GroupDefinitionModel" containment="true"/>
+        eType="#//GroupDefinitionModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="policyTypes" upperBound="-1"
-        eType="#//PolicyDefinitionModel" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="topologyTemplate" eType="#//TopologyTemplateModel"
-        containment="true"/>
+        eType="#//PolicyDefinitionModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topologyTemplate" eType="#//TopologyTemplateModel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TopologyTemplateModel" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="TopologyTemplateModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
-        eType="#//ParameterDefinitionModel" containment="true"/>
+        eType="#//ParameterDefinitionModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nodeTemplates" upperBound="-1"
-        eType="#//NodeTemplateModel" containment="true"/>
+        eType="#//NodeTemplateModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relationshipTemplates"
-        upperBound="-1" eType="#//RelationshipTemplateModel" containment="true"/>
+        upperBound="-1" eType="#//RelationshipTemplateModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="groups" upperBound="-1"
-        eType="#//GroupDefinitionModel" containment="true"/>
+        eType="#//GroupDefinitionModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="policies" upperBound="-1"
-        eType="#//PolicyDefinitionModel" containment="true"/>
+        eType="#//PolicyDefinitionModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" upperBound="-1"
-        eType="#//ParameterDefinitionModel" containment="true"/>
+        eType="#//ParameterDefinitionModel"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Serializable" instanceClassName="java.io.Serializable"
       abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EDataType" name="VersionModel" instanceClassName="kr.ac.hanyang.tosca2camp.rest.model.VersionModel"/>
   <eClassifiers xsi:type="ecore:EDataType" name="StringArray" instanceClassName="java.lang.String[]"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="Map" instanceClassName="java.util.Map">
-    <eTypeParameters name="T"/>
-    <eTypeParameters name="T1"/>
-  </eClassifiers>
 </ecore:EPackage>

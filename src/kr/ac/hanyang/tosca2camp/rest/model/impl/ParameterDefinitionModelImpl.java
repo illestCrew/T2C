@@ -2,6 +2,7 @@
  */
 package kr.ac.hanyang.tosca2camp.rest.model.impl;
 
+import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
@@ -43,7 +44,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class ParameterDefinitionModelImpl extends MinimalEObjectImpl.Container implements ParameterDefinitionModel {
+public class ParameterDefinitionModelImpl extends MinimalEObjectImpl.Container implements ParameterDefinitionModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

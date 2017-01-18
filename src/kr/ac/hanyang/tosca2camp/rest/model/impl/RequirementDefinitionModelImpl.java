@@ -6,6 +6,8 @@ import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 import kr.ac.hanyang.tosca2camp.rest.model.RelationshipDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.RequirementDefinitionModel;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -30,7 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class RequirementDefinitionModelImpl extends MinimalEObjectImpl.Container implements RequirementDefinitionModel {
+public class RequirementDefinitionModelImpl extends MinimalEObjectImpl.Container implements RequirementDefinitionModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

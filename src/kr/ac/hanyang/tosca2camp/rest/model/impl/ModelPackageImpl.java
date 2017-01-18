@@ -288,12 +288,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 */
 	private EDataType stringArrayEDataType = null;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType mapEDataType = null;
+//	/**
+//	 * <!-- begin-user-doc -->
+//	 * <!-- end-user-doc -->
+//	 * @generated
+//	 */
+//	private EDataType mapEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1931,14 +1931,14 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		return (EAttribute)serviceTemplateModelEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getServiceTemplateModel_MetaData() {
-		return (EAttribute)serviceTemplateModelEClass.getEStructuralFeatures().get(1);
-	}
+//	/**
+//	 * <!-- begin-user-doc -->
+//	 * <!-- end-user-doc -->
+//	 * @generated
+//	 */
+//	public EAttribute getServiceTemplateModel_MetaData() {
+//		return (EAttribute)serviceTemplateModelEClass.getEStructuralFeatures().get(1);
+//	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2147,14 +2147,14 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		return stringArrayEDataType;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EDataType getMap() {
-		return mapEDataType;
-	}
+//	/**
+//	 * <!-- begin-user-doc -->
+//	 * <!-- end-user-doc -->
+//	 * @generated
+//	 */
+//	public EDataType getMap() {
+//		return mapEDataType;
+//	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2415,7 +2415,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		// Create data types
 		versionModelEDataType = createEDataType(VERSION_MODEL);
 		stringArrayEDataType = createEDataType(STRING_ARRAY);
-		mapEDataType = createEDataType(MAP);
+		//mapEDataType = createEDataType(MAP);
 	}
 
 	/**
@@ -2442,8 +2442,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		setNsURI(eNS_URI);
 
 		// Create type parameters
-		addETypeParameter(mapEDataType, "T");
-		addETypeParameter(mapEDataType, "T1");
+		//addETypeParameter(mapEDataType, "T");
+		//addETypeParameter(mapEDataType, "T1");
 
 		// Set bounds for type parameters
 
@@ -2685,12 +2685,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		initEClass(serviceTemplateModelEClass, ServiceTemplateModel.class, "ServiceTemplateModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getServiceTemplateModel_Version(), ecorePackage.getEString(), "version", null, 0, 1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		EGenericType g1 = createEGenericType(this.getMap());
-		EGenericType g2 = createEGenericType(ecorePackage.getEString());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEString());
-		g1.getETypeArguments().add(g2);
-		initEAttribute(getServiceTemplateModel_MetaData(), g1, "metaData", null, 0, 1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		//EGenericType g1 = createEGenericType(this.getMap());
+		//EGenericType g2 = createEGenericType(ecorePackage.getEString());
+		//g1.getETypeArguments().add(g2);
+		//g2 = createEGenericType(ecorePackage.getEString());
+		//g1.getETypeArguments().add(g2);
+		//initEAttribute(getServiceTemplateModel_MetaData(), g1, "metaData", null, 0, 1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getServiceTemplateModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getServiceTemplateModel_Repositories(), this.getRepositoryDefinitionModel(), null, "repositories", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getServiceTemplateModel_Imports(), this.getImportDefinitionModel(), null, "imports", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2718,10 +2718,22 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		// Initialize data types
 		initEDataType(versionModelEDataType, VersionModel.class, "VersionModel", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(stringArrayEDataType, String[].class, "StringArray", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(mapEDataType, Map.class, "Map", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		//initEDataType(mapEDataType, Map.class, "Map", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
+	}
+
+	@Override
+	public EAttribute getServiceTemplateModel_MetaData() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public EDataType getMap() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 } //ModelPackageImpl

@@ -5,9 +5,9 @@ import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 /**
- * @model kind="class"
+ * @model 
  */
-public interface GroupDefinitionModel extends EObject, Serializable{//  implements EObject, Serializable{
+public interface GroupDefinitionModel extends EObject{//  implements EObject, Serializable{
 	
 	/**
 	 * 

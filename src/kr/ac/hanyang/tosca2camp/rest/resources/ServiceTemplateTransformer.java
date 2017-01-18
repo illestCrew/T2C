@@ -67,7 +67,7 @@ public class ServiceTemplateTransformer {
 		EFactory factory = ePackage.getEFactoryInstance();
 		ServiceTemplateModel stm = (ServiceTemplateModel) factory.create(ModelPackage.Literals.SERVICE_TEMPLATE_MODEL);//.createServiceTemplateModel();
 		stm.eSet(ModelPackage.Literals.SERVICE_TEMPLATE_MODEL__VERSION, st.getVersion());
-		stm.eSet(ModelPackage.Literals.SERVICE_TEMPLATE_MODEL__META_DATA, st.getMetaData());
+		//stm.eSet(ModelPackage.Literals.SERVICE_TEMPLATE_MODEL__META_DATA, st.getMetaData());
 		stm.eSet(ModelPackage.Literals.SERVICE_TEMPLATE_MODEL__DESCRIPTION, st.getDescription());
 		stm.eSet(ModelPackage.Literals.SERVICE_TEMPLATE_MODEL__IMPORTS, st.getImports());
 		stm.eSet(ModelPackage.Literals.SERVICE_TEMPLATE_MODEL__ARTIFACT_TYPES, getArtifactsTypes(st.getArtifacts()));

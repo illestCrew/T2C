@@ -5,6 +5,8 @@ package kr.ac.hanyang.tosca2camp.rest.model.impl;
 import kr.ac.hanyang.tosca2camp.rest.model.ArtifactDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -29,7 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ArtifactDefinitionModelImpl extends MinimalEObjectImpl.Container implements ArtifactDefinitionModel {
+public class ArtifactDefinitionModelImpl extends MinimalEObjectImpl.Container implements ArtifactDefinitionModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

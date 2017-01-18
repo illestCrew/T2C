@@ -7,10 +7,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 /**
- * @model kind="class"
+ * @model 
  */
 @XmlRootElement
-public interface ServiceTemplateModel extends EObject, Serializable{// implements EObject, Serializable{
+public interface ServiceTemplateModel extends EObject{// implements EObject, Serializable{
 
 	
 	/**
@@ -71,21 +71,21 @@ public interface ServiceTemplateModel extends EObject, Serializable{// implement
 	 */
 	void setVersion(String value);
 
-	/**
-	 * @model 
-	 */
-	@XmlElement(name="metadata")
-	public Map<String, String> getMetaData();
+//	/**
+//	 * 
+//	 */
+//	@XmlElement(name="metadata")
+//	public Map<String, String> getMetaData();
 	
-	/**
-	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getMetaData <em>Meta Data</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Meta Data</em>' attribute.
-	 * @see #getMetaData()
-	 * @generated
-	 */
-	void setMetaData(Map<String, String> value);
+//	/**
+//	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getMetaData <em>Meta Data</em>}' attribute.
+//	 * <!-- begin-user-doc -->
+//	 * <!-- end-user-doc -->
+//	 * @param value the new value of the '<em>Meta Data</em>' attribute.
+//	 * @see #getMetaData()
+//	 * 
+//	 */
+//	void setMetaData(Map<String, String> value);
 
 	/**
 	 * @model 

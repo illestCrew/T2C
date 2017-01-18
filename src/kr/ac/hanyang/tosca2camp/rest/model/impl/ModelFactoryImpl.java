@@ -106,8 +106,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 				return createVersionModelFromString(eDataType, initialValue);
 			case ModelPackage.STRING_ARRAY:
 				return createStringArrayFromString(eDataType, initialValue);
-			case ModelPackage.MAP:
-				return createMapFromString(eDataType, initialValue);
+//			case ModelPackage.MAP:
+//				return createMapFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -125,8 +125,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 				return convertVersionModelToString(eDataType, instanceValue);
 			case ModelPackage.STRING_ARRAY:
 				return convertStringArrayToString(eDataType, instanceValue);
-			case ModelPackage.MAP:
-				return convertMapToString(eDataType, instanceValue);
+//			case ModelPackage.MAP:
+//				return convertMapToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -468,23 +468,23 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 		return super.convertToString(instanceValue);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Map<?, ?> createMapFromString(EDataType eDataType, String initialValue) {
-		return (Map<?, ?>)super.createFromString(initialValue);
-	}
+//	/**
+//	 * <!-- begin-user-doc -->
+//	 * <!-- end-user-doc -->
+//	 * @generated
+//	 */
+//	public Map<?, ?> createMapFromString(EDataType eDataType, String initialValue) {
+//		return (Map<?, ?>)super.createFromString(initialValue);
+//	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertMapToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(instanceValue);
-	}
+//	/**
+//	 * <!-- begin-user-doc -->
+//	 * <!-- end-user-doc -->
+//	 * @generated
+//	 */
+//	public String convertMapToString(EDataType eDataType, Object instanceValue) {
+//		return super.convertToString(instanceValue);
+//	}
 
 	/**
 	 * <!-- begin-user-doc -->

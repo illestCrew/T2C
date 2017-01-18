@@ -2,6 +2,7 @@
  */
 package kr.ac.hanyang.tosca2camp.rest.model.impl;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import kr.ac.hanyang.tosca2camp.rest.model.AttributeAssignmentModel;
@@ -35,7 +36,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class CapabilityAssignmentModelImpl extends MinimalEObjectImpl.Container implements CapabilityAssignmentModel {
+public class CapabilityAssignmentModelImpl extends MinimalEObjectImpl.Container implements CapabilityAssignmentModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -4,10 +4,10 @@ import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.ecore.EObject;
 /**
- * @model kind="class"
+ * @model 
  */
 
-public interface ImportDefinitionModel extends EObject, Serializable{//  implements EObject, Serializable{
+public interface ImportDefinitionModel extends EObject{//  implements EObject, Serializable{
 	
 	/**
 	 * 

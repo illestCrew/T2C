@@ -6,6 +6,8 @@ import kr.ac.hanyang.tosca2camp.rest.model.ConstraintModel;
 import kr.ac.hanyang.tosca2camp.rest.model.DataModel;
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -28,7 +30,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ConstraintModelImpl extends MinimalEObjectImpl.Container implements ConstraintModel {
+public class ConstraintModelImpl extends MinimalEObjectImpl.Container implements ConstraintModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

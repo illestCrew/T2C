@@ -2,6 +2,7 @@
  */
 package kr.ac.hanyang.tosca2camp.rest.model.impl;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import kr.ac.hanyang.tosca2camp.rest.model.GroupDefinitionModel;
@@ -42,7 +43,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class TopologyTemplateModelImpl extends MinimalEObjectImpl.Container implements TopologyTemplateModel {
+public class TopologyTemplateModelImpl extends MinimalEObjectImpl.Container implements TopologyTemplateModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

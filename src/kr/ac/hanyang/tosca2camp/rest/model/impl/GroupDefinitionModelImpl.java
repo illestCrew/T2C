@@ -2,6 +2,7 @@
  */
 package kr.ac.hanyang.tosca2camp.rest.model.impl;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import kr.ac.hanyang.tosca2camp.rest.model.GroupDefinitionModel;
@@ -39,7 +40,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class GroupDefinitionModelImpl extends MinimalEObjectImpl.Container implements GroupDefinitionModel {
+public class GroupDefinitionModelImpl extends MinimalEObjectImpl.Container implements GroupDefinitionModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

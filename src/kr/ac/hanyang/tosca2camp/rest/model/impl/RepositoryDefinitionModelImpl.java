@@ -5,6 +5,8 @@ package kr.ac.hanyang.tosca2camp.rest.model.impl;
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 import kr.ac.hanyang.tosca2camp.rest.model.RepositoryDefinitionModel;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -27,7 +29,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class RepositoryDefinitionModelImpl extends MinimalEObjectImpl.Container implements RepositoryDefinitionModel {
+public class RepositoryDefinitionModelImpl extends MinimalEObjectImpl.Container implements RepositoryDefinitionModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

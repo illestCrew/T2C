@@ -8,10 +8,6 @@
       ecorePackage="TOSCA.ecore#/">
     <genDataTypes ecoreDataType="TOSCA.ecore#//VersionModel"/>
     <genDataTypes ecoreDataType="TOSCA.ecore#//StringArray"/>
-    <genDataTypes ecoreDataType="TOSCA.ecore#//Map">
-      <genTypeParameters ecoreTypeParameter="TOSCA.ecore#//Map/T"/>
-      <genTypeParameters ecoreTypeParameter="TOSCA.ecore#//Map/T1"/>
-    </genDataTypes>
     <genClasses ecoreClass="TOSCA.ecore#//ArtifactDefinitionModel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ArtifactDefinitionModel/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ArtifactDefinitionModel/file"/>
@@ -215,7 +211,6 @@
     </genClasses>
     <genClasses ecoreClass="TOSCA.ecore#//ServiceTemplateModel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ServiceTemplateModel/version"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ServiceTemplateModel/metaData"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ServiceTemplateModel/description"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ServiceTemplateModel/repositories"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ServiceTemplateModel/imports"/>

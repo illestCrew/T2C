@@ -2,6 +2,7 @@
  */
 package kr.ac.hanyang.tosca2camp.rest.model.impl;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import kr.ac.hanyang.tosca2camp.rest.model.ArtifactTypeModel;
@@ -46,7 +47,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implements NodeTemplateModel {
+public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implements NodeTemplateModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -2,6 +2,7 @@
  */
 package kr.ac.hanyang.tosca2camp.rest.model.impl;
 
+import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
@@ -43,7 +44,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class PropertyModelImpl extends MinimalEObjectImpl.Container implements PropertyModel {
+public class PropertyModelImpl extends MinimalEObjectImpl.Container implements PropertyModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

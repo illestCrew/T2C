@@ -6,6 +6,8 @@ import kr.ac.hanyang.tosca2camp.rest.model.DataModel;
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 import kr.ac.hanyang.tosca2camp.rest.model.PropertyAssignmentModel;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -28,7 +30,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class PropertyAssignmentModelImpl extends MinimalEObjectImpl.Container implements PropertyAssignmentModel {
+public class PropertyAssignmentModelImpl extends MinimalEObjectImpl.Container implements PropertyAssignmentModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -2,6 +2,7 @@
  */
 package kr.ac.hanyang.tosca2camp.rest.model.impl;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
@@ -36,7 +37,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class PolicyDefinitionModelImpl extends MinimalEObjectImpl.Container implements PolicyDefinitionModel {
+public class PolicyDefinitionModelImpl extends MinimalEObjectImpl.Container implements PolicyDefinitionModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

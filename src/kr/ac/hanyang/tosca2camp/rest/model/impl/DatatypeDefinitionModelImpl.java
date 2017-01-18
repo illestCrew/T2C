@@ -2,6 +2,7 @@
  */
 package kr.ac.hanyang.tosca2camp.rest.model.impl;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import kr.ac.hanyang.tosca2camp.rest.model.ConstraintModel;
@@ -38,7 +39,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class DatatypeDefinitionModelImpl extends MinimalEObjectImpl.Container implements DatatypeDefinitionModel {
+public class DatatypeDefinitionModelImpl extends MinimalEObjectImpl.Container implements DatatypeDefinitionModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

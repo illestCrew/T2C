@@ -4,9 +4,9 @@ import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.ecore.EObject;
 /**
- * @model kind="class"
+ * @model 
  */
-public interface RepositoryDefinitionModel extends EObject, Serializable{//  implements EObject, Serializable{
+public interface RepositoryDefinitionModel extends EObject{//  implements EObject, Serializable{
 	
 	/**
 	 * 

@@ -2,6 +2,7 @@
  */
 package kr.ac.hanyang.tosca2camp.rest.model.impl;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import kr.ac.hanyang.tosca2camp.rest.model.InterfaceTypeModel;
@@ -39,7 +40,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class InterfaceTypeModelImpl extends MinimalEObjectImpl.Container implements InterfaceTypeModel {
+public class InterfaceTypeModelImpl extends MinimalEObjectImpl.Container implements InterfaceTypeModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

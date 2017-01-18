@@ -5,6 +5,8 @@ package kr.ac.hanyang.tosca2camp.rest.model.impl;
 import kr.ac.hanyang.tosca2camp.rest.model.ImportDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -28,7 +30,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ImportDefinitionModelImpl extends MinimalEObjectImpl.Container implements ImportDefinitionModel {
+public class ImportDefinitionModelImpl extends MinimalEObjectImpl.Container implements ImportDefinitionModel, Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

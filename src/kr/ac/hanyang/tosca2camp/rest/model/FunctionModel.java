@@ -6,9 +6,9 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 	/**
-	 * @model kind="class"
+	 * @model 
 	 */
-	public interface FunctionModel extends EObject, Serializable{//  implements EObject, Serializable{
+	public interface FunctionModel extends EObject{//  implements EObject, Serializable{
 		
 		/**
 		 * 
