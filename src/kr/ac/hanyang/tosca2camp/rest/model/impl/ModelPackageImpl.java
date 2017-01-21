@@ -2,10 +2,6 @@
  */
 package kr.ac.hanyang.tosca2camp.rest.model.impl;
 
-import java.io.Serializable;
-
-import java.util.Map;
-
 import kr.ac.hanyang.tosca2camp.rest.model.ArtifactDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.ArtifactTypeModel;
 import kr.ac.hanyang.tosca2camp.rest.model.AttributeAssignmentModel;
@@ -38,12 +34,11 @@ import kr.ac.hanyang.tosca2camp.rest.model.RequirementAssignmentModel;
 import kr.ac.hanyang.tosca2camp.rest.model.RequirementDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel;
 import kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel;
-import kr.ac.hanyang.tosca2camp.rest.model.VersionModel;
+
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -266,20 +261,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EClass topologyTemplateModelEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass serializableEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType versionModelEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1946,7 +1927,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	public EAttribute getServiceTemplateModel_Description() {
-		return (EAttribute)serviceTemplateModelEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)serviceTemplateModelEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1955,7 +1936,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	public EReference getServiceTemplateModel_Repositories() {
-		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(3);
+		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1964,7 +1945,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	public EReference getServiceTemplateModel_Imports() {
-		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(4);
+		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1973,7 +1954,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	public EReference getServiceTemplateModel_ArtifactTypes() {
-		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(5);
+		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1982,7 +1963,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	public EReference getServiceTemplateModel_DataTypes() {
-		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(6);
+		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1991,7 +1972,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	public EReference getServiceTemplateModel_CapabilityTypes() {
-		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(7);
+		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -2000,7 +1981,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	public EReference getServiceTemplateModel_InterfaceTypes() {
-		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(8);
+		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -2009,7 +1990,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	public EReference getServiceTemplateModel_RelationshipTypes() {
-		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(9);
+		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -2018,7 +1999,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	public EReference getServiceTemplateModel_NodeTypes() {
-		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(10);
+		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -2027,7 +2008,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	public EReference getServiceTemplateModel_GroupTypes() {
-		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(11);
+		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -2036,7 +2017,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	public EReference getServiceTemplateModel_PolicyTypes() {
-		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(12);
+		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -2045,7 +2026,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	public EReference getServiceTemplateModel_TopologyTemplate() {
-		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(13);
+		return (EReference)serviceTemplateModelEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -2118,24 +2099,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 */
 	public EReference getTopologyTemplateModel_Outputs() {
 		return (EReference)topologyTemplateModelEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSerializable() {
-		return serializableEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EDataType getVersionModel() {
-		return versionModelEDataType;
 	}
 
 	/**
@@ -2387,7 +2350,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		serviceTemplateModelEClass = createEClass(SERVICE_TEMPLATE_MODEL);
 		createEAttribute(serviceTemplateModelEClass, SERVICE_TEMPLATE_MODEL__VERSION);
-		createEAttribute(serviceTemplateModelEClass, SERVICE_TEMPLATE_MODEL__META_DATA);
 		createEAttribute(serviceTemplateModelEClass, SERVICE_TEMPLATE_MODEL__DESCRIPTION);
 		createEReference(serviceTemplateModelEClass, SERVICE_TEMPLATE_MODEL__REPOSITORIES);
 		createEReference(serviceTemplateModelEClass, SERVICE_TEMPLATE_MODEL__IMPORTS);
@@ -2410,12 +2372,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEReference(topologyTemplateModelEClass, TOPOLOGY_TEMPLATE_MODEL__POLICIES);
 		createEReference(topologyTemplateModelEClass, TOPOLOGY_TEMPLATE_MODEL__OUTPUTS);
 
-		serializableEClass = createEClass(SERIALIZABLE);
-
 		// Create data types
-		versionModelEDataType = createEDataType(VERSION_MODEL);
 		stringArrayEDataType = createEDataType(STRING_ARRAY);
-		//mapEDataType = createEDataType(MAP);
 	}
 
 	/**
@@ -2442,42 +2400,10 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		setNsURI(eNS_URI);
 
 		// Create type parameters
-		//addETypeParameter(mapEDataType, "T");
-		//addETypeParameter(mapEDataType, "T1");
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		artifactDefinitionModelEClass.getESuperTypes().add(this.getSerializable());
-		artifactTypeModelEClass.getESuperTypes().add(this.getSerializable());
-		attributeAssignmentModelEClass.getESuperTypes().add(this.getSerializable());
-		attributeDefinitionModelEClass.getESuperTypes().add(this.getSerializable());
-		capabilityAssignmentModelEClass.getESuperTypes().add(this.getSerializable());
-		capabilityDefinitionModelEClass.getESuperTypes().add(this.getSerializable());
-		constraintModelEClass.getESuperTypes().add(this.getSerializable());
-		dataModelEClass.getESuperTypes().add(this.getSerializable());
-		datatypeDefinitionModelEClass.getESuperTypes().add(this.getSerializable());
-		functionModelEClass.getESuperTypes().add(this.getSerializable());
-		groupDefinitionModelEClass.getESuperTypes().add(this.getSerializable());
-		groupTypeModelEClass.getESuperTypes().add(this.getSerializable());
-		importDefinitionModelEClass.getESuperTypes().add(this.getSerializable());
-		interfaceDefinitionModelEClass.getESuperTypes().add(this.getSerializable());
-		interfaceTypeModelEClass.getESuperTypes().add(this.getSerializable());
-		nodeDefinitionModelEClass.getESuperTypes().add(this.getSerializable());
-		nodeTemplateModelEClass.getESuperTypes().add(this.getSerializable());
-		operationDefinitionModelEClass.getESuperTypes().add(this.getSerializable());
-		parameterDefinitionModelEClass.getESuperTypes().add(this.getSerializable());
-		policyDefinitionModelEClass.getESuperTypes().add(this.getSerializable());
-		policyTypeModelEClass.getESuperTypes().add(this.getSerializable());
-		propertyAssignmentModelEClass.getESuperTypes().add(this.getSerializable());
-		propertyModelEClass.getESuperTypes().add(this.getSerializable());
-		relationshipDefinitionModelEClass.getESuperTypes().add(this.getSerializable());
-		relationshipTemplateModelEClass.getESuperTypes().add(this.getSerializable());
-		repositoryDefinitionModelEClass.getESuperTypes().add(this.getSerializable());
-		requirementAssignmentModelEClass.getESuperTypes().add(this.getSerializable());
-		requirementDefinitionModelEClass.getESuperTypes().add(this.getSerializable());
-		serviceTemplateModelEClass.getESuperTypes().add(this.getSerializable());
-		topologyTemplateModelEClass.getESuperTypes().add(this.getSerializable());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(artifactDefinitionModelEClass, ArtifactDefinitionModel.class, "ArtifactDefinitionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2490,41 +2416,41 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEClass(artifactTypeModelEClass, ArtifactTypeModel.class, "ArtifactTypeModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getArtifactTypeModel_TypeName(), ecorePackage.getEString(), "typeName", null, 0, 1, ArtifactTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getArtifactTypeModel_DerivedFrom(), ecorePackage.getEString(), "derivedFrom", null, 0, 1, ArtifactTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArtifactTypeModel_Version(), this.getVersionModel(), "version", null, 0, 1, ArtifactTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArtifactTypeModel_Version(), ecorePackage.getEString(), "version", null, 0, 1, ArtifactTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getArtifactTypeModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, ArtifactTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getArtifactTypeModel_Mime_type(), ecorePackage.getEString(), "mime_type", null, 0, 1, ArtifactTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getArtifactTypeModel_File_ext(), this.getStringArray(), "file_ext", null, 0, 1, ArtifactTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getArtifactTypeModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, ArtifactTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArtifactTypeModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, ArtifactTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeAssignmentModelEClass, AttributeAssignmentModel.class, "AttributeAssignmentModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAttributeAssignmentModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, AttributeAssignmentModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAttributeAssignmentModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, AttributeAssignmentModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttributeAssignmentModel_Value(), this.getDataModel(), null, "value", null, 0, 1, AttributeAssignmentModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttributeAssignmentModel_Value(), this.getDataModel(), null, "value", null, 0, 1, AttributeAssignmentModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeDefinitionModelEClass, AttributeDefinitionModel.class, "AttributeDefinitionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAttributeDefinitionModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, AttributeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAttributeDefinitionModel_Type(), ecorePackage.getEString(), "type", null, 0, 1, AttributeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAttributeDefinitionModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, AttributeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttributeDefinitionModel_DataValue(), this.getDataModel(), null, "dataValue", null, 0, 1, AttributeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttributeDefinitionModel_DataValue(), this.getDataModel(), null, "dataValue", null, 0, 1, AttributeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAttributeDefinitionModel_Status(), ecorePackage.getEString(), "status", null, 0, 1, AttributeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(capabilityAssignmentModelEClass, CapabilityAssignmentModel.class, "CapabilityAssignmentModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCapabilityAssignmentModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, CapabilityAssignmentModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapabilityAssignmentModel_Properties(), this.getPropertyAssignmentModel(), null, "properties", null, 0, -1, CapabilityAssignmentModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapabilityAssignmentModel_Attributes(), this.getAttributeAssignmentModel(), null, "attributes", null, 0, -1, CapabilityAssignmentModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilityAssignmentModel_Properties(), this.getPropertyAssignmentModel(), null, "properties", null, 0, -1, CapabilityAssignmentModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilityAssignmentModel_Attributes(), this.getAttributeAssignmentModel(), null, "attributes", null, 0, -1, CapabilityAssignmentModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(capabilityDefinitionModelEClass, CapabilityDefinitionModel.class, "CapabilityDefinitionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCapabilityDefinitionModel_TypeName(), ecorePackage.getEString(), "typeName", null, 0, 1, CapabilityDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCapabilityDefinitionModel_DerivedFrom(), ecorePackage.getEString(), "derivedFrom", null, 0, 1, CapabilityDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCapabilityDefinitionModel_Version(), this.getVersionModel(), "version", null, 0, 1, CapabilityDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCapabilityDefinitionModel_Version(), ecorePackage.getEString(), "version", null, 0, 1, CapabilityDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCapabilityDefinitionModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, CapabilityDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapabilityDefinitionModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, CapabilityDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapabilityDefinitionModel_Attributes(), this.getAttributeDefinitionModel(), null, "attributes", null, 0, -1, CapabilityDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilityDefinitionModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, CapabilityDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilityDefinitionModel_Attributes(), this.getAttributeDefinitionModel(), null, "attributes", null, 0, -1, CapabilityDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCapabilityDefinitionModel_ValidSources(), this.getStringArray(), "validSources", null, 0, 1, CapabilityDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constraintModelEClass, ConstraintModel.class, "ConstraintModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getConstraintModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, ConstraintModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConstraintModel_Value(), this.getDataModel(), null, "value", null, 0, 1, ConstraintModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstraintModel_Value(), this.getDataModel(), null, "value", null, 0, 1, ConstraintModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataModelEClass, DataModel.class, "DataModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDataModel_Value(), ecorePackage.getEJavaObject(), "value", null, 0, 1, DataModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2534,29 +2460,29 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getDatatypeDefinitionModel_DerivedFrom(), ecorePackage.getEString(), "derivedFrom", null, 0, 1, DatatypeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDatatypeDefinitionModel_Version(), ecorePackage.getEString(), "version", null, 0, 1, DatatypeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDatatypeDefinitionModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, DatatypeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDatatypeDefinitionModel_Constraints(), this.getConstraintModel(), null, "constraints", null, 0, -1, DatatypeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDatatypeDefinitionModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, DatatypeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDatatypeDefinitionModel_Constraints(), this.getConstraintModel(), null, "constraints", null, 0, -1, DatatypeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDatatypeDefinitionModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, DatatypeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionModelEClass, FunctionModel.class, "FunctionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunctionModel_TypeName(), ecorePackage.getEString(), "typeName", null, 0, 1, FunctionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionModel_Parameters(), this.getPropertyModel(), null, "parameters", null, 0, -1, FunctionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionModel_Parameters(), this.getPropertyModel(), null, "parameters", null, 0, -1, FunctionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groupDefinitionModelEClass, GroupDefinitionModel.class, "GroupDefinitionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGroupDefinitionModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, GroupDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGroupDefinitionModel_Type(), ecorePackage.getEString(), "type", null, 0, 1, GroupDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGroupDefinitionModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, GroupDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGroupDefinitionModel_Properties(), this.getPropertyAssignmentModel(), null, "properties", null, 0, -1, GroupDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGroupDefinitionModel_Members(), this.getNodeTemplateModel(), null, "members", null, 0, -1, GroupDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGroupDefinitionModel_Interfaces(), this.getInterfaceTypeModel(), null, "interfaces", null, 0, -1, GroupDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGroupDefinitionModel_Properties(), this.getPropertyAssignmentModel(), null, "properties", null, 0, -1, GroupDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGroupDefinitionModel_Members(), this.getNodeTemplateModel(), null, "members", null, 0, -1, GroupDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGroupDefinitionModel_Interfaces(), this.getInterfaceTypeModel(), null, "interfaces", null, 0, -1, GroupDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groupTypeModelEClass, GroupTypeModel.class, "GroupTypeModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGroupTypeModel_TypeName(), ecorePackage.getEString(), "typeName", null, 0, 1, GroupTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGroupTypeModel_DerivedFrom(), ecorePackage.getEString(), "derivedFrom", null, 0, 1, GroupTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGroupTypeModel_Version(), this.getVersionModel(), "version", null, 0, 1, GroupTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGroupTypeModel_Version(), ecorePackage.getEString(), "version", null, 0, 1, GroupTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGroupTypeModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, GroupTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGroupTypeModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, GroupTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGroupTypeModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, GroupTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGroupTypeModel_Members(), this.getStringArray(), "members", null, 0, 1, GroupTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGroupTypeModel_Interfaces(), this.getInterfaceTypeModel(), null, "interfaces", null, 0, -1, GroupTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGroupTypeModel_Interfaces(), this.getInterfaceTypeModel(), null, "interfaces", null, 0, -1, GroupTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(importDefinitionModelEClass, ImportDefinitionModel.class, "ImportDefinitionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getImportDefinitionModel_File(), ecorePackage.getEString(), "file", null, 0, 1, ImportDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2565,54 +2491,54 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getImportDefinitionModel_NamespacePrefix(), ecorePackage.getEString(), "namespacePrefix", null, 0, 1, ImportDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(interfaceDefinitionModelEClass, InterfaceDefinitionModel.class, "InterfaceDefinitionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInterfaceDefinitionModel_Inputs(), this.getPropertyModel(), null, "inputs", null, 0, -1, InterfaceDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInterfaceDefinitionModel_Inputs(), this.getPropertyModel(), null, "inputs", null, 0, -1, InterfaceDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(interfaceTypeModelEClass, InterfaceTypeModel.class, "InterfaceTypeModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInterfaceTypeModel_TypeName(), ecorePackage.getEString(), "typeName", null, 0, 1, InterfaceTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInterfaceTypeModel_DerivedFrom(), ecorePackage.getEString(), "derivedFrom", null, 0, 1, InterfaceTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInterfaceTypeModel_Version(), this.getVersionModel(), "version", null, 0, 1, InterfaceTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInterfaceTypeModel_Version(), ecorePackage.getEString(), "version", null, 0, 1, InterfaceTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInterfaceTypeModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, InterfaceTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInterfaceTypeModel_Inputs(), this.getPropertyModel(), null, "inputs", null, 0, -1, InterfaceTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInterfaceTypeModel_Operations(), this.getOperationDefinitionModel(), null, "operations", null, 0, -1, InterfaceTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInterfaceTypeModel_Inputs(), this.getPropertyModel(), null, "inputs", null, 0, -1, InterfaceTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInterfaceTypeModel_Operations(), this.getOperationDefinitionModel(), null, "operations", null, 0, -1, InterfaceTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeDefinitionModelEClass, NodeDefinitionModel.class, "NodeDefinitionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNodeDefinitionModel_TypeName(), ecorePackage.getEString(), "typeName", null, 0, 1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodeDefinitionModel_DerivedFrom(), ecorePackage.getEString(), "derivedFrom", null, 0, 1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNodeDefinitionModel_Version(), this.getVersionModel(), "version", null, 0, 1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNodeDefinitionModel_Version(), ecorePackage.getEString(), "version", null, 0, 1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodeDefinitionModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodeDefinitionModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodeDefinitionModel_Attributes(), this.getAttributeDefinitionModel(), null, "attributes", null, 0, -1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodeDefinitionModel_Requirements(), this.getRequirementDefinitionModel(), null, "requirements", null, 0, -1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodeDefinitionModel_Capabilities(), this.getCapabilityDefinitionModel(), null, "capabilities", null, 0, -1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodeDefinitionModel_Interfaces(), this.getInterfaceTypeModel(), null, "interfaces", null, 0, -1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodeDefinitionModel_Artifacts(), this.getArtifactTypeModel(), null, "artifacts", null, 0, -1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodeDefinitionModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodeDefinitionModel_Attributes(), this.getAttributeDefinitionModel(), null, "attributes", null, 0, -1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodeDefinitionModel_Requirements(), this.getRequirementDefinitionModel(), null, "requirements", null, 0, -1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodeDefinitionModel_Capabilities(), this.getCapabilityDefinitionModel(), null, "capabilities", null, 0, -1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodeDefinitionModel_Interfaces(), this.getInterfaceTypeModel(), null, "interfaces", null, 0, -1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodeDefinitionModel_Artifacts(), this.getArtifactTypeModel(), null, "artifacts", null, 0, -1, NodeDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeTemplateModelEClass, NodeTemplateModel.class, "NodeTemplateModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNodeTemplateModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodeTemplateModel_Type(), ecorePackage.getEString(), "type", null, 0, 1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodeTemplateModel_Directives(), ecorePackage.getEString(), "directives", null, 0, 1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodeTemplateModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodeTemplateModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodeTemplateModel_Attributes(), this.getAttributeAssignmentModel(), null, "attributes", null, 0, -1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodeTemplateModel_Requirements(), this.getRequirementAssignmentModel(), null, "requirements", null, 0, -1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodeTemplateModel_Capabilities(), this.getCapabilityAssignmentModel(), null, "capabilities", null, 0, -1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodeTemplateModel_Interfaces(), this.getInterfaceDefinitionModel(), null, "interfaces", null, 0, -1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodeTemplateModel_Artifacts(), this.getArtifactTypeModel(), null, "artifacts", null, 0, -1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodeTemplateModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodeTemplateModel_Attributes(), this.getAttributeAssignmentModel(), null, "attributes", null, 0, -1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodeTemplateModel_Requirements(), this.getRequirementAssignmentModel(), null, "requirements", null, 0, -1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodeTemplateModel_Capabilities(), this.getCapabilityAssignmentModel(), null, "capabilities", null, 0, -1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodeTemplateModel_Interfaces(), this.getInterfaceDefinitionModel(), null, "interfaces", null, 0, -1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodeTemplateModel_Artifacts(), this.getArtifactTypeModel(), null, "artifacts", null, 0, -1, NodeTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operationDefinitionModelEClass, OperationDefinitionModel.class, "OperationDefinitionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOperationDefinitionModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, OperationDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOperationDefinitionModel_Implementation(), ecorePackage.getEString(), "implementation", null, 0, 1, OperationDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOperationDefinitionModel_Inputs_definitions(), this.getPropertyModel(), null, "inputs_definitions", null, 0, -1, OperationDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOperationDefinitionModel_Inputs_assignments(), this.getPropertyAssignmentModel(), null, "inputs_assignments", null, 0, -1, OperationDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOperationDefinitionModel_Inputs_definitions(), this.getPropertyModel(), null, "inputs_definitions", null, 0, -1, OperationDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOperationDefinitionModel_Inputs_assignments(), this.getPropertyAssignmentModel(), null, "inputs_assignments", null, 0, -1, OperationDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parameterDefinitionModelEClass, ParameterDefinitionModel.class, "ParameterDefinitionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getParameterDefinitionModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, ParameterDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParameterDefinitionModel_Type(), ecorePackage.getEString(), "type", null, 0, 1, ParameterDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParameterDefinitionModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, ParameterDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getParameterDefinitionModel_DataValue(), this.getDataModel(), null, "dataValue", null, 0, 1, ParameterDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getParameterDefinitionModel_DataValue(), this.getDataModel(), null, "dataValue", null, 0, 1, ParameterDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getParameterDefinitionModel_Value(), this.getDataModel(), null, "value", null, 0, 1, ParameterDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParameterDefinitionModel_Status(), ecorePackage.getEString(), "status", null, 0, 1, ParameterDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getParameterDefinitionModel_Constraint(), this.getConstraintModel(), null, "constraint", null, 0, -1, ParameterDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getParameterDefinitionModel_Constraint(), this.getConstraintModel(), null, "constraint", null, 0, -1, ParameterDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParameterDefinitionModel_EntrySchema(), ecorePackage.getEString(), "entrySchema", null, 0, 1, ParameterDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getParameterDefinitionModel__GetRequired(), ecorePackage.getEBoolean(), "getRequired", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -2621,50 +2547,50 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getPolicyDefinitionModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, PolicyDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPolicyDefinitionModel_Type(), ecorePackage.getEString(), "type", null, 0, 1, PolicyDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPolicyDefinitionModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, PolicyDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPolicyDefinitionModel_Properties(), this.getPropertyAssignmentModel(), null, "properties", null, 0, -1, PolicyDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPolicyDefinitionModel_Properties(), this.getPropertyAssignmentModel(), null, "properties", null, 0, -1, PolicyDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPolicyDefinitionModel_Targets(), this.getStringArray(), "targets", null, 0, 1, PolicyDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(policyTypeModelEClass, PolicyTypeModel.class, "PolicyTypeModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPolicyTypeModel_TypeName(), ecorePackage.getEString(), "typeName", null, 0, 1, PolicyTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPolicyTypeModel_DerivedFrom(), ecorePackage.getEString(), "derivedFrom", null, 0, 1, PolicyTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPolicyTypeModel_Version(), this.getVersionModel(), "version", null, 0, 1, PolicyTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPolicyTypeModel_Version(), ecorePackage.getEString(), "version", null, 0, 1, PolicyTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPolicyTypeModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, PolicyTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPolicyTypeModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, PolicyTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPolicyTypeModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, PolicyTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPolicyTypeModel_Targets(), this.getStringArray(), "targets", null, 0, 1, PolicyTypeModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(propertyAssignmentModelEClass, PropertyAssignmentModel.class, "PropertyAssignmentModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPropertyAssignmentModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, PropertyAssignmentModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPropertyAssignmentModel_Value(), this.getDataModel(), null, "value", null, 0, 1, PropertyAssignmentModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPropertyAssignmentModel_Value(), this.getDataModel(), null, "value", null, 0, 1, PropertyAssignmentModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(propertyModelEClass, PropertyModel.class, "PropertyModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPropertyModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, PropertyModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPropertyModel_Type(), ecorePackage.getEString(), "type", null, 0, 1, PropertyModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPropertyModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, PropertyModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPropertyModel_DataValue(), this.getDataModel(), null, "dataValue", null, 0, 1, PropertyModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPropertyModel_DataValue(), this.getDataModel(), null, "dataValue", null, 0, 1, PropertyModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPropertyModel_Status(), ecorePackage.getEString(), "status", null, 0, 1, PropertyModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPropertyModel_Constraint(), this.getConstraintModel(), null, "constraint", null, 0, -1, PropertyModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPropertyModel_Constraint(), this.getConstraintModel(), null, "constraint", null, 0, -1, PropertyModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPropertyModel_EntrySchema(), ecorePackage.getEString(), "entrySchema", null, 0, 1, PropertyModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPropertyModel_Value(), this.getDataModel(), null, "value", null, 0, 1, PropertyModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPropertyModel_Value(), this.getDataModel(), null, "value", null, 0, 1, PropertyModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getPropertyModel__GetRequired(), ecorePackage.getEBoolean(), "getRequired", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(relationshipDefinitionModelEClass, RelationshipDefinitionModel.class, "RelationshipDefinitionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRelationshipDefinitionModel_TypeName(), ecorePackage.getEString(), "typeName", null, 0, 1, RelationshipDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelationshipDefinitionModel_DerivedFrom(), ecorePackage.getEString(), "derivedFrom", null, 0, 1, RelationshipDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRelationshipDefinitionModel_Version(), this.getVersionModel(), "version", null, 0, 1, RelationshipDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRelationshipDefinitionModel_Version(), ecorePackage.getEString(), "version", null, 0, 1, RelationshipDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelationshipDefinitionModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, RelationshipDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRelationshipDefinitionModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, RelationshipDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRelationshipDefinitionModel_Attributes(), this.getAttributeDefinitionModel(), null, "attributes", null, 0, -1, RelationshipDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRelationshipDefinitionModel_Interfaces(), this.getInterfaceTypeModel(), null, "interfaces", null, 0, -1, RelationshipDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelationshipDefinitionModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, RelationshipDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelationshipDefinitionModel_Attributes(), this.getAttributeDefinitionModel(), null, "attributes", null, 0, -1, RelationshipDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelationshipDefinitionModel_Interfaces(), this.getInterfaceTypeModel(), null, "interfaces", null, 0, -1, RelationshipDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelationshipDefinitionModel_ValidTargetTypes(), this.getStringArray(), "validTargetTypes", null, 0, 1, RelationshipDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(relationshipTemplateModelEClass, RelationshipTemplateModel.class, "RelationshipTemplateModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRelationshipTemplateModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, RelationshipTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelationshipTemplateModel_TypeName(), ecorePackage.getEString(), "typeName", null, 0, 1, RelationshipTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelationshipTemplateModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, RelationshipTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRelationshipTemplateModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, RelationshipTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRelationshipTemplateModel_Attributes(), this.getAttributeAssignmentModel(), null, "attributes", null, 0, -1, RelationshipTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRelationshipTemplateModel_Interfaces(), this.getInterfaceDefinitionModel(), null, "interfaces", null, 0, -1, RelationshipTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelationshipTemplateModel_Properties(), this.getPropertyModel(), null, "properties", null, 0, -1, RelationshipTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelationshipTemplateModel_Attributes(), this.getAttributeAssignmentModel(), null, "attributes", null, 0, -1, RelationshipTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelationshipTemplateModel_Interfaces(), this.getInterfaceDefinitionModel(), null, "interfaces", null, 0, -1, RelationshipTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelationshipTemplateModel_Copy(), ecorePackage.getEString(), "copy", null, 0, 1, RelationshipTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(repositoryDefinitionModelEClass, RepositoryDefinitionModel.class, "RepositoryDefinitionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2681,59 +2607,45 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getRequirementDefinitionModel_Capability(), ecorePackage.getEString(), "capability", null, 0, 1, RequirementDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRequirementDefinitionModel_Node(), ecorePackage.getEString(), "node", null, 0, 1, RequirementDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRequirementDefinitionModel_Relationship_type(), ecorePackage.getEString(), "relationship_type", null, 0, 1, RequirementDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRequirementDefinitionModel_Relationship_definition(), this.getRelationshipDefinitionModel(), null, "relationship_definition", null, 0, 1, RequirementDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRequirementDefinitionModel_Relationship_definition(), this.getRelationshipDefinitionModel(), null, "relationship_definition", null, 0, 1, RequirementDefinitionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(serviceTemplateModelEClass, ServiceTemplateModel.class, "ServiceTemplateModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getServiceTemplateModel_Version(), ecorePackage.getEString(), "version", null, 0, 1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		//EGenericType g1 = createEGenericType(this.getMap());
-		//EGenericType g2 = createEGenericType(ecorePackage.getEString());
-		//g1.getETypeArguments().add(g2);
-		//g2 = createEGenericType(ecorePackage.getEString());
-		//g1.getETypeArguments().add(g2);
-		//initEAttribute(getServiceTemplateModel_MetaData(), g1, "metaData", null, 0, 1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getServiceTemplateModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getServiceTemplateModel_Repositories(), this.getRepositoryDefinitionModel(), null, "repositories", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getServiceTemplateModel_Imports(), this.getImportDefinitionModel(), null, "imports", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getServiceTemplateModel_ArtifactTypes(), this.getArtifactTypeModel(), null, "artifactTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getServiceTemplateModel_DataTypes(), this.getDatatypeDefinitionModel(), null, "dataTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getServiceTemplateModel_CapabilityTypes(), this.getCapabilityDefinitionModel(), null, "capabilityTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getServiceTemplateModel_InterfaceTypes(), this.getInterfaceTypeModel(), null, "interfaceTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getServiceTemplateModel_RelationshipTypes(), this.getRelationshipDefinitionModel(), null, "relationshipTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getServiceTemplateModel_NodeTypes(), this.getNodeDefinitionModel(), null, "nodeTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getServiceTemplateModel_GroupTypes(), this.getGroupDefinitionModel(), null, "groupTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getServiceTemplateModel_PolicyTypes(), this.getPolicyDefinitionModel(), null, "policyTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getServiceTemplateModel_TopologyTemplate(), this.getTopologyTemplateModel(), null, "topologyTemplate", null, 0, 1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServiceTemplateModel_Repositories(), this.getRepositoryDefinitionModel(), null, "repositories", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServiceTemplateModel_Imports(), this.getImportDefinitionModel(), null, "imports", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServiceTemplateModel_ArtifactTypes(), this.getArtifactTypeModel(), null, "artifactTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServiceTemplateModel_DataTypes(), this.getDatatypeDefinitionModel(), null, "dataTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServiceTemplateModel_CapabilityTypes(), this.getCapabilityDefinitionModel(), null, "capabilityTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServiceTemplateModel_InterfaceTypes(), this.getInterfaceTypeModel(), null, "interfaceTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServiceTemplateModel_RelationshipTypes(), this.getRelationshipDefinitionModel(), null, "relationshipTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServiceTemplateModel_NodeTypes(), this.getNodeDefinitionModel(), null, "nodeTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServiceTemplateModel_GroupTypes(), this.getGroupDefinitionModel(), null, "groupTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServiceTemplateModel_PolicyTypes(), this.getPolicyDefinitionModel(), null, "policyTypes", null, 0, -1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServiceTemplateModel_TopologyTemplate(), this.getTopologyTemplateModel(), null, "topologyTemplate", null, 0, 1, ServiceTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(topologyTemplateModelEClass, TopologyTemplateModel.class, "TopologyTemplateModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTopologyTemplateModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, TopologyTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTopologyTemplateModel_Inputs(), this.getParameterDefinitionModel(), null, "inputs", null, 0, -1, TopologyTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTopologyTemplateModel_NodeTemplates(), this.getNodeTemplateModel(), null, "nodeTemplates", null, 0, -1, TopologyTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTopologyTemplateModel_RelationshipTemplates(), this.getRelationshipTemplateModel(), null, "relationshipTemplates", null, 0, -1, TopologyTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTopologyTemplateModel_Groups(), this.getGroupDefinitionModel(), null, "groups", null, 0, -1, TopologyTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTopologyTemplateModel_Policies(), this.getPolicyDefinitionModel(), null, "policies", null, 0, -1, TopologyTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTopologyTemplateModel_Outputs(), this.getParameterDefinitionModel(), null, "outputs", null, 0, -1, TopologyTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(serializableEClass, Serializable.class, "Serializable", IS_ABSTRACT, IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTopologyTemplateModel_Inputs(), this.getParameterDefinitionModel(), null, "inputs", null, 0, -1, TopologyTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTopologyTemplateModel_NodeTemplates(), this.getNodeTemplateModel(), null, "nodeTemplates", null, 0, -1, TopologyTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTopologyTemplateModel_RelationshipTemplates(), this.getRelationshipTemplateModel(), null, "relationshipTemplates", null, 0, -1, TopologyTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTopologyTemplateModel_Groups(), this.getGroupDefinitionModel(), null, "groups", null, 0, -1, TopologyTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTopologyTemplateModel_Policies(), this.getPolicyDefinitionModel(), null, "policies", null, 0, -1, TopologyTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTopologyTemplateModel_Outputs(), this.getParameterDefinitionModel(), null, "outputs", null, 0, -1, TopologyTemplateModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
-		initEDataType(versionModelEDataType, VersionModel.class, "VersionModel", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(stringArrayEDataType, String[].class, "StringArray", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		//initEDataType(mapEDataType, Map.class, "Map", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
 	}
 
-	@Override
-	public EAttribute getServiceTemplateModel_MetaData() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	@Override
+//	public EAttribute getServiceTemplateModel_MetaData() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
-	@Override
-	public EDataType getMap() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 
 } //ModelPackageImpl

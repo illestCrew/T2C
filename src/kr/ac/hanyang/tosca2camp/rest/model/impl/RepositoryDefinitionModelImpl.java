@@ -27,15 +27,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.RepositoryDefinitionModelImpl#getCredential <em>Credential</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class RepositoryDefinitionModelImpl extends MinimalEObjectImpl.Container implements RepositoryDefinitionModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -231605226953026538L;
 
 	/**
 	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.

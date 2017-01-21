@@ -1,13 +1,12 @@
 package kr.ac.hanyang.tosca2camp.rest.model;
 
-import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 /**
  * @model 
  */
-public interface CapabilityDefinitionModel extends EObject{//  implements EObject, Serializable{
+public interface CapabilityDefinitionModel extends EObject{
 	
 	
 	/**
@@ -16,7 +15,7 @@ public interface CapabilityDefinitionModel extends EObject{//  implements EObjec
 //	private static final long serialVersionUID = 3480410611419031003L;
 //	private String typeName;
 //	private String derived_from;
-//	private VersionModel version;
+//	private String version;
 //	private String description;
 //	private List<PropertyModel> properties;
 //	private List<AttributeDefinitionModel> attributes;
@@ -31,7 +30,7 @@ public interface CapabilityDefinitionModel extends EObject{//  implements EObjec
 //	
 //	public CapabilityDefinitionModel typeName(String name){	this.typeName = name; 	return this; 	}
 //	public CapabilityDefinitionModel derived_from(String derived_from){	this.derived_from = derived_from; 	return this; 	}
-//	public CapabilityDefinitionModel version(VersionModel version){	this.version = version; 	return this; 	}
+//	public CapabilityDefinitionModel version(String version){	this.version = version; 	return this; 	}
 //	public CapabilityDefinitionModel description(String description){	this.description = description; 	return this; 	}
 //	public CapabilityDefinitionModel properties(List<PropertyModel> properties){	this.properties = properties; 	return this; 	}
 //	public CapabilityDefinitionModel attributes(List<AttributeDefinitionModel> attributes){	this.attributes = attributes; 	return this; 	}
@@ -73,7 +72,7 @@ public interface CapabilityDefinitionModel extends EObject{//  implements EObjec
 	 * @model 
 	 */
 	@XmlElement(name="version")
-	public VersionModel getVersion();
+	public String getVersion();
 	
 	/**
 	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.CapabilityDefinitionModel#getVersion <em>Version</em>}' attribute.
@@ -83,7 +82,7 @@ public interface CapabilityDefinitionModel extends EObject{//  implements EObjec
 	 * @see #getVersion()
 	 * @generated
 	 */
-	void setVersion(VersionModel value);
+	void setVersion(String value);
 
 	/**
 	 * @model 

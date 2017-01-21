@@ -11,14 +11,17 @@ import kr.ac.hanyang.tosca2camp.rest.model.PropertyAssignmentModel;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,15 +38,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.PolicyDefinitionModelImpl#getTargets <em>Targets</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class PolicyDefinitionModelImpl extends MinimalEObjectImpl.Container implements PolicyDefinitionModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -1637478551621063773L;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -106,7 +107,7 @@ public class PolicyDefinitionModelImpl extends MinimalEObjectImpl.Container impl
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' reference list.
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProperties()
@@ -224,7 +225,7 @@ public class PolicyDefinitionModelImpl extends MinimalEObjectImpl.Container impl
 	 */
 	public EList<PropertyAssignmentModel> getProperties() {
 		if (properties == null) {
-			properties = new EObjectResolvingEList<PropertyAssignmentModel>(PropertyAssignmentModel.class, this, ModelPackage.POLICY_DEFINITION_MODEL__PROPERTIES);
+			properties = new EObjectContainmentEList<PropertyAssignmentModel>(PropertyAssignmentModel.class, this, ModelPackage.POLICY_DEFINITION_MODEL__PROPERTIES);
 		}
 		return properties;
 	}
@@ -248,6 +249,20 @@ public class PolicyDefinitionModelImpl extends MinimalEObjectImpl.Container impl
 		targets = newTargets;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.POLICY_DEFINITION_MODEL__TARGETS, oldTargets, targets));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.POLICY_DEFINITION_MODEL__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

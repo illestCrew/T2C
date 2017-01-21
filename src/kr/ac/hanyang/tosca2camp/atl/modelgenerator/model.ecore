@@ -12,46 +12,49 @@
   <eClassifiers xsi:type="ecore:EClass" name="ArtifactTypeModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//VersionModel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mime_type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="file_ext" eType="#//StringArray"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//PropertyModel"/>
+        eType="#//PropertyModel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeAssignmentModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//DataModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//DataModel"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataValue" eType="#//DataModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataValue" eType="#//DataModel"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CapabilityAssignmentModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//PropertyAssignmentModel"/>
+        eType="#//PropertyAssignmentModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
-        eType="#//AttributeAssignmentModel"/>
+        eType="#//AttributeAssignmentModel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CapabilityDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//VersionModel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//PropertyModel"/>
+        eType="#//PropertyModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
-        eType="#//AttributeDefinitionModel"/>
+        eType="#//AttributeDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="validSources" eType="#//StringArray"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConstraintModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//DataModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//DataModel"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
@@ -62,36 +65,36 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="constraints" upperBound="-1"
-        eType="#//ConstraintModel"/>
+        eType="#//ConstraintModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//PropertyModel"/>
+        eType="#//PropertyModel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FunctionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
-        eType="#//PropertyModel"/>
+        eType="#//PropertyModel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GroupDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//PropertyAssignmentModel"/>
+        eType="#//PropertyAssignmentModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="members" upperBound="-1"
-        eType="#//NodeTemplateModel"/>
+        eType="#//NodeTemplateModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
-        eType="#//InterfaceTypeModel"/>
+        eType="#//InterfaceTypeModel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GroupTypeModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//VersionModel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//PropertyModel"/>
+        eType="#//PropertyModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="members" eType="#//StringArray"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
-        eType="#//InterfaceTypeModel"/>
+        eType="#//InterfaceTypeModel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ImportDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -101,35 +104,35 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
-        eType="#//PropertyModel"/>
+        eType="#//PropertyModel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceTypeModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//VersionModel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
-        eType="#//PropertyModel"/>
+        eType="#//PropertyModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
-        eType="#//OperationDefinitionModel"/>
+        eType="#//OperationDefinitionModel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NodeDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//VersionModel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//PropertyModel"/>
+        eType="#//PropertyModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
-        eType="#//AttributeDefinitionModel"/>
+        eType="#//AttributeDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="requirements" upperBound="-1"
-        eType="#//RequirementDefinitionModel"/>
+        eType="#//RequirementDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="capabilities" upperBound="-1"
-        eType="#//CapabilityDefinitionModel"/>
+        eType="#//CapabilityDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
-        eType="#//InterfaceTypeModel"/>
+        eType="#//InterfaceTypeModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifacts" upperBound="-1"
-        eType="#//ArtifactTypeModel"/>
+        eType="#//ArtifactTypeModel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NodeTemplateModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -137,36 +140,37 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="directives" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//PropertyModel"/>
+        eType="#//PropertyModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
-        eType="#//AttributeAssignmentModel"/>
+        eType="#//AttributeAssignmentModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="requirements" upperBound="-1"
-        eType="#//RequirementAssignmentModel"/>
+        eType="#//RequirementAssignmentModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="capabilities" upperBound="-1"
-        eType="#//CapabilityAssignmentModel"/>
+        eType="#//CapabilityAssignmentModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
-        eType="#//InterfaceDefinitionModel"/>
+        eType="#//InterfaceDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifacts" upperBound="-1"
-        eType="#//ArtifactTypeModel"/>
+        eType="#//ArtifactTypeModel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OperationDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implementation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs_definitions" upperBound="-1"
-        eType="#//PropertyModel"/>
+        eType="#//PropertyModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs_assignments" upperBound="-1"
-        eType="#//PropertyAssignmentModel"/>
+        eType="#//PropertyAssignmentModel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ParameterDefinitionModel">
     <eOperations name="getRequired" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataValue" eType="#//DataModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataValue" eType="#//DataModel"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//DataModel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="constraint" upperBound="-1"
-        eType="#//ConstraintModel"/>
+        eType="#//ConstraintModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="entrySchema" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PolicyDefinitionModel">
@@ -174,45 +178,48 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//PropertyAssignmentModel"/>
+        eType="#//PropertyAssignmentModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targets" eType="#//StringArray"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PolicyTypeModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//VersionModel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//PropertyModel"/>
+        eType="#//PropertyModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targets" eType="#//StringArray"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PropertyAssignmentModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//DataModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//DataModel"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PropertyModel">
     <eOperations name="getRequired" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataValue" eType="#//DataModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataValue" eType="#//DataModel"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="constraint" upperBound="-1"
-        eType="#//ConstraintModel"/>
+        eType="#//ConstraintModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="entrySchema" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//DataModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//DataModel"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RelationshipDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//VersionModel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//PropertyModel"/>
+        eType="#//PropertyModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
-        eType="#//AttributeDefinitionModel"/>
+        eType="#//AttributeDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
-        eType="#//InterfaceTypeModel"/>
+        eType="#//InterfaceTypeModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="validTargetTypes" eType="#//StringArray"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RelationshipTemplateModel">
@@ -220,11 +227,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//PropertyModel"/>
+        eType="#//PropertyModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
-        eType="#//AttributeAssignmentModel"/>
+        eType="#//AttributeAssignmentModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
-        eType="#//InterfaceDefinitionModel"/>
+        eType="#//InterfaceDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="copy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RepositoryDefinitionModel">
@@ -242,50 +249,48 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="node" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="relationship_type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relationship_definition"
-        eType="#//RelationshipDefinitionModel"/>
+        eType="#//RelationshipDefinitionModel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceTemplateModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="repositories" upperBound="-1"
-        eType="#//RepositoryDefinitionModel"/>
+        eType="#//RepositoryDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
-        eType="#//ImportDefinitionModel"/>
+        eType="#//ImportDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifactTypes" upperBound="-1"
-        eType="#//ArtifactTypeModel"/>
+        eType="#//ArtifactTypeModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataTypes" upperBound="-1"
-        eType="#//DatatypeDefinitionModel"/>
+        eType="#//DatatypeDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="capabilityTypes" upperBound="-1"
-        eType="#//CapabilityDefinitionModel"/>
+        eType="#//CapabilityDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceTypes" upperBound="-1"
-        eType="#//InterfaceTypeModel"/>
+        eType="#//InterfaceTypeModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relationshipTypes" upperBound="-1"
-        eType="#//RelationshipDefinitionModel"/>
+        eType="#//RelationshipDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nodeTypes" upperBound="-1"
-        eType="#//NodeDefinitionModel"/>
+        eType="#//NodeDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="groupTypes" upperBound="-1"
-        eType="#//GroupDefinitionModel"/>
+        eType="#//GroupDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="policyTypes" upperBound="-1"
-        eType="#//PolicyDefinitionModel"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="topologyTemplate" eType="#//TopologyTemplateModel"/>
+        eType="#//PolicyDefinitionModel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topologyTemplate" eType="#//TopologyTemplateModel"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TopologyTemplateModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
-        eType="#//ParameterDefinitionModel"/>
+        eType="#//ParameterDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nodeTemplates" upperBound="-1"
-        eType="#//NodeTemplateModel"/>
+        eType="#//NodeTemplateModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relationshipTemplates"
-        upperBound="-1" eType="#//RelationshipTemplateModel"/>
+        upperBound="-1" eType="#//RelationshipTemplateModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="groups" upperBound="-1"
-        eType="#//GroupDefinitionModel"/>
+        eType="#//GroupDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="policies" upperBound="-1"
-        eType="#//PolicyDefinitionModel"/>
+        eType="#//PolicyDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" upperBound="-1"
-        eType="#//ParameterDefinitionModel"/>
+        eType="#//ParameterDefinitionModel" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Serializable" instanceClassName="java.io.Serializable"
-      abstract="true" interface="true"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="VersionModel" instanceClassName="kr.ac.hanyang.tosca2camp.rest.model.VersionModel"/>
   <eClassifiers xsi:type="ecore:EDataType" name="StringArray" instanceClassName="java.lang.String[]"/>
 </ecore:EPackage>

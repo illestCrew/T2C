@@ -15,14 +15,17 @@ import kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,15 +44,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.TopologyTemplateModelImpl#getOutputs <em>Outputs</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class TopologyTemplateModelImpl extends MinimalEObjectImpl.Container implements TopologyTemplateModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -7424046592307326981L;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -72,7 +73,7 @@ public class TopologyTemplateModelImpl extends MinimalEObjectImpl.Container impl
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' reference list.
+	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInputs()
@@ -82,7 +83,7 @@ public class TopologyTemplateModelImpl extends MinimalEObjectImpl.Container impl
 	protected EList<ParameterDefinitionModel> inputs;
 
 	/**
-	 * The cached value of the '{@link #getNodeTemplates() <em>Node Templates</em>}' reference list.
+	 * The cached value of the '{@link #getNodeTemplates() <em>Node Templates</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getNodeTemplates()
@@ -92,7 +93,7 @@ public class TopologyTemplateModelImpl extends MinimalEObjectImpl.Container impl
 	protected EList<NodeTemplateModel> nodeTemplates;
 
 	/**
-	 * The cached value of the '{@link #getRelationshipTemplates() <em>Relationship Templates</em>}' reference list.
+	 * The cached value of the '{@link #getRelationshipTemplates() <em>Relationship Templates</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRelationshipTemplates()
@@ -102,7 +103,7 @@ public class TopologyTemplateModelImpl extends MinimalEObjectImpl.Container impl
 	protected EList<RelationshipTemplateModel> relationshipTemplates;
 
 	/**
-	 * The cached value of the '{@link #getGroups() <em>Groups</em>}' reference list.
+	 * The cached value of the '{@link #getGroups() <em>Groups</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGroups()
@@ -112,7 +113,7 @@ public class TopologyTemplateModelImpl extends MinimalEObjectImpl.Container impl
 	protected EList<GroupDefinitionModel> groups;
 
 	/**
-	 * The cached value of the '{@link #getPolicies() <em>Policies</em>}' reference list.
+	 * The cached value of the '{@link #getPolicies() <em>Policies</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPolicies()
@@ -122,7 +123,7 @@ public class TopologyTemplateModelImpl extends MinimalEObjectImpl.Container impl
 	protected EList<PolicyDefinitionModel> policies;
 
 	/**
-	 * The cached value of the '{@link #getOutputs() <em>Outputs</em>}' reference list.
+	 * The cached value of the '{@link #getOutputs() <em>Outputs</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOutputs()
@@ -178,7 +179,7 @@ public class TopologyTemplateModelImpl extends MinimalEObjectImpl.Container impl
 	 */
 	public EList<ParameterDefinitionModel> getInputs() {
 		if (inputs == null) {
-			inputs = new EObjectResolvingEList<ParameterDefinitionModel>(ParameterDefinitionModel.class, this, ModelPackage.TOPOLOGY_TEMPLATE_MODEL__INPUTS);
+			inputs = new EObjectContainmentEList<ParameterDefinitionModel>(ParameterDefinitionModel.class, this, ModelPackage.TOPOLOGY_TEMPLATE_MODEL__INPUTS);
 		}
 		return inputs;
 	}
@@ -190,7 +191,7 @@ public class TopologyTemplateModelImpl extends MinimalEObjectImpl.Container impl
 	 */
 	public EList<NodeTemplateModel> getNodeTemplates() {
 		if (nodeTemplates == null) {
-			nodeTemplates = new EObjectResolvingEList<NodeTemplateModel>(NodeTemplateModel.class, this, ModelPackage.TOPOLOGY_TEMPLATE_MODEL__NODE_TEMPLATES);
+			nodeTemplates = new EObjectContainmentEList<NodeTemplateModel>(NodeTemplateModel.class, this, ModelPackage.TOPOLOGY_TEMPLATE_MODEL__NODE_TEMPLATES);
 		}
 		return nodeTemplates;
 	}
@@ -202,7 +203,7 @@ public class TopologyTemplateModelImpl extends MinimalEObjectImpl.Container impl
 	 */
 	public EList<RelationshipTemplateModel> getRelationshipTemplates() {
 		if (relationshipTemplates == null) {
-			relationshipTemplates = new EObjectResolvingEList<RelationshipTemplateModel>(RelationshipTemplateModel.class, this, ModelPackage.TOPOLOGY_TEMPLATE_MODEL__RELATIONSHIP_TEMPLATES);
+			relationshipTemplates = new EObjectContainmentEList<RelationshipTemplateModel>(RelationshipTemplateModel.class, this, ModelPackage.TOPOLOGY_TEMPLATE_MODEL__RELATIONSHIP_TEMPLATES);
 		}
 		return relationshipTemplates;
 	}
@@ -214,7 +215,7 @@ public class TopologyTemplateModelImpl extends MinimalEObjectImpl.Container impl
 	 */
 	public EList<GroupDefinitionModel> getGroups() {
 		if (groups == null) {
-			groups = new EObjectResolvingEList<GroupDefinitionModel>(GroupDefinitionModel.class, this, ModelPackage.TOPOLOGY_TEMPLATE_MODEL__GROUPS);
+			groups = new EObjectContainmentEList<GroupDefinitionModel>(GroupDefinitionModel.class, this, ModelPackage.TOPOLOGY_TEMPLATE_MODEL__GROUPS);
 		}
 		return groups;
 	}
@@ -226,7 +227,7 @@ public class TopologyTemplateModelImpl extends MinimalEObjectImpl.Container impl
 	 */
 	public EList<PolicyDefinitionModel> getPolicies() {
 		if (policies == null) {
-			policies = new EObjectResolvingEList<PolicyDefinitionModel>(PolicyDefinitionModel.class, this, ModelPackage.TOPOLOGY_TEMPLATE_MODEL__POLICIES);
+			policies = new EObjectContainmentEList<PolicyDefinitionModel>(PolicyDefinitionModel.class, this, ModelPackage.TOPOLOGY_TEMPLATE_MODEL__POLICIES);
 		}
 		return policies;
 	}
@@ -238,9 +239,33 @@ public class TopologyTemplateModelImpl extends MinimalEObjectImpl.Container impl
 	 */
 	public EList<ParameterDefinitionModel> getOutputs() {
 		if (outputs == null) {
-			outputs = new EObjectResolvingEList<ParameterDefinitionModel>(ParameterDefinitionModel.class, this, ModelPackage.TOPOLOGY_TEMPLATE_MODEL__OUTPUTS);
+			outputs = new EObjectContainmentEList<ParameterDefinitionModel>(ParameterDefinitionModel.class, this, ModelPackage.TOPOLOGY_TEMPLATE_MODEL__OUTPUTS);
 		}
 		return outputs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.TOPOLOGY_TEMPLATE_MODEL__INPUTS:
+				return ((InternalEList<?>)getInputs()).basicRemove(otherEnd, msgs);
+			case ModelPackage.TOPOLOGY_TEMPLATE_MODEL__NODE_TEMPLATES:
+				return ((InternalEList<?>)getNodeTemplates()).basicRemove(otherEnd, msgs);
+			case ModelPackage.TOPOLOGY_TEMPLATE_MODEL__RELATIONSHIP_TEMPLATES:
+				return ((InternalEList<?>)getRelationshipTemplates()).basicRemove(otherEnd, msgs);
+			case ModelPackage.TOPOLOGY_TEMPLATE_MODEL__GROUPS:
+				return ((InternalEList<?>)getGroups()).basicRemove(otherEnd, msgs);
+			case ModelPackage.TOPOLOGY_TEMPLATE_MODEL__POLICIES:
+				return ((InternalEList<?>)getPolicies()).basicRemove(otherEnd, msgs);
+			case ModelPackage.TOPOLOGY_TEMPLATE_MODEL__OUTPUTS:
+				return ((InternalEList<?>)getOutputs()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

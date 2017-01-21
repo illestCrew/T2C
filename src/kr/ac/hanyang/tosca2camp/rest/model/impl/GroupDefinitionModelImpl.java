@@ -13,14 +13,17 @@ import kr.ac.hanyang.tosca2camp.rest.model.PropertyAssignmentModel;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,15 +41,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.GroupDefinitionModelImpl#getInterfaces <em>Interfaces</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class GroupDefinitionModelImpl extends MinimalEObjectImpl.Container implements GroupDefinitionModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 6403448635473252890L;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -109,7 +110,7 @@ public class GroupDefinitionModelImpl extends MinimalEObjectImpl.Container imple
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' reference list.
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProperties()
@@ -119,7 +120,7 @@ public class GroupDefinitionModelImpl extends MinimalEObjectImpl.Container imple
 	protected EList<PropertyAssignmentModel> properties;
 
 	/**
-	 * The cached value of the '{@link #getMembers() <em>Members</em>}' reference list.
+	 * The cached value of the '{@link #getMembers() <em>Members</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getMembers()
@@ -129,7 +130,7 @@ public class GroupDefinitionModelImpl extends MinimalEObjectImpl.Container imple
 	protected EList<NodeTemplateModel> members;
 
 	/**
-	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' reference list.
+	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInterfaces()
@@ -227,7 +228,7 @@ public class GroupDefinitionModelImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<PropertyAssignmentModel> getProperties() {
 		if (properties == null) {
-			properties = new EObjectResolvingEList<PropertyAssignmentModel>(PropertyAssignmentModel.class, this, ModelPackage.GROUP_DEFINITION_MODEL__PROPERTIES);
+			properties = new EObjectContainmentEList<PropertyAssignmentModel>(PropertyAssignmentModel.class, this, ModelPackage.GROUP_DEFINITION_MODEL__PROPERTIES);
 		}
 		return properties;
 	}
@@ -239,7 +240,7 @@ public class GroupDefinitionModelImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<NodeTemplateModel> getMembers() {
 		if (members == null) {
-			members = new EObjectResolvingEList<NodeTemplateModel>(NodeTemplateModel.class, this, ModelPackage.GROUP_DEFINITION_MODEL__MEMBERS);
+			members = new EObjectContainmentEList<NodeTemplateModel>(NodeTemplateModel.class, this, ModelPackage.GROUP_DEFINITION_MODEL__MEMBERS);
 		}
 		return members;
 	}
@@ -251,9 +252,27 @@ public class GroupDefinitionModelImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<InterfaceTypeModel> getInterfaces() {
 		if (interfaces == null) {
-			interfaces = new EObjectResolvingEList<InterfaceTypeModel>(InterfaceTypeModel.class, this, ModelPackage.GROUP_DEFINITION_MODEL__INTERFACES);
+			interfaces = new EObjectContainmentEList<InterfaceTypeModel>(InterfaceTypeModel.class, this, ModelPackage.GROUP_DEFINITION_MODEL__INTERFACES);
 		}
 		return interfaces;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.GROUP_DEFINITION_MODEL__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+			case ModelPackage.GROUP_DEFINITION_MODEL__MEMBERS:
+				return ((InternalEList<?>)getMembers()).basicRemove(otherEnd, msgs);
+			case ModelPackage.GROUP_DEFINITION_MODEL__INTERFACES:
+				return ((InternalEList<?>)getInterfaces()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

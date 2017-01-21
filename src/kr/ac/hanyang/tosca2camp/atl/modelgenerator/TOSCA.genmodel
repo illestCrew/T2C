@@ -1,238 +1,236 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/tosca2camp/src" modelPluginID="tosca2camp" modelName="TOSCA"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/T2C/src" modelPluginID="T2C" modelName="TOSCA"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.java"
     complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>@model</foreignModel>
   <genPackages prefix="Model" basePackage="kr.ac.hanyang.tosca2camp.rest" disposableProviderFactory="true"
-      ecorePackage="TOSCA.ecore#/">
-    <genDataTypes ecoreDataType="TOSCA.ecore#//VersionModel"/>
-    <genDataTypes ecoreDataType="TOSCA.ecore#//StringArray"/>
-    <genClasses ecoreClass="TOSCA.ecore#//ArtifactDefinitionModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ArtifactDefinitionModel/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ArtifactDefinitionModel/file"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ArtifactDefinitionModel/repository"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ArtifactDefinitionModel/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ArtifactDefinitionModel/deploy_path"/>
+      ecorePackage="model.ecore#/">
+    <genDataTypes ecoreDataType="model.ecore#//StringArray"/>
+    <genClasses ecoreClass="model.ecore#//ArtifactDefinitionModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ArtifactDefinitionModel/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ArtifactDefinitionModel/file"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ArtifactDefinitionModel/repository"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ArtifactDefinitionModel/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ArtifactDefinitionModel/deploy_path"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//ArtifactTypeModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ArtifactTypeModel/typeName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ArtifactTypeModel/derivedFrom"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ArtifactTypeModel/version"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ArtifactTypeModel/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ArtifactTypeModel/mime_type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ArtifactTypeModel/file_ext"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ArtifactTypeModel/properties"/>
+    <genClasses ecoreClass="model.ecore#//ArtifactTypeModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ArtifactTypeModel/typeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ArtifactTypeModel/derivedFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ArtifactTypeModel/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ArtifactTypeModel/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ArtifactTypeModel/mime_type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ArtifactTypeModel/file_ext"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ArtifactTypeModel/properties"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//AttributeAssignmentModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//AttributeAssignmentModel/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//AttributeAssignmentModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//AttributeAssignmentModel/value"/>
+    <genClasses ecoreClass="model.ecore#//AttributeAssignmentModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AttributeAssignmentModel/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AttributeAssignmentModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//AttributeAssignmentModel/value"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//AttributeDefinitionModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//AttributeDefinitionModel/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//AttributeDefinitionModel/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//AttributeDefinitionModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//AttributeDefinitionModel/dataValue"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//AttributeDefinitionModel/status"/>
+    <genClasses ecoreClass="model.ecore#//AttributeDefinitionModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AttributeDefinitionModel/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AttributeDefinitionModel/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AttributeDefinitionModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//AttributeDefinitionModel/dataValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AttributeDefinitionModel/status"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//CapabilityAssignmentModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//CapabilityAssignmentModel/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//CapabilityAssignmentModel/properties"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//CapabilityAssignmentModel/attributes"/>
+    <genClasses ecoreClass="model.ecore#//CapabilityAssignmentModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//CapabilityAssignmentModel/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//CapabilityAssignmentModel/properties"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//CapabilityAssignmentModel/attributes"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//CapabilityDefinitionModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//CapabilityDefinitionModel/typeName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//CapabilityDefinitionModel/derivedFrom"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//CapabilityDefinitionModel/version"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//CapabilityDefinitionModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//CapabilityDefinitionModel/properties"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//CapabilityDefinitionModel/attributes"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//CapabilityDefinitionModel/validSources"/>
+    <genClasses ecoreClass="model.ecore#//CapabilityDefinitionModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//CapabilityDefinitionModel/typeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//CapabilityDefinitionModel/derivedFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//CapabilityDefinitionModel/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//CapabilityDefinitionModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//CapabilityDefinitionModel/properties"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//CapabilityDefinitionModel/attributes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//CapabilityDefinitionModel/validSources"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//ConstraintModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ConstraintModel/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ConstraintModel/value"/>
+    <genClasses ecoreClass="model.ecore#//ConstraintModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ConstraintModel/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ConstraintModel/value"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//DataModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//DataModel/value"/>
+    <genClasses ecoreClass="model.ecore#//DataModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DataModel/value"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//DatatypeDefinitionModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//DatatypeDefinitionModel/typeName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//DatatypeDefinitionModel/derivedFrom"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//DatatypeDefinitionModel/version"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//DatatypeDefinitionModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//DatatypeDefinitionModel/constraints"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//DatatypeDefinitionModel/properties"/>
+    <genClasses ecoreClass="model.ecore#//DatatypeDefinitionModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DatatypeDefinitionModel/typeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DatatypeDefinitionModel/derivedFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DatatypeDefinitionModel/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DatatypeDefinitionModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//DatatypeDefinitionModel/constraints"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//DatatypeDefinitionModel/properties"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//FunctionModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//FunctionModel/typeName"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//FunctionModel/parameters"/>
+    <genClasses ecoreClass="model.ecore#//FunctionModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//FunctionModel/typeName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//FunctionModel/parameters"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//GroupDefinitionModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//GroupDefinitionModel/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//GroupDefinitionModel/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//GroupDefinitionModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//GroupDefinitionModel/properties"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//GroupDefinitionModel/members"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//GroupDefinitionModel/interfaces"/>
+    <genClasses ecoreClass="model.ecore#//GroupDefinitionModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//GroupDefinitionModel/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//GroupDefinitionModel/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//GroupDefinitionModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//GroupDefinitionModel/properties"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//GroupDefinitionModel/members"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//GroupDefinitionModel/interfaces"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//GroupTypeModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//GroupTypeModel/typeName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//GroupTypeModel/derivedFrom"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//GroupTypeModel/version"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//GroupTypeModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//GroupTypeModel/properties"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//GroupTypeModel/members"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//GroupTypeModel/interfaces"/>
+    <genClasses ecoreClass="model.ecore#//GroupTypeModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//GroupTypeModel/typeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//GroupTypeModel/derivedFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//GroupTypeModel/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//GroupTypeModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//GroupTypeModel/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//GroupTypeModel/members"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//GroupTypeModel/interfaces"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//ImportDefinitionModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ImportDefinitionModel/file"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ImportDefinitionModel/repository"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ImportDefinitionModel/namespaceUri"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ImportDefinitionModel/namespacePrefix"/>
+    <genClasses ecoreClass="model.ecore#//ImportDefinitionModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ImportDefinitionModel/file"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ImportDefinitionModel/repository"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ImportDefinitionModel/namespaceUri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ImportDefinitionModel/namespacePrefix"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//InterfaceDefinitionModel">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//InterfaceDefinitionModel/inputs"/>
+    <genClasses ecoreClass="model.ecore#//InterfaceDefinitionModel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//InterfaceDefinitionModel/inputs"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//InterfaceTypeModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//InterfaceTypeModel/typeName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//InterfaceTypeModel/derivedFrom"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//InterfaceTypeModel/version"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//InterfaceTypeModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//InterfaceTypeModel/inputs"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//InterfaceTypeModel/operations"/>
+    <genClasses ecoreClass="model.ecore#//InterfaceTypeModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//InterfaceTypeModel/typeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//InterfaceTypeModel/derivedFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//InterfaceTypeModel/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//InterfaceTypeModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//InterfaceTypeModel/inputs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//InterfaceTypeModel/operations"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//NodeDefinitionModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//NodeDefinitionModel/typeName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//NodeDefinitionModel/derivedFrom"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//NodeDefinitionModel/version"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//NodeDefinitionModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//NodeDefinitionModel/properties"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//NodeDefinitionModel/attributes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//NodeDefinitionModel/requirements"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//NodeDefinitionModel/capabilities"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//NodeDefinitionModel/interfaces"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//NodeDefinitionModel/artifacts"/>
+    <genClasses ecoreClass="model.ecore#//NodeDefinitionModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//NodeDefinitionModel/typeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//NodeDefinitionModel/derivedFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//NodeDefinitionModel/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//NodeDefinitionModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//NodeDefinitionModel/properties"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//NodeDefinitionModel/attributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//NodeDefinitionModel/requirements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//NodeDefinitionModel/capabilities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//NodeDefinitionModel/interfaces"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//NodeDefinitionModel/artifacts"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//NodeTemplateModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//NodeTemplateModel/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//NodeTemplateModel/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//NodeTemplateModel/directives"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//NodeTemplateModel/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference TOSCA.ecore#//NodeTemplateModel/properties"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference TOSCA.ecore#//NodeTemplateModel/attributes"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference TOSCA.ecore#//NodeTemplateModel/requirements"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference TOSCA.ecore#//NodeTemplateModel/capabilities"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference TOSCA.ecore#//NodeTemplateModel/interfaces"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference TOSCA.ecore#//NodeTemplateModel/artifacts"/>
+    <genClasses ecoreClass="model.ecore#//NodeTemplateModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//NodeTemplateModel/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//NodeTemplateModel/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//NodeTemplateModel/directives"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//NodeTemplateModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//NodeTemplateModel/properties"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//NodeTemplateModel/attributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//NodeTemplateModel/requirements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//NodeTemplateModel/capabilities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//NodeTemplateModel/interfaces"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//NodeTemplateModel/artifacts"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//OperationDefinitionModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//OperationDefinitionModel/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//OperationDefinitionModel/implementation"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//OperationDefinitionModel/inputs_definitions"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//OperationDefinitionModel/inputs_assignments"/>
+    <genClasses ecoreClass="model.ecore#//OperationDefinitionModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//OperationDefinitionModel/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//OperationDefinitionModel/implementation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//OperationDefinitionModel/inputs_definitions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//OperationDefinitionModel/inputs_assignments"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//ParameterDefinitionModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ParameterDefinitionModel/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ParameterDefinitionModel/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ParameterDefinitionModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ParameterDefinitionModel/dataValue"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ParameterDefinitionModel/value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ParameterDefinitionModel/status"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ParameterDefinitionModel/constraint"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ParameterDefinitionModel/entrySchema"/>
-      <genOperations ecoreOperation="TOSCA.ecore#//ParameterDefinitionModel/getRequired"/>
+    <genClasses ecoreClass="model.ecore#//ParameterDefinitionModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ParameterDefinitionModel/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ParameterDefinitionModel/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ParameterDefinitionModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ParameterDefinitionModel/dataValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ParameterDefinitionModel/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ParameterDefinitionModel/status"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ParameterDefinitionModel/constraint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ParameterDefinitionModel/entrySchema"/>
+      <genOperations ecoreOperation="model.ecore#//ParameterDefinitionModel/getRequired"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//PolicyDefinitionModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//PolicyDefinitionModel/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//PolicyDefinitionModel/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//PolicyDefinitionModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//PolicyDefinitionModel/properties"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//PolicyDefinitionModel/targets"/>
+    <genClasses ecoreClass="model.ecore#//PolicyDefinitionModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PolicyDefinitionModel/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PolicyDefinitionModel/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PolicyDefinitionModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//PolicyDefinitionModel/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PolicyDefinitionModel/targets"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//PolicyTypeModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//PolicyTypeModel/typeName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//PolicyTypeModel/derivedFrom"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//PolicyTypeModel/version"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//PolicyTypeModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//PolicyTypeModel/properties"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//PolicyTypeModel/targets"/>
+    <genClasses ecoreClass="model.ecore#//PolicyTypeModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PolicyTypeModel/typeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PolicyTypeModel/derivedFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PolicyTypeModel/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PolicyTypeModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//PolicyTypeModel/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PolicyTypeModel/targets"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//PropertyAssignmentModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//PropertyAssignmentModel/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//PropertyAssignmentModel/value"/>
+    <genClasses ecoreClass="model.ecore#//PropertyAssignmentModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PropertyAssignmentModel/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//PropertyAssignmentModel/value"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//PropertyModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//PropertyModel/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//PropertyModel/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//PropertyModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//PropertyModel/dataValue"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//PropertyModel/status"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//PropertyModel/constraint"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//PropertyModel/entrySchema"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//PropertyModel/value"/>
-      <genOperations ecoreOperation="TOSCA.ecore#//PropertyModel/getRequired"/>
+    <genClasses ecoreClass="model.ecore#//PropertyModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PropertyModel/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PropertyModel/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PropertyModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//PropertyModel/dataValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PropertyModel/status"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//PropertyModel/constraint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PropertyModel/entrySchema"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//PropertyModel/value"/>
+      <genOperations ecoreOperation="model.ecore#//PropertyModel/getRequired"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//RelationshipDefinitionModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RelationshipDefinitionModel/typeName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RelationshipDefinitionModel/derivedFrom"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RelationshipDefinitionModel/version"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RelationshipDefinitionModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//RelationshipDefinitionModel/properties"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//RelationshipDefinitionModel/attributes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//RelationshipDefinitionModel/interfaces"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RelationshipDefinitionModel/validTargetTypes"/>
+    <genClasses ecoreClass="model.ecore#//RelationshipDefinitionModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RelationshipDefinitionModel/typeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RelationshipDefinitionModel/derivedFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RelationshipDefinitionModel/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RelationshipDefinitionModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//RelationshipDefinitionModel/properties"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//RelationshipDefinitionModel/attributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//RelationshipDefinitionModel/interfaces"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RelationshipDefinitionModel/validTargetTypes"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//RelationshipTemplateModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RelationshipTemplateModel/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RelationshipTemplateModel/typeName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RelationshipTemplateModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//RelationshipTemplateModel/properties"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//RelationshipTemplateModel/attributes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//RelationshipTemplateModel/interfaces"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RelationshipTemplateModel/copy"/>
+    <genClasses ecoreClass="model.ecore#//RelationshipTemplateModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RelationshipTemplateModel/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RelationshipTemplateModel/typeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RelationshipTemplateModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//RelationshipTemplateModel/properties"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//RelationshipTemplateModel/attributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//RelationshipTemplateModel/interfaces"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RelationshipTemplateModel/copy"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//RepositoryDefinitionModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RepositoryDefinitionModel/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RepositoryDefinitionModel/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RepositoryDefinitionModel/credential"/>
+    <genClasses ecoreClass="model.ecore#//RepositoryDefinitionModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RepositoryDefinitionModel/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RepositoryDefinitionModel/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RepositoryDefinitionModel/credential"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//RequirementAssignmentModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RequirementAssignmentModel/capability"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RequirementAssignmentModel/node"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RequirementAssignmentModel/relationship"/>
+    <genClasses ecoreClass="model.ecore#//RequirementAssignmentModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RequirementAssignmentModel/capability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RequirementAssignmentModel/node"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RequirementAssignmentModel/relationship"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//RequirementDefinitionModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RequirementDefinitionModel/capability"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RequirementDefinitionModel/node"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//RequirementDefinitionModel/relationship_type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//RequirementDefinitionModel/relationship_definition"/>
+    <genClasses ecoreClass="model.ecore#//RequirementDefinitionModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RequirementDefinitionModel/capability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RequirementDefinitionModel/node"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RequirementDefinitionModel/relationship_type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//RequirementDefinitionModel/relationship_definition"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//ServiceTemplateModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ServiceTemplateModel/version"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//ServiceTemplateModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ServiceTemplateModel/repositories"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ServiceTemplateModel/imports"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ServiceTemplateModel/artifactTypes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ServiceTemplateModel/dataTypes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ServiceTemplateModel/capabilityTypes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ServiceTemplateModel/interfaceTypes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ServiceTemplateModel/relationshipTypes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ServiceTemplateModel/nodeTypes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ServiceTemplateModel/groupTypes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ServiceTemplateModel/policyTypes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//ServiceTemplateModel/topologyTemplate"/>
+    <genClasses ecoreClass="model.ecore#//ServiceTemplateModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ServiceTemplateModel/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ServiceTemplateModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ServiceTemplateModel/repositories"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ServiceTemplateModel/imports"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ServiceTemplateModel/artifactTypes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ServiceTemplateModel/dataTypes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ServiceTemplateModel/capabilityTypes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ServiceTemplateModel/interfaceTypes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ServiceTemplateModel/relationshipTypes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ServiceTemplateModel/nodeTypes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ServiceTemplateModel/groupTypes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ServiceTemplateModel/policyTypes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ServiceTemplateModel/topologyTemplate"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA.ecore#//TopologyTemplateModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA.ecore#//TopologyTemplateModel/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//TopologyTemplateModel/inputs"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//TopologyTemplateModel/nodeTemplates"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//TopologyTemplateModel/relationshipTemplates"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//TopologyTemplateModel/groups"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//TopologyTemplateModel/policies"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TOSCA.ecore#//TopologyTemplateModel/outputs"/>
+    <genClasses ecoreClass="model.ecore#//TopologyTemplateModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//TopologyTemplateModel/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//TopologyTemplateModel/inputs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//TopologyTemplateModel/nodeTemplates"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//TopologyTemplateModel/relationshipTemplates"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//TopologyTemplateModel/groups"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//TopologyTemplateModel/policies"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//TopologyTemplateModel/outputs"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="TOSCA.ecore#//Serializable"/>
   </genPackages>
 </genmodel:GenModel>

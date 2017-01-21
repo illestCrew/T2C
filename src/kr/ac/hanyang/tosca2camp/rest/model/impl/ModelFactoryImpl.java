@@ -2,8 +2,6 @@
  */
 package kr.ac.hanyang.tosca2camp.rest.model.impl;
 
-import java.util.Map;
-
 import kr.ac.hanyang.tosca2camp.rest.model.*;
 
 import org.eclipse.emf.ecore.EClass;
@@ -102,12 +100,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case ModelPackage.VERSION_MODEL:
-				return createVersionModelFromString(eDataType, initialValue);
 			case ModelPackage.STRING_ARRAY:
 				return createStringArrayFromString(eDataType, initialValue);
-//			case ModelPackage.MAP:
-//				return createMapFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -121,12 +115,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case ModelPackage.VERSION_MODEL:
-				return convertVersionModelToString(eDataType, instanceValue);
 			case ModelPackage.STRING_ARRAY:
 				return convertStringArrayToString(eDataType, instanceValue);
-//			case ModelPackage.MAP:
-//				return convertMapToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -431,24 +421,24 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 		TopologyTemplateModelImpl topologyTemplateModel = new TopologyTemplateModelImpl();
 		return topologyTemplateModel;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VersionModel createVersionModelFromString(EDataType eDataType, String initialValue) {
-		return (VersionModel)super.createFromString(eDataType, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertVersionModelToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
-	}
+//
+//	/**
+//	 * <!-- begin-user-doc -->
+//	 * <!-- end-user-doc -->
+//	 * @generated
+//	 */
+//	public String createVersionModelFromString(EDataType eDataType, String initialValue) {
+//		return (String)super.createFromString(eDataType, initialValue);
+//	}
+//
+//	/**
+//	 * <!-- begin-user-doc -->
+//	 * <!-- end-user-doc -->
+//	 * @generated
+//	 */
+//	public String convertVersionModelToString(EDataType eDataType, Object instanceValue) {
+//		return super.convertToString(eDataType, instanceValue);
+//	}
 
 	/**
 	 * <!-- begin-user-doc -->

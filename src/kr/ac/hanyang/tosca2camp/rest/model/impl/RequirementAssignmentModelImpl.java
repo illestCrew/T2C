@@ -27,15 +27,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.RequirementAssignmentModelImpl#getRelationship <em>Relationship</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class RequirementAssignmentModelImpl extends MinimalEObjectImpl.Container implements RequirementAssignmentModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -7889160460992594372L;
 
 	/**
 	 * The default value of the '{@link #getCapability() <em>Capability</em>}' attribute.

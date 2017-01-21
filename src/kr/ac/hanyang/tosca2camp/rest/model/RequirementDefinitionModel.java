@@ -1,13 +1,11 @@
 package kr.ac.hanyang.tosca2camp.rest.model;
 
-import java.io.Serializable;
-
 import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.ecore.EObject;
 /**
  * @model 
  */
-public interface RequirementDefinitionModel extends EObject{//  implements EObject, Serializable{
+public interface RequirementDefinitionModel extends EObject{
 	
 
 	/**
@@ -90,10 +88,10 @@ public interface RequirementDefinitionModel extends EObject{//  implements EObje
 	public RelationshipDefinitionModel getRelationship_definition();
 
 	/**
-	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.RequirementDefinitionModel#getRelationship_definition <em>Relationship definition</em>}' reference.
+	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.RequirementDefinitionModel#getRelationship_definition <em>Relationship definition</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Relationship definition</em>' reference.
+	 * @param value the new value of the '<em>Relationship definition</em>' containment reference.
 	 * @see #getRelationship_definition()
 	 * @generated
 	 */

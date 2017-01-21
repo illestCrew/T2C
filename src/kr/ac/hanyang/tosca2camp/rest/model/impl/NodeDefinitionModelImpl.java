@@ -13,18 +13,21 @@ import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 import kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.PropertyModel;
 import kr.ac.hanyang.tosca2camp.rest.model.RequirementDefinitionModel;
-import kr.ac.hanyang.tosca2camp.rest.model.VersionModel;
+
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,15 +49,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.NodeDefinitionModelImpl#getArtifacts <em>Artifacts</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implements NodeDefinitionModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -723463605108751884L;
 
 	/**
 	 * The default value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
@@ -104,7 +105,7 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected static final VersionModel VERSION_EDEFAULT = null;
+	protected static final String VERSION_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute.
@@ -114,7 +115,7 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected VersionModel version = VERSION_EDEFAULT;
+	protected String version = VERSION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -137,7 +138,7 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' reference list.
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProperties()
@@ -147,7 +148,7 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	protected EList<PropertyModel> properties;
 
 	/**
-	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' reference list.
+	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAttributes()
@@ -157,7 +158,7 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	protected EList<AttributeDefinitionModel> attributes;
 
 	/**
-	 * The cached value of the '{@link #getRequirements() <em>Requirements</em>}' reference list.
+	 * The cached value of the '{@link #getRequirements() <em>Requirements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRequirements()
@@ -167,7 +168,7 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	protected EList<RequirementDefinitionModel> requirements;
 
 	/**
-	 * The cached value of the '{@link #getCapabilities() <em>Capabilities</em>}' reference list.
+	 * The cached value of the '{@link #getCapabilities() <em>Capabilities</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCapabilities()
@@ -177,7 +178,7 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	protected EList<CapabilityDefinitionModel> capabilities;
 
 	/**
-	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' reference list.
+	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInterfaces()
@@ -187,7 +188,7 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	protected EList<InterfaceTypeModel> interfaces;
 
 	/**
-	 * The cached value of the '{@link #getArtifacts() <em>Artifacts</em>}' reference list.
+	 * The cached value of the '{@link #getArtifacts() <em>Artifacts</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getArtifacts()
@@ -262,7 +263,7 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VersionModel getVersion() {
+	public String getVersion() {
 		return version;
 	}
 
@@ -271,8 +272,8 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVersion(VersionModel newVersion) {
-		VersionModel oldVersion = version;
+	public void setVersion(String newVersion) {
+		String oldVersion = version;
 		version = newVersion;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.NODE_DEFINITION_MODEL__VERSION, oldVersion, version));
@@ -306,7 +307,7 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	 */
 	public EList<PropertyModel> getProperties() {
 		if (properties == null) {
-			properties = new EObjectResolvingEList<PropertyModel>(PropertyModel.class, this, ModelPackage.NODE_DEFINITION_MODEL__PROPERTIES);
+			properties = new EObjectContainmentEList<PropertyModel>(PropertyModel.class, this, ModelPackage.NODE_DEFINITION_MODEL__PROPERTIES);
 		}
 		return properties;
 	}
@@ -318,7 +319,7 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	 */
 	public EList<AttributeDefinitionModel> getAttributes() {
 		if (attributes == null) {
-			attributes = new EObjectResolvingEList<AttributeDefinitionModel>(AttributeDefinitionModel.class, this, ModelPackage.NODE_DEFINITION_MODEL__ATTRIBUTES);
+			attributes = new EObjectContainmentEList<AttributeDefinitionModel>(AttributeDefinitionModel.class, this, ModelPackage.NODE_DEFINITION_MODEL__ATTRIBUTES);
 		}
 		return attributes;
 	}
@@ -330,7 +331,7 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	 */
 	public EList<RequirementDefinitionModel> getRequirements() {
 		if (requirements == null) {
-			requirements = new EObjectResolvingEList<RequirementDefinitionModel>(RequirementDefinitionModel.class, this, ModelPackage.NODE_DEFINITION_MODEL__REQUIREMENTS);
+			requirements = new EObjectContainmentEList<RequirementDefinitionModel>(RequirementDefinitionModel.class, this, ModelPackage.NODE_DEFINITION_MODEL__REQUIREMENTS);
 		}
 		return requirements;
 	}
@@ -342,7 +343,7 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	 */
 	public EList<CapabilityDefinitionModel> getCapabilities() {
 		if (capabilities == null) {
-			capabilities = new EObjectResolvingEList<CapabilityDefinitionModel>(CapabilityDefinitionModel.class, this, ModelPackage.NODE_DEFINITION_MODEL__CAPABILITIES);
+			capabilities = new EObjectContainmentEList<CapabilityDefinitionModel>(CapabilityDefinitionModel.class, this, ModelPackage.NODE_DEFINITION_MODEL__CAPABILITIES);
 		}
 		return capabilities;
 	}
@@ -354,7 +355,7 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	 */
 	public EList<InterfaceTypeModel> getInterfaces() {
 		if (interfaces == null) {
-			interfaces = new EObjectResolvingEList<InterfaceTypeModel>(InterfaceTypeModel.class, this, ModelPackage.NODE_DEFINITION_MODEL__INTERFACES);
+			interfaces = new EObjectContainmentEList<InterfaceTypeModel>(InterfaceTypeModel.class, this, ModelPackage.NODE_DEFINITION_MODEL__INTERFACES);
 		}
 		return interfaces;
 	}
@@ -366,9 +367,33 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 	 */
 	public EList<ArtifactTypeModel> getArtifacts() {
 		if (artifacts == null) {
-			artifacts = new EObjectResolvingEList<ArtifactTypeModel>(ArtifactTypeModel.class, this, ModelPackage.NODE_DEFINITION_MODEL__ARTIFACTS);
+			artifacts = new EObjectContainmentEList<ArtifactTypeModel>(ArtifactTypeModel.class, this, ModelPackage.NODE_DEFINITION_MODEL__ARTIFACTS);
 		}
 		return artifacts;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.NODE_DEFINITION_MODEL__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+			case ModelPackage.NODE_DEFINITION_MODEL__ATTRIBUTES:
+				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
+			case ModelPackage.NODE_DEFINITION_MODEL__REQUIREMENTS:
+				return ((InternalEList<?>)getRequirements()).basicRemove(otherEnd, msgs);
+			case ModelPackage.NODE_DEFINITION_MODEL__CAPABILITIES:
+				return ((InternalEList<?>)getCapabilities()).basicRemove(otherEnd, msgs);
+			case ModelPackage.NODE_DEFINITION_MODEL__INTERFACES:
+				return ((InternalEList<?>)getInterfaces()).basicRemove(otherEnd, msgs);
+			case ModelPackage.NODE_DEFINITION_MODEL__ARTIFACTS:
+				return ((InternalEList<?>)getArtifacts()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -419,7 +444,7 @@ public class NodeDefinitionModelImpl extends MinimalEObjectImpl.Container implem
 				setDerivedFrom((String)newValue);
 				return;
 			case ModelPackage.NODE_DEFINITION_MODEL__VERSION:
-				setVersion((VersionModel)newValue);
+				setVersion((String)newValue);
 				return;
 			case ModelPackage.NODE_DEFINITION_MODEL__DESCRIPTION:
 				setDescription((String)newValue);

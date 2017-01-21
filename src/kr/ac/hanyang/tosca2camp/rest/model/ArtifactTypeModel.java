@@ -1,41 +1,13 @@
 package kr.ac.hanyang.tosca2camp.rest.model;
 
-import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 /**
  * @model 
  */
-public interface ArtifactTypeModel extends EObject{//  implements EObject, Serializable{
-	
-//	/**
-//	 * 
-//	 */
-//	private static final long serialVersionUID = 3060798844214919904L;
-//	private String typeName;
-//	private String derived_from;
-//	private VersionModel version;
-//	private String description;
-//	private String mime_type;
-//	private String[] file_ext;
-//	private List<PropertyModel> properties;
-//	
-//	
-//	private ArtifactTypeModel(){ }
-//	
-//	public static ArtifactTypeModel of(){
-//		return new ArtifactTypeModel();
-//	}
-//	
-//	public ArtifactTypeModel typeName(String name){	this.typeName = name; 	return this; 	}
-//	public ArtifactTypeModel derived_from(String derived_from){	this.derived_from = derived_from; 	return this; 	}
-//	public ArtifactTypeModel version(VersionModel version){	this.version = version; 	return this; 	}
-//	public ArtifactTypeModel description(String description){	this.description = description; 	return this; 	}
-//	public ArtifactTypeModel mime_type(String mime_type){	this.mime_type = mime_type; 	return this; 	}
-//	public ArtifactTypeModel file_ext(String[] file_ext){	this.file_ext = file_ext; 	return this; 	}
-//	public ArtifactTypeModel properties(List<PropertyModel> properties){	this.properties = properties; 	return this; 	}
-	
+public interface ArtifactTypeModel extends EObject{
+
 	/**
 	 * @model 
 	 */
@@ -72,7 +44,7 @@ public interface ArtifactTypeModel extends EObject{//  implements EObject, Seria
 	 * @model 
 	 */
 	@XmlElement(name="version")
-	public VersionModel getVersion();
+	public String getVersion();
 	
 	/**
 	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.ArtifactTypeModel#getVersion <em>Version</em>}' attribute.
@@ -82,7 +54,7 @@ public interface ArtifactTypeModel extends EObject{//  implements EObject, Seria
 	 * @see #getVersion()
 	 * @generated
 	 */
-	void setVersion(VersionModel value);
+	void setVersion(String value);
 
 	/**
 	 * @model 

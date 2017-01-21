@@ -10,6 +10,7 @@ import java.io.Serializable;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -31,15 +32,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.AttributeDefinitionModelImpl#getStatus <em>Status</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class AttributeDefinitionModelImpl extends MinimalEObjectImpl.Container implements AttributeDefinitionModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -3954230563235886536L;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -102,7 +101,7 @@ public class AttributeDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getDataValue() <em>Data Value</em>}' reference.
+	 * The cached value of the '{@link #getDataValue() <em>Data Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDataValue()
@@ -219,14 +218,6 @@ public class AttributeDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public DataModel getDataValue() {
-		if (dataValue != null && dataValue.eIsProxy()) {
-			InternalEObject oldDataValue = (InternalEObject)dataValue;
-			dataValue = (DataModel)eResolveProxy(oldDataValue);
-			if (dataValue != oldDataValue) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.ATTRIBUTE_DEFINITION_MODEL__DATA_VALUE, oldDataValue, dataValue));
-			}
-		}
 		return dataValue;
 	}
 
@@ -235,8 +226,14 @@ public class AttributeDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataModel basicGetDataValue() {
-		return dataValue;
+	public NotificationChain basicSetDataValue(DataModel newDataValue, NotificationChain msgs) {
+		DataModel oldDataValue = dataValue;
+		dataValue = newDataValue;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelPackage.ATTRIBUTE_DEFINITION_MODEL__DATA_VALUE, oldDataValue, newDataValue);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -245,10 +242,17 @@ public class AttributeDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public void setDataValue(DataModel newDataValue) {
-		DataModel oldDataValue = dataValue;
-		dataValue = newDataValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ATTRIBUTE_DEFINITION_MODEL__DATA_VALUE, oldDataValue, dataValue));
+		if (newDataValue != dataValue) {
+			NotificationChain msgs = null;
+			if (dataValue != null)
+				msgs = ((InternalEObject)dataValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelPackage.ATTRIBUTE_DEFINITION_MODEL__DATA_VALUE, null, msgs);
+			if (newDataValue != null)
+				msgs = ((InternalEObject)newDataValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelPackage.ATTRIBUTE_DEFINITION_MODEL__DATA_VALUE, null, msgs);
+			msgs = basicSetDataValue(newDataValue, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ATTRIBUTE_DEFINITION_MODEL__DATA_VALUE, newDataValue, newDataValue));
 	}
 
 	/**
@@ -278,6 +282,20 @@ public class AttributeDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.ATTRIBUTE_DEFINITION_MODEL__DATA_VALUE:
+				return basicSetDataValue(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ModelPackage.ATTRIBUTE_DEFINITION_MODEL__NAME:
@@ -287,8 +305,7 @@ public class AttributeDefinitionModelImpl extends MinimalEObjectImpl.Container i
 			case ModelPackage.ATTRIBUTE_DEFINITION_MODEL__DESCRIPTION:
 				return getDescription();
 			case ModelPackage.ATTRIBUTE_DEFINITION_MODEL__DATA_VALUE:
-				if (resolve) return getDataValue();
-				return basicGetDataValue();
+				return getDataValue();
 			case ModelPackage.ATTRIBUTE_DEFINITION_MODEL__STATUS:
 				return getStatus();
 		}

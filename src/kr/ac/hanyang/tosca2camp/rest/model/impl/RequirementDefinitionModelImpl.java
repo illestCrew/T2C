@@ -10,6 +10,7 @@ import java.io.Serializable;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -30,15 +31,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.RequirementDefinitionModelImpl#getRelationship_definition <em>Relationship definition</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class RequirementDefinitionModelImpl extends MinimalEObjectImpl.Container implements RequirementDefinitionModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -9170429555364059598L;
 
 	/**
 	 * The default value of the '{@link #getCapability() <em>Capability</em>}' attribute.
@@ -101,7 +100,7 @@ public class RequirementDefinitionModelImpl extends MinimalEObjectImpl.Container
 	protected String relationship_type = RELATIONSHIP_TYPE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRelationship_definition() <em>Relationship definition</em>}' reference.
+	 * The cached value of the '{@link #getRelationship_definition() <em>Relationship definition</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRelationship_definition()
@@ -198,14 +197,6 @@ public class RequirementDefinitionModelImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	public RelationshipDefinitionModel getRelationship_definition() {
-		if (relationship_definition != null && relationship_definition.eIsProxy()) {
-			InternalEObject oldRelationship_definition = (InternalEObject)relationship_definition;
-			relationship_definition = (RelationshipDefinitionModel)eResolveProxy(oldRelationship_definition);
-			if (relationship_definition != oldRelationship_definition) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.REQUIREMENT_DEFINITION_MODEL__RELATIONSHIP_DEFINITION, oldRelationship_definition, relationship_definition));
-			}
-		}
 		return relationship_definition;
 	}
 
@@ -214,8 +205,14 @@ public class RequirementDefinitionModelImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RelationshipDefinitionModel basicGetRelationship_definition() {
-		return relationship_definition;
+	public NotificationChain basicSetRelationship_definition(RelationshipDefinitionModel newRelationship_definition, NotificationChain msgs) {
+		RelationshipDefinitionModel oldRelationship_definition = relationship_definition;
+		relationship_definition = newRelationship_definition;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelPackage.REQUIREMENT_DEFINITION_MODEL__RELATIONSHIP_DEFINITION, oldRelationship_definition, newRelationship_definition);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -224,10 +221,31 @@ public class RequirementDefinitionModelImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	public void setRelationship_definition(RelationshipDefinitionModel newRelationship_definition) {
-		RelationshipDefinitionModel oldRelationship_definition = relationship_definition;
-		relationship_definition = newRelationship_definition;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REQUIREMENT_DEFINITION_MODEL__RELATIONSHIP_DEFINITION, oldRelationship_definition, relationship_definition));
+		if (newRelationship_definition != relationship_definition) {
+			NotificationChain msgs = null;
+			if (relationship_definition != null)
+				msgs = ((InternalEObject)relationship_definition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelPackage.REQUIREMENT_DEFINITION_MODEL__RELATIONSHIP_DEFINITION, null, msgs);
+			if (newRelationship_definition != null)
+				msgs = ((InternalEObject)newRelationship_definition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelPackage.REQUIREMENT_DEFINITION_MODEL__RELATIONSHIP_DEFINITION, null, msgs);
+			msgs = basicSetRelationship_definition(newRelationship_definition, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REQUIREMENT_DEFINITION_MODEL__RELATIONSHIP_DEFINITION, newRelationship_definition, newRelationship_definition));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.REQUIREMENT_DEFINITION_MODEL__RELATIONSHIP_DEFINITION:
+				return basicSetRelationship_definition(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -245,8 +263,7 @@ public class RequirementDefinitionModelImpl extends MinimalEObjectImpl.Container
 			case ModelPackage.REQUIREMENT_DEFINITION_MODEL__RELATIONSHIP_TYPE:
 				return getRelationship_type();
 			case ModelPackage.REQUIREMENT_DEFINITION_MODEL__RELATIONSHIP_DEFINITION:
-				if (resolve) return getRelationship_definition();
-				return basicGetRelationship_definition();
+				return getRelationship_definition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

@@ -1,6 +1,5 @@
 package kr.ac.hanyang.tosca2camp.rest.model;
 
-import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.ecore.EObject;
 
@@ -8,25 +7,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model 
  */
 
-public interface AttributeAssignmentModel extends EObject{//  implements EObject, Serializable{
-	
-//	/**
-//	 * 
-//	 */
-//	private static final long serialVersionUID = 5409955638809017992L;
-//	private String name;
-//	private String description;
-//	private DataModel value;
-//	
-//	private AttributeAssignmentModel(){ }
-//	
-//	public static AttributeAssignmentModel of(){
-//		return new AttributeAssignmentModel();
-//	}
-//	
-//	public AttributeAssignmentModel name(String name){	this.name = name; 	return this; 	}
-//	public AttributeAssignmentModel description(String description){	this.description = description; 	return this; 	}
-//	public AttributeAssignmentModel defaultValue(DataModel value){	this.value = value; 	return this; 	}
+public interface AttributeAssignmentModel extends EObject{
 
 	/**
 	 * @model 
@@ -67,10 +48,10 @@ public interface AttributeAssignmentModel extends EObject{//  implements EObject
 	public DataModel getValue();
 
 	/**
-	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.AttributeAssignmentModel#getValue <em>Value</em>}' reference.
+	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.AttributeAssignmentModel#getValue <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value</em>' reference.
+	 * @param value the new value of the '<em>Value</em>' containment reference.
 	 * @see #getValue()
 	 * @generated
 	 */

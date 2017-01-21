@@ -1,14 +1,12 @@
 package kr.ac.hanyang.tosca2camp.rest.model;
 
-import java.io.Serializable;
-
 import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.ecore.EObject;
 /**
  * @model 
  */
 @Deprecated
-public interface PropertyAssignmentModel extends EObject{//  implements EObject, Serializable{
+public interface PropertyAssignmentModel extends EObject{
 	
 	/**
 	 * 
@@ -49,10 +47,10 @@ public interface PropertyAssignmentModel extends EObject{//  implements EObject,
 	public DataModel getValue();
 
 	/**
-	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.PropertyAssignmentModel#getValue <em>Value</em>}' reference.
+	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.PropertyAssignmentModel#getValue <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value</em>' reference.
+	 * @param value the new value of the '<em>Value</em>' containment reference.
 	 * @see #getValue()
 	 * @generated
 	 */

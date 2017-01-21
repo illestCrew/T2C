@@ -1,13 +1,12 @@
 package kr.ac.hanyang.tosca2camp.rest.model;
 
-import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 /**
  * @model 
  */
-public interface PolicyDefinitionModel extends EObject{//  implements EObject, Serializable{
+public interface PolicyDefinitionModel extends EObject{
 	
 	/**
 	 * 

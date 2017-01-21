@@ -1,13 +1,12 @@
 package kr.ac.hanyang.tosca2camp.rest.model;
 
-import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 /**
  * @model 
  */
-public interface InterfaceTypeModel extends EObject{//  implements EObject, Serializable{
+public interface InterfaceTypeModel extends EObject{
 	
 	/**
 	 * 
@@ -15,7 +14,7 @@ public interface InterfaceTypeModel extends EObject{//  implements EObject, Seri
 //	private static final long serialVersionUID = 8353182089865790116L;
 //	private String typeName;
 //	private String derived_from;
-//	private VersionModel version;
+//	private String version;
 //	private String description;
 //	private List<PropertyModel> inputs;
 //	private List<OperationDefinitionModel> operations;
@@ -29,7 +28,7 @@ public interface InterfaceTypeModel extends EObject{//  implements EObject, Seri
 //	
 //	public InterfaceTypeModel typeName(String name){	this.typeName = name; 	return this; 	}
 //	public InterfaceTypeModel derived_from(String derived_from){	this.derived_from = derived_from; 	return this; 	}
-//	public InterfaceTypeModel version(VersionModel version){	this.version = version; 	return this; 	}
+//	public InterfaceTypeModel version(String version){	this.version = version; 	return this; 	}
 //	public InterfaceTypeModel description(String description){	this.description = description; 	return this; 	}
 //	public InterfaceTypeModel inputs(List<PropertyModel> properties){	this.inputs = properties; 	return this; 	}
 //	public InterfaceTypeModel operations(List<OperationDefinitionModel> operations){	this.operations = operations; 	return this; 	}
@@ -70,7 +69,7 @@ public interface InterfaceTypeModel extends EObject{//  implements EObject, Seri
 	 * @model 
 	 */
 	@XmlElement(name="version")
-	public VersionModel getVersion();
+	public String getVersion();
 	
 	/**
 	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.InterfaceTypeModel#getVersion <em>Version</em>}' attribute.
@@ -80,7 +79,7 @@ public interface InterfaceTypeModel extends EObject{//  implements EObject, Seri
 	 * @see #getVersion()
 	 * @generated
 	 */
-	void setVersion(VersionModel value);
+	void setVersion(String value);
 
 	/**
 	 * @model 

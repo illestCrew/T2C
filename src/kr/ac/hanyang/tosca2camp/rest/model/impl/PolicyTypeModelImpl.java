@@ -8,18 +8,21 @@ import java.util.Collection;
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 import kr.ac.hanyang.tosca2camp.rest.model.PolicyTypeModel;
 import kr.ac.hanyang.tosca2camp.rest.model.PropertyModel;
-import kr.ac.hanyang.tosca2camp.rest.model.VersionModel;
+
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,15 +40,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.PolicyTypeModelImpl#getTargets <em>Targets</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class PolicyTypeModelImpl extends MinimalEObjectImpl.Container implements PolicyTypeModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 8640521186004568735L;
 
 	/**
 	 * The default value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
@@ -95,7 +96,7 @@ public class PolicyTypeModelImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final VersionModel VERSION_EDEFAULT = null;
+	protected static final String VERSION_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute.
@@ -105,7 +106,7 @@ public class PolicyTypeModelImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected VersionModel version = VERSION_EDEFAULT;
+	protected String version = VERSION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -128,7 +129,7 @@ public class PolicyTypeModelImpl extends MinimalEObjectImpl.Container implements
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' reference list.
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProperties()
@@ -223,7 +224,7 @@ public class PolicyTypeModelImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VersionModel getVersion() {
+	public String getVersion() {
 		return version;
 	}
 
@@ -232,8 +233,8 @@ public class PolicyTypeModelImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVersion(VersionModel newVersion) {
-		VersionModel oldVersion = version;
+	public void setVersion(String newVersion) {
+		String oldVersion = version;
 		version = newVersion;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.POLICY_TYPE_MODEL__VERSION, oldVersion, version));
@@ -267,7 +268,7 @@ public class PolicyTypeModelImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public EList<PropertyModel> getProperties() {
 		if (properties == null) {
-			properties = new EObjectResolvingEList<PropertyModel>(PropertyModel.class, this, ModelPackage.POLICY_TYPE_MODEL__PROPERTIES);
+			properties = new EObjectContainmentEList<PropertyModel>(PropertyModel.class, this, ModelPackage.POLICY_TYPE_MODEL__PROPERTIES);
 		}
 		return properties;
 	}
@@ -291,6 +292,20 @@ public class PolicyTypeModelImpl extends MinimalEObjectImpl.Container implements
 		targets = newTargets;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.POLICY_TYPE_MODEL__TARGETS, oldTargets, targets));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.POLICY_TYPE_MODEL__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -333,7 +348,7 @@ public class PolicyTypeModelImpl extends MinimalEObjectImpl.Container implements
 				setDerivedFrom((String)newValue);
 				return;
 			case ModelPackage.POLICY_TYPE_MODEL__VERSION:
-				setVersion((VersionModel)newValue);
+				setVersion((String)newValue);
 				return;
 			case ModelPackage.POLICY_TYPE_MODEL__DESCRIPTION:
 				setDescription((String)newValue);

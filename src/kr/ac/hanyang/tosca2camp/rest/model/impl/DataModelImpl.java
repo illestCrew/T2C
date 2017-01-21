@@ -25,15 +25,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.DataModelImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class DataModelImpl extends MinimalEObjectImpl.Container implements DataModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 6851614148676008592L;
 
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.

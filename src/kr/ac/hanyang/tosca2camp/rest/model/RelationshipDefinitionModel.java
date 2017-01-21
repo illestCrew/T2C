@@ -1,13 +1,12 @@
 package kr.ac.hanyang.tosca2camp.rest.model;
 
-import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 /**
  * @model 
  */
-public interface RelationshipDefinitionModel extends EObject{//  implements EObject, Serializable{
+public interface RelationshipDefinitionModel extends EObject{
 	
 	
 	/**
@@ -16,7 +15,7 @@ public interface RelationshipDefinitionModel extends EObject{//  implements EObj
 //	private static final long serialVersionUID = 7816920253360860892L;
 //	private String typeName;
 //	private String derived_from;
-//	private VersionModel version;
+//	private String version;
 //	private String description;
 //	private List<PropertyModel> properties;
 //	private List<AttributeDefinitionModel> attributes;
@@ -32,7 +31,7 @@ public interface RelationshipDefinitionModel extends EObject{//  implements EObj
 //	
 //	public RelationshipDefinitionModel typeName(String name){	this.typeName = name; 	return this; 	}
 //	public RelationshipDefinitionModel derived_from(String derived_from){	this.derived_from = derived_from; 	return this; 	}
-//	public RelationshipDefinitionModel version(VersionModel version){	this.version = version; 	return this; 	}
+//	public RelationshipDefinitionModel version(String version){	this.version = version; 	return this; 	}
 //	public RelationshipDefinitionModel description(String description){	this.description = description; 	return this; 	}
 //	public RelationshipDefinitionModel properties(List<PropertyModel> properties){	this.properties = properties; 	return this; 	}
 //	public RelationshipDefinitionModel attributes(List<AttributeDefinitionModel> attributes){	this.attributes = attributes; 	return this; 	}
@@ -75,7 +74,7 @@ public interface RelationshipDefinitionModel extends EObject{//  implements EObj
 	 * @model 
 	 */
 	@XmlElement(name="version")
-	public VersionModel getVersion();
+	public String getVersion();
 	
 	/**
 	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.RelationshipDefinitionModel#getVersion <em>Version</em>}' attribute.
@@ -85,7 +84,7 @@ public interface RelationshipDefinitionModel extends EObject{//  implements EObj
 	 * @see #getVersion()
 	 * @generated
 	 */
-	void setVersion(VersionModel value);
+	void setVersion(String value);
 
 	/**
 	 * @model 

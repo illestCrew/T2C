@@ -279,6 +279,7 @@ public class ServiceTemplateUtilities {
 					break;
 				}
 			}
+			capDefinition.setConfigured(true);
 			return capDefinition;
 		}
 		

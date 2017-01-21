@@ -2,8 +2,6 @@
  */
 package kr.ac.hanyang.tosca2camp.rest.model.util;
 
-import java.io.Serializable;
-
 import kr.ac.hanyang.tosca2camp.rest.model.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -71,216 +69,180 @@ public class ModelSwitch<T> extends Switch<T> {
 			case ModelPackage.ARTIFACT_DEFINITION_MODEL: {
 				ArtifactDefinitionModel artifactDefinitionModel = (ArtifactDefinitionModel)theEObject;
 				T result = caseArtifactDefinitionModel(artifactDefinitionModel);
-				if (result == null) result = caseSerializable(artifactDefinitionModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.ARTIFACT_TYPE_MODEL: {
 				ArtifactTypeModel artifactTypeModel = (ArtifactTypeModel)theEObject;
 				T result = caseArtifactTypeModel(artifactTypeModel);
-				if (result == null) result = caseSerializable(artifactTypeModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.ATTRIBUTE_ASSIGNMENT_MODEL: {
 				AttributeAssignmentModel attributeAssignmentModel = (AttributeAssignmentModel)theEObject;
 				T result = caseAttributeAssignmentModel(attributeAssignmentModel);
-				if (result == null) result = caseSerializable(attributeAssignmentModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.ATTRIBUTE_DEFINITION_MODEL: {
 				AttributeDefinitionModel attributeDefinitionModel = (AttributeDefinitionModel)theEObject;
 				T result = caseAttributeDefinitionModel(attributeDefinitionModel);
-				if (result == null) result = caseSerializable(attributeDefinitionModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.CAPABILITY_ASSIGNMENT_MODEL: {
 				CapabilityAssignmentModel capabilityAssignmentModel = (CapabilityAssignmentModel)theEObject;
 				T result = caseCapabilityAssignmentModel(capabilityAssignmentModel);
-				if (result == null) result = caseSerializable(capabilityAssignmentModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.CAPABILITY_DEFINITION_MODEL: {
 				CapabilityDefinitionModel capabilityDefinitionModel = (CapabilityDefinitionModel)theEObject;
 				T result = caseCapabilityDefinitionModel(capabilityDefinitionModel);
-				if (result == null) result = caseSerializable(capabilityDefinitionModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.CONSTRAINT_MODEL: {
 				ConstraintModel constraintModel = (ConstraintModel)theEObject;
 				T result = caseConstraintModel(constraintModel);
-				if (result == null) result = caseSerializable(constraintModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.DATA_MODEL: {
 				DataModel dataModel = (DataModel)theEObject;
 				T result = caseDataModel(dataModel);
-				if (result == null) result = caseSerializable(dataModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.DATATYPE_DEFINITION_MODEL: {
 				DatatypeDefinitionModel datatypeDefinitionModel = (DatatypeDefinitionModel)theEObject;
 				T result = caseDatatypeDefinitionModel(datatypeDefinitionModel);
-				if (result == null) result = caseSerializable(datatypeDefinitionModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.FUNCTION_MODEL: {
 				FunctionModel functionModel = (FunctionModel)theEObject;
 				T result = caseFunctionModel(functionModel);
-				if (result == null) result = caseSerializable(functionModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.GROUP_DEFINITION_MODEL: {
 				GroupDefinitionModel groupDefinitionModel = (GroupDefinitionModel)theEObject;
 				T result = caseGroupDefinitionModel(groupDefinitionModel);
-				if (result == null) result = caseSerializable(groupDefinitionModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.GROUP_TYPE_MODEL: {
 				GroupTypeModel groupTypeModel = (GroupTypeModel)theEObject;
 				T result = caseGroupTypeModel(groupTypeModel);
-				if (result == null) result = caseSerializable(groupTypeModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.IMPORT_DEFINITION_MODEL: {
 				ImportDefinitionModel importDefinitionModel = (ImportDefinitionModel)theEObject;
 				T result = caseImportDefinitionModel(importDefinitionModel);
-				if (result == null) result = caseSerializable(importDefinitionModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.INTERFACE_DEFINITION_MODEL: {
 				InterfaceDefinitionModel interfaceDefinitionModel = (InterfaceDefinitionModel)theEObject;
 				T result = caseInterfaceDefinitionModel(interfaceDefinitionModel);
-				if (result == null) result = caseSerializable(interfaceDefinitionModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.INTERFACE_TYPE_MODEL: {
 				InterfaceTypeModel interfaceTypeModel = (InterfaceTypeModel)theEObject;
 				T result = caseInterfaceTypeModel(interfaceTypeModel);
-				if (result == null) result = caseSerializable(interfaceTypeModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.NODE_DEFINITION_MODEL: {
 				NodeDefinitionModel nodeDefinitionModel = (NodeDefinitionModel)theEObject;
 				T result = caseNodeDefinitionModel(nodeDefinitionModel);
-				if (result == null) result = caseSerializable(nodeDefinitionModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.NODE_TEMPLATE_MODEL: {
 				NodeTemplateModel nodeTemplateModel = (NodeTemplateModel)theEObject;
 				T result = caseNodeTemplateModel(nodeTemplateModel);
-				if (result == null) result = caseSerializable(nodeTemplateModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.OPERATION_DEFINITION_MODEL: {
 				OperationDefinitionModel operationDefinitionModel = (OperationDefinitionModel)theEObject;
 				T result = caseOperationDefinitionModel(operationDefinitionModel);
-				if (result == null) result = caseSerializable(operationDefinitionModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.PARAMETER_DEFINITION_MODEL: {
 				ParameterDefinitionModel parameterDefinitionModel = (ParameterDefinitionModel)theEObject;
 				T result = caseParameterDefinitionModel(parameterDefinitionModel);
-				if (result == null) result = caseSerializable(parameterDefinitionModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.POLICY_DEFINITION_MODEL: {
 				PolicyDefinitionModel policyDefinitionModel = (PolicyDefinitionModel)theEObject;
 				T result = casePolicyDefinitionModel(policyDefinitionModel);
-				if (result == null) result = caseSerializable(policyDefinitionModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.POLICY_TYPE_MODEL: {
 				PolicyTypeModel policyTypeModel = (PolicyTypeModel)theEObject;
 				T result = casePolicyTypeModel(policyTypeModel);
-				if (result == null) result = caseSerializable(policyTypeModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.PROPERTY_ASSIGNMENT_MODEL: {
 				PropertyAssignmentModel propertyAssignmentModel = (PropertyAssignmentModel)theEObject;
 				T result = casePropertyAssignmentModel(propertyAssignmentModel);
-				if (result == null) result = caseSerializable(propertyAssignmentModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.PROPERTY_MODEL: {
 				PropertyModel propertyModel = (PropertyModel)theEObject;
 				T result = casePropertyModel(propertyModel);
-				if (result == null) result = caseSerializable(propertyModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.RELATIONSHIP_DEFINITION_MODEL: {
 				RelationshipDefinitionModel relationshipDefinitionModel = (RelationshipDefinitionModel)theEObject;
 				T result = caseRelationshipDefinitionModel(relationshipDefinitionModel);
-				if (result == null) result = caseSerializable(relationshipDefinitionModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.RELATIONSHIP_TEMPLATE_MODEL: {
 				RelationshipTemplateModel relationshipTemplateModel = (RelationshipTemplateModel)theEObject;
 				T result = caseRelationshipTemplateModel(relationshipTemplateModel);
-				if (result == null) result = caseSerializable(relationshipTemplateModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.REPOSITORY_DEFINITION_MODEL: {
 				RepositoryDefinitionModel repositoryDefinitionModel = (RepositoryDefinitionModel)theEObject;
 				T result = caseRepositoryDefinitionModel(repositoryDefinitionModel);
-				if (result == null) result = caseSerializable(repositoryDefinitionModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.REQUIREMENT_ASSIGNMENT_MODEL: {
 				RequirementAssignmentModel requirementAssignmentModel = (RequirementAssignmentModel)theEObject;
 				T result = caseRequirementAssignmentModel(requirementAssignmentModel);
-				if (result == null) result = caseSerializable(requirementAssignmentModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.REQUIREMENT_DEFINITION_MODEL: {
 				RequirementDefinitionModel requirementDefinitionModel = (RequirementDefinitionModel)theEObject;
 				T result = caseRequirementDefinitionModel(requirementDefinitionModel);
-				if (result == null) result = caseSerializable(requirementDefinitionModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.SERVICE_TEMPLATE_MODEL: {
 				ServiceTemplateModel serviceTemplateModel = (ServiceTemplateModel)theEObject;
 				T result = caseServiceTemplateModel(serviceTemplateModel);
-				if (result == null) result = caseSerializable(serviceTemplateModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.TOPOLOGY_TEMPLATE_MODEL: {
 				TopologyTemplateModel topologyTemplateModel = (TopologyTemplateModel)theEObject;
 				T result = caseTopologyTemplateModel(topologyTemplateModel);
-				if (result == null) result = caseSerializable(topologyTemplateModel);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ModelPackage.SERIALIZABLE: {
-				Serializable serializable = (Serializable)theEObject;
-				T result = caseSerializable(serializable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -735,21 +697,6 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTopologyTemplateModel(TopologyTemplateModel object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Serializable</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Serializable</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSerializable(Serializable object) {
 		return null;
 	}
 

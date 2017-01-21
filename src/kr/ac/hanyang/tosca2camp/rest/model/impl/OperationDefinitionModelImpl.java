@@ -12,14 +12,17 @@ import kr.ac.hanyang.tosca2camp.rest.model.PropertyModel;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,15 +38,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.OperationDefinitionModelImpl#getInputs_assignments <em>Inputs assignments</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class OperationDefinitionModelImpl extends MinimalEObjectImpl.Container implements OperationDefinitionModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1373994651654367485L;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -86,7 +87,7 @@ public class OperationDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	protected String implementation = IMPLEMENTATION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getInputs_definitions() <em>Inputs definitions</em>}' reference list.
+	 * The cached value of the '{@link #getInputs_definitions() <em>Inputs definitions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInputs_definitions()
@@ -96,7 +97,7 @@ public class OperationDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	protected EList<PropertyModel> inputs_definitions;
 
 	/**
-	 * The cached value of the '{@link #getInputs_assignments() <em>Inputs assignments</em>}' reference list.
+	 * The cached value of the '{@link #getInputs_assignments() <em>Inputs assignments</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInputs_assignments()
@@ -173,7 +174,7 @@ public class OperationDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 */
 	public EList<PropertyModel> getInputs_definitions() {
 		if (inputs_definitions == null) {
-			inputs_definitions = new EObjectResolvingEList<PropertyModel>(PropertyModel.class, this, ModelPackage.OPERATION_DEFINITION_MODEL__INPUTS_DEFINITIONS);
+			inputs_definitions = new EObjectContainmentEList<PropertyModel>(PropertyModel.class, this, ModelPackage.OPERATION_DEFINITION_MODEL__INPUTS_DEFINITIONS);
 		}
 		return inputs_definitions;
 	}
@@ -185,9 +186,25 @@ public class OperationDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 */
 	public EList<PropertyAssignmentModel> getInputs_assignments() {
 		if (inputs_assignments == null) {
-			inputs_assignments = new EObjectResolvingEList<PropertyAssignmentModel>(PropertyAssignmentModel.class, this, ModelPackage.OPERATION_DEFINITION_MODEL__INPUTS_ASSIGNMENTS);
+			inputs_assignments = new EObjectContainmentEList<PropertyAssignmentModel>(PropertyAssignmentModel.class, this, ModelPackage.OPERATION_DEFINITION_MODEL__INPUTS_ASSIGNMENTS);
 		}
 		return inputs_assignments;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.OPERATION_DEFINITION_MODEL__INPUTS_DEFINITIONS:
+				return ((InternalEList<?>)getInputs_definitions()).basicRemove(otherEnd, msgs);
+			case ModelPackage.OPERATION_DEFINITION_MODEL__INPUTS_ASSIGNMENTS:
+				return ((InternalEList<?>)getInputs_assignments()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

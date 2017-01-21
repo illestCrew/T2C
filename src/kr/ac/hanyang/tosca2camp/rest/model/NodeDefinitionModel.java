@@ -1,13 +1,12 @@
 package kr.ac.hanyang.tosca2camp.rest.model;
 
-import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 /**
  * @model 
  */
-public interface NodeDefinitionModel extends EObject{//  implements EObject, Serializable{
+public interface NodeDefinitionModel extends EObject{
 	
 	
 	/**
@@ -16,7 +15,7 @@ public interface NodeDefinitionModel extends EObject{//  implements EObject, Ser
 //	private static final long serialVersionUID = -7853713381724893045L;
 //	private String typeName;
 //	private String derived_from;
-//	private VersionModel version;
+//	private String version;
 //	private String description;
 //	private List<PropertyModel> properties;
 //	private List<AttributeDefinitionModel> attributes;
@@ -34,7 +33,7 @@ public interface NodeDefinitionModel extends EObject{//  implements EObject, Ser
 //	
 //	public NodeDefinitionModel typeName(String name){	this.typeName = name; 	return this; 	}
 //	public NodeDefinitionModel derived_from(String derived_from){	this.derived_from = derived_from; 	return this; 	}
-//	public NodeDefinitionModel version(VersionModel version){	this.version = version; 	return this; 	}
+//	public NodeDefinitionModel version(String version){	this.version = version; 	return this; 	}
 //	public NodeDefinitionModel description(String description){	this.description = description; 	return this; 	}
 //	public NodeDefinitionModel properties(List<PropertyModel> properties){	this.properties = properties; 	return this; 	}
 //	public NodeDefinitionModel attributes(List<AttributeDefinitionModel> attributes){	this.attributes = attributes; 	return this; 	}
@@ -79,7 +78,7 @@ public interface NodeDefinitionModel extends EObject{//  implements EObject, Ser
 	 * @model 
 	 */
 	@XmlElement(name="version")
-	public VersionModel getVersion();
+	public String getVersion();
 	
 	/**
 	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getVersion <em>Version</em>}' attribute.
@@ -89,7 +88,7 @@ public interface NodeDefinitionModel extends EObject{//  implements EObject, Ser
 	 * @see #getVersion()
 	 * @generated
 	 */
-	void setVersion(VersionModel value);
+	void setVersion(String value);
 
 	/**
 	 * @model 

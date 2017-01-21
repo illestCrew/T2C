@@ -29,15 +29,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ArtifactDefinitionModelImpl#getDeploy_path <em>Deploy path</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class ArtifactDefinitionModelImpl extends MinimalEObjectImpl.Container implements ArtifactDefinitionModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 6400833751204162539L;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.

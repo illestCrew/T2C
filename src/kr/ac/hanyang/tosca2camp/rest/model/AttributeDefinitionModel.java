@@ -1,13 +1,12 @@
 package kr.ac.hanyang.tosca2camp.rest.model;
 
-import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.ecore.EObject;
 /**
  * @model 
  */
 
-public interface AttributeDefinitionModel extends EObject{//  implements EObject, Serializable{
+public interface AttributeDefinitionModel extends EObject{
 	
 //	/**
 //	 * 
@@ -87,10 +86,10 @@ public interface AttributeDefinitionModel extends EObject{//  implements EObject
 	public DataModel getDataValue();
 	
 	/**
-	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.AttributeDefinitionModel#getDataValue <em>Data Value</em>}' reference.
+	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.AttributeDefinitionModel#getDataValue <em>Data Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Data Value</em>' reference.
+	 * @param value the new value of the '<em>Data Value</em>' containment reference.
 	 * @see #getDataValue()
 	 * @generated
 	 */

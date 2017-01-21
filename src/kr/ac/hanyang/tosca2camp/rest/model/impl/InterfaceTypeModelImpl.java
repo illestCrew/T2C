@@ -9,18 +9,21 @@ import kr.ac.hanyang.tosca2camp.rest.model.InterfaceTypeModel;
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 import kr.ac.hanyang.tosca2camp.rest.model.OperationDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.PropertyModel;
-import kr.ac.hanyang.tosca2camp.rest.model.VersionModel;
+
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,15 +41,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.InterfaceTypeModelImpl#getOperations <em>Operations</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class InterfaceTypeModelImpl extends MinimalEObjectImpl.Container implements InterfaceTypeModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -807199633501488783L;
 
 	/**
 	 * The default value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
@@ -96,7 +97,7 @@ public class InterfaceTypeModelImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected static final VersionModel VERSION_EDEFAULT = null;
+	protected static final String VERSION_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute.
@@ -106,7 +107,7 @@ public class InterfaceTypeModelImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected VersionModel version = VERSION_EDEFAULT;
+	protected String version = VERSION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -129,7 +130,7 @@ public class InterfaceTypeModelImpl extends MinimalEObjectImpl.Container impleme
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' reference list.
+	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInputs()
@@ -139,7 +140,7 @@ public class InterfaceTypeModelImpl extends MinimalEObjectImpl.Container impleme
 	protected EList<PropertyModel> inputs;
 
 	/**
-	 * The cached value of the '{@link #getOperations() <em>Operations</em>}' reference list.
+	 * The cached value of the '{@link #getOperations() <em>Operations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOperations()
@@ -214,7 +215,7 @@ public class InterfaceTypeModelImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VersionModel getVersion() {
+	public String getVersion() {
 		return version;
 	}
 
@@ -223,8 +224,8 @@ public class InterfaceTypeModelImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVersion(VersionModel newVersion) {
-		VersionModel oldVersion = version;
+	public void setVersion(String newVersion) {
+		String oldVersion = version;
 		version = newVersion;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.INTERFACE_TYPE_MODEL__VERSION, oldVersion, version));
@@ -258,7 +259,7 @@ public class InterfaceTypeModelImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	public EList<PropertyModel> getInputs() {
 		if (inputs == null) {
-			inputs = new EObjectResolvingEList<PropertyModel>(PropertyModel.class, this, ModelPackage.INTERFACE_TYPE_MODEL__INPUTS);
+			inputs = new EObjectContainmentEList<PropertyModel>(PropertyModel.class, this, ModelPackage.INTERFACE_TYPE_MODEL__INPUTS);
 		}
 		return inputs;
 	}
@@ -270,9 +271,25 @@ public class InterfaceTypeModelImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	public EList<OperationDefinitionModel> getOperations() {
 		if (operations == null) {
-			operations = new EObjectResolvingEList<OperationDefinitionModel>(OperationDefinitionModel.class, this, ModelPackage.INTERFACE_TYPE_MODEL__OPERATIONS);
+			operations = new EObjectContainmentEList<OperationDefinitionModel>(OperationDefinitionModel.class, this, ModelPackage.INTERFACE_TYPE_MODEL__OPERATIONS);
 		}
 		return operations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.INTERFACE_TYPE_MODEL__INPUTS:
+				return ((InternalEList<?>)getInputs()).basicRemove(otherEnd, msgs);
+			case ModelPackage.INTERFACE_TYPE_MODEL__OPERATIONS:
+				return ((InternalEList<?>)getOperations()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -315,7 +332,7 @@ public class InterfaceTypeModelImpl extends MinimalEObjectImpl.Container impleme
 				setDerivedFrom((String)newValue);
 				return;
 			case ModelPackage.INTERFACE_TYPE_MODEL__VERSION:
-				setVersion((VersionModel)newValue);
+				setVersion((String)newValue);
 				return;
 			case ModelPackage.INTERFACE_TYPE_MODEL__DESCRIPTION:
 				setDescription((String)newValue);

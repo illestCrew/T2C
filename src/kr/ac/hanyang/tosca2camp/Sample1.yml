@@ -25,7 +25,7 @@ topology_template:
  
   node_templates:
     my_server:
-      type: Compute
+      type: tosca.nodes.Compute 
       capabilities:
         host:
           properties:
@@ -36,18 +36,15 @@ topology_template:
           properties:
             architecture: x86_64
             type: linux 
-            distribution: fedora 
-            version: 18.0
+            #distribution: fedora 
+            #version: 18.0
       requirements:
         - local_storage:
             node: my_storage
-            relationship:
-              type: AttachesTo
-              properties:
-                location: ./Storage/Location
+
  
     my_storage:
-      type: BlockStorage
+      type: tosca.nodes.BlockStorage
       properties:
         size: "50 GB"
         snapshot_id: BS084412-StorageID

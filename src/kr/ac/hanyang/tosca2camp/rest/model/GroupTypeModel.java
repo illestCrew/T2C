@@ -1,13 +1,12 @@
 package kr.ac.hanyang.tosca2camp.rest.model;
 
-import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 /**
  * @model 
  */
-public interface GroupTypeModel extends EObject{//  implements EObject, Serializable{
+public interface GroupTypeModel extends EObject{
 	
 	/**
 	 * 
@@ -15,7 +14,7 @@ public interface GroupTypeModel extends EObject{//  implements EObject, Serializ
 //	private static final long serialVersionUID = -6314220638330382038L;
 //	private String typeName;
 //	private String derived_from;
-//	private VersionModel version;
+//	private String version;
 //	private String description;
 //	private List<PropertyModel> properties;
 //	private String[] members;
@@ -30,7 +29,7 @@ public interface GroupTypeModel extends EObject{//  implements EObject, Serializ
 //	
 //	public GroupTypeModel typeName(String name){	this.typeName = name; 	return this; 	}
 //	public GroupTypeModel derived_from(String derived_from){	this.derived_from = derived_from; 	return this; 	}
-//	public GroupTypeModel version(VersionModel version){	this.version = version; 	return this; 	}
+//	public GroupTypeModel version(String version){	this.version = version; 	return this; 	}
 //	public GroupTypeModel description(String description){	this.description = description; 	return this; 	}
 //	public GroupTypeModel properties(List<PropertyModel> properties){	this.properties = properties; 	return this; 	}
 //	public GroupTypeModel members(String[] members){	this.members = members; 	return this; 	}
@@ -72,7 +71,7 @@ public interface GroupTypeModel extends EObject{//  implements EObject, Serializ
 	 * @model 
 	 */
 	@XmlElement(name="version")
-	public VersionModel getVersion();
+	public String getVersion();
 	
 	/**
 	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.GroupTypeModel#getVersion <em>Version</em>}' attribute.
@@ -82,7 +81,7 @@ public interface GroupTypeModel extends EObject{//  implements EObject, Serializ
 	 * @see #getVersion()
 	 * @generated
 	 */
-	void setVersion(VersionModel value);
+	void setVersion(String value);
 
 	/**
 	 * @model 

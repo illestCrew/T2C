@@ -9,13 +9,16 @@ import kr.ac.hanyang.tosca2camp.rest.model.InterfaceDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 import kr.ac.hanyang.tosca2camp.rest.model.PropertyModel;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,18 +31,15 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.InterfaceDefinitionModelImpl#getInputs <em>Inputs</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class InterfaceDefinitionModelImpl extends MinimalEObjectImpl.Container implements InterfaceDefinitionModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
-
+	private static final long serialVersionUID = 6469305423039487931L;
 	/**
-	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' reference list.
+	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInputs()
@@ -74,9 +74,23 @@ public class InterfaceDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 */
 	public EList<PropertyModel> getInputs() {
 		if (inputs == null) {
-			inputs = new EObjectResolvingEList<PropertyModel>(PropertyModel.class, this, ModelPackage.INTERFACE_DEFINITION_MODEL__INPUTS);
+			inputs = new EObjectContainmentEList<PropertyModel>(PropertyModel.class, this, ModelPackage.INTERFACE_DEFINITION_MODEL__INPUTS);
 		}
 		return inputs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.INTERFACE_DEFINITION_MODEL__INPUTS:
+				return ((InternalEList<?>)getInputs()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

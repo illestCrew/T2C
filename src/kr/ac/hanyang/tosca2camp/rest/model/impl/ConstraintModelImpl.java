@@ -10,6 +10,7 @@ import java.io.Serializable;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -28,15 +29,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ConstraintModelImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @generated
+ *
  */
 public class ConstraintModelImpl extends MinimalEObjectImpl.Container implements ConstraintModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -7366869364434757324L;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -59,7 +58,7 @@ public class ConstraintModelImpl extends MinimalEObjectImpl.Container implements
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' reference.
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getValue()
@@ -114,14 +113,6 @@ public class ConstraintModelImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public DataModel getValue() {
-		if (value != null && value.eIsProxy()) {
-			InternalEObject oldValue = (InternalEObject)value;
-			value = (DataModel)eResolveProxy(oldValue);
-			if (value != oldValue) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.CONSTRAINT_MODEL__VALUE, oldValue, value));
-			}
-		}
 		return value;
 	}
 
@@ -130,8 +121,14 @@ public class ConstraintModelImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataModel basicGetValue() {
-		return value;
+	public NotificationChain basicSetValue(DataModel newValue, NotificationChain msgs) {
+		DataModel oldValue = value;
+		value = newValue;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelPackage.CONSTRAINT_MODEL__VALUE, oldValue, newValue);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -140,10 +137,31 @@ public class ConstraintModelImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public void setValue(DataModel newValue) {
-		DataModel oldValue = value;
-		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.CONSTRAINT_MODEL__VALUE, oldValue, value));
+		if (newValue != value) {
+			NotificationChain msgs = null;
+			if (value != null)
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelPackage.CONSTRAINT_MODEL__VALUE, null, msgs);
+			if (newValue != null)
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelPackage.CONSTRAINT_MODEL__VALUE, null, msgs);
+			msgs = basicSetValue(newValue, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.CONSTRAINT_MODEL__VALUE, newValue, newValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.CONSTRAINT_MODEL__VALUE:
+				return basicSetValue(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -157,8 +175,7 @@ public class ConstraintModelImpl extends MinimalEObjectImpl.Container implements
 			case ModelPackage.CONSTRAINT_MODEL__NAME:
 				return getName();
 			case ModelPackage.CONSTRAINT_MODEL__VALUE:
-				if (resolve) return getValue();
-				return basicGetValue();
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

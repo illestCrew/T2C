@@ -11,14 +11,17 @@ import kr.ac.hanyang.tosca2camp.rest.model.PropertyModel;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,15 +35,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.FunctionModelImpl#getParameters <em>Parameters</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class FunctionModelImpl extends MinimalEObjectImpl.Container implements FunctionModel, Serializable {
+	
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 2811074539025667562L;
 
 	/**
 	 * The default value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
@@ -63,7 +65,7 @@ public class FunctionModelImpl extends MinimalEObjectImpl.Container implements F
 	protected String typeName = TYPE_NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' reference list.
+	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getParameters()
@@ -119,9 +121,23 @@ public class FunctionModelImpl extends MinimalEObjectImpl.Container implements F
 	 */
 	public EList<PropertyModel> getParameters() {
 		if (parameters == null) {
-			parameters = new EObjectResolvingEList<PropertyModel>(PropertyModel.class, this, ModelPackage.FUNCTION_MODEL__PARAMETERS);
+			parameters = new EObjectContainmentEList<PropertyModel>(PropertyModel.class, this, ModelPackage.FUNCTION_MODEL__PARAMETERS);
 		}
 		return parameters;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.FUNCTION_MODEL__PARAMETERS:
+				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

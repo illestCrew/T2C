@@ -12,14 +12,17 @@ import kr.ac.hanyang.tosca2camp.rest.model.PropertyModel;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,15 +40,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.DatatypeDefinitionModelImpl#getProperties <em>Properties</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class DatatypeDefinitionModelImpl extends MinimalEObjectImpl.Container implements DatatypeDefinitionModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -752841583718781542L;
 
 	/**
 	 * The default value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
@@ -128,7 +129,7 @@ public class DatatypeDefinitionModelImpl extends MinimalEObjectImpl.Container im
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' reference list.
+	 * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConstraints()
@@ -138,7 +139,7 @@ public class DatatypeDefinitionModelImpl extends MinimalEObjectImpl.Container im
 	protected EList<ConstraintModel> constraints;
 
 	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' reference list.
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProperties()
@@ -257,7 +258,7 @@ public class DatatypeDefinitionModelImpl extends MinimalEObjectImpl.Container im
 	 */
 	public EList<ConstraintModel> getConstraints() {
 		if (constraints == null) {
-			constraints = new EObjectResolvingEList<ConstraintModel>(ConstraintModel.class, this, ModelPackage.DATATYPE_DEFINITION_MODEL__CONSTRAINTS);
+			constraints = new EObjectContainmentEList<ConstraintModel>(ConstraintModel.class, this, ModelPackage.DATATYPE_DEFINITION_MODEL__CONSTRAINTS);
 		}
 		return constraints;
 	}
@@ -269,9 +270,25 @@ public class DatatypeDefinitionModelImpl extends MinimalEObjectImpl.Container im
 	 */
 	public EList<PropertyModel> getProperties() {
 		if (properties == null) {
-			properties = new EObjectResolvingEList<PropertyModel>(PropertyModel.class, this, ModelPackage.DATATYPE_DEFINITION_MODEL__PROPERTIES);
+			properties = new EObjectContainmentEList<PropertyModel>(PropertyModel.class, this, ModelPackage.DATATYPE_DEFINITION_MODEL__PROPERTIES);
 		}
 		return properties;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.DATATYPE_DEFINITION_MODEL__CONSTRAINTS:
+				return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
+			case ModelPackage.DATATYPE_DEFINITION_MODEL__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

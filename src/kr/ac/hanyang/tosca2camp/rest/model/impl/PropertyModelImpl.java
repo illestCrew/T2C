@@ -14,6 +14,7 @@ import kr.ac.hanyang.tosca2camp.rest.model.PropertyModel;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -22,7 +23,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,15 +44,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.PropertyModelImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class PropertyModelImpl extends MinimalEObjectImpl.Container implements PropertyModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -4106849079503239205L;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -113,7 +113,7 @@ public class PropertyModelImpl extends MinimalEObjectImpl.Container implements P
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getDataValue() <em>Data Value</em>}' reference.
+	 * The cached value of the '{@link #getDataValue() <em>Data Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDataValue()
@@ -143,7 +143,7 @@ public class PropertyModelImpl extends MinimalEObjectImpl.Container implements P
 	protected String status = STATUS_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getConstraint() <em>Constraint</em>}' reference list.
+	 * The cached value of the '{@link #getConstraint() <em>Constraint</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConstraint()
@@ -173,7 +173,7 @@ public class PropertyModelImpl extends MinimalEObjectImpl.Container implements P
 	protected String entrySchema = ENTRY_SCHEMA_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' reference.
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getValue()
@@ -270,14 +270,6 @@ public class PropertyModelImpl extends MinimalEObjectImpl.Container implements P
 	 * @generated
 	 */
 	public DataModel getDataValue() {
-		if (dataValue != null && dataValue.eIsProxy()) {
-			InternalEObject oldDataValue = (InternalEObject)dataValue;
-			dataValue = (DataModel)eResolveProxy(oldDataValue);
-			if (dataValue != oldDataValue) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.PROPERTY_MODEL__DATA_VALUE, oldDataValue, dataValue));
-			}
-		}
 		return dataValue;
 	}
 
@@ -286,8 +278,14 @@ public class PropertyModelImpl extends MinimalEObjectImpl.Container implements P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataModel basicGetDataValue() {
-		return dataValue;
+	public NotificationChain basicSetDataValue(DataModel newDataValue, NotificationChain msgs) {
+		DataModel oldDataValue = dataValue;
+		dataValue = newDataValue;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelPackage.PROPERTY_MODEL__DATA_VALUE, oldDataValue, newDataValue);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -296,10 +294,17 @@ public class PropertyModelImpl extends MinimalEObjectImpl.Container implements P
 	 * @generated
 	 */
 	public void setDataValue(DataModel newDataValue) {
-		DataModel oldDataValue = dataValue;
-		dataValue = newDataValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PROPERTY_MODEL__DATA_VALUE, oldDataValue, dataValue));
+		if (newDataValue != dataValue) {
+			NotificationChain msgs = null;
+			if (dataValue != null)
+				msgs = ((InternalEObject)dataValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelPackage.PROPERTY_MODEL__DATA_VALUE, null, msgs);
+			if (newDataValue != null)
+				msgs = ((InternalEObject)newDataValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelPackage.PROPERTY_MODEL__DATA_VALUE, null, msgs);
+			msgs = basicSetDataValue(newDataValue, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PROPERTY_MODEL__DATA_VALUE, newDataValue, newDataValue));
 	}
 
 	/**
@@ -330,7 +335,7 @@ public class PropertyModelImpl extends MinimalEObjectImpl.Container implements P
 	 */
 	public EList<ConstraintModel> getConstraint() {
 		if (constraint == null) {
-			constraint = new EObjectResolvingEList<ConstraintModel>(ConstraintModel.class, this, ModelPackage.PROPERTY_MODEL__CONSTRAINT);
+			constraint = new EObjectContainmentEList<ConstraintModel>(ConstraintModel.class, this, ModelPackage.PROPERTY_MODEL__CONSTRAINT);
 		}
 		return constraint;
 	}
@@ -362,14 +367,6 @@ public class PropertyModelImpl extends MinimalEObjectImpl.Container implements P
 	 * @generated
 	 */
 	public DataModel getValue() {
-		if (value != null && value.eIsProxy()) {
-			InternalEObject oldValue = (InternalEObject)value;
-			value = (DataModel)eResolveProxy(oldValue);
-			if (value != oldValue) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.PROPERTY_MODEL__VALUE, oldValue, value));
-			}
-		}
 		return value;
 	}
 
@@ -378,8 +375,14 @@ public class PropertyModelImpl extends MinimalEObjectImpl.Container implements P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataModel basicGetValue() {
-		return value;
+	public NotificationChain basicSetValue(DataModel newValue, NotificationChain msgs) {
+		DataModel oldValue = value;
+		value = newValue;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelPackage.PROPERTY_MODEL__VALUE, oldValue, newValue);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -388,10 +391,17 @@ public class PropertyModelImpl extends MinimalEObjectImpl.Container implements P
 	 * @generated
 	 */
 	public void setValue(DataModel newValue) {
-		DataModel oldValue = value;
-		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PROPERTY_MODEL__VALUE, oldValue, value));
+		if (newValue != value) {
+			NotificationChain msgs = null;
+			if (value != null)
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelPackage.PROPERTY_MODEL__VALUE, null, msgs);
+			if (newValue != null)
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelPackage.PROPERTY_MODEL__VALUE, null, msgs);
+			msgs = basicSetValue(newValue, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PROPERTY_MODEL__VALUE, newValue, newValue));
 	}
 
 	/**
@@ -411,6 +421,24 @@ public class PropertyModelImpl extends MinimalEObjectImpl.Container implements P
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.PROPERTY_MODEL__DATA_VALUE:
+				return basicSetDataValue(null, msgs);
+			case ModelPackage.PROPERTY_MODEL__CONSTRAINT:
+				return ((InternalEList<?>)getConstraint()).basicRemove(otherEnd, msgs);
+			case ModelPackage.PROPERTY_MODEL__VALUE:
+				return basicSetValue(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ModelPackage.PROPERTY_MODEL__NAME:
@@ -420,8 +448,7 @@ public class PropertyModelImpl extends MinimalEObjectImpl.Container implements P
 			case ModelPackage.PROPERTY_MODEL__DESCRIPTION:
 				return getDescription();
 			case ModelPackage.PROPERTY_MODEL__DATA_VALUE:
-				if (resolve) return getDataValue();
-				return basicGetDataValue();
+				return getDataValue();
 			case ModelPackage.PROPERTY_MODEL__STATUS:
 				return getStatus();
 			case ModelPackage.PROPERTY_MODEL__CONSTRAINT:
@@ -429,8 +456,7 @@ public class PropertyModelImpl extends MinimalEObjectImpl.Container implements P
 			case ModelPackage.PROPERTY_MODEL__ENTRY_SCHEMA:
 				return getEntrySchema();
 			case ModelPackage.PROPERTY_MODEL__VALUE:
-				if (resolve) return getValue();
-				return basicGetValue();
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

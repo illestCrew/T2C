@@ -12,14 +12,17 @@ import kr.ac.hanyang.tosca2camp.rest.model.PropertyAssignmentModel;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,15 +37,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.CapabilityAssignmentModelImpl#getAttributes <em>Attributes</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class CapabilityAssignmentModelImpl extends MinimalEObjectImpl.Container implements CapabilityAssignmentModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 5762429071043823450L;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -65,7 +66,7 @@ public class CapabilityAssignmentModelImpl extends MinimalEObjectImpl.Container 
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' reference list.
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProperties()
@@ -75,7 +76,7 @@ public class CapabilityAssignmentModelImpl extends MinimalEObjectImpl.Container 
 	protected EList<PropertyAssignmentModel> properties;
 
 	/**
-	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' reference list.
+	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAttributes()
@@ -131,7 +132,7 @@ public class CapabilityAssignmentModelImpl extends MinimalEObjectImpl.Container 
 	 */
 	public EList<PropertyAssignmentModel> getProperties() {
 		if (properties == null) {
-			properties = new EObjectResolvingEList<PropertyAssignmentModel>(PropertyAssignmentModel.class, this, ModelPackage.CAPABILITY_ASSIGNMENT_MODEL__PROPERTIES);
+			properties = new EObjectContainmentEList<PropertyAssignmentModel>(PropertyAssignmentModel.class, this, ModelPackage.CAPABILITY_ASSIGNMENT_MODEL__PROPERTIES);
 		}
 		return properties;
 	}
@@ -143,9 +144,25 @@ public class CapabilityAssignmentModelImpl extends MinimalEObjectImpl.Container 
 	 */
 	public EList<AttributeAssignmentModel> getAttributes() {
 		if (attributes == null) {
-			attributes = new EObjectResolvingEList<AttributeAssignmentModel>(AttributeAssignmentModel.class, this, ModelPackage.CAPABILITY_ASSIGNMENT_MODEL__ATTRIBUTES);
+			attributes = new EObjectContainmentEList<AttributeAssignmentModel>(AttributeAssignmentModel.class, this, ModelPackage.CAPABILITY_ASSIGNMENT_MODEL__ATTRIBUTES);
 		}
 		return attributes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.CAPABILITY_ASSIGNMENT_MODEL__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+			case ModelPackage.CAPABILITY_ASSIGNMENT_MODEL__ATTRIBUTES:
+				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

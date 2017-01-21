@@ -4,8 +4,6 @@ package kr.ac.hanyang.tosca2camp.rest.model.impl;
 
 import java.io.Serializable;
 import java.util.Collection;
-import java.util.Map;
-
 import kr.ac.hanyang.tosca2camp.rest.model.ArtifactTypeModel;
 import kr.ac.hanyang.tosca2camp.rest.model.CapabilityDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.DatatypeDefinitionModel;
@@ -20,8 +18,10 @@ import kr.ac.hanyang.tosca2camp.rest.model.RepositoryDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel;
 import kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel;
 
+
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -30,7 +30,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,7 +42,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ServiceTemplateModelImpl#getVersion <em>Version</em>}</li>
- *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ServiceTemplateModelImpl#getMetaData <em>Meta Data</em>}</li>
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ServiceTemplateModelImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ServiceTemplateModelImpl#getRepositories <em>Repositories</em>}</li>
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ServiceTemplateModelImpl#getImports <em>Imports</em>}</li>
@@ -56,15 +56,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ServiceTemplateModelImpl#getTopologyTemplate <em>Topology Template</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container implements ServiceTemplateModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -4425702710629104402L;
 
 	/**
 	 * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
@@ -117,7 +115,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRepositories() <em>Repositories</em>}' reference list.
+	 * The cached value of the '{@link #getRepositories() <em>Repositories</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRepositories()
@@ -127,7 +125,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	protected EList<RepositoryDefinitionModel> repositories;
 
 	/**
-	 * The cached value of the '{@link #getImports() <em>Imports</em>}' reference list.
+	 * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getImports()
@@ -137,7 +135,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	protected EList<ImportDefinitionModel> imports;
 
 	/**
-	 * The cached value of the '{@link #getArtifactTypes() <em>Artifact Types</em>}' reference list.
+	 * The cached value of the '{@link #getArtifactTypes() <em>Artifact Types</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getArtifactTypes()
@@ -147,7 +145,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	protected EList<ArtifactTypeModel> artifactTypes;
 
 	/**
-	 * The cached value of the '{@link #getDataTypes() <em>Data Types</em>}' reference list.
+	 * The cached value of the '{@link #getDataTypes() <em>Data Types</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDataTypes()
@@ -157,7 +155,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	protected EList<DatatypeDefinitionModel> dataTypes;
 
 	/**
-	 * The cached value of the '{@link #getCapabilityTypes() <em>Capability Types</em>}' reference list.
+	 * The cached value of the '{@link #getCapabilityTypes() <em>Capability Types</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCapabilityTypes()
@@ -167,7 +165,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	protected EList<CapabilityDefinitionModel> capabilityTypes;
 
 	/**
-	 * The cached value of the '{@link #getInterfaceTypes() <em>Interface Types</em>}' reference list.
+	 * The cached value of the '{@link #getInterfaceTypes() <em>Interface Types</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInterfaceTypes()
@@ -177,7 +175,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	protected EList<InterfaceTypeModel> interfaceTypes;
 
 	/**
-	 * The cached value of the '{@link #getRelationshipTypes() <em>Relationship Types</em>}' reference list.
+	 * The cached value of the '{@link #getRelationshipTypes() <em>Relationship Types</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRelationshipTypes()
@@ -187,7 +185,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	protected EList<RelationshipDefinitionModel> relationshipTypes;
 
 	/**
-	 * The cached value of the '{@link #getNodeTypes() <em>Node Types</em>}' reference list.
+	 * The cached value of the '{@link #getNodeTypes() <em>Node Types</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getNodeTypes()
@@ -197,7 +195,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	protected EList<NodeDefinitionModel> nodeTypes;
 
 	/**
-	 * The cached value of the '{@link #getGroupTypes() <em>Group Types</em>}' reference list.
+	 * The cached value of the '{@link #getGroupTypes() <em>Group Types</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGroupTypes()
@@ -207,7 +205,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	protected EList<GroupDefinitionModel> groupTypes;
 
 	/**
-	 * The cached value of the '{@link #getPolicyTypes() <em>Policy Types</em>}' reference list.
+	 * The cached value of the '{@link #getPolicyTypes() <em>Policy Types</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPolicyTypes()
@@ -217,7 +215,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	protected EList<PolicyDefinitionModel> policyTypes;
 
 	/**
-	 * The cached value of the '{@link #getTopologyTemplate() <em>Topology Template</em>}' reference.
+	 * The cached value of the '{@link #getTopologyTemplate() <em>Topology Template</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTopologyTemplate()
@@ -315,7 +313,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<RepositoryDefinitionModel> getRepositories() {
 		if (repositories == null) {
-			repositories = new EObjectResolvingEList<RepositoryDefinitionModel>(RepositoryDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__REPOSITORIES);
+			repositories = new EObjectContainmentEList<RepositoryDefinitionModel>(RepositoryDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__REPOSITORIES);
 		}
 		return repositories;
 	}
@@ -327,7 +325,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<ImportDefinitionModel> getImports() {
 		if (imports == null) {
-			imports = new EObjectResolvingEList<ImportDefinitionModel>(ImportDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__IMPORTS);
+			imports = new EObjectContainmentEList<ImportDefinitionModel>(ImportDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__IMPORTS);
 		}
 		return imports;
 	}
@@ -339,7 +337,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<ArtifactTypeModel> getArtifactTypes() {
 		if (artifactTypes == null) {
-			artifactTypes = new EObjectResolvingEList<ArtifactTypeModel>(ArtifactTypeModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__ARTIFACT_TYPES);
+			artifactTypes = new EObjectContainmentEList<ArtifactTypeModel>(ArtifactTypeModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__ARTIFACT_TYPES);
 		}
 		return artifactTypes;
 	}
@@ -351,7 +349,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<DatatypeDefinitionModel> getDataTypes() {
 		if (dataTypes == null) {
-			dataTypes = new EObjectResolvingEList<DatatypeDefinitionModel>(DatatypeDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__DATA_TYPES);
+			dataTypes = new EObjectContainmentEList<DatatypeDefinitionModel>(DatatypeDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__DATA_TYPES);
 		}
 		return dataTypes;
 	}
@@ -363,7 +361,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<CapabilityDefinitionModel> getCapabilityTypes() {
 		if (capabilityTypes == null) {
-			capabilityTypes = new EObjectResolvingEList<CapabilityDefinitionModel>(CapabilityDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__CAPABILITY_TYPES);
+			capabilityTypes = new EObjectContainmentEList<CapabilityDefinitionModel>(CapabilityDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__CAPABILITY_TYPES);
 		}
 		return capabilityTypes;
 	}
@@ -375,7 +373,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<InterfaceTypeModel> getInterfaceTypes() {
 		if (interfaceTypes == null) {
-			interfaceTypes = new EObjectResolvingEList<InterfaceTypeModel>(InterfaceTypeModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__INTERFACE_TYPES);
+			interfaceTypes = new EObjectContainmentEList<InterfaceTypeModel>(InterfaceTypeModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__INTERFACE_TYPES);
 		}
 		return interfaceTypes;
 	}
@@ -387,7 +385,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<RelationshipDefinitionModel> getRelationshipTypes() {
 		if (relationshipTypes == null) {
-			relationshipTypes = new EObjectResolvingEList<RelationshipDefinitionModel>(RelationshipDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__RELATIONSHIP_TYPES);
+			relationshipTypes = new EObjectContainmentEList<RelationshipDefinitionModel>(RelationshipDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__RELATIONSHIP_TYPES);
 		}
 		return relationshipTypes;
 	}
@@ -399,7 +397,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<NodeDefinitionModel> getNodeTypes() {
 		if (nodeTypes == null) {
-			nodeTypes = new EObjectResolvingEList<NodeDefinitionModel>(NodeDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__NODE_TYPES);
+			nodeTypes = new EObjectContainmentEList<NodeDefinitionModel>(NodeDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__NODE_TYPES);
 		}
 		return nodeTypes;
 	}
@@ -411,7 +409,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<GroupDefinitionModel> getGroupTypes() {
 		if (groupTypes == null) {
-			groupTypes = new EObjectResolvingEList<GroupDefinitionModel>(GroupDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__GROUP_TYPES);
+			groupTypes = new EObjectContainmentEList<GroupDefinitionModel>(GroupDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__GROUP_TYPES);
 		}
 		return groupTypes;
 	}
@@ -423,7 +421,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<PolicyDefinitionModel> getPolicyTypes() {
 		if (policyTypes == null) {
-			policyTypes = new EObjectResolvingEList<PolicyDefinitionModel>(PolicyDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__POLICY_TYPES);
+			policyTypes = new EObjectContainmentEList<PolicyDefinitionModel>(PolicyDefinitionModel.class, this, ModelPackage.SERVICE_TEMPLATE_MODEL__POLICY_TYPES);
 		}
 		return policyTypes;
 	}
@@ -434,14 +432,6 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	public TopologyTemplateModel getTopologyTemplate() {
-		if (topologyTemplate != null && topologyTemplate.eIsProxy()) {
-			InternalEObject oldTopologyTemplate = (InternalEObject)topologyTemplate;
-			topologyTemplate = (TopologyTemplateModel)eResolveProxy(oldTopologyTemplate);
-			if (topologyTemplate != oldTopologyTemplate) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.SERVICE_TEMPLATE_MODEL__TOPOLOGY_TEMPLATE, oldTopologyTemplate, topologyTemplate));
-			}
-		}
 		return topologyTemplate;
 	}
 
@@ -450,8 +440,14 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TopologyTemplateModel basicGetTopologyTemplate() {
-		return topologyTemplate;
+	public NotificationChain basicSetTopologyTemplate(TopologyTemplateModel newTopologyTemplate, NotificationChain msgs) {
+		TopologyTemplateModel oldTopologyTemplate = topologyTemplate;
+		topologyTemplate = newTopologyTemplate;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelPackage.SERVICE_TEMPLATE_MODEL__TOPOLOGY_TEMPLATE, oldTopologyTemplate, newTopologyTemplate);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -460,10 +456,51 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	public void setTopologyTemplate(TopologyTemplateModel newTopologyTemplate) {
-		TopologyTemplateModel oldTopologyTemplate = topologyTemplate;
-		topologyTemplate = newTopologyTemplate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SERVICE_TEMPLATE_MODEL__TOPOLOGY_TEMPLATE, oldTopologyTemplate, topologyTemplate));
+		if (newTopologyTemplate != topologyTemplate) {
+			NotificationChain msgs = null;
+			if (topologyTemplate != null)
+				msgs = ((InternalEObject)topologyTemplate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelPackage.SERVICE_TEMPLATE_MODEL__TOPOLOGY_TEMPLATE, null, msgs);
+			if (newTopologyTemplate != null)
+				msgs = ((InternalEObject)newTopologyTemplate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelPackage.SERVICE_TEMPLATE_MODEL__TOPOLOGY_TEMPLATE, null, msgs);
+			msgs = basicSetTopologyTemplate(newTopologyTemplate, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SERVICE_TEMPLATE_MODEL__TOPOLOGY_TEMPLATE, newTopologyTemplate, newTopologyTemplate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.SERVICE_TEMPLATE_MODEL__REPOSITORIES:
+				return ((InternalEList<?>)getRepositories()).basicRemove(otherEnd, msgs);
+			case ModelPackage.SERVICE_TEMPLATE_MODEL__IMPORTS:
+				return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
+			case ModelPackage.SERVICE_TEMPLATE_MODEL__ARTIFACT_TYPES:
+				return ((InternalEList<?>)getArtifactTypes()).basicRemove(otherEnd, msgs);
+			case ModelPackage.SERVICE_TEMPLATE_MODEL__DATA_TYPES:
+				return ((InternalEList<?>)getDataTypes()).basicRemove(otherEnd, msgs);
+			case ModelPackage.SERVICE_TEMPLATE_MODEL__CAPABILITY_TYPES:
+				return ((InternalEList<?>)getCapabilityTypes()).basicRemove(otherEnd, msgs);
+			case ModelPackage.SERVICE_TEMPLATE_MODEL__INTERFACE_TYPES:
+				return ((InternalEList<?>)getInterfaceTypes()).basicRemove(otherEnd, msgs);
+			case ModelPackage.SERVICE_TEMPLATE_MODEL__RELATIONSHIP_TYPES:
+				return ((InternalEList<?>)getRelationshipTypes()).basicRemove(otherEnd, msgs);
+			case ModelPackage.SERVICE_TEMPLATE_MODEL__NODE_TYPES:
+				return ((InternalEList<?>)getNodeTypes()).basicRemove(otherEnd, msgs);
+			case ModelPackage.SERVICE_TEMPLATE_MODEL__GROUP_TYPES:
+				return ((InternalEList<?>)getGroupTypes()).basicRemove(otherEnd, msgs);
+			case ModelPackage.SERVICE_TEMPLATE_MODEL__POLICY_TYPES:
+				return ((InternalEList<?>)getPolicyTypes()).basicRemove(otherEnd, msgs);
+			case ModelPackage.SERVICE_TEMPLATE_MODEL__TOPOLOGY_TEMPLATE:
+				return basicSetTopologyTemplate(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -476,8 +513,6 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 		switch (featureID) {
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__VERSION:
 				return getVersion();
-//			case ModelPackage.SERVICE_TEMPLATE_MODEL__META_DATA:
-//				return getMetaData();
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__DESCRIPTION:
 				return getDescription();
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__REPOSITORIES:
@@ -501,8 +536,7 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__POLICY_TYPES:
 				return getPolicyTypes();
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__TOPOLOGY_TEMPLATE:
-				if (resolve) return getTopologyTemplate();
-				return basicGetTopologyTemplate();
+				return getTopologyTemplate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -519,9 +553,6 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__VERSION:
 				setVersion((String)newValue);
 				return;
-//			case ModelPackage.SERVICE_TEMPLATE_MODEL__META_DATA:
-//				setMetaData((Map<String, String>)newValue);
-//				return;
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
@@ -583,9 +614,6 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__VERSION:
 				setVersion(VERSION_EDEFAULT);
 				return;
-//			case ModelPackage.SERVICE_TEMPLATE_MODEL__META_DATA:
-//				setMetaData((Map<String, String>)null);
-//				return;
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
@@ -636,8 +664,6 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 		switch (featureID) {
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__VERSION:
 				return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
-//			case ModelPackage.SERVICE_TEMPLATE_MODEL__META_DATA:
-//				return metaData != null;
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ModelPackage.SERVICE_TEMPLATE_MODEL__REPOSITORIES:
@@ -678,12 +704,11 @@ public class ServiceTemplateModelImpl extends MinimalEObjectImpl.Container imple
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (version: ");
 		result.append(version);
-		result.append(", metaData: ");
-//		result.append(metaData);
 		result.append(", description: ");
 		result.append(description);
 		result.append(')');
 		return result.toString();
 	}
+
 
 } //ServiceTemplateModelImpl

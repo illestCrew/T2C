@@ -1,37 +1,13 @@
 package kr.ac.hanyang.tosca2camp.rest.model;
 
-import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.ecore.EObject;
 /**
  * @model 
  */
-public interface ArtifactDefinitionModel extends EObject{//  implements EObject, Serializable{
+public interface ArtifactDefinitionModel extends EObject{
 	
-//	/**
-//	 * 
-//	 */
-//	private static final long serialVersionUID = -6042288078801986884L;
-//	private String type;
-//	private String file;
-//	private String repository;
-//	private String description;
-//	private String deploy_path;
 
-	
-	
-	//public ArtifactDefinitionModel(){ }
-	
-//	public static ArtifactDefinitionModel of(){
-//		return new ArtifactDefinitionModel();
-//	}
-//	
-//	public ArtifactDefinitionModel type(String type){	this.type = type; 	return this; 	}
-//	public ArtifactDefinitionModel file(String file){	this.file = file; 	return this; 	}
-//	public ArtifactDefinitionModel repository(String repository){	this.repository = repository; 	return this; 	}
-//	public ArtifactDefinitionModel description(String description){	this.description = description; 	return this; 	}
-//	public ArtifactDefinitionModel deploy_path(String deploy_path){	this.deploy_path = deploy_path; 	return this; 	}
-	
 	/**
 	 * @model 
 	 */

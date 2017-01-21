@@ -1,13 +1,12 @@
 package kr.ac.hanyang.tosca2camp.rest.model;
 
-import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 /**
  * @model 
  */
-public interface PolicyTypeModel extends EObject{//  implements EObject, Serializable{
+public interface PolicyTypeModel extends EObject{
 	
 	/**
 	 * 
@@ -15,7 +14,7 @@ public interface PolicyTypeModel extends EObject{//  implements EObject, Seriali
 //	private static final long serialVersionUID = 3131633548859928754L;
 //	private String typeName;
 //	private String derived_from;
-//	private VersionModel version;
+//	private String version;
 //	private String description;
 //	private List<PropertyModel> properties;
 //	private String[] targets;
@@ -29,7 +28,7 @@ public interface PolicyTypeModel extends EObject{//  implements EObject, Seriali
 //	
 //	public PolicyTypeModel typeName(String name){	this.typeName = name; 	return this; 	}
 //	public PolicyTypeModel derived_from(String derived_from){	this.derived_from = derived_from; 	return this; 	}
-//	public PolicyTypeModel version(VersionModel version){	this.version = version; 	return this; 	}
+//	public PolicyTypeModel version(String version){	this.version = version; 	return this; 	}
 //	public PolicyTypeModel description(String description){	this.description = description; 	return this; 	}
 //	public PolicyTypeModel properties(List<PropertyModel> properties){	this.properties = properties; 	return this; 	}
 //	public PolicyTypeModel targets(String[] targets){	this.targets = targets; 	return this; 	}
@@ -70,7 +69,7 @@ public interface PolicyTypeModel extends EObject{//  implements EObject, Seriali
 	 * @model 
 	 */
 	@XmlElement(name="version")
-	public VersionModel getVersion();
+	public String getVersion();
 	
 	/**
 	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.PolicyTypeModel#getVersion <em>Version</em>}' attribute.
@@ -80,7 +79,7 @@ public interface PolicyTypeModel extends EObject{//  implements EObject, Seriali
 	 * @see #getVersion()
 	 * @generated
 	 */
-	void setVersion(VersionModel value);
+	void setVersion(String value);
 
 	/**
 	 * @model 

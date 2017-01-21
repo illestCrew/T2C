@@ -10,18 +10,21 @@ import kr.ac.hanyang.tosca2camp.rest.model.InterfaceTypeModel;
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 import kr.ac.hanyang.tosca2camp.rest.model.PropertyModel;
 import kr.ac.hanyang.tosca2camp.rest.model.RelationshipDefinitionModel;
-import kr.ac.hanyang.tosca2camp.rest.model.VersionModel;
+
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,15 +44,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.RelationshipDefinitionModelImpl#getValidTargetTypes <em>Valid Target Types</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class RelationshipDefinitionModelImpl extends MinimalEObjectImpl.Container implements RelationshipDefinitionModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1055007581525562131L;
 
 	/**
 	 * The default value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
@@ -99,7 +100,7 @@ public class RelationshipDefinitionModelImpl extends MinimalEObjectImpl.Containe
 	 * @generated
 	 * @ordered
 	 */
-	protected static final VersionModel VERSION_EDEFAULT = null;
+	protected static final String VERSION_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute.
@@ -109,7 +110,7 @@ public class RelationshipDefinitionModelImpl extends MinimalEObjectImpl.Containe
 	 * @generated
 	 * @ordered
 	 */
-	protected VersionModel version = VERSION_EDEFAULT;
+	protected String version = VERSION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -132,7 +133,7 @@ public class RelationshipDefinitionModelImpl extends MinimalEObjectImpl.Containe
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' reference list.
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProperties()
@@ -142,7 +143,7 @@ public class RelationshipDefinitionModelImpl extends MinimalEObjectImpl.Containe
 	protected EList<PropertyModel> properties;
 
 	/**
-	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' reference list.
+	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAttributes()
@@ -152,7 +153,7 @@ public class RelationshipDefinitionModelImpl extends MinimalEObjectImpl.Containe
 	protected EList<AttributeDefinitionModel> attributes;
 
 	/**
-	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' reference list.
+	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInterfaces()
@@ -247,7 +248,7 @@ public class RelationshipDefinitionModelImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VersionModel getVersion() {
+	public String getVersion() {
 		return version;
 	}
 
@@ -256,8 +257,8 @@ public class RelationshipDefinitionModelImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVersion(VersionModel newVersion) {
-		VersionModel oldVersion = version;
+	public void setVersion(String newVersion) {
+		String oldVersion = version;
 		version = newVersion;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.RELATIONSHIP_DEFINITION_MODEL__VERSION, oldVersion, version));
@@ -291,7 +292,7 @@ public class RelationshipDefinitionModelImpl extends MinimalEObjectImpl.Containe
 	 */
 	public EList<PropertyModel> getProperties() {
 		if (properties == null) {
-			properties = new EObjectResolvingEList<PropertyModel>(PropertyModel.class, this, ModelPackage.RELATIONSHIP_DEFINITION_MODEL__PROPERTIES);
+			properties = new EObjectContainmentEList<PropertyModel>(PropertyModel.class, this, ModelPackage.RELATIONSHIP_DEFINITION_MODEL__PROPERTIES);
 		}
 		return properties;
 	}
@@ -303,7 +304,7 @@ public class RelationshipDefinitionModelImpl extends MinimalEObjectImpl.Containe
 	 */
 	public EList<AttributeDefinitionModel> getAttributes() {
 		if (attributes == null) {
-			attributes = new EObjectResolvingEList<AttributeDefinitionModel>(AttributeDefinitionModel.class, this, ModelPackage.RELATIONSHIP_DEFINITION_MODEL__ATTRIBUTES);
+			attributes = new EObjectContainmentEList<AttributeDefinitionModel>(AttributeDefinitionModel.class, this, ModelPackage.RELATIONSHIP_DEFINITION_MODEL__ATTRIBUTES);
 		}
 		return attributes;
 	}
@@ -315,7 +316,7 @@ public class RelationshipDefinitionModelImpl extends MinimalEObjectImpl.Containe
 	 */
 	public EList<InterfaceTypeModel> getInterfaces() {
 		if (interfaces == null) {
-			interfaces = new EObjectResolvingEList<InterfaceTypeModel>(InterfaceTypeModel.class, this, ModelPackage.RELATIONSHIP_DEFINITION_MODEL__INTERFACES);
+			interfaces = new EObjectContainmentEList<InterfaceTypeModel>(InterfaceTypeModel.class, this, ModelPackage.RELATIONSHIP_DEFINITION_MODEL__INTERFACES);
 		}
 		return interfaces;
 	}
@@ -339,6 +340,24 @@ public class RelationshipDefinitionModelImpl extends MinimalEObjectImpl.Containe
 		validTargetTypes = newValidTargetTypes;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.RELATIONSHIP_DEFINITION_MODEL__VALID_TARGET_TYPES, oldValidTargetTypes, validTargetTypes));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.RELATIONSHIP_DEFINITION_MODEL__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+			case ModelPackage.RELATIONSHIP_DEFINITION_MODEL__ATTRIBUTES:
+				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
+			case ModelPackage.RELATIONSHIP_DEFINITION_MODEL__INTERFACES:
+				return ((InternalEList<?>)getInterfaces()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -385,7 +404,7 @@ public class RelationshipDefinitionModelImpl extends MinimalEObjectImpl.Containe
 				setDerivedFrom((String)newValue);
 				return;
 			case ModelPackage.RELATIONSHIP_DEFINITION_MODEL__VERSION:
-				setVersion((VersionModel)newValue);
+				setVersion((String)newValue);
 				return;
 			case ModelPackage.RELATIONSHIP_DEFINITION_MODEL__DESCRIPTION:
 				setDescription((String)newValue);

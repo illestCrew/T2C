@@ -59,34 +59,6 @@ public interface ModelPackage extends EPackage {
 	ModelPackage eINSTANCE = kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link java.io.Serializable <em>Serializable</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see java.io.Serializable
-	 * @see kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl#getSerializable()
-	 * @generated
-	 */
-	int SERIALIZABLE = 30;
-
-	/**
-	 * The number of structural features of the '<em>Serializable</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERIALIZABLE_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Serializable</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERIALIZABLE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ArtifactDefinitionModelImpl <em>Artifact Definition Model</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,7 +75,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_DEFINITION_MODEL__TYPE = SERIALIZABLE_FEATURE_COUNT + 0;
+	int ARTIFACT_DEFINITION_MODEL__TYPE = 0;
 
 	/**
 	 * The feature id for the '<em><b>File</b></em>' attribute.
@@ -112,7 +84,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_DEFINITION_MODEL__FILE = SERIALIZABLE_FEATURE_COUNT + 1;
+	int ARTIFACT_DEFINITION_MODEL__FILE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Repository</b></em>' attribute.
@@ -121,7 +93,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_DEFINITION_MODEL__REPOSITORY = SERIALIZABLE_FEATURE_COUNT + 2;
+	int ARTIFACT_DEFINITION_MODEL__REPOSITORY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -130,7 +102,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_DEFINITION_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 3;
+	int ARTIFACT_DEFINITION_MODEL__DESCRIPTION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Deploy path</b></em>' attribute.
@@ -139,7 +111,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_DEFINITION_MODEL__DEPLOY_PATH = SERIALIZABLE_FEATURE_COUNT + 4;
+	int ARTIFACT_DEFINITION_MODEL__DEPLOY_PATH = 4;
 
 	/**
 	 * The number of structural features of the '<em>Artifact Definition Model</em>' class.
@@ -148,7 +120,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_DEFINITION_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 5;
+	int ARTIFACT_DEFINITION_MODEL_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Artifact Definition Model</em>' class.
@@ -157,7 +129,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_DEFINITION_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int ARTIFACT_DEFINITION_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ArtifactTypeModelImpl <em>Artifact Type Model</em>}' class.
@@ -176,7 +148,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_TYPE_MODEL__TYPE_NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int ARTIFACT_TYPE_MODEL__TYPE_NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Derived From</b></em>' attribute.
@@ -185,7 +157,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_TYPE_MODEL__DERIVED_FROM = SERIALIZABLE_FEATURE_COUNT + 1;
+	int ARTIFACT_TYPE_MODEL__DERIVED_FROM = 1;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -194,7 +166,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_TYPE_MODEL__VERSION = SERIALIZABLE_FEATURE_COUNT + 2;
+	int ARTIFACT_TYPE_MODEL__VERSION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -203,7 +175,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_TYPE_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 3;
+	int ARTIFACT_TYPE_MODEL__DESCRIPTION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Mime type</b></em>' attribute.
@@ -212,7 +184,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_TYPE_MODEL__MIME_TYPE = SERIALIZABLE_FEATURE_COUNT + 4;
+	int ARTIFACT_TYPE_MODEL__MIME_TYPE = 4;
 
 	/**
 	 * The feature id for the '<em><b>File ext</b></em>' attribute.
@@ -221,16 +193,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_TYPE_MODEL__FILE_EXT = SERIALIZABLE_FEATURE_COUNT + 5;
+	int ARTIFACT_TYPE_MODEL__FILE_EXT = 5;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_TYPE_MODEL__PROPERTIES = SERIALIZABLE_FEATURE_COUNT + 6;
+	int ARTIFACT_TYPE_MODEL__PROPERTIES = 6;
 
 	/**
 	 * The number of structural features of the '<em>Artifact Type Model</em>' class.
@@ -239,7 +211,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_TYPE_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 7;
+	int ARTIFACT_TYPE_MODEL_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Artifact Type Model</em>' class.
@@ -248,7 +220,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_TYPE_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int ARTIFACT_TYPE_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.AttributeAssignmentModelImpl <em>Attribute Assignment Model</em>}' class.
@@ -267,7 +239,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_ASSIGNMENT_MODEL__NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int ATTRIBUTE_ASSIGNMENT_MODEL__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -276,16 +248,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_ASSIGNMENT_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 1;
+	int ATTRIBUTE_ASSIGNMENT_MODEL__DESCRIPTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_ASSIGNMENT_MODEL__VALUE = SERIALIZABLE_FEATURE_COUNT + 2;
+	int ATTRIBUTE_ASSIGNMENT_MODEL__VALUE = 2;
 
 	/**
 	 * The number of structural features of the '<em>Attribute Assignment Model</em>' class.
@@ -294,7 +266,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_ASSIGNMENT_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 3;
+	int ATTRIBUTE_ASSIGNMENT_MODEL_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Attribute Assignment Model</em>' class.
@@ -303,7 +275,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_ASSIGNMENT_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int ATTRIBUTE_ASSIGNMENT_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.AttributeDefinitionModelImpl <em>Attribute Definition Model</em>}' class.
@@ -322,7 +294,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION_MODEL__NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int ATTRIBUTE_DEFINITION_MODEL__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -331,7 +303,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION_MODEL__TYPE = SERIALIZABLE_FEATURE_COUNT + 1;
+	int ATTRIBUTE_DEFINITION_MODEL__TYPE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -340,16 +312,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 2;
+	int ATTRIBUTE_DEFINITION_MODEL__DESCRIPTION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Data Value</b></em>' reference.
+	 * The feature id for the '<em><b>Data Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION_MODEL__DATA_VALUE = SERIALIZABLE_FEATURE_COUNT + 3;
+	int ATTRIBUTE_DEFINITION_MODEL__DATA_VALUE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -358,7 +330,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION_MODEL__STATUS = SERIALIZABLE_FEATURE_COUNT + 4;
+	int ATTRIBUTE_DEFINITION_MODEL__STATUS = 4;
 
 	/**
 	 * The number of structural features of the '<em>Attribute Definition Model</em>' class.
@@ -367,7 +339,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 5;
+	int ATTRIBUTE_DEFINITION_MODEL_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Attribute Definition Model</em>' class.
@@ -376,7 +348,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int ATTRIBUTE_DEFINITION_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.CapabilityAssignmentModelImpl <em>Capability Assignment Model</em>}' class.
@@ -395,25 +367,25 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_ASSIGNMENT_MODEL__NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int CAPABILITY_ASSIGNMENT_MODEL__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_ASSIGNMENT_MODEL__PROPERTIES = SERIALIZABLE_FEATURE_COUNT + 1;
+	int CAPABILITY_ASSIGNMENT_MODEL__PROPERTIES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_ASSIGNMENT_MODEL__ATTRIBUTES = SERIALIZABLE_FEATURE_COUNT + 2;
+	int CAPABILITY_ASSIGNMENT_MODEL__ATTRIBUTES = 2;
 
 	/**
 	 * The number of structural features of the '<em>Capability Assignment Model</em>' class.
@@ -422,7 +394,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_ASSIGNMENT_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 3;
+	int CAPABILITY_ASSIGNMENT_MODEL_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Capability Assignment Model</em>' class.
@@ -431,7 +403,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_ASSIGNMENT_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int CAPABILITY_ASSIGNMENT_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.CapabilityDefinitionModelImpl <em>Capability Definition Model</em>}' class.
@@ -450,7 +422,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DEFINITION_MODEL__TYPE_NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int CAPABILITY_DEFINITION_MODEL__TYPE_NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Derived From</b></em>' attribute.
@@ -459,7 +431,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DEFINITION_MODEL__DERIVED_FROM = SERIALIZABLE_FEATURE_COUNT + 1;
+	int CAPABILITY_DEFINITION_MODEL__DERIVED_FROM = 1;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -468,7 +440,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DEFINITION_MODEL__VERSION = SERIALIZABLE_FEATURE_COUNT + 2;
+	int CAPABILITY_DEFINITION_MODEL__VERSION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -477,25 +449,25 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DEFINITION_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 3;
+	int CAPABILITY_DEFINITION_MODEL__DESCRIPTION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DEFINITION_MODEL__PROPERTIES = SERIALIZABLE_FEATURE_COUNT + 4;
+	int CAPABILITY_DEFINITION_MODEL__PROPERTIES = 4;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DEFINITION_MODEL__ATTRIBUTES = SERIALIZABLE_FEATURE_COUNT + 5;
+	int CAPABILITY_DEFINITION_MODEL__ATTRIBUTES = 5;
 
 	/**
 	 * The feature id for the '<em><b>Valid Sources</b></em>' attribute.
@@ -504,7 +476,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DEFINITION_MODEL__VALID_SOURCES = SERIALIZABLE_FEATURE_COUNT + 6;
+	int CAPABILITY_DEFINITION_MODEL__VALID_SOURCES = 6;
 
 	/**
 	 * The number of structural features of the '<em>Capability Definition Model</em>' class.
@@ -513,7 +485,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DEFINITION_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 7;
+	int CAPABILITY_DEFINITION_MODEL_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Capability Definition Model</em>' class.
@@ -522,7 +494,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DEFINITION_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int CAPABILITY_DEFINITION_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ConstraintModelImpl <em>Constraint Model</em>}' class.
@@ -541,16 +513,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT_MODEL__NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int CONSTRAINT_MODEL__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT_MODEL__VALUE = SERIALIZABLE_FEATURE_COUNT + 1;
+	int CONSTRAINT_MODEL__VALUE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Constraint Model</em>' class.
@@ -559,7 +531,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 2;
+	int CONSTRAINT_MODEL_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Constraint Model</em>' class.
@@ -568,7 +540,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int CONSTRAINT_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.DataModelImpl <em>Data Model</em>}' class.
@@ -587,7 +559,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_MODEL__VALUE = SERIALIZABLE_FEATURE_COUNT + 0;
+	int DATA_MODEL__VALUE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Data Model</em>' class.
@@ -596,7 +568,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 1;
+	int DATA_MODEL_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Data Model</em>' class.
@@ -605,7 +577,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int DATA_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.DatatypeDefinitionModelImpl <em>Datatype Definition Model</em>}' class.
@@ -624,7 +596,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATATYPE_DEFINITION_MODEL__TYPE_NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int DATATYPE_DEFINITION_MODEL__TYPE_NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Derived From</b></em>' attribute.
@@ -633,7 +605,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATATYPE_DEFINITION_MODEL__DERIVED_FROM = SERIALIZABLE_FEATURE_COUNT + 1;
+	int DATATYPE_DEFINITION_MODEL__DERIVED_FROM = 1;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -642,7 +614,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATATYPE_DEFINITION_MODEL__VERSION = SERIALIZABLE_FEATURE_COUNT + 2;
+	int DATATYPE_DEFINITION_MODEL__VERSION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -651,25 +623,25 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATATYPE_DEFINITION_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 3;
+	int DATATYPE_DEFINITION_MODEL__DESCRIPTION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Constraints</b></em>' reference list.
+	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATATYPE_DEFINITION_MODEL__CONSTRAINTS = SERIALIZABLE_FEATURE_COUNT + 4;
+	int DATATYPE_DEFINITION_MODEL__CONSTRAINTS = 4;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATATYPE_DEFINITION_MODEL__PROPERTIES = SERIALIZABLE_FEATURE_COUNT + 5;
+	int DATATYPE_DEFINITION_MODEL__PROPERTIES = 5;
 
 	/**
 	 * The number of structural features of the '<em>Datatype Definition Model</em>' class.
@@ -678,7 +650,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATATYPE_DEFINITION_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 6;
+	int DATATYPE_DEFINITION_MODEL_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Datatype Definition Model</em>' class.
@@ -687,7 +659,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATATYPE_DEFINITION_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int DATATYPE_DEFINITION_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.FunctionModelImpl <em>Function Model</em>}' class.
@@ -706,16 +678,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_MODEL__TYPE_NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int FUNCTION_MODEL__TYPE_NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' reference list.
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_MODEL__PARAMETERS = SERIALIZABLE_FEATURE_COUNT + 1;
+	int FUNCTION_MODEL__PARAMETERS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Function Model</em>' class.
@@ -724,7 +696,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 2;
+	int FUNCTION_MODEL_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Function Model</em>' class.
@@ -733,7 +705,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int FUNCTION_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.GroupDefinitionModelImpl <em>Group Definition Model</em>}' class.
@@ -752,7 +724,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_DEFINITION_MODEL__NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int GROUP_DEFINITION_MODEL__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -761,7 +733,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_DEFINITION_MODEL__TYPE = SERIALIZABLE_FEATURE_COUNT + 1;
+	int GROUP_DEFINITION_MODEL__TYPE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -770,34 +742,34 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_DEFINITION_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 2;
+	int GROUP_DEFINITION_MODEL__DESCRIPTION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_DEFINITION_MODEL__PROPERTIES = SERIALIZABLE_FEATURE_COUNT + 3;
+	int GROUP_DEFINITION_MODEL__PROPERTIES = 3;
 
 	/**
-	 * The feature id for the '<em><b>Members</b></em>' reference list.
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_DEFINITION_MODEL__MEMBERS = SERIALIZABLE_FEATURE_COUNT + 4;
+	int GROUP_DEFINITION_MODEL__MEMBERS = 4;
 
 	/**
-	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_DEFINITION_MODEL__INTERFACES = SERIALIZABLE_FEATURE_COUNT + 5;
+	int GROUP_DEFINITION_MODEL__INTERFACES = 5;
 
 	/**
 	 * The number of structural features of the '<em>Group Definition Model</em>' class.
@@ -806,7 +778,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_DEFINITION_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 6;
+	int GROUP_DEFINITION_MODEL_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Group Definition Model</em>' class.
@@ -815,7 +787,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_DEFINITION_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int GROUP_DEFINITION_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.GroupTypeModelImpl <em>Group Type Model</em>}' class.
@@ -834,7 +806,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_TYPE_MODEL__TYPE_NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int GROUP_TYPE_MODEL__TYPE_NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Derived From</b></em>' attribute.
@@ -843,7 +815,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_TYPE_MODEL__DERIVED_FROM = SERIALIZABLE_FEATURE_COUNT + 1;
+	int GROUP_TYPE_MODEL__DERIVED_FROM = 1;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -852,7 +824,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_TYPE_MODEL__VERSION = SERIALIZABLE_FEATURE_COUNT + 2;
+	int GROUP_TYPE_MODEL__VERSION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -861,16 +833,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_TYPE_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 3;
+	int GROUP_TYPE_MODEL__DESCRIPTION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_TYPE_MODEL__PROPERTIES = SERIALIZABLE_FEATURE_COUNT + 4;
+	int GROUP_TYPE_MODEL__PROPERTIES = 4;
 
 	/**
 	 * The feature id for the '<em><b>Members</b></em>' attribute.
@@ -879,16 +851,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_TYPE_MODEL__MEMBERS = SERIALIZABLE_FEATURE_COUNT + 5;
+	int GROUP_TYPE_MODEL__MEMBERS = 5;
 
 	/**
-	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_TYPE_MODEL__INTERFACES = SERIALIZABLE_FEATURE_COUNT + 6;
+	int GROUP_TYPE_MODEL__INTERFACES = 6;
 
 	/**
 	 * The number of structural features of the '<em>Group Type Model</em>' class.
@@ -897,7 +869,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_TYPE_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 7;
+	int GROUP_TYPE_MODEL_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Group Type Model</em>' class.
@@ -906,7 +878,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_TYPE_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int GROUP_TYPE_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ImportDefinitionModelImpl <em>Import Definition Model</em>}' class.
@@ -925,7 +897,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMPORT_DEFINITION_MODEL__FILE = SERIALIZABLE_FEATURE_COUNT + 0;
+	int IMPORT_DEFINITION_MODEL__FILE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Repository</b></em>' attribute.
@@ -934,7 +906,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMPORT_DEFINITION_MODEL__REPOSITORY = SERIALIZABLE_FEATURE_COUNT + 1;
+	int IMPORT_DEFINITION_MODEL__REPOSITORY = 1;
 
 	/**
 	 * The feature id for the '<em><b>Namespace Uri</b></em>' attribute.
@@ -943,7 +915,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMPORT_DEFINITION_MODEL__NAMESPACE_URI = SERIALIZABLE_FEATURE_COUNT + 2;
+	int IMPORT_DEFINITION_MODEL__NAMESPACE_URI = 2;
 
 	/**
 	 * The feature id for the '<em><b>Namespace Prefix</b></em>' attribute.
@@ -952,7 +924,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMPORT_DEFINITION_MODEL__NAMESPACE_PREFIX = SERIALIZABLE_FEATURE_COUNT + 3;
+	int IMPORT_DEFINITION_MODEL__NAMESPACE_PREFIX = 3;
 
 	/**
 	 * The number of structural features of the '<em>Import Definition Model</em>' class.
@@ -961,7 +933,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMPORT_DEFINITION_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 4;
+	int IMPORT_DEFINITION_MODEL_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Import Definition Model</em>' class.
@@ -970,7 +942,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMPORT_DEFINITION_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int IMPORT_DEFINITION_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.InterfaceDefinitionModelImpl <em>Interface Definition Model</em>}' class.
@@ -983,13 +955,13 @@ public interface ModelPackage extends EPackage {
 	int INTERFACE_DEFINITION_MODEL = 13;
 
 	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' reference list.
+	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_DEFINITION_MODEL__INPUTS = SERIALIZABLE_FEATURE_COUNT + 0;
+	int INTERFACE_DEFINITION_MODEL__INPUTS = 0;
 
 	/**
 	 * The number of structural features of the '<em>Interface Definition Model</em>' class.
@@ -998,7 +970,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_DEFINITION_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 1;
+	int INTERFACE_DEFINITION_MODEL_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Interface Definition Model</em>' class.
@@ -1007,7 +979,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_DEFINITION_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int INTERFACE_DEFINITION_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.InterfaceTypeModelImpl <em>Interface Type Model</em>}' class.
@@ -1026,7 +998,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_TYPE_MODEL__TYPE_NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int INTERFACE_TYPE_MODEL__TYPE_NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Derived From</b></em>' attribute.
@@ -1035,7 +1007,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_TYPE_MODEL__DERIVED_FROM = SERIALIZABLE_FEATURE_COUNT + 1;
+	int INTERFACE_TYPE_MODEL__DERIVED_FROM = 1;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -1044,7 +1016,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_TYPE_MODEL__VERSION = SERIALIZABLE_FEATURE_COUNT + 2;
+	int INTERFACE_TYPE_MODEL__VERSION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1053,25 +1025,25 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_TYPE_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 3;
+	int INTERFACE_TYPE_MODEL__DESCRIPTION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' reference list.
+	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_TYPE_MODEL__INPUTS = SERIALIZABLE_FEATURE_COUNT + 4;
+	int INTERFACE_TYPE_MODEL__INPUTS = 4;
 
 	/**
-	 * The feature id for the '<em><b>Operations</b></em>' reference list.
+	 * The feature id for the '<em><b>Operations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_TYPE_MODEL__OPERATIONS = SERIALIZABLE_FEATURE_COUNT + 5;
+	int INTERFACE_TYPE_MODEL__OPERATIONS = 5;
 
 	/**
 	 * The number of structural features of the '<em>Interface Type Model</em>' class.
@@ -1080,7 +1052,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_TYPE_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 6;
+	int INTERFACE_TYPE_MODEL_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Interface Type Model</em>' class.
@@ -1089,7 +1061,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_TYPE_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int INTERFACE_TYPE_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.NodeDefinitionModelImpl <em>Node Definition Model</em>}' class.
@@ -1108,7 +1080,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_DEFINITION_MODEL__TYPE_NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int NODE_DEFINITION_MODEL__TYPE_NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Derived From</b></em>' attribute.
@@ -1117,7 +1089,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_DEFINITION_MODEL__DERIVED_FROM = SERIALIZABLE_FEATURE_COUNT + 1;
+	int NODE_DEFINITION_MODEL__DERIVED_FROM = 1;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -1126,7 +1098,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_DEFINITION_MODEL__VERSION = SERIALIZABLE_FEATURE_COUNT + 2;
+	int NODE_DEFINITION_MODEL__VERSION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1135,61 +1107,61 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_DEFINITION_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 3;
+	int NODE_DEFINITION_MODEL__DESCRIPTION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_DEFINITION_MODEL__PROPERTIES = SERIALIZABLE_FEATURE_COUNT + 4;
+	int NODE_DEFINITION_MODEL__PROPERTIES = 4;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_DEFINITION_MODEL__ATTRIBUTES = SERIALIZABLE_FEATURE_COUNT + 5;
+	int NODE_DEFINITION_MODEL__ATTRIBUTES = 5;
 
 	/**
-	 * The feature id for the '<em><b>Requirements</b></em>' reference list.
+	 * The feature id for the '<em><b>Requirements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_DEFINITION_MODEL__REQUIREMENTS = SERIALIZABLE_FEATURE_COUNT + 6;
+	int NODE_DEFINITION_MODEL__REQUIREMENTS = 6;
 
 	/**
-	 * The feature id for the '<em><b>Capabilities</b></em>' reference list.
+	 * The feature id for the '<em><b>Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_DEFINITION_MODEL__CAPABILITIES = SERIALIZABLE_FEATURE_COUNT + 7;
+	int NODE_DEFINITION_MODEL__CAPABILITIES = 7;
 
 	/**
-	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_DEFINITION_MODEL__INTERFACES = SERIALIZABLE_FEATURE_COUNT + 8;
+	int NODE_DEFINITION_MODEL__INTERFACES = 8;
 
 	/**
-	 * The feature id for the '<em><b>Artifacts</b></em>' reference list.
+	 * The feature id for the '<em><b>Artifacts</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_DEFINITION_MODEL__ARTIFACTS = SERIALIZABLE_FEATURE_COUNT + 9;
+	int NODE_DEFINITION_MODEL__ARTIFACTS = 9;
 
 	/**
 	 * The number of structural features of the '<em>Node Definition Model</em>' class.
@@ -1198,7 +1170,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_DEFINITION_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 10;
+	int NODE_DEFINITION_MODEL_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Node Definition Model</em>' class.
@@ -1207,7 +1179,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_DEFINITION_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int NODE_DEFINITION_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.NodeTemplateModelImpl <em>Node Template Model</em>}' class.
@@ -1226,7 +1198,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TEMPLATE_MODEL__NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int NODE_TEMPLATE_MODEL__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1235,7 +1207,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TEMPLATE_MODEL__TYPE = SERIALIZABLE_FEATURE_COUNT + 1;
+	int NODE_TEMPLATE_MODEL__TYPE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Directives</b></em>' attribute.
@@ -1244,7 +1216,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TEMPLATE_MODEL__DIRECTIVES = SERIALIZABLE_FEATURE_COUNT + 2;
+	int NODE_TEMPLATE_MODEL__DIRECTIVES = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1253,61 +1225,61 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TEMPLATE_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 3;
+	int NODE_TEMPLATE_MODEL__DESCRIPTION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TEMPLATE_MODEL__PROPERTIES = SERIALIZABLE_FEATURE_COUNT + 4;
+	int NODE_TEMPLATE_MODEL__PROPERTIES = 4;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TEMPLATE_MODEL__ATTRIBUTES = SERIALIZABLE_FEATURE_COUNT + 5;
+	int NODE_TEMPLATE_MODEL__ATTRIBUTES = 5;
 
 	/**
-	 * The feature id for the '<em><b>Requirements</b></em>' reference list.
+	 * The feature id for the '<em><b>Requirements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TEMPLATE_MODEL__REQUIREMENTS = SERIALIZABLE_FEATURE_COUNT + 6;
+	int NODE_TEMPLATE_MODEL__REQUIREMENTS = 6;
 
 	/**
-	 * The feature id for the '<em><b>Capabilities</b></em>' reference list.
+	 * The feature id for the '<em><b>Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TEMPLATE_MODEL__CAPABILITIES = SERIALIZABLE_FEATURE_COUNT + 7;
+	int NODE_TEMPLATE_MODEL__CAPABILITIES = 7;
 
 	/**
-	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TEMPLATE_MODEL__INTERFACES = SERIALIZABLE_FEATURE_COUNT + 8;
+	int NODE_TEMPLATE_MODEL__INTERFACES = 8;
 
 	/**
-	 * The feature id for the '<em><b>Artifacts</b></em>' reference list.
+	 * The feature id for the '<em><b>Artifacts</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TEMPLATE_MODEL__ARTIFACTS = SERIALIZABLE_FEATURE_COUNT + 9;
+	int NODE_TEMPLATE_MODEL__ARTIFACTS = 9;
 
 	/**
 	 * The number of structural features of the '<em>Node Template Model</em>' class.
@@ -1316,7 +1288,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TEMPLATE_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 10;
+	int NODE_TEMPLATE_MODEL_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Node Template Model</em>' class.
@@ -1325,7 +1297,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TEMPLATE_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int NODE_TEMPLATE_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.OperationDefinitionModelImpl <em>Operation Definition Model</em>}' class.
@@ -1344,7 +1316,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_DEFINITION_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 0;
+	int OPERATION_DEFINITION_MODEL__DESCRIPTION = 0;
 
 	/**
 	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
@@ -1353,25 +1325,25 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_DEFINITION_MODEL__IMPLEMENTATION = SERIALIZABLE_FEATURE_COUNT + 1;
+	int OPERATION_DEFINITION_MODEL__IMPLEMENTATION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Inputs definitions</b></em>' reference list.
+	 * The feature id for the '<em><b>Inputs definitions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_DEFINITION_MODEL__INPUTS_DEFINITIONS = SERIALIZABLE_FEATURE_COUNT + 2;
+	int OPERATION_DEFINITION_MODEL__INPUTS_DEFINITIONS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Inputs assignments</b></em>' reference list.
+	 * The feature id for the '<em><b>Inputs assignments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_DEFINITION_MODEL__INPUTS_ASSIGNMENTS = SERIALIZABLE_FEATURE_COUNT + 3;
+	int OPERATION_DEFINITION_MODEL__INPUTS_ASSIGNMENTS = 3;
 
 	/**
 	 * The number of structural features of the '<em>Operation Definition Model</em>' class.
@@ -1380,7 +1352,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_DEFINITION_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 4;
+	int OPERATION_DEFINITION_MODEL_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Operation Definition Model</em>' class.
@@ -1389,7 +1361,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_DEFINITION_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int OPERATION_DEFINITION_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ParameterDefinitionModelImpl <em>Parameter Definition Model</em>}' class.
@@ -1408,7 +1380,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION_MODEL__NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int PARAMETER_DEFINITION_MODEL__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1417,7 +1389,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION_MODEL__TYPE = SERIALIZABLE_FEATURE_COUNT + 1;
+	int PARAMETER_DEFINITION_MODEL__TYPE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1426,16 +1398,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 2;
+	int PARAMETER_DEFINITION_MODEL__DESCRIPTION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Data Value</b></em>' reference.
+	 * The feature id for the '<em><b>Data Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION_MODEL__DATA_VALUE = SERIALIZABLE_FEATURE_COUNT + 3;
+	int PARAMETER_DEFINITION_MODEL__DATA_VALUE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' reference.
@@ -1444,7 +1416,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION_MODEL__VALUE = SERIALIZABLE_FEATURE_COUNT + 4;
+	int PARAMETER_DEFINITION_MODEL__VALUE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -1453,16 +1425,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION_MODEL__STATUS = SERIALIZABLE_FEATURE_COUNT + 5;
+	int PARAMETER_DEFINITION_MODEL__STATUS = 5;
 
 	/**
-	 * The feature id for the '<em><b>Constraint</b></em>' reference list.
+	 * The feature id for the '<em><b>Constraint</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION_MODEL__CONSTRAINT = SERIALIZABLE_FEATURE_COUNT + 6;
+	int PARAMETER_DEFINITION_MODEL__CONSTRAINT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Entry Schema</b></em>' attribute.
@@ -1471,7 +1443,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION_MODEL__ENTRY_SCHEMA = SERIALIZABLE_FEATURE_COUNT + 7;
+	int PARAMETER_DEFINITION_MODEL__ENTRY_SCHEMA = 7;
 
 	/**
 	 * The number of structural features of the '<em>Parameter Definition Model</em>' class.
@@ -1480,7 +1452,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 8;
+	int PARAMETER_DEFINITION_MODEL_FEATURE_COUNT = 8;
 
 	/**
 	 * The operation id for the '<em>Get Required</em>' operation.
@@ -1489,7 +1461,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION_MODEL___GET_REQUIRED = SERIALIZABLE_OPERATION_COUNT + 0;
+	int PARAMETER_DEFINITION_MODEL___GET_REQUIRED = 0;
 
 	/**
 	 * The number of operations of the '<em>Parameter Definition Model</em>' class.
@@ -1498,7 +1470,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 1;
+	int PARAMETER_DEFINITION_MODEL_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.PolicyDefinitionModelImpl <em>Policy Definition Model</em>}' class.
@@ -1517,7 +1489,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_DEFINITION_MODEL__NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int POLICY_DEFINITION_MODEL__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1526,7 +1498,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_DEFINITION_MODEL__TYPE = SERIALIZABLE_FEATURE_COUNT + 1;
+	int POLICY_DEFINITION_MODEL__TYPE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1535,16 +1507,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_DEFINITION_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 2;
+	int POLICY_DEFINITION_MODEL__DESCRIPTION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_DEFINITION_MODEL__PROPERTIES = SERIALIZABLE_FEATURE_COUNT + 3;
+	int POLICY_DEFINITION_MODEL__PROPERTIES = 3;
 
 	/**
 	 * The feature id for the '<em><b>Targets</b></em>' attribute.
@@ -1553,7 +1525,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_DEFINITION_MODEL__TARGETS = SERIALIZABLE_FEATURE_COUNT + 4;
+	int POLICY_DEFINITION_MODEL__TARGETS = 4;
 
 	/**
 	 * The number of structural features of the '<em>Policy Definition Model</em>' class.
@@ -1562,7 +1534,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_DEFINITION_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 5;
+	int POLICY_DEFINITION_MODEL_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Policy Definition Model</em>' class.
@@ -1571,7 +1543,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_DEFINITION_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int POLICY_DEFINITION_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.PolicyTypeModelImpl <em>Policy Type Model</em>}' class.
@@ -1590,7 +1562,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_TYPE_MODEL__TYPE_NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int POLICY_TYPE_MODEL__TYPE_NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Derived From</b></em>' attribute.
@@ -1599,7 +1571,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_TYPE_MODEL__DERIVED_FROM = SERIALIZABLE_FEATURE_COUNT + 1;
+	int POLICY_TYPE_MODEL__DERIVED_FROM = 1;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -1608,7 +1580,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_TYPE_MODEL__VERSION = SERIALIZABLE_FEATURE_COUNT + 2;
+	int POLICY_TYPE_MODEL__VERSION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1617,16 +1589,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_TYPE_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 3;
+	int POLICY_TYPE_MODEL__DESCRIPTION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_TYPE_MODEL__PROPERTIES = SERIALIZABLE_FEATURE_COUNT + 4;
+	int POLICY_TYPE_MODEL__PROPERTIES = 4;
 
 	/**
 	 * The feature id for the '<em><b>Targets</b></em>' attribute.
@@ -1635,7 +1607,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_TYPE_MODEL__TARGETS = SERIALIZABLE_FEATURE_COUNT + 5;
+	int POLICY_TYPE_MODEL__TARGETS = 5;
 
 	/**
 	 * The number of structural features of the '<em>Policy Type Model</em>' class.
@@ -1644,7 +1616,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_TYPE_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 6;
+	int POLICY_TYPE_MODEL_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Policy Type Model</em>' class.
@@ -1653,7 +1625,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_TYPE_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int POLICY_TYPE_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.PropertyAssignmentModelImpl <em>Property Assignment Model</em>}' class.
@@ -1672,16 +1644,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_ASSIGNMENT_MODEL__NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int PROPERTY_ASSIGNMENT_MODEL__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_ASSIGNMENT_MODEL__VALUE = SERIALIZABLE_FEATURE_COUNT + 1;
+	int PROPERTY_ASSIGNMENT_MODEL__VALUE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Property Assignment Model</em>' class.
@@ -1690,7 +1662,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_ASSIGNMENT_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 2;
+	int PROPERTY_ASSIGNMENT_MODEL_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Property Assignment Model</em>' class.
@@ -1699,7 +1671,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_ASSIGNMENT_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int PROPERTY_ASSIGNMENT_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.PropertyModelImpl <em>Property Model</em>}' class.
@@ -1718,7 +1690,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_MODEL__NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int PROPERTY_MODEL__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1727,7 +1699,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_MODEL__TYPE = SERIALIZABLE_FEATURE_COUNT + 1;
+	int PROPERTY_MODEL__TYPE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1736,16 +1708,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 2;
+	int PROPERTY_MODEL__DESCRIPTION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Data Value</b></em>' reference.
+	 * The feature id for the '<em><b>Data Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_MODEL__DATA_VALUE = SERIALIZABLE_FEATURE_COUNT + 3;
+	int PROPERTY_MODEL__DATA_VALUE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -1754,16 +1726,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_MODEL__STATUS = SERIALIZABLE_FEATURE_COUNT + 4;
+	int PROPERTY_MODEL__STATUS = 4;
 
 	/**
-	 * The feature id for the '<em><b>Constraint</b></em>' reference list.
+	 * The feature id for the '<em><b>Constraint</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_MODEL__CONSTRAINT = SERIALIZABLE_FEATURE_COUNT + 5;
+	int PROPERTY_MODEL__CONSTRAINT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Entry Schema</b></em>' attribute.
@@ -1772,16 +1744,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_MODEL__ENTRY_SCHEMA = SERIALIZABLE_FEATURE_COUNT + 6;
+	int PROPERTY_MODEL__ENTRY_SCHEMA = 6;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_MODEL__VALUE = SERIALIZABLE_FEATURE_COUNT + 7;
+	int PROPERTY_MODEL__VALUE = 7;
 
 	/**
 	 * The number of structural features of the '<em>Property Model</em>' class.
@@ -1790,7 +1762,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 8;
+	int PROPERTY_MODEL_FEATURE_COUNT = 8;
 
 	/**
 	 * The operation id for the '<em>Get Required</em>' operation.
@@ -1799,7 +1771,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_MODEL___GET_REQUIRED = SERIALIZABLE_OPERATION_COUNT + 0;
+	int PROPERTY_MODEL___GET_REQUIRED = 0;
 
 	/**
 	 * The number of operations of the '<em>Property Model</em>' class.
@@ -1808,7 +1780,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 1;
+	int PROPERTY_MODEL_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.RelationshipDefinitionModelImpl <em>Relationship Definition Model</em>}' class.
@@ -1827,7 +1799,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_DEFINITION_MODEL__TYPE_NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int RELATIONSHIP_DEFINITION_MODEL__TYPE_NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Derived From</b></em>' attribute.
@@ -1836,7 +1808,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_DEFINITION_MODEL__DERIVED_FROM = SERIALIZABLE_FEATURE_COUNT + 1;
+	int RELATIONSHIP_DEFINITION_MODEL__DERIVED_FROM = 1;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -1845,7 +1817,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_DEFINITION_MODEL__VERSION = SERIALIZABLE_FEATURE_COUNT + 2;
+	int RELATIONSHIP_DEFINITION_MODEL__VERSION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1854,34 +1826,34 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_DEFINITION_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 3;
+	int RELATIONSHIP_DEFINITION_MODEL__DESCRIPTION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_DEFINITION_MODEL__PROPERTIES = SERIALIZABLE_FEATURE_COUNT + 4;
+	int RELATIONSHIP_DEFINITION_MODEL__PROPERTIES = 4;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_DEFINITION_MODEL__ATTRIBUTES = SERIALIZABLE_FEATURE_COUNT + 5;
+	int RELATIONSHIP_DEFINITION_MODEL__ATTRIBUTES = 5;
 
 	/**
-	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_DEFINITION_MODEL__INTERFACES = SERIALIZABLE_FEATURE_COUNT + 6;
+	int RELATIONSHIP_DEFINITION_MODEL__INTERFACES = 6;
 
 	/**
 	 * The feature id for the '<em><b>Valid Target Types</b></em>' attribute.
@@ -1890,7 +1862,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_DEFINITION_MODEL__VALID_TARGET_TYPES = SERIALIZABLE_FEATURE_COUNT + 7;
+	int RELATIONSHIP_DEFINITION_MODEL__VALID_TARGET_TYPES = 7;
 
 	/**
 	 * The number of structural features of the '<em>Relationship Definition Model</em>' class.
@@ -1899,7 +1871,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_DEFINITION_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 8;
+	int RELATIONSHIP_DEFINITION_MODEL_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Relationship Definition Model</em>' class.
@@ -1908,7 +1880,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_DEFINITION_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int RELATIONSHIP_DEFINITION_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.RelationshipTemplateModelImpl <em>Relationship Template Model</em>}' class.
@@ -1927,7 +1899,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_TEMPLATE_MODEL__NAME = SERIALIZABLE_FEATURE_COUNT + 0;
+	int RELATIONSHIP_TEMPLATE_MODEL__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Type Name</b></em>' attribute.
@@ -1936,7 +1908,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_TEMPLATE_MODEL__TYPE_NAME = SERIALIZABLE_FEATURE_COUNT + 1;
+	int RELATIONSHIP_TEMPLATE_MODEL__TYPE_NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1945,34 +1917,34 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_TEMPLATE_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 2;
+	int RELATIONSHIP_TEMPLATE_MODEL__DESCRIPTION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_TEMPLATE_MODEL__PROPERTIES = SERIALIZABLE_FEATURE_COUNT + 3;
+	int RELATIONSHIP_TEMPLATE_MODEL__PROPERTIES = 3;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_TEMPLATE_MODEL__ATTRIBUTES = SERIALIZABLE_FEATURE_COUNT + 4;
+	int RELATIONSHIP_TEMPLATE_MODEL__ATTRIBUTES = 4;
 
 	/**
-	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_TEMPLATE_MODEL__INTERFACES = SERIALIZABLE_FEATURE_COUNT + 5;
+	int RELATIONSHIP_TEMPLATE_MODEL__INTERFACES = 5;
 
 	/**
 	 * The feature id for the '<em><b>Copy</b></em>' attribute.
@@ -1981,7 +1953,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_TEMPLATE_MODEL__COPY = SERIALIZABLE_FEATURE_COUNT + 6;
+	int RELATIONSHIP_TEMPLATE_MODEL__COPY = 6;
 
 	/**
 	 * The number of structural features of the '<em>Relationship Template Model</em>' class.
@@ -1990,7 +1962,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_TEMPLATE_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 7;
+	int RELATIONSHIP_TEMPLATE_MODEL_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Relationship Template Model</em>' class.
@@ -1999,7 +1971,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_TEMPLATE_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int RELATIONSHIP_TEMPLATE_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.RepositoryDefinitionModelImpl <em>Repository Definition Model</em>}' class.
@@ -2018,7 +1990,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPOSITORY_DEFINITION_MODEL__URL = SERIALIZABLE_FEATURE_COUNT + 0;
+	int REPOSITORY_DEFINITION_MODEL__URL = 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2027,7 +1999,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPOSITORY_DEFINITION_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 1;
+	int REPOSITORY_DEFINITION_MODEL__DESCRIPTION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Credential</b></em>' attribute.
@@ -2036,7 +2008,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPOSITORY_DEFINITION_MODEL__CREDENTIAL = SERIALIZABLE_FEATURE_COUNT + 2;
+	int REPOSITORY_DEFINITION_MODEL__CREDENTIAL = 2;
 
 	/**
 	 * The number of structural features of the '<em>Repository Definition Model</em>' class.
@@ -2045,7 +2017,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPOSITORY_DEFINITION_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 3;
+	int REPOSITORY_DEFINITION_MODEL_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Repository Definition Model</em>' class.
@@ -2054,7 +2026,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPOSITORY_DEFINITION_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int REPOSITORY_DEFINITION_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.RequirementAssignmentModelImpl <em>Requirement Assignment Model</em>}' class.
@@ -2073,7 +2045,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_ASSIGNMENT_MODEL__CAPABILITY = SERIALIZABLE_FEATURE_COUNT + 0;
+	int REQUIREMENT_ASSIGNMENT_MODEL__CAPABILITY = 0;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' attribute.
@@ -2082,7 +2054,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_ASSIGNMENT_MODEL__NODE = SERIALIZABLE_FEATURE_COUNT + 1;
+	int REQUIREMENT_ASSIGNMENT_MODEL__NODE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Relationship</b></em>' attribute.
@@ -2091,7 +2063,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_ASSIGNMENT_MODEL__RELATIONSHIP = SERIALIZABLE_FEATURE_COUNT + 2;
+	int REQUIREMENT_ASSIGNMENT_MODEL__RELATIONSHIP = 2;
 
 	/**
 	 * The number of structural features of the '<em>Requirement Assignment Model</em>' class.
@@ -2100,7 +2072,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_ASSIGNMENT_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 3;
+	int REQUIREMENT_ASSIGNMENT_MODEL_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Requirement Assignment Model</em>' class.
@@ -2109,7 +2081,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_ASSIGNMENT_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int REQUIREMENT_ASSIGNMENT_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.RequirementDefinitionModelImpl <em>Requirement Definition Model</em>}' class.
@@ -2128,7 +2100,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_DEFINITION_MODEL__CAPABILITY = SERIALIZABLE_FEATURE_COUNT + 0;
+	int REQUIREMENT_DEFINITION_MODEL__CAPABILITY = 0;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' attribute.
@@ -2137,7 +2109,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_DEFINITION_MODEL__NODE = SERIALIZABLE_FEATURE_COUNT + 1;
+	int REQUIREMENT_DEFINITION_MODEL__NODE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Relationship type</b></em>' attribute.
@@ -2146,16 +2118,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_DEFINITION_MODEL__RELATIONSHIP_TYPE = SERIALIZABLE_FEATURE_COUNT + 2;
+	int REQUIREMENT_DEFINITION_MODEL__RELATIONSHIP_TYPE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Relationship definition</b></em>' reference.
+	 * The feature id for the '<em><b>Relationship definition</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_DEFINITION_MODEL__RELATIONSHIP_DEFINITION = SERIALIZABLE_FEATURE_COUNT + 3;
+	int REQUIREMENT_DEFINITION_MODEL__RELATIONSHIP_DEFINITION = 3;
 
 	/**
 	 * The number of structural features of the '<em>Requirement Definition Model</em>' class.
@@ -2164,7 +2136,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_DEFINITION_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 4;
+	int REQUIREMENT_DEFINITION_MODEL_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Requirement Definition Model</em>' class.
@@ -2173,7 +2145,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_DEFINITION_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int REQUIREMENT_DEFINITION_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ServiceTemplateModelImpl <em>Service Template Model</em>}' class.
@@ -2192,16 +2164,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_MODEL__VERSION = SERIALIZABLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Meta Data</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_TEMPLATE_MODEL__META_DATA = SERIALIZABLE_FEATURE_COUNT + 1;
+	int SERVICE_TEMPLATE_MODEL__VERSION = 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2210,106 +2173,106 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 2;
+	int SERVICE_TEMPLATE_MODEL__DESCRIPTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Repositories</b></em>' reference list.
+	 * The feature id for the '<em><b>Repositories</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_MODEL__REPOSITORIES = SERIALIZABLE_FEATURE_COUNT + 3;
+	int SERVICE_TEMPLATE_MODEL__REPOSITORIES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Imports</b></em>' reference list.
+	 * The feature id for the '<em><b>Imports</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_MODEL__IMPORTS = SERIALIZABLE_FEATURE_COUNT + 4;
+	int SERVICE_TEMPLATE_MODEL__IMPORTS = 3;
 
 	/**
-	 * The feature id for the '<em><b>Artifact Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Artifact Types</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_MODEL__ARTIFACT_TYPES = SERIALIZABLE_FEATURE_COUNT + 5;
+	int SERVICE_TEMPLATE_MODEL__ARTIFACT_TYPES = 4;
 
 	/**
-	 * The feature id for the '<em><b>Data Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Data Types</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_MODEL__DATA_TYPES = SERIALIZABLE_FEATURE_COUNT + 6;
+	int SERVICE_TEMPLATE_MODEL__DATA_TYPES = 5;
 
 	/**
-	 * The feature id for the '<em><b>Capability Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Capability Types</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_MODEL__CAPABILITY_TYPES = SERIALIZABLE_FEATURE_COUNT + 7;
+	int SERVICE_TEMPLATE_MODEL__CAPABILITY_TYPES = 6;
 
 	/**
-	 * The feature id for the '<em><b>Interface Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Interface Types</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_MODEL__INTERFACE_TYPES = SERIALIZABLE_FEATURE_COUNT + 8;
+	int SERVICE_TEMPLATE_MODEL__INTERFACE_TYPES = 7;
 
 	/**
-	 * The feature id for the '<em><b>Relationship Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Relationship Types</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_MODEL__RELATIONSHIP_TYPES = SERIALIZABLE_FEATURE_COUNT + 9;
+	int SERVICE_TEMPLATE_MODEL__RELATIONSHIP_TYPES = 8;
 
 	/**
-	 * The feature id for the '<em><b>Node Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Node Types</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_MODEL__NODE_TYPES = SERIALIZABLE_FEATURE_COUNT + 10;
+	int SERVICE_TEMPLATE_MODEL__NODE_TYPES = 9;
 
 	/**
-	 * The feature id for the '<em><b>Group Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Group Types</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_MODEL__GROUP_TYPES = SERIALIZABLE_FEATURE_COUNT + 11;
+	int SERVICE_TEMPLATE_MODEL__GROUP_TYPES = 10;
 
 	/**
-	 * The feature id for the '<em><b>Policy Types</b></em>' reference list.
+	 * The feature id for the '<em><b>Policy Types</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_MODEL__POLICY_TYPES = SERIALIZABLE_FEATURE_COUNT + 12;
+	int SERVICE_TEMPLATE_MODEL__POLICY_TYPES = 11;
 
 	/**
-	 * The feature id for the '<em><b>Topology Template</b></em>' reference.
+	 * The feature id for the '<em><b>Topology Template</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_MODEL__TOPOLOGY_TEMPLATE = SERIALIZABLE_FEATURE_COUNT + 13;
+	int SERVICE_TEMPLATE_MODEL__TOPOLOGY_TEMPLATE = 12;
 
 	/**
 	 * The number of structural features of the '<em>Service Template Model</em>' class.
@@ -2318,7 +2281,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 14;
+	int SERVICE_TEMPLATE_MODEL_FEATURE_COUNT = 13;
 
 	/**
 	 * The number of operations of the '<em>Service Template Model</em>' class.
@@ -2327,7 +2290,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
+	int SERVICE_TEMPLATE_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.TopologyTemplateModelImpl <em>Topology Template Model</em>}' class.
@@ -2346,61 +2309,61 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_TEMPLATE_MODEL__DESCRIPTION = SERIALIZABLE_FEATURE_COUNT + 0;
+	int TOPOLOGY_TEMPLATE_MODEL__DESCRIPTION = 0;
 
 	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' reference list.
+	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_TEMPLATE_MODEL__INPUTS = SERIALIZABLE_FEATURE_COUNT + 1;
+	int TOPOLOGY_TEMPLATE_MODEL__INPUTS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Node Templates</b></em>' reference list.
+	 * The feature id for the '<em><b>Node Templates</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_TEMPLATE_MODEL__NODE_TEMPLATES = SERIALIZABLE_FEATURE_COUNT + 2;
+	int TOPOLOGY_TEMPLATE_MODEL__NODE_TEMPLATES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Relationship Templates</b></em>' reference list.
+	 * The feature id for the '<em><b>Relationship Templates</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_TEMPLATE_MODEL__RELATIONSHIP_TEMPLATES = SERIALIZABLE_FEATURE_COUNT + 3;
+	int TOPOLOGY_TEMPLATE_MODEL__RELATIONSHIP_TEMPLATES = 3;
 
 	/**
-	 * The feature id for the '<em><b>Groups</b></em>' reference list.
+	 * The feature id for the '<em><b>Groups</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_TEMPLATE_MODEL__GROUPS = SERIALIZABLE_FEATURE_COUNT + 4;
+	int TOPOLOGY_TEMPLATE_MODEL__GROUPS = 4;
 
 	/**
-	 * The feature id for the '<em><b>Policies</b></em>' reference list.
+	 * The feature id for the '<em><b>Policies</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_TEMPLATE_MODEL__POLICIES = SERIALIZABLE_FEATURE_COUNT + 5;
+	int TOPOLOGY_TEMPLATE_MODEL__POLICIES = 5;
 
 	/**
-	 * The feature id for the '<em><b>Outputs</b></em>' reference list.
+	 * The feature id for the '<em><b>Outputs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_TEMPLATE_MODEL__OUTPUTS = SERIALIZABLE_FEATURE_COUNT + 6;
+	int TOPOLOGY_TEMPLATE_MODEL__OUTPUTS = 6;
 
 	/**
 	 * The number of structural features of the '<em>Topology Template Model</em>' class.
@@ -2409,7 +2372,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_TEMPLATE_MODEL_FEATURE_COUNT = SERIALIZABLE_FEATURE_COUNT + 7;
+	int TOPOLOGY_TEMPLATE_MODEL_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Topology Template Model</em>' class.
@@ -2418,17 +2381,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_TEMPLATE_MODEL_OPERATION_COUNT = SERIALIZABLE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '<em>Version Model</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see kr.ac.hanyang.tosca2camp.rest.model.VersionModel
-	 * @see kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl#getVersionModel()
-	 * @generated
-	 */
-	int VERSION_MODEL = 31;
+	int TOPOLOGY_TEMPLATE_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '<em>String Array</em>' data type.
@@ -2437,17 +2390,7 @@ public interface ModelPackage extends EPackage {
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl#getStringArray()
 	 * @generated
 	 */
-	int STRING_ARRAY = 32;
-
-//	/**
-//	 * The meta object id for the '<em>Map</em>' data type.
-//	 * <!-- begin-user-doc -->
-//	 * <!-- end-user-doc -->
-//	 * @see java.util.Map
-//	 * @see kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl#getMap()
-//	 * @generated
-//	 */
-//	int MAP = 33;
+	int STRING_ARRAY = 30;
 
 
 	/**
@@ -2592,10 +2535,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getArtifactTypeModel_File_ext();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ArtifactTypeModel#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ArtifactTypeModel#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Properties</em>'.
+	 * @return the meta object for the containment reference list '<em>Properties</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.ArtifactTypeModel#getProperties()
 	 * @see #getArtifactTypeModel()
 	 * @generated
@@ -2635,10 +2578,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getAttributeAssignmentModel_Description();
 
 	/**
-	 * Returns the meta object for the reference '{@link kr.ac.hanyang.tosca2camp.rest.model.AttributeAssignmentModel#getValue <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link kr.ac.hanyang.tosca2camp.rest.model.AttributeAssignmentModel#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @return the meta object for the containment reference '<em>Value</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.AttributeAssignmentModel#getValue()
 	 * @see #getAttributeAssignmentModel()
 	 * @generated
@@ -2689,10 +2632,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getAttributeDefinitionModel_Description();
 
 	/**
-	 * Returns the meta object for the reference '{@link kr.ac.hanyang.tosca2camp.rest.model.AttributeDefinitionModel#getDataValue <em>Data Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link kr.ac.hanyang.tosca2camp.rest.model.AttributeDefinitionModel#getDataValue <em>Data Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Data Value</em>'.
+	 * @return the meta object for the containment reference '<em>Data Value</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.AttributeDefinitionModel#getDataValue()
 	 * @see #getAttributeDefinitionModel()
 	 * @generated
@@ -2732,10 +2675,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getCapabilityAssignmentModel_Name();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.CapabilityAssignmentModel#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.CapabilityAssignmentModel#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Properties</em>'.
+	 * @return the meta object for the containment reference list '<em>Properties</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.CapabilityAssignmentModel#getProperties()
 	 * @see #getCapabilityAssignmentModel()
 	 * @generated
@@ -2743,10 +2686,10 @@ public interface ModelPackage extends EPackage {
 	EReference getCapabilityAssignmentModel_Properties();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.CapabilityAssignmentModel#getAttributes <em>Attributes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.CapabilityAssignmentModel#getAttributes <em>Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Attributes</em>'.
+	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.CapabilityAssignmentModel#getAttributes()
 	 * @see #getCapabilityAssignmentModel()
 	 * @generated
@@ -2808,10 +2751,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getCapabilityDefinitionModel_Description();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.CapabilityDefinitionModel#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.CapabilityDefinitionModel#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Properties</em>'.
+	 * @return the meta object for the containment reference list '<em>Properties</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.CapabilityDefinitionModel#getProperties()
 	 * @see #getCapabilityDefinitionModel()
 	 * @generated
@@ -2819,10 +2762,10 @@ public interface ModelPackage extends EPackage {
 	EReference getCapabilityDefinitionModel_Properties();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.CapabilityDefinitionModel#getAttributes <em>Attributes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.CapabilityDefinitionModel#getAttributes <em>Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Attributes</em>'.
+	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.CapabilityDefinitionModel#getAttributes()
 	 * @see #getCapabilityDefinitionModel()
 	 * @generated
@@ -2862,10 +2805,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getConstraintModel_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link kr.ac.hanyang.tosca2camp.rest.model.ConstraintModel#getValue <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link kr.ac.hanyang.tosca2camp.rest.model.ConstraintModel#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @return the meta object for the containment reference '<em>Value</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.ConstraintModel#getValue()
 	 * @see #getConstraintModel()
 	 * @generated
@@ -2948,10 +2891,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getDatatypeDefinitionModel_Description();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.DatatypeDefinitionModel#getConstraints <em>Constraints</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.DatatypeDefinitionModel#getConstraints <em>Constraints</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Constraints</em>'.
+	 * @return the meta object for the containment reference list '<em>Constraints</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.DatatypeDefinitionModel#getConstraints()
 	 * @see #getDatatypeDefinitionModel()
 	 * @generated
@@ -2959,10 +2902,10 @@ public interface ModelPackage extends EPackage {
 	EReference getDatatypeDefinitionModel_Constraints();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.DatatypeDefinitionModel#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.DatatypeDefinitionModel#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Properties</em>'.
+	 * @return the meta object for the containment reference list '<em>Properties</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.DatatypeDefinitionModel#getProperties()
 	 * @see #getDatatypeDefinitionModel()
 	 * @generated
@@ -2991,10 +2934,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getFunctionModel_TypeName();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.FunctionModel#getParameters <em>Parameters</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.FunctionModel#getParameters <em>Parameters</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Parameters</em>'.
+	 * @return the meta object for the containment reference list '<em>Parameters</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.FunctionModel#getParameters()
 	 * @see #getFunctionModel()
 	 * @generated
@@ -3045,10 +2988,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getGroupDefinitionModel_Description();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.GroupDefinitionModel#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.GroupDefinitionModel#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Properties</em>'.
+	 * @return the meta object for the containment reference list '<em>Properties</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.GroupDefinitionModel#getProperties()
 	 * @see #getGroupDefinitionModel()
 	 * @generated
@@ -3056,10 +2999,10 @@ public interface ModelPackage extends EPackage {
 	EReference getGroupDefinitionModel_Properties();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.GroupDefinitionModel#getMembers <em>Members</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.GroupDefinitionModel#getMembers <em>Members</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Members</em>'.
+	 * @return the meta object for the containment reference list '<em>Members</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.GroupDefinitionModel#getMembers()
 	 * @see #getGroupDefinitionModel()
 	 * @generated
@@ -3067,10 +3010,10 @@ public interface ModelPackage extends EPackage {
 	EReference getGroupDefinitionModel_Members();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.GroupDefinitionModel#getInterfaces <em>Interfaces</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.GroupDefinitionModel#getInterfaces <em>Interfaces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Interfaces</em>'.
+	 * @return the meta object for the containment reference list '<em>Interfaces</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.GroupDefinitionModel#getInterfaces()
 	 * @see #getGroupDefinitionModel()
 	 * @generated
@@ -3132,10 +3075,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getGroupTypeModel_Description();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.GroupTypeModel#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.GroupTypeModel#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Properties</em>'.
+	 * @return the meta object for the containment reference list '<em>Properties</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.GroupTypeModel#getProperties()
 	 * @see #getGroupTypeModel()
 	 * @generated
@@ -3154,10 +3097,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getGroupTypeModel_Members();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.GroupTypeModel#getInterfaces <em>Interfaces</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.GroupTypeModel#getInterfaces <em>Interfaces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Interfaces</em>'.
+	 * @return the meta object for the containment reference list '<em>Interfaces</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.GroupTypeModel#getInterfaces()
 	 * @see #getGroupTypeModel()
 	 * @generated
@@ -3229,10 +3172,10 @@ public interface ModelPackage extends EPackage {
 	EClass getInterfaceDefinitionModel();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.InterfaceDefinitionModel#getInputs <em>Inputs</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.InterfaceDefinitionModel#getInputs <em>Inputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Inputs</em>'.
+	 * @return the meta object for the containment reference list '<em>Inputs</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.InterfaceDefinitionModel#getInputs()
 	 * @see #getInterfaceDefinitionModel()
 	 * @generated
@@ -3294,10 +3237,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getInterfaceTypeModel_Description();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.InterfaceTypeModel#getInputs <em>Inputs</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.InterfaceTypeModel#getInputs <em>Inputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Inputs</em>'.
+	 * @return the meta object for the containment reference list '<em>Inputs</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.InterfaceTypeModel#getInputs()
 	 * @see #getInterfaceTypeModel()
 	 * @generated
@@ -3305,10 +3248,10 @@ public interface ModelPackage extends EPackage {
 	EReference getInterfaceTypeModel_Inputs();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.InterfaceTypeModel#getOperations <em>Operations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.InterfaceTypeModel#getOperations <em>Operations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Operations</em>'.
+	 * @return the meta object for the containment reference list '<em>Operations</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.InterfaceTypeModel#getOperations()
 	 * @see #getInterfaceTypeModel()
 	 * @generated
@@ -3370,10 +3313,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getNodeDefinitionModel_Description();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Properties</em>'.
+	 * @return the meta object for the containment reference list '<em>Properties</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getProperties()
 	 * @see #getNodeDefinitionModel()
 	 * @generated
@@ -3381,10 +3324,10 @@ public interface ModelPackage extends EPackage {
 	EReference getNodeDefinitionModel_Properties();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getAttributes <em>Attributes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getAttributes <em>Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Attributes</em>'.
+	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getAttributes()
 	 * @see #getNodeDefinitionModel()
 	 * @generated
@@ -3392,10 +3335,10 @@ public interface ModelPackage extends EPackage {
 	EReference getNodeDefinitionModel_Attributes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getRequirements <em>Requirements</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getRequirements <em>Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Requirements</em>'.
+	 * @return the meta object for the containment reference list '<em>Requirements</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getRequirements()
 	 * @see #getNodeDefinitionModel()
 	 * @generated
@@ -3403,10 +3346,10 @@ public interface ModelPackage extends EPackage {
 	EReference getNodeDefinitionModel_Requirements();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getCapabilities <em>Capabilities</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getCapabilities <em>Capabilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Capabilities</em>'.
+	 * @return the meta object for the containment reference list '<em>Capabilities</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getCapabilities()
 	 * @see #getNodeDefinitionModel()
 	 * @generated
@@ -3414,10 +3357,10 @@ public interface ModelPackage extends EPackage {
 	EReference getNodeDefinitionModel_Capabilities();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getInterfaces <em>Interfaces</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getInterfaces <em>Interfaces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Interfaces</em>'.
+	 * @return the meta object for the containment reference list '<em>Interfaces</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getInterfaces()
 	 * @see #getNodeDefinitionModel()
 	 * @generated
@@ -3425,10 +3368,10 @@ public interface ModelPackage extends EPackage {
 	EReference getNodeDefinitionModel_Interfaces();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getArtifacts <em>Artifacts</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getArtifacts <em>Artifacts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Artifacts</em>'.
+	 * @return the meta object for the containment reference list '<em>Artifacts</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel#getArtifacts()
 	 * @see #getNodeDefinitionModel()
 	 * @generated
@@ -3490,10 +3433,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getNodeTemplateModel_Description();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Properties</em>'.
+	 * @return the meta object for the containment reference list '<em>Properties</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getProperties()
 	 * @see #getNodeTemplateModel()
 	 * @generated
@@ -3501,10 +3444,10 @@ public interface ModelPackage extends EPackage {
 	EReference getNodeTemplateModel_Properties();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getAttributes <em>Attributes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getAttributes <em>Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Attributes</em>'.
+	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getAttributes()
 	 * @see #getNodeTemplateModel()
 	 * @generated
@@ -3512,10 +3455,10 @@ public interface ModelPackage extends EPackage {
 	EReference getNodeTemplateModel_Attributes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getRequirements <em>Requirements</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getRequirements <em>Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Requirements</em>'.
+	 * @return the meta object for the containment reference list '<em>Requirements</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getRequirements()
 	 * @see #getNodeTemplateModel()
 	 * @generated
@@ -3523,10 +3466,10 @@ public interface ModelPackage extends EPackage {
 	EReference getNodeTemplateModel_Requirements();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getCapabilities <em>Capabilities</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getCapabilities <em>Capabilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Capabilities</em>'.
+	 * @return the meta object for the containment reference list '<em>Capabilities</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getCapabilities()
 	 * @see #getNodeTemplateModel()
 	 * @generated
@@ -3534,10 +3477,10 @@ public interface ModelPackage extends EPackage {
 	EReference getNodeTemplateModel_Capabilities();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getInterfaces <em>Interfaces</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getInterfaces <em>Interfaces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Interfaces</em>'.
+	 * @return the meta object for the containment reference list '<em>Interfaces</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getInterfaces()
 	 * @see #getNodeTemplateModel()
 	 * @generated
@@ -3545,10 +3488,10 @@ public interface ModelPackage extends EPackage {
 	EReference getNodeTemplateModel_Interfaces();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getArtifacts <em>Artifacts</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getArtifacts <em>Artifacts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Artifacts</em>'.
+	 * @return the meta object for the containment reference list '<em>Artifacts</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel#getArtifacts()
 	 * @see #getNodeTemplateModel()
 	 * @generated
@@ -3588,10 +3531,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getOperationDefinitionModel_Implementation();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.OperationDefinitionModel#getInputs_definitions <em>Inputs definitions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.OperationDefinitionModel#getInputs_definitions <em>Inputs definitions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Inputs definitions</em>'.
+	 * @return the meta object for the containment reference list '<em>Inputs definitions</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.OperationDefinitionModel#getInputs_definitions()
 	 * @see #getOperationDefinitionModel()
 	 * @generated
@@ -3599,10 +3542,10 @@ public interface ModelPackage extends EPackage {
 	EReference getOperationDefinitionModel_Inputs_definitions();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.OperationDefinitionModel#getInputs_assignments <em>Inputs assignments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.OperationDefinitionModel#getInputs_assignments <em>Inputs assignments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Inputs assignments</em>'.
+	 * @return the meta object for the containment reference list '<em>Inputs assignments</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.OperationDefinitionModel#getInputs_assignments()
 	 * @see #getOperationDefinitionModel()
 	 * @generated
@@ -3653,10 +3596,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getParameterDefinitionModel_Description();
 
 	/**
-	 * Returns the meta object for the reference '{@link kr.ac.hanyang.tosca2camp.rest.model.ParameterDefinitionModel#getDataValue <em>Data Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link kr.ac.hanyang.tosca2camp.rest.model.ParameterDefinitionModel#getDataValue <em>Data Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Data Value</em>'.
+	 * @return the meta object for the containment reference '<em>Data Value</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.ParameterDefinitionModel#getDataValue()
 	 * @see #getParameterDefinitionModel()
 	 * @generated
@@ -3686,10 +3629,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getParameterDefinitionModel_Status();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ParameterDefinitionModel#getConstraint <em>Constraint</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ParameterDefinitionModel#getConstraint <em>Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Constraint</em>'.
+	 * @return the meta object for the containment reference list '<em>Constraint</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.ParameterDefinitionModel#getConstraint()
 	 * @see #getParameterDefinitionModel()
 	 * @generated
@@ -3761,10 +3704,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getPolicyDefinitionModel_Description();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.PolicyDefinitionModel#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.PolicyDefinitionModel#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Properties</em>'.
+	 * @return the meta object for the containment reference list '<em>Properties</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.PolicyDefinitionModel#getProperties()
 	 * @see #getPolicyDefinitionModel()
 	 * @generated
@@ -3837,10 +3780,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getPolicyTypeModel_Description();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.PolicyTypeModel#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.PolicyTypeModel#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Properties</em>'.
+	 * @return the meta object for the containment reference list '<em>Properties</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.PolicyTypeModel#getProperties()
 	 * @see #getPolicyTypeModel()
 	 * @generated
@@ -3880,10 +3823,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getPropertyAssignmentModel_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link kr.ac.hanyang.tosca2camp.rest.model.PropertyAssignmentModel#getValue <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link kr.ac.hanyang.tosca2camp.rest.model.PropertyAssignmentModel#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @return the meta object for the containment reference '<em>Value</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.PropertyAssignmentModel#getValue()
 	 * @see #getPropertyAssignmentModel()
 	 * @generated
@@ -3934,10 +3877,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getPropertyModel_Description();
 
 	/**
-	 * Returns the meta object for the reference '{@link kr.ac.hanyang.tosca2camp.rest.model.PropertyModel#getDataValue <em>Data Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link kr.ac.hanyang.tosca2camp.rest.model.PropertyModel#getDataValue <em>Data Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Data Value</em>'.
+	 * @return the meta object for the containment reference '<em>Data Value</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.PropertyModel#getDataValue()
 	 * @see #getPropertyModel()
 	 * @generated
@@ -3956,10 +3899,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getPropertyModel_Status();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.PropertyModel#getConstraint <em>Constraint</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.PropertyModel#getConstraint <em>Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Constraint</em>'.
+	 * @return the meta object for the containment reference list '<em>Constraint</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.PropertyModel#getConstraint()
 	 * @see #getPropertyModel()
 	 * @generated
@@ -3978,10 +3921,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getPropertyModel_EntrySchema();
 
 	/**
-	 * Returns the meta object for the reference '{@link kr.ac.hanyang.tosca2camp.rest.model.PropertyModel#getValue <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link kr.ac.hanyang.tosca2camp.rest.model.PropertyModel#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @return the meta object for the containment reference '<em>Value</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.PropertyModel#getValue()
 	 * @see #getPropertyModel()
 	 * @generated
@@ -4053,10 +3996,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getRelationshipDefinitionModel_Description();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.RelationshipDefinitionModel#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.RelationshipDefinitionModel#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Properties</em>'.
+	 * @return the meta object for the containment reference list '<em>Properties</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.RelationshipDefinitionModel#getProperties()
 	 * @see #getRelationshipDefinitionModel()
 	 * @generated
@@ -4064,10 +4007,10 @@ public interface ModelPackage extends EPackage {
 	EReference getRelationshipDefinitionModel_Properties();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.RelationshipDefinitionModel#getAttributes <em>Attributes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.RelationshipDefinitionModel#getAttributes <em>Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Attributes</em>'.
+	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.RelationshipDefinitionModel#getAttributes()
 	 * @see #getRelationshipDefinitionModel()
 	 * @generated
@@ -4075,10 +4018,10 @@ public interface ModelPackage extends EPackage {
 	EReference getRelationshipDefinitionModel_Attributes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.RelationshipDefinitionModel#getInterfaces <em>Interfaces</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.RelationshipDefinitionModel#getInterfaces <em>Interfaces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Interfaces</em>'.
+	 * @return the meta object for the containment reference list '<em>Interfaces</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.RelationshipDefinitionModel#getInterfaces()
 	 * @see #getRelationshipDefinitionModel()
 	 * @generated
@@ -4140,10 +4083,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getRelationshipTemplateModel_Description();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.RelationshipTemplateModel#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.RelationshipTemplateModel#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Properties</em>'.
+	 * @return the meta object for the containment reference list '<em>Properties</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.RelationshipTemplateModel#getProperties()
 	 * @see #getRelationshipTemplateModel()
 	 * @generated
@@ -4151,10 +4094,10 @@ public interface ModelPackage extends EPackage {
 	EReference getRelationshipTemplateModel_Properties();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.RelationshipTemplateModel#getAttributes <em>Attributes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.RelationshipTemplateModel#getAttributes <em>Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Attributes</em>'.
+	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.RelationshipTemplateModel#getAttributes()
 	 * @see #getRelationshipTemplateModel()
 	 * @generated
@@ -4162,10 +4105,10 @@ public interface ModelPackage extends EPackage {
 	EReference getRelationshipTemplateModel_Attributes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.RelationshipTemplateModel#getInterfaces <em>Interfaces</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.RelationshipTemplateModel#getInterfaces <em>Interfaces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Interfaces</em>'.
+	 * @return the meta object for the containment reference list '<em>Interfaces</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.RelationshipTemplateModel#getInterfaces()
 	 * @see #getRelationshipTemplateModel()
 	 * @generated
@@ -4313,10 +4256,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getRequirementDefinitionModel_Relationship_type();
 
 	/**
-	 * Returns the meta object for the reference '{@link kr.ac.hanyang.tosca2camp.rest.model.RequirementDefinitionModel#getRelationship_definition <em>Relationship definition</em>}'.
+	 * Returns the meta object for the containment reference '{@link kr.ac.hanyang.tosca2camp.rest.model.RequirementDefinitionModel#getRelationship_definition <em>Relationship definition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Relationship definition</em>'.
+	 * @return the meta object for the containment reference '<em>Relationship definition</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.RequirementDefinitionModel#getRelationship_definition()
 	 * @see #getRequirementDefinitionModel()
 	 * @generated
@@ -4345,17 +4288,6 @@ public interface ModelPackage extends EPackage {
 	EAttribute getServiceTemplateModel_Version();
 
 	/**
-	 * Returns the meta object for the attribute '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getMetaData <em>Meta Data</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Meta Data</em>'.
-	 * @see kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getMetaData()
-	 * @see #getServiceTemplateModel()
-	 * @generated
-	 */
-	EAttribute getServiceTemplateModel_MetaData();
-
-	/**
 	 * Returns the meta object for the attribute '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4367,10 +4299,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getServiceTemplateModel_Description();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getRepositories <em>Repositories</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getRepositories <em>Repositories</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Repositories</em>'.
+	 * @return the meta object for the containment reference list '<em>Repositories</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getRepositories()
 	 * @see #getServiceTemplateModel()
 	 * @generated
@@ -4378,10 +4310,10 @@ public interface ModelPackage extends EPackage {
 	EReference getServiceTemplateModel_Repositories();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getImports <em>Imports</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getImports <em>Imports</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Imports</em>'.
+	 * @return the meta object for the containment reference list '<em>Imports</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getImports()
 	 * @see #getServiceTemplateModel()
 	 * @generated
@@ -4389,10 +4321,10 @@ public interface ModelPackage extends EPackage {
 	EReference getServiceTemplateModel_Imports();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getArtifactTypes <em>Artifact Types</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getArtifactTypes <em>Artifact Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Artifact Types</em>'.
+	 * @return the meta object for the containment reference list '<em>Artifact Types</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getArtifactTypes()
 	 * @see #getServiceTemplateModel()
 	 * @generated
@@ -4400,10 +4332,10 @@ public interface ModelPackage extends EPackage {
 	EReference getServiceTemplateModel_ArtifactTypes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getDataTypes <em>Data Types</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getDataTypes <em>Data Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Data Types</em>'.
+	 * @return the meta object for the containment reference list '<em>Data Types</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getDataTypes()
 	 * @see #getServiceTemplateModel()
 	 * @generated
@@ -4411,10 +4343,10 @@ public interface ModelPackage extends EPackage {
 	EReference getServiceTemplateModel_DataTypes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getCapabilityTypes <em>Capability Types</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getCapabilityTypes <em>Capability Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Capability Types</em>'.
+	 * @return the meta object for the containment reference list '<em>Capability Types</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getCapabilityTypes()
 	 * @see #getServiceTemplateModel()
 	 * @generated
@@ -4422,10 +4354,10 @@ public interface ModelPackage extends EPackage {
 	EReference getServiceTemplateModel_CapabilityTypes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getInterfaceTypes <em>Interface Types</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getInterfaceTypes <em>Interface Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Interface Types</em>'.
+	 * @return the meta object for the containment reference list '<em>Interface Types</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getInterfaceTypes()
 	 * @see #getServiceTemplateModel()
 	 * @generated
@@ -4433,10 +4365,10 @@ public interface ModelPackage extends EPackage {
 	EReference getServiceTemplateModel_InterfaceTypes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getRelationshipTypes <em>Relationship Types</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getRelationshipTypes <em>Relationship Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Relationship Types</em>'.
+	 * @return the meta object for the containment reference list '<em>Relationship Types</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getRelationshipTypes()
 	 * @see #getServiceTemplateModel()
 	 * @generated
@@ -4444,10 +4376,10 @@ public interface ModelPackage extends EPackage {
 	EReference getServiceTemplateModel_RelationshipTypes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getNodeTypes <em>Node Types</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getNodeTypes <em>Node Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Node Types</em>'.
+	 * @return the meta object for the containment reference list '<em>Node Types</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getNodeTypes()
 	 * @see #getServiceTemplateModel()
 	 * @generated
@@ -4455,10 +4387,10 @@ public interface ModelPackage extends EPackage {
 	EReference getServiceTemplateModel_NodeTypes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getGroupTypes <em>Group Types</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getGroupTypes <em>Group Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Group Types</em>'.
+	 * @return the meta object for the containment reference list '<em>Group Types</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getGroupTypes()
 	 * @see #getServiceTemplateModel()
 	 * @generated
@@ -4466,10 +4398,10 @@ public interface ModelPackage extends EPackage {
 	EReference getServiceTemplateModel_GroupTypes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getPolicyTypes <em>Policy Types</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getPolicyTypes <em>Policy Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Policy Types</em>'.
+	 * @return the meta object for the containment reference list '<em>Policy Types</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getPolicyTypes()
 	 * @see #getServiceTemplateModel()
 	 * @generated
@@ -4477,10 +4409,10 @@ public interface ModelPackage extends EPackage {
 	EReference getServiceTemplateModel_PolicyTypes();
 
 	/**
-	 * Returns the meta object for the reference '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getTopologyTemplate <em>Topology Template</em>}'.
+	 * Returns the meta object for the containment reference '{@link kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getTopologyTemplate <em>Topology Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Topology Template</em>'.
+	 * @return the meta object for the containment reference '<em>Topology Template</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel#getTopologyTemplate()
 	 * @see #getServiceTemplateModel()
 	 * @generated
@@ -4509,10 +4441,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getTopologyTemplateModel_Description();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getInputs <em>Inputs</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getInputs <em>Inputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Inputs</em>'.
+	 * @return the meta object for the containment reference list '<em>Inputs</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getInputs()
 	 * @see #getTopologyTemplateModel()
 	 * @generated
@@ -4520,10 +4452,10 @@ public interface ModelPackage extends EPackage {
 	EReference getTopologyTemplateModel_Inputs();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getNodeTemplates <em>Node Templates</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getNodeTemplates <em>Node Templates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Node Templates</em>'.
+	 * @return the meta object for the containment reference list '<em>Node Templates</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getNodeTemplates()
 	 * @see #getTopologyTemplateModel()
 	 * @generated
@@ -4531,10 +4463,10 @@ public interface ModelPackage extends EPackage {
 	EReference getTopologyTemplateModel_NodeTemplates();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getRelationshipTemplates <em>Relationship Templates</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getRelationshipTemplates <em>Relationship Templates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Relationship Templates</em>'.
+	 * @return the meta object for the containment reference list '<em>Relationship Templates</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getRelationshipTemplates()
 	 * @see #getTopologyTemplateModel()
 	 * @generated
@@ -4542,10 +4474,10 @@ public interface ModelPackage extends EPackage {
 	EReference getTopologyTemplateModel_RelationshipTemplates();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getGroups <em>Groups</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getGroups <em>Groups</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Groups</em>'.
+	 * @return the meta object for the containment reference list '<em>Groups</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getGroups()
 	 * @see #getTopologyTemplateModel()
 	 * @generated
@@ -4553,10 +4485,10 @@ public interface ModelPackage extends EPackage {
 	EReference getTopologyTemplateModel_Groups();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getPolicies <em>Policies</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getPolicies <em>Policies</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Policies</em>'.
+	 * @return the meta object for the containment reference list '<em>Policies</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getPolicies()
 	 * @see #getTopologyTemplateModel()
 	 * @generated
@@ -4564,37 +4496,15 @@ public interface ModelPackage extends EPackage {
 	EReference getTopologyTemplateModel_Policies();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getOutputs <em>Outputs</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getOutputs <em>Outputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Outputs</em>'.
+	 * @return the meta object for the containment reference list '<em>Outputs</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel#getOutputs()
 	 * @see #getTopologyTemplateModel()
 	 * @generated
 	 */
 	EReference getTopologyTemplateModel_Outputs();
-
-	/**
-	 * Returns the meta object for class '{@link java.io.Serializable <em>Serializable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Serializable</em>'.
-	 * @see java.io.Serializable
-	 * @model instanceClass="java.io.Serializable"
-	 * @generated
-	 */
-	EClass getSerializable();
-
-	/**
-	 * Returns the meta object for data type '{@link kr.ac.hanyang.tosca2camp.rest.model.VersionModel <em>Version Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Version Model</em>'.
-	 * @see kr.ac.hanyang.tosca2camp.rest.model.VersionModel
-	 * @model instanceClass="kr.ac.hanyang.tosca2camp.rest.model.VersionModel"
-	 * @generated
-	 */
-	EDataType getVersionModel();
 
 	/**
 	 * Returns the meta object for data type '<em>String Array</em>'.
@@ -4605,17 +4515,6 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getStringArray();
-
-//	/**
-//	 * Returns the meta object for data type '{@link java.util.Map <em>Map</em>}'.
-//	 * <!-- begin-user-doc -->
-//	 * <!-- end-user-doc -->
-//	 * @return the meta object for data type '<em>Map</em>'.
-//	 * @see java.util.Map
-//	 * @model instanceClass="java.util.Map" typeParameters="T T1"
-//	 * @generated
-//	 */
-//	EDataType getMap();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4749,7 +4648,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute ARTIFACT_TYPE_MODEL__FILE_EXT = eINSTANCE.getArtifactTypeModel_File_ext();
 
 		/**
-		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4783,7 +4682,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute ATTRIBUTE_ASSIGNMENT_MODEL__DESCRIPTION = eINSTANCE.getAttributeAssignmentModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4825,7 +4724,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute ATTRIBUTE_DEFINITION_MODEL__DESCRIPTION = eINSTANCE.getAttributeDefinitionModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Data Value</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Data Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4859,7 +4758,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute CAPABILITY_ASSIGNMENT_MODEL__NAME = eINSTANCE.getCapabilityAssignmentModel_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4867,7 +4766,7 @@ public interface ModelPackage extends EPackage {
 		EReference CAPABILITY_ASSIGNMENT_MODEL__PROPERTIES = eINSTANCE.getCapabilityAssignmentModel_Properties();
 
 		/**
-		 * The meta object literal for the '<em><b>Attributes</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4917,7 +4816,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute CAPABILITY_DEFINITION_MODEL__DESCRIPTION = eINSTANCE.getCapabilityDefinitionModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4925,7 +4824,7 @@ public interface ModelPackage extends EPackage {
 		EReference CAPABILITY_DEFINITION_MODEL__PROPERTIES = eINSTANCE.getCapabilityDefinitionModel_Properties();
 
 		/**
-		 * The meta object literal for the '<em><b>Attributes</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4959,7 +4858,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute CONSTRAINT_MODEL__NAME = eINSTANCE.getConstraintModel_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5027,7 +4926,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute DATATYPE_DEFINITION_MODEL__DESCRIPTION = eINSTANCE.getDatatypeDefinitionModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraints</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Constraints</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5035,7 +4934,7 @@ public interface ModelPackage extends EPackage {
 		EReference DATATYPE_DEFINITION_MODEL__CONSTRAINTS = eINSTANCE.getDatatypeDefinitionModel_Constraints();
 
 		/**
-		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5061,7 +4960,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute FUNCTION_MODEL__TYPE_NAME = eINSTANCE.getFunctionModel_TypeName();
 
 		/**
-		 * The meta object literal for the '<em><b>Parameters</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5103,7 +5002,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute GROUP_DEFINITION_MODEL__DESCRIPTION = eINSTANCE.getGroupDefinitionModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5111,7 +5010,7 @@ public interface ModelPackage extends EPackage {
 		EReference GROUP_DEFINITION_MODEL__PROPERTIES = eINSTANCE.getGroupDefinitionModel_Properties();
 
 		/**
-		 * The meta object literal for the '<em><b>Members</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Members</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5119,7 +5018,7 @@ public interface ModelPackage extends EPackage {
 		EReference GROUP_DEFINITION_MODEL__MEMBERS = eINSTANCE.getGroupDefinitionModel_Members();
 
 		/**
-		 * The meta object literal for the '<em><b>Interfaces</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Interfaces</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5169,7 +5068,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute GROUP_TYPE_MODEL__DESCRIPTION = eINSTANCE.getGroupTypeModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5185,7 +5084,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute GROUP_TYPE_MODEL__MEMBERS = eINSTANCE.getGroupTypeModel_Members();
 
 		/**
-		 * The meta object literal for the '<em><b>Interfaces</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Interfaces</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5245,7 +5144,7 @@ public interface ModelPackage extends EPackage {
 		EClass INTERFACE_DEFINITION_MODEL = eINSTANCE.getInterfaceDefinitionModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Inputs</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5295,7 +5194,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute INTERFACE_TYPE_MODEL__DESCRIPTION = eINSTANCE.getInterfaceTypeModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Inputs</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5303,7 +5202,7 @@ public interface ModelPackage extends EPackage {
 		EReference INTERFACE_TYPE_MODEL__INPUTS = eINSTANCE.getInterfaceTypeModel_Inputs();
 
 		/**
-		 * The meta object literal for the '<em><b>Operations</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Operations</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5353,7 +5252,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute NODE_DEFINITION_MODEL__DESCRIPTION = eINSTANCE.getNodeDefinitionModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5361,7 +5260,7 @@ public interface ModelPackage extends EPackage {
 		EReference NODE_DEFINITION_MODEL__PROPERTIES = eINSTANCE.getNodeDefinitionModel_Properties();
 
 		/**
-		 * The meta object literal for the '<em><b>Attributes</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5369,7 +5268,7 @@ public interface ModelPackage extends EPackage {
 		EReference NODE_DEFINITION_MODEL__ATTRIBUTES = eINSTANCE.getNodeDefinitionModel_Attributes();
 
 		/**
-		 * The meta object literal for the '<em><b>Requirements</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Requirements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5377,7 +5276,7 @@ public interface ModelPackage extends EPackage {
 		EReference NODE_DEFINITION_MODEL__REQUIREMENTS = eINSTANCE.getNodeDefinitionModel_Requirements();
 
 		/**
-		 * The meta object literal for the '<em><b>Capabilities</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Capabilities</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5385,7 +5284,7 @@ public interface ModelPackage extends EPackage {
 		EReference NODE_DEFINITION_MODEL__CAPABILITIES = eINSTANCE.getNodeDefinitionModel_Capabilities();
 
 		/**
-		 * The meta object literal for the '<em><b>Interfaces</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Interfaces</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5393,7 +5292,7 @@ public interface ModelPackage extends EPackage {
 		EReference NODE_DEFINITION_MODEL__INTERFACES = eINSTANCE.getNodeDefinitionModel_Interfaces();
 
 		/**
-		 * The meta object literal for the '<em><b>Artifacts</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Artifacts</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5443,7 +5342,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute NODE_TEMPLATE_MODEL__DESCRIPTION = eINSTANCE.getNodeTemplateModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5451,7 +5350,7 @@ public interface ModelPackage extends EPackage {
 		EReference NODE_TEMPLATE_MODEL__PROPERTIES = eINSTANCE.getNodeTemplateModel_Properties();
 
 		/**
-		 * The meta object literal for the '<em><b>Attributes</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5459,7 +5358,7 @@ public interface ModelPackage extends EPackage {
 		EReference NODE_TEMPLATE_MODEL__ATTRIBUTES = eINSTANCE.getNodeTemplateModel_Attributes();
 
 		/**
-		 * The meta object literal for the '<em><b>Requirements</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Requirements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5467,7 +5366,7 @@ public interface ModelPackage extends EPackage {
 		EReference NODE_TEMPLATE_MODEL__REQUIREMENTS = eINSTANCE.getNodeTemplateModel_Requirements();
 
 		/**
-		 * The meta object literal for the '<em><b>Capabilities</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Capabilities</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5475,7 +5374,7 @@ public interface ModelPackage extends EPackage {
 		EReference NODE_TEMPLATE_MODEL__CAPABILITIES = eINSTANCE.getNodeTemplateModel_Capabilities();
 
 		/**
-		 * The meta object literal for the '<em><b>Interfaces</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Interfaces</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5483,7 +5382,7 @@ public interface ModelPackage extends EPackage {
 		EReference NODE_TEMPLATE_MODEL__INTERFACES = eINSTANCE.getNodeTemplateModel_Interfaces();
 
 		/**
-		 * The meta object literal for the '<em><b>Artifacts</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Artifacts</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5517,7 +5416,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute OPERATION_DEFINITION_MODEL__IMPLEMENTATION = eINSTANCE.getOperationDefinitionModel_Implementation();
 
 		/**
-		 * The meta object literal for the '<em><b>Inputs definitions</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Inputs definitions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5525,7 +5424,7 @@ public interface ModelPackage extends EPackage {
 		EReference OPERATION_DEFINITION_MODEL__INPUTS_DEFINITIONS = eINSTANCE.getOperationDefinitionModel_Inputs_definitions();
 
 		/**
-		 * The meta object literal for the '<em><b>Inputs assignments</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Inputs assignments</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5567,7 +5466,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute PARAMETER_DEFINITION_MODEL__DESCRIPTION = eINSTANCE.getParameterDefinitionModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Data Value</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Data Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5591,7 +5490,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute PARAMETER_DEFINITION_MODEL__STATUS = eINSTANCE.getParameterDefinitionModel_Status();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Constraint</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5649,7 +5548,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute POLICY_DEFINITION_MODEL__DESCRIPTION = eINSTANCE.getPolicyDefinitionModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5707,7 +5606,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute POLICY_TYPE_MODEL__DESCRIPTION = eINSTANCE.getPolicyTypeModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5741,7 +5640,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute PROPERTY_ASSIGNMENT_MODEL__NAME = eINSTANCE.getPropertyAssignmentModel_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5783,7 +5682,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute PROPERTY_MODEL__DESCRIPTION = eINSTANCE.getPropertyModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Data Value</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Data Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5799,7 +5698,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute PROPERTY_MODEL__STATUS = eINSTANCE.getPropertyModel_Status();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Constraint</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5815,7 +5714,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute PROPERTY_MODEL__ENTRY_SCHEMA = eINSTANCE.getPropertyModel_EntrySchema();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5873,7 +5772,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute RELATIONSHIP_DEFINITION_MODEL__DESCRIPTION = eINSTANCE.getRelationshipDefinitionModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5881,7 +5780,7 @@ public interface ModelPackage extends EPackage {
 		EReference RELATIONSHIP_DEFINITION_MODEL__PROPERTIES = eINSTANCE.getRelationshipDefinitionModel_Properties();
 
 		/**
-		 * The meta object literal for the '<em><b>Attributes</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5889,7 +5788,7 @@ public interface ModelPackage extends EPackage {
 		EReference RELATIONSHIP_DEFINITION_MODEL__ATTRIBUTES = eINSTANCE.getRelationshipDefinitionModel_Attributes();
 
 		/**
-		 * The meta object literal for the '<em><b>Interfaces</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Interfaces</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5939,7 +5838,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute RELATIONSHIP_TEMPLATE_MODEL__DESCRIPTION = eINSTANCE.getRelationshipTemplateModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5947,7 +5846,7 @@ public interface ModelPackage extends EPackage {
 		EReference RELATIONSHIP_TEMPLATE_MODEL__PROPERTIES = eINSTANCE.getRelationshipTemplateModel_Properties();
 
 		/**
-		 * The meta object literal for the '<em><b>Attributes</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5955,7 +5854,7 @@ public interface ModelPackage extends EPackage {
 		EReference RELATIONSHIP_TEMPLATE_MODEL__ATTRIBUTES = eINSTANCE.getRelationshipTemplateModel_Attributes();
 
 		/**
-		 * The meta object literal for the '<em><b>Interfaces</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Interfaces</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6073,7 +5972,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute REQUIREMENT_DEFINITION_MODEL__RELATIONSHIP_TYPE = eINSTANCE.getRequirementDefinitionModel_Relationship_type();
 
 		/**
-		 * The meta object literal for the '<em><b>Relationship definition</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Relationship definition</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6099,14 +5998,6 @@ public interface ModelPackage extends EPackage {
 		EAttribute SERVICE_TEMPLATE_MODEL__VERSION = eINSTANCE.getServiceTemplateModel_Version();
 
 		/**
-		 * The meta object literal for the '<em><b>Meta Data</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SERVICE_TEMPLATE_MODEL__META_DATA = eINSTANCE.getServiceTemplateModel_MetaData();
-
-		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6115,7 +6006,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute SERVICE_TEMPLATE_MODEL__DESCRIPTION = eINSTANCE.getServiceTemplateModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Repositories</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Repositories</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6123,7 +6014,7 @@ public interface ModelPackage extends EPackage {
 		EReference SERVICE_TEMPLATE_MODEL__REPOSITORIES = eINSTANCE.getServiceTemplateModel_Repositories();
 
 		/**
-		 * The meta object literal for the '<em><b>Imports</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Imports</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6131,7 +6022,7 @@ public interface ModelPackage extends EPackage {
 		EReference SERVICE_TEMPLATE_MODEL__IMPORTS = eINSTANCE.getServiceTemplateModel_Imports();
 
 		/**
-		 * The meta object literal for the '<em><b>Artifact Types</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Artifact Types</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6139,7 +6030,7 @@ public interface ModelPackage extends EPackage {
 		EReference SERVICE_TEMPLATE_MODEL__ARTIFACT_TYPES = eINSTANCE.getServiceTemplateModel_ArtifactTypes();
 
 		/**
-		 * The meta object literal for the '<em><b>Data Types</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Data Types</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6147,7 +6038,7 @@ public interface ModelPackage extends EPackage {
 		EReference SERVICE_TEMPLATE_MODEL__DATA_TYPES = eINSTANCE.getServiceTemplateModel_DataTypes();
 
 		/**
-		 * The meta object literal for the '<em><b>Capability Types</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Capability Types</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6155,7 +6046,7 @@ public interface ModelPackage extends EPackage {
 		EReference SERVICE_TEMPLATE_MODEL__CAPABILITY_TYPES = eINSTANCE.getServiceTemplateModel_CapabilityTypes();
 
 		/**
-		 * The meta object literal for the '<em><b>Interface Types</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Interface Types</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6163,7 +6054,7 @@ public interface ModelPackage extends EPackage {
 		EReference SERVICE_TEMPLATE_MODEL__INTERFACE_TYPES = eINSTANCE.getServiceTemplateModel_InterfaceTypes();
 
 		/**
-		 * The meta object literal for the '<em><b>Relationship Types</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Relationship Types</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6171,7 +6062,7 @@ public interface ModelPackage extends EPackage {
 		EReference SERVICE_TEMPLATE_MODEL__RELATIONSHIP_TYPES = eINSTANCE.getServiceTemplateModel_RelationshipTypes();
 
 		/**
-		 * The meta object literal for the '<em><b>Node Types</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Node Types</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6179,7 +6070,7 @@ public interface ModelPackage extends EPackage {
 		EReference SERVICE_TEMPLATE_MODEL__NODE_TYPES = eINSTANCE.getServiceTemplateModel_NodeTypes();
 
 		/**
-		 * The meta object literal for the '<em><b>Group Types</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Group Types</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6187,7 +6078,7 @@ public interface ModelPackage extends EPackage {
 		EReference SERVICE_TEMPLATE_MODEL__GROUP_TYPES = eINSTANCE.getServiceTemplateModel_GroupTypes();
 
 		/**
-		 * The meta object literal for the '<em><b>Policy Types</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Policy Types</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6195,7 +6086,7 @@ public interface ModelPackage extends EPackage {
 		EReference SERVICE_TEMPLATE_MODEL__POLICY_TYPES = eINSTANCE.getServiceTemplateModel_PolicyTypes();
 
 		/**
-		 * The meta object literal for the '<em><b>Topology Template</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Topology Template</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6221,7 +6112,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute TOPOLOGY_TEMPLATE_MODEL__DESCRIPTION = eINSTANCE.getTopologyTemplateModel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Inputs</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6229,7 +6120,7 @@ public interface ModelPackage extends EPackage {
 		EReference TOPOLOGY_TEMPLATE_MODEL__INPUTS = eINSTANCE.getTopologyTemplateModel_Inputs();
 
 		/**
-		 * The meta object literal for the '<em><b>Node Templates</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Node Templates</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6237,7 +6128,7 @@ public interface ModelPackage extends EPackage {
 		EReference TOPOLOGY_TEMPLATE_MODEL__NODE_TEMPLATES = eINSTANCE.getTopologyTemplateModel_NodeTemplates();
 
 		/**
-		 * The meta object literal for the '<em><b>Relationship Templates</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Relationship Templates</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6245,7 +6136,7 @@ public interface ModelPackage extends EPackage {
 		EReference TOPOLOGY_TEMPLATE_MODEL__RELATIONSHIP_TEMPLATES = eINSTANCE.getTopologyTemplateModel_RelationshipTemplates();
 
 		/**
-		 * The meta object literal for the '<em><b>Groups</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Groups</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6253,7 +6144,7 @@ public interface ModelPackage extends EPackage {
 		EReference TOPOLOGY_TEMPLATE_MODEL__GROUPS = eINSTANCE.getTopologyTemplateModel_Groups();
 
 		/**
-		 * The meta object literal for the '<em><b>Policies</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Policies</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6261,32 +6152,12 @@ public interface ModelPackage extends EPackage {
 		EReference TOPOLOGY_TEMPLATE_MODEL__POLICIES = eINSTANCE.getTopologyTemplateModel_Policies();
 
 		/**
-		 * The meta object literal for the '<em><b>Outputs</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Outputs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference TOPOLOGY_TEMPLATE_MODEL__OUTPUTS = eINSTANCE.getTopologyTemplateModel_Outputs();
-
-		/**
-		 * The meta object literal for the '{@link java.io.Serializable <em>Serializable</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see java.io.Serializable
-		 * @see kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl#getSerializable()
-		 * @generated
-		 */
-		EClass SERIALIZABLE = eINSTANCE.getSerializable();
-
-		/**
-		 * The meta object literal for the '<em>Version Model</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see kr.ac.hanyang.tosca2camp.rest.model.VersionModel
-		 * @see kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl#getVersionModel()
-		 * @generated
-		 */
-		EDataType VERSION_MODEL = eINSTANCE.getVersionModel();
 
 		/**
 		 * The meta object literal for the '<em>String Array</em>' data type.
@@ -6296,16 +6167,6 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType STRING_ARRAY = eINSTANCE.getStringArray();
-
-//		/**
-//		 * The meta object literal for the '<em>Map</em>' data type.
-//		 * <!-- begin-user-doc -->
-//		 * <!-- end-user-doc -->
-//		 * @see java.util.Map
-//		 * @see kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl#getMap()
-//		 * @generated
-//		 */
-//		EDataType MAP = eINSTANCE.getMap();
 
 	}
 

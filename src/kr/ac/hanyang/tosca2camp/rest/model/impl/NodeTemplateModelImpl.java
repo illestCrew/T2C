@@ -16,14 +16,17 @@ import kr.ac.hanyang.tosca2camp.rest.model.RequirementAssignmentModel;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,15 +48,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.NodeTemplateModelImpl#getArtifacts <em>Artifacts</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implements NodeTemplateModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 6813369726214664653L;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -136,7 +137,7 @@ public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implemen
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' reference list.
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProperties()
@@ -146,7 +147,7 @@ public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implemen
 	protected EList<PropertyModel> properties;
 
 	/**
-	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' reference list.
+	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAttributes()
@@ -156,7 +157,7 @@ public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implemen
 	protected EList<AttributeAssignmentModel> attributes;
 
 	/**
-	 * The cached value of the '{@link #getRequirements() <em>Requirements</em>}' reference list.
+	 * The cached value of the '{@link #getRequirements() <em>Requirements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRequirements()
@@ -166,7 +167,7 @@ public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implemen
 	protected EList<RequirementAssignmentModel> requirements;
 
 	/**
-	 * The cached value of the '{@link #getCapabilities() <em>Capabilities</em>}' reference list.
+	 * The cached value of the '{@link #getCapabilities() <em>Capabilities</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCapabilities()
@@ -176,7 +177,7 @@ public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implemen
 	protected EList<CapabilityAssignmentModel> capabilities;
 
 	/**
-	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' reference list.
+	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInterfaces()
@@ -186,7 +187,7 @@ public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implemen
 	protected EList<InterfaceDefinitionModel> interfaces;
 
 	/**
-	 * The cached value of the '{@link #getArtifacts() <em>Artifacts</em>}' reference list.
+	 * The cached value of the '{@link #getArtifacts() <em>Artifacts</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getArtifacts()
@@ -305,7 +306,7 @@ public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public EList<PropertyModel> getProperties() {
 		if (properties == null) {
-			properties = new EObjectResolvingEList<PropertyModel>(PropertyModel.class, this, ModelPackage.NODE_TEMPLATE_MODEL__PROPERTIES);
+			properties = new EObjectContainmentEList<PropertyModel>(PropertyModel.class, this, ModelPackage.NODE_TEMPLATE_MODEL__PROPERTIES);
 		}
 		return properties;
 	}
@@ -317,7 +318,7 @@ public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public EList<AttributeAssignmentModel> getAttributes() {
 		if (attributes == null) {
-			attributes = new EObjectResolvingEList<AttributeAssignmentModel>(AttributeAssignmentModel.class, this, ModelPackage.NODE_TEMPLATE_MODEL__ATTRIBUTES);
+			attributes = new EObjectContainmentEList<AttributeAssignmentModel>(AttributeAssignmentModel.class, this, ModelPackage.NODE_TEMPLATE_MODEL__ATTRIBUTES);
 		}
 		return attributes;
 	}
@@ -329,7 +330,7 @@ public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public EList<RequirementAssignmentModel> getRequirements() {
 		if (requirements == null) {
-			requirements = new EObjectResolvingEList<RequirementAssignmentModel>(RequirementAssignmentModel.class, this, ModelPackage.NODE_TEMPLATE_MODEL__REQUIREMENTS);
+			requirements = new EObjectContainmentEList<RequirementAssignmentModel>(RequirementAssignmentModel.class, this, ModelPackage.NODE_TEMPLATE_MODEL__REQUIREMENTS);
 		}
 		return requirements;
 	}
@@ -341,7 +342,7 @@ public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public EList<CapabilityAssignmentModel> getCapabilities() {
 		if (capabilities == null) {
-			capabilities = new EObjectResolvingEList<CapabilityAssignmentModel>(CapabilityAssignmentModel.class, this, ModelPackage.NODE_TEMPLATE_MODEL__CAPABILITIES);
+			capabilities = new EObjectContainmentEList<CapabilityAssignmentModel>(CapabilityAssignmentModel.class, this, ModelPackage.NODE_TEMPLATE_MODEL__CAPABILITIES);
 		}
 		return capabilities;
 	}
@@ -353,7 +354,7 @@ public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public EList<InterfaceDefinitionModel> getInterfaces() {
 		if (interfaces == null) {
-			interfaces = new EObjectResolvingEList<InterfaceDefinitionModel>(InterfaceDefinitionModel.class, this, ModelPackage.NODE_TEMPLATE_MODEL__INTERFACES);
+			interfaces = new EObjectContainmentEList<InterfaceDefinitionModel>(InterfaceDefinitionModel.class, this, ModelPackage.NODE_TEMPLATE_MODEL__INTERFACES);
 		}
 		return interfaces;
 	}
@@ -365,9 +366,33 @@ public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public EList<ArtifactTypeModel> getArtifacts() {
 		if (artifacts == null) {
-			artifacts = new EObjectResolvingEList<ArtifactTypeModel>(ArtifactTypeModel.class, this, ModelPackage.NODE_TEMPLATE_MODEL__ARTIFACTS);
+			artifacts = new EObjectContainmentEList<ArtifactTypeModel>(ArtifactTypeModel.class, this, ModelPackage.NODE_TEMPLATE_MODEL__ARTIFACTS);
 		}
 		return artifacts;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.NODE_TEMPLATE_MODEL__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+			case ModelPackage.NODE_TEMPLATE_MODEL__ATTRIBUTES:
+				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
+			case ModelPackage.NODE_TEMPLATE_MODEL__REQUIREMENTS:
+				return ((InternalEList<?>)getRequirements()).basicRemove(otherEnd, msgs);
+			case ModelPackage.NODE_TEMPLATE_MODEL__CAPABILITIES:
+				return ((InternalEList<?>)getCapabilities()).basicRemove(otherEnd, msgs);
+			case ModelPackage.NODE_TEMPLATE_MODEL__INTERFACES:
+				return ((InternalEList<?>)getInterfaces()).basicRemove(otherEnd, msgs);
+			case ModelPackage.NODE_TEMPLATE_MODEL__ARTIFACTS:
+				return ((InternalEList<?>)getArtifacts()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

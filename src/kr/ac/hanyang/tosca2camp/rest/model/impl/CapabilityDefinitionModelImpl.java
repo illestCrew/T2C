@@ -9,18 +9,21 @@ import kr.ac.hanyang.tosca2camp.rest.model.AttributeDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.CapabilityDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 import kr.ac.hanyang.tosca2camp.rest.model.PropertyModel;
-import kr.ac.hanyang.tosca2camp.rest.model.VersionModel;
+
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,15 +42,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.CapabilityDefinitionModelImpl#getValidSources <em>Valid Sources</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class CapabilityDefinitionModelImpl extends MinimalEObjectImpl.Container implements CapabilityDefinitionModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 2134303159688987186L;
 
 	/**
 	 * The default value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
@@ -97,7 +98,7 @@ public class CapabilityDefinitionModelImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final VersionModel VERSION_EDEFAULT = null;
+	protected static final String VERSION_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute.
@@ -107,7 +108,7 @@ public class CapabilityDefinitionModelImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected VersionModel version = VERSION_EDEFAULT;
+	protected String version = VERSION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -130,7 +131,7 @@ public class CapabilityDefinitionModelImpl extends MinimalEObjectImpl.Container 
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' reference list.
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProperties()
@@ -140,7 +141,7 @@ public class CapabilityDefinitionModelImpl extends MinimalEObjectImpl.Container 
 	protected EList<PropertyModel> properties;
 
 	/**
-	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' reference list.
+	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAttributes()
@@ -235,7 +236,7 @@ public class CapabilityDefinitionModelImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VersionModel getVersion() {
+	public String getVersion() {
 		return version;
 	}
 
@@ -244,8 +245,8 @@ public class CapabilityDefinitionModelImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVersion(VersionModel newVersion) {
-		VersionModel oldVersion = version;
+	public void setVersion(String newVersion) {
+		String oldVersion = version;
 		version = newVersion;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.CAPABILITY_DEFINITION_MODEL__VERSION, oldVersion, version));
@@ -279,7 +280,7 @@ public class CapabilityDefinitionModelImpl extends MinimalEObjectImpl.Container 
 	 */
 	public EList<PropertyModel> getProperties() {
 		if (properties == null) {
-			properties = new EObjectResolvingEList<PropertyModel>(PropertyModel.class, this, ModelPackage.CAPABILITY_DEFINITION_MODEL__PROPERTIES);
+			properties = new EObjectContainmentEList<PropertyModel>(PropertyModel.class, this, ModelPackage.CAPABILITY_DEFINITION_MODEL__PROPERTIES);
 		}
 		return properties;
 	}
@@ -291,7 +292,7 @@ public class CapabilityDefinitionModelImpl extends MinimalEObjectImpl.Container 
 	 */
 	public EList<AttributeDefinitionModel> getAttributes() {
 		if (attributes == null) {
-			attributes = new EObjectResolvingEList<AttributeDefinitionModel>(AttributeDefinitionModel.class, this, ModelPackage.CAPABILITY_DEFINITION_MODEL__ATTRIBUTES);
+			attributes = new EObjectContainmentEList<AttributeDefinitionModel>(AttributeDefinitionModel.class, this, ModelPackage.CAPABILITY_DEFINITION_MODEL__ATTRIBUTES);
 		}
 		return attributes;
 	}
@@ -315,6 +316,22 @@ public class CapabilityDefinitionModelImpl extends MinimalEObjectImpl.Container 
 		validSources = newValidSources;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.CAPABILITY_DEFINITION_MODEL__VALID_SOURCES, oldValidSources, validSources));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.CAPABILITY_DEFINITION_MODEL__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+			case ModelPackage.CAPABILITY_DEFINITION_MODEL__ATTRIBUTES:
+				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -359,7 +376,7 @@ public class CapabilityDefinitionModelImpl extends MinimalEObjectImpl.Container 
 				setDerivedFrom((String)newValue);
 				return;
 			case ModelPackage.CAPABILITY_DEFINITION_MODEL__VERSION:
-				setVersion((VersionModel)newValue);
+				setVersion((String)newValue);
 				return;
 			case ModelPackage.CAPABILITY_DEFINITION_MODEL__DESCRIPTION:
 				setDescription((String)newValue);

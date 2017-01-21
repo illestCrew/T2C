@@ -14,6 +14,7 @@ import kr.ac.hanyang.tosca2camp.rest.model.ParameterDefinitionModel;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -22,7 +23,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,15 +44,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ParameterDefinitionModelImpl#getEntrySchema <em>Entry Schema</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class ParameterDefinitionModelImpl extends MinimalEObjectImpl.Container implements ParameterDefinitionModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 7737351522062695769L;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -113,7 +113,7 @@ public class ParameterDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getDataValue() <em>Data Value</em>}' reference.
+	 * The cached value of the '{@link #getDataValue() <em>Data Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDataValue()
@@ -153,7 +153,7 @@ public class ParameterDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	protected String status = STATUS_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getConstraint() <em>Constraint</em>}' reference list.
+	 * The cached value of the '{@link #getConstraint() <em>Constraint</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConstraint()
@@ -270,14 +270,6 @@ public class ParameterDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public DataModel getDataValue() {
-		if (dataValue != null && dataValue.eIsProxy()) {
-			InternalEObject oldDataValue = (InternalEObject)dataValue;
-			dataValue = (DataModel)eResolveProxy(oldDataValue);
-			if (dataValue != oldDataValue) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.PARAMETER_DEFINITION_MODEL__DATA_VALUE, oldDataValue, dataValue));
-			}
-		}
 		return dataValue;
 	}
 
@@ -286,8 +278,14 @@ public class ParameterDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataModel basicGetDataValue() {
-		return dataValue;
+	public NotificationChain basicSetDataValue(DataModel newDataValue, NotificationChain msgs) {
+		DataModel oldDataValue = dataValue;
+		dataValue = newDataValue;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelPackage.PARAMETER_DEFINITION_MODEL__DATA_VALUE, oldDataValue, newDataValue);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -296,10 +294,17 @@ public class ParameterDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public void setDataValue(DataModel newDataValue) {
-		DataModel oldDataValue = dataValue;
-		dataValue = newDataValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PARAMETER_DEFINITION_MODEL__DATA_VALUE, oldDataValue, dataValue));
+		if (newDataValue != dataValue) {
+			NotificationChain msgs = null;
+			if (dataValue != null)
+				msgs = ((InternalEObject)dataValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelPackage.PARAMETER_DEFINITION_MODEL__DATA_VALUE, null, msgs);
+			if (newDataValue != null)
+				msgs = ((InternalEObject)newDataValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelPackage.PARAMETER_DEFINITION_MODEL__DATA_VALUE, null, msgs);
+			msgs = basicSetDataValue(newDataValue, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PARAMETER_DEFINITION_MODEL__DATA_VALUE, newDataValue, newDataValue));
 	}
 
 	/**
@@ -368,7 +373,7 @@ public class ParameterDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 */
 	public EList<ConstraintModel> getConstraint() {
 		if (constraint == null) {
-			constraint = new EObjectResolvingEList<ConstraintModel>(ConstraintModel.class, this, ModelPackage.PARAMETER_DEFINITION_MODEL__CONSTRAINT);
+			constraint = new EObjectContainmentEList<ConstraintModel>(ConstraintModel.class, this, ModelPackage.PARAMETER_DEFINITION_MODEL__CONSTRAINT);
 		}
 		return constraint;
 	}
@@ -411,6 +416,22 @@ public class ParameterDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelPackage.PARAMETER_DEFINITION_MODEL__DATA_VALUE:
+				return basicSetDataValue(null, msgs);
+			case ModelPackage.PARAMETER_DEFINITION_MODEL__CONSTRAINT:
+				return ((InternalEList<?>)getConstraint()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ModelPackage.PARAMETER_DEFINITION_MODEL__NAME:
@@ -420,8 +441,7 @@ public class ParameterDefinitionModelImpl extends MinimalEObjectImpl.Container i
 			case ModelPackage.PARAMETER_DEFINITION_MODEL__DESCRIPTION:
 				return getDescription();
 			case ModelPackage.PARAMETER_DEFINITION_MODEL__DATA_VALUE:
-				if (resolve) return getDataValue();
-				return basicGetDataValue();
+				return getDataValue();
 			case ModelPackage.PARAMETER_DEFINITION_MODEL__VALUE:
 				if (resolve) return getValue();
 				return basicGetValue();

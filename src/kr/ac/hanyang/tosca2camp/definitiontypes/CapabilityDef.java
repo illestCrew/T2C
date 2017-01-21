@@ -16,6 +16,7 @@ public class CapabilityDef implements Cloneable{
 	private Map<String, PropertyDef> properties; 
 	private Map<String, AttributeDef> attributes;
 	private List<String> valid_source_types;
+	private boolean isConfigured;
 	
 	public static class Builder {
 		private String name;
@@ -26,6 +27,7 @@ public class CapabilityDef implements Cloneable{
 		private Map<String, PropertyDef> properties = new LinkedHashMap<String, PropertyDef>(); 
 		private Map<String, AttributeDef> attributes = new LinkedHashMap<String, AttributeDef>();
 		private List<String> valid_source_types = new ArrayList<String>();
+		private boolean isConfigured = false;
 		
 		public Builder(){ }
 		
@@ -78,6 +80,11 @@ public class CapabilityDef implements Cloneable{
 			return this;
 		}
 		
+		public Builder configure(boolean config){
+			this.isConfigured = config;
+			return this;
+		}
+		
 		public CapabilityDef build(){
 			return new CapabilityDef(this);
 		}
@@ -102,6 +109,7 @@ public class CapabilityDef implements Cloneable{
 			toReturn.valid_source_types = new ArrayList<String>();
 			for(String vSource: valid_source_types)
 				toReturn.valid_source_types.add(vSource);
+			toReturn.isConfigured = this.isConfigured;
 			return toReturn.build();
 		}catch(CloneNotSupportedException e){
 			return null;
@@ -118,6 +126,7 @@ public class CapabilityDef implements Cloneable{
 		this.properties = builder.properties;
 		this.attributes = builder.attributes;
 		this.valid_source_types = builder.valid_source_types;
+		this.isConfigured = builder.isConfigured;
 	}
 	
 	public Builder getBuilder(){
@@ -130,6 +139,7 @@ public class CapabilityDef implements Cloneable{
 		builder.properties = this.properties;
 		builder.attributes = this.attributes;
 		builder.valid_source_types = this.valid_source_types;
+		builder.isConfigured = this.isConfigured;
 		return builder;
 		
 	}
@@ -177,6 +187,14 @@ public class CapabilityDef implements Cloneable{
 	
 	public AttributeDef getAttribute(String attributeName){
 		return attributes.get(attributeName);
+	}
+	
+	public void setConfigured(boolean config){
+		this.isConfigured = config;
+	}
+	
+	public boolean isConfigured(){
+		return this.isConfigured;
 	}
 	
 	private int tabNum;

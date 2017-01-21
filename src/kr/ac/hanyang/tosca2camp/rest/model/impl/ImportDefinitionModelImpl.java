@@ -28,15 +28,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ImportDefinitionModelImpl#getNamespacePrefix <em>Namespace Prefix</em>}</li>
  * </ul>
  *
- * @generated
+ * 
  */
 public class ImportDefinitionModelImpl extends MinimalEObjectImpl.Container implements ImportDefinitionModel, Serializable {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -4217406862990473717L;
 
 	/**
 	 * The default value of the '{@link #getFile() <em>File</em>}' attribute.
