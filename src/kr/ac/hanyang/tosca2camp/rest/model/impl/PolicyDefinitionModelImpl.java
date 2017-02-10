@@ -7,19 +7,18 @@ import java.util.Collection;
 
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 import kr.ac.hanyang.tosca2camp.rest.model.PolicyDefinitionModel;
-import kr.ac.hanyang.tosca2camp.rest.model.PropertyAssignmentModel;
-
+import kr.ac.hanyang.tosca2camp.rest.model.PropertyModel;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -114,27 +113,17 @@ public class PolicyDefinitionModelImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PropertyAssignmentModel> properties;
+	protected EList<PropertyModel> properties;
 
 	/**
-	 * The default value of the '{@link #getTargets() <em>Targets</em>}' attribute.
+	 * The cached value of the '{@link #getTargets() <em>Targets</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTargets()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String[] TARGETS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTargets() <em>Targets</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargets()
-	 * @generated
-	 * @ordered
-	 */
-	protected String[] targets = TARGETS_EDEFAULT;
+	protected EList<String> targets;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -223,9 +212,9 @@ public class PolicyDefinitionModelImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PropertyAssignmentModel> getProperties() {
+	public EList<PropertyModel> getProperties() {
 		if (properties == null) {
-			properties = new EObjectContainmentEList<PropertyAssignmentModel>(PropertyAssignmentModel.class, this, ModelPackage.POLICY_DEFINITION_MODEL__PROPERTIES);
+			properties = new EObjectContainmentEList<PropertyModel>(PropertyModel.class, this, ModelPackage.POLICY_DEFINITION_MODEL__PROPERTIES);
 		}
 		return properties;
 	}
@@ -235,20 +224,12 @@ public class PolicyDefinitionModelImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String[] getTargets() {
+	@SuppressWarnings("unchecked")
+	public EList<String> getTargets() {
+		if (targets == null) {
+			targets = new EDataTypeUniqueEList<String>(String.class, this, ModelPackage.POLICY_DEFINITION_MODEL__TARGETS);
+		}
 		return targets;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTargets(String[] newTargets) {
-		String[] oldTargets = targets;
-		targets = newTargets;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.POLICY_DEFINITION_MODEL__TARGETS, oldTargets, targets));
 	}
 
 	/**
@@ -307,10 +288,11 @@ public class PolicyDefinitionModelImpl extends MinimalEObjectImpl.Container impl
 				return;
 			case ModelPackage.POLICY_DEFINITION_MODEL__PROPERTIES:
 				getProperties().clear();
-				getProperties().addAll((Collection<? extends PropertyAssignmentModel>)newValue);
+				getProperties().addAll((Collection<? extends PropertyModel>)newValue);
 				return;
 			case ModelPackage.POLICY_DEFINITION_MODEL__TARGETS:
-				setTargets((String[])newValue);
+				getTargets().clear();
+				getTargets().addAll((Collection<? extends String>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -337,7 +319,7 @@ public class PolicyDefinitionModelImpl extends MinimalEObjectImpl.Container impl
 				getProperties().clear();
 				return;
 			case ModelPackage.POLICY_DEFINITION_MODEL__TARGETS:
-				setTargets(TARGETS_EDEFAULT);
+				getTargets().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -360,7 +342,7 @@ public class PolicyDefinitionModelImpl extends MinimalEObjectImpl.Container impl
 			case ModelPackage.POLICY_DEFINITION_MODEL__PROPERTIES:
 				return properties != null && !properties.isEmpty();
 			case ModelPackage.POLICY_DEFINITION_MODEL__TARGETS:
-				return TARGETS_EDEFAULT == null ? targets != null : !TARGETS_EDEFAULT.equals(targets);
+				return targets != null && !targets.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

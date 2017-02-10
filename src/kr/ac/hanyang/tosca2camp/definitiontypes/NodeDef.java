@@ -156,8 +156,7 @@ public class NodeDef implements Cloneable{
 			return new NodeDef(this);
 		}
 	}
-	
-	
+		
 	
 	protected NodeDef(Builder builder){
 		this.name = builder.name;
@@ -200,6 +199,16 @@ public class NodeDef implements Cloneable{
 			for(String cDefName:capabilities.keySet()){
 				CapabilityDef cDef = capabilities.get(cDefName);
 				toReturn.capabilities.put(cDefName, (CapabilityDef)cDef.clone()); //make sure pDef can create a copy
+			}
+			toReturn.interfaces = new LinkedHashMap<String, InterfaceDef>();
+			for(String intDefName:interfaces.keySet()){
+				InterfaceDef interDef = interfaces.get(intDefName);
+				toReturn.interfaces.put(intDefName, (InterfaceDef)interDef.clone()); //make sure interDef can create a copy
+			}
+			toReturn.artifacts = new LinkedHashMap<String, ArtifactDef>();
+			for(String artDefName:artifacts.keySet()){
+				ArtifactDef artDef = artifacts.get(artDefName);
+				toReturn.artifacts.put(artDefName, (ArtifactDef)artDef.clone()); 
 			}
 			if (nodeFilter != null) toReturn.nodeFilter = (NodeFilter) nodeFilter.clone();
 			return toReturn;

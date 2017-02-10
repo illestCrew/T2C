@@ -14,18 +14,19 @@ public class OperationDef implements Cloneable{
 	private String description; // description are treated as their own type but for now they will be string
 	private ImplementationArtifact implementation; 
 	private List<PropertyDef> inputs; //TODO define the property definitions or property assignments
-	
+	private boolean isConfigured;
 
 	public static class Builder {
 		private String name;
 		private String description; // description are treated as their own type but for now they will be string
 		private ImplementationArtifact implementation; 
 		private List<PropertyDef> inputs; //TODO define the property definitions or property assignments
+		private boolean isConfigured;
 		
 		public Builder(String name){
 			this.name = name;
 			this.inputs = new ArrayList<PropertyDef>();
-			
+			this.isConfigured = false;
 		}
 		
 		public Builder description(String description){
@@ -48,6 +49,11 @@ public class OperationDef implements Cloneable{
 			return this;
 		}
 		
+		public Builder configure(boolean config){
+			this.isConfigured = config;
+			return this;
+		}
+		
 		public OperationDef build(){
 			return new OperationDef(this);
 		}
@@ -58,6 +64,7 @@ public class OperationDef implements Cloneable{
 		this.description = builder.description;
 		this.implementation = builder.implementation;
 		this.inputs = builder.inputs;
+		this.isConfigured = builder.isConfigured;
 	}
 	
 	public Builder getBuilder(){ 
@@ -65,6 +72,7 @@ public class OperationDef implements Cloneable{
 		builder.description = this.description;
 		builder.implementation = this.implementation;
 		builder.inputs = this.inputs;
+		builder.isConfigured = this.isConfigured;
 		return builder;
 	}
 	
@@ -77,6 +85,7 @@ public class OperationDef implements Cloneable{
 			toReturn.inputs = new ArrayList<PropertyDef>();
 			for(PropertyDef input: inputs)
 				toReturn.inputs.add(input);
+			toReturn.isConfigured = this.isConfigured;
 			return toReturn;
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
@@ -90,6 +99,14 @@ public class OperationDef implements Cloneable{
 	public ImplementationArtifact getImplementation() {	return implementation;}
 	public List<PropertyDef> getInputs() {return inputs;}
 
+	public void configure(boolean config){
+		isConfigured = config;
+	}
+	
+	public boolean isConfigured(){
+		return isConfigured;
+	}
+	
 	public void addImplementation(ImplementationArtifact implementation){
 		this.implementation = implementation;
 	}

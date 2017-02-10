@@ -16,4 +16,5 @@ Export-Package: kr.ac.hanyang.tosca2camp,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Import-Package: org.eclipse.m2m.atl.core
+Import-Package: kr.ac.hanyang.tosca2camp.rest.model,
+ org.eclipse.m2m.atl.core

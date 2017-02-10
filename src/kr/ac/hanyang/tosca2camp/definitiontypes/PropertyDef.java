@@ -194,7 +194,7 @@ public class PropertyDef implements Cloneable{
 	
 	@Deprecated
 	public void setPropertyValue(Object value){		
-		Object type = Utilities.isPrimative(value.toString());
+		Object type = Utilities.isPrimative(value.getClass().getName());
 		if (type != null){
 			String typeName = Utilities.normalizeTypeName(type.getClass().getName(), "datatype");
 			propertyValue = (DataTypeDef) Utilities.loadData(value, new DataTypeDef.Builder().typeName(typeName).build());

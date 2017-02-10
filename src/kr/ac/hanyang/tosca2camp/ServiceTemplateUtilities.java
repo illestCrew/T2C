@@ -68,7 +68,7 @@ public class ServiceTemplateUtilities {
 							if (reqDef != null){ 
 								reqDef.getBuilder().name(reqName);
 								Map<String, Object> reqMap = (Map<String, Object>) reqItem.get(reqName);
-								parseRequirementAssignment(reqMap ,reqDef, platform);
+								reqDef = parseRequirementAssignment(reqMap ,reqDef, platform);
 							}
 						}
 						break;
@@ -81,14 +81,6 @@ public class ServiceTemplateUtilities {
 							Map<String, Object> capMap = (Map<String, Object>) capMaps.get(capName);
 							parseCapabilityAssignment(capName,capMap ,capDef,platform);
 						}
-						
-//						for(Object obj:  ((Map<String, Object>) nodeMap.get(key)).values()){
-//							Map<String, Object> capItem = (Map<String, Object>) obj;
-//							String capName = capItem.keySet().iterator().next();
-//							CapabilityDef capDef = nodeDefinition.getCapability(capName);
-//							Map<String, Object> capMap = (Map<String, Object>) capItem.get(capName);
-//							parseCapabilityAssignment(capName,capMap ,capDef,platform);
-//						}
 						break;
 					case "interfaces" :
 						Map<String, Object> ifaceMap = (Map<String, Object>) nodeMap.get(key);
@@ -167,7 +159,7 @@ public class ServiceTemplateUtilities {
 					reqDefinition.setNodeVal((String)reqMap.get(mapItem));
 					break;
 				case "relationship":
- 
+					
 					Object relItem = reqMap.get(mapItem);
 					if (relItem instanceof String){
 						reqDefinition.setRelValue((String) relItem);
@@ -336,6 +328,7 @@ public class ServiceTemplateUtilities {
 		protected static OperationDef parseOperation(Object obj, OperationDef opDef, Tosca2CampPlatform platform){
 			if (obj instanceof String){
 				opDef.addImplementation(new ImplementationArtifact((String)obj));
+				opDef.configure(true);
 				return opDef;
 			}else{
 				Map<String, Object> opMap = (Map<String, Object>) obj;
@@ -381,6 +374,7 @@ public class ServiceTemplateUtilities {
 						break;
 					}
 				}
+				opDef.configure(true);
 				return opDef;
 			}
 		}
@@ -421,7 +415,8 @@ public class ServiceTemplateUtilities {
 						for(String propName: polMaps.keySet()){
 							PropertyDef propDef = policyDefinition.getProperty(propName);
 							Object value = polMaps.get(propName);
-							parsePropertyAssignment(value ,propDef, platform);
+							propDef = parsePropertyAssignment(value ,propDef, platform);
+							policyDefinition.getBuilder().addProperty(propDef).build();
 						}
 						break;
 					case "targets":

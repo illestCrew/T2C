@@ -83,24 +83,14 @@ public interface PolicyDefinitionModel extends EObject{
 	 * @model 
 	 */
 	@XmlElement(name="properties")
-	public EList<PropertyAssignmentModel> getProperties();
+	public EList<PropertyModel> getProperties();
 	
 	/**
 	 * @model 
 	 */
 	@XmlElement(name="targets")
-	public String[] getTargets();
+	public EList<String> getTargets();
 
-	/**
-	 * Sets the value of the '{@link kr.ac.hanyang.tosca2camp.rest.model.PolicyDefinitionModel#getTargets <em>Targets</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Targets</em>' attribute.
-	 * @see #getTargets()
-	 * @generated
-	 */
-	void setTargets(String[] value);
-	
 	public void eSet(int featureID, Object newValue);
 	
 }

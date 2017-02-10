@@ -7,14 +7,17 @@ import java.util.Collection;
 
 import kr.ac.hanyang.tosca2camp.rest.model.InterfaceDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
+import kr.ac.hanyang.tosca2camp.rest.model.OperationDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.PropertyModel;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -48,6 +51,34 @@ public class InterfaceDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 */
 	protected EList<PropertyModel> inputs;
 
+	/**
+	 * The cached value of the '{@link #getOperations() <em>Operations</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOperations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<OperationDefinitionModel> operations;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -84,11 +115,46 @@ public class InterfaceDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<OperationDefinitionModel> getOperations() {
+		if (operations == null) {
+			operations = new EObjectContainmentEList<OperationDefinitionModel>(OperationDefinitionModel.class, this, ModelPackage.INTERFACE_DEFINITION_MODEL__OPERATIONS);
+		}
+		return operations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.INTERFACE_DEFINITION_MODEL__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ModelPackage.INTERFACE_DEFINITION_MODEL__INPUTS:
 				return ((InternalEList<?>)getInputs()).basicRemove(otherEnd, msgs);
+			case ModelPackage.INTERFACE_DEFINITION_MODEL__OPERATIONS:
+				return ((InternalEList<?>)getOperations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -103,6 +169,10 @@ public class InterfaceDefinitionModelImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case ModelPackage.INTERFACE_DEFINITION_MODEL__INPUTS:
 				return getInputs();
+			case ModelPackage.INTERFACE_DEFINITION_MODEL__OPERATIONS:
+				return getOperations();
+			case ModelPackage.INTERFACE_DEFINITION_MODEL__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -120,6 +190,13 @@ public class InterfaceDefinitionModelImpl extends MinimalEObjectImpl.Container i
 				getInputs().clear();
 				getInputs().addAll((Collection<? extends PropertyModel>)newValue);
 				return;
+			case ModelPackage.INTERFACE_DEFINITION_MODEL__OPERATIONS:
+				getOperations().clear();
+				getOperations().addAll((Collection<? extends OperationDefinitionModel>)newValue);
+				return;
+			case ModelPackage.INTERFACE_DEFINITION_MODEL__NAME:
+				setName((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -135,6 +212,12 @@ public class InterfaceDefinitionModelImpl extends MinimalEObjectImpl.Container i
 			case ModelPackage.INTERFACE_DEFINITION_MODEL__INPUTS:
 				getInputs().clear();
 				return;
+			case ModelPackage.INTERFACE_DEFINITION_MODEL__OPERATIONS:
+				getOperations().clear();
+				return;
+			case ModelPackage.INTERFACE_DEFINITION_MODEL__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -149,8 +232,28 @@ public class InterfaceDefinitionModelImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case ModelPackage.INTERFACE_DEFINITION_MODEL__INPUTS:
 				return inputs != null && !inputs.isEmpty();
+			case ModelPackage.INTERFACE_DEFINITION_MODEL__OPERATIONS:
+				return operations != null && !operations.isEmpty();
+			case ModelPackage.INTERFACE_DEFINITION_MODEL__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //InterfaceDefinitionModelImpl

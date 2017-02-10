@@ -622,7 +622,7 @@ public class Tosca2CampPlatform{
 			case "relationship":		
 				Object relItem = reqMap.get(mapItem);
 				if (relItem instanceof String){
-					reqBuilder.relationshipDef(new RelationshipDef.Builder(name,name).build());
+					reqBuilder.relationshipDef(new RelationshipDef.Builder(name,(String)relItem).build());
 				}else{
 					Map<String, Object> relMap = (Map<String, Object>) relItem;
 					String relName = relMap.keySet().iterator().next();

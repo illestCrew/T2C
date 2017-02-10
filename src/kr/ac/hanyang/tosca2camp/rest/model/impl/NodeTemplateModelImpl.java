@@ -5,7 +5,7 @@ package kr.ac.hanyang.tosca2camp.rest.model.impl;
 import java.io.Serializable;
 import java.util.Collection;
 
-import kr.ac.hanyang.tosca2camp.rest.model.ArtifactTypeModel;
+import kr.ac.hanyang.tosca2camp.rest.model.ArtifactDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.AttributeAssignmentModel;
 import kr.ac.hanyang.tosca2camp.rest.model.CapabilityAssignmentModel;
 import kr.ac.hanyang.tosca2camp.rest.model.InterfaceDefinitionModel;
@@ -194,7 +194,7 @@ public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ArtifactTypeModel> artifacts;
+	protected EList<ArtifactDefinitionModel> artifacts;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -364,9 +364,9 @@ public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ArtifactTypeModel> getArtifacts() {
+	public EList<ArtifactDefinitionModel> getArtifacts() {
 		if (artifacts == null) {
-			artifacts = new EObjectContainmentEList<ArtifactTypeModel>(ArtifactTypeModel.class, this, ModelPackage.NODE_TEMPLATE_MODEL__ARTIFACTS);
+			artifacts = new EObjectContainmentEList<ArtifactDefinitionModel>(ArtifactDefinitionModel.class, this, ModelPackage.NODE_TEMPLATE_MODEL__ARTIFACTS);
 		}
 		return artifacts;
 	}
@@ -470,7 +470,7 @@ public class NodeTemplateModelImpl extends MinimalEObjectImpl.Container implemen
 				return;
 			case ModelPackage.NODE_TEMPLATE_MODEL__ARTIFACTS:
 				getArtifacts().clear();
-				getArtifacts().addAll((Collection<? extends ArtifactTypeModel>)newValue);
+				getArtifacts().addAll((Collection<? extends ArtifactDefinitionModel>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

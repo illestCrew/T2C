@@ -15,7 +15,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mime_type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="file_ext" eType="#//StringArray"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="file_ext" eType="#//String2Array"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
         eType="#//PropertyModel" containment="true"/>
   </eClassifiers>
@@ -49,7 +49,7 @@
         eType="#//PropertyModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//AttributeDefinitionModel" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="validSources" eType="#//StringArray"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="validSources" eType="#//String2Array"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConstraintModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -92,7 +92,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
         eType="#//PropertyModel" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="members" eType="#//StringArray"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="members" eType="#//String2Array"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
         eType="#//InterfaceTypeModel" containment="true"/>
   </eClassifiers>
@@ -105,6 +105,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
         eType="#//PropertyModel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
+        eType="#//OperationDefinitionModel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceTypeModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -150,7 +153,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
         eType="#//InterfaceDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifacts" upperBound="-1"
-        eType="#//ArtifactTypeModel" containment="true"/>
+        eType="#//ArtifactDefinitionModel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OperationDefinitionModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -158,7 +161,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs_definitions" upperBound="-1"
         eType="#//PropertyModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs_assignments" upperBound="-1"
-        eType="#//PropertyAssignmentModel" containment="true"/>
+        eType="#//PropertyModel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ParameterDefinitionModel">
     <eOperations name="getRequired" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -178,8 +182,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//PropertyAssignmentModel" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targets" eType="#//StringArray"/>
+        eType="#//PropertyModel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targets" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PolicyTypeModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -188,7 +193,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
         eType="#//PropertyModel" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targets" eType="#//StringArray"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targets" eType="#//String2Array"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PropertyAssignmentModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -220,7 +225,7 @@
         eType="#//AttributeDefinitionModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
         eType="#//InterfaceTypeModel" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="validTargetTypes" eType="#//StringArray"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="validTargetTypes" eType="#//String2Array"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RelationshipTemplateModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -292,5 +297,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" upperBound="-1"
         eType="#//ParameterDefinitionModel" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="StringArray" instanceClassName="java.lang.String[]"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="String2Array" instanceClassName="java.lang.String[]"/>
 </ecore:EPackage>

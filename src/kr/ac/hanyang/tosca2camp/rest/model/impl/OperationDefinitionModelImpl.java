@@ -7,7 +7,6 @@ import java.util.Collection;
 
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 import kr.ac.hanyang.tosca2camp.rest.model.OperationDefinitionModel;
-import kr.ac.hanyang.tosca2camp.rest.model.PropertyAssignmentModel;
 import kr.ac.hanyang.tosca2camp.rest.model.PropertyModel;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -104,7 +103,27 @@ public class OperationDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PropertyAssignmentModel> inputs_assignments;
+	protected EList<PropertyModel> inputs_assignments;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -184,11 +203,32 @@ public class OperationDefinitionModelImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PropertyAssignmentModel> getInputs_assignments() {
+	public EList<PropertyModel> getInputs_assignments() {
 		if (inputs_assignments == null) {
-			inputs_assignments = new EObjectContainmentEList<PropertyAssignmentModel>(PropertyAssignmentModel.class, this, ModelPackage.OPERATION_DEFINITION_MODEL__INPUTS_ASSIGNMENTS);
+			inputs_assignments = new EObjectContainmentEList<PropertyModel>(PropertyModel.class, this, ModelPackage.OPERATION_DEFINITION_MODEL__INPUTS_ASSIGNMENTS);
 		}
 		return inputs_assignments;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OPERATION_DEFINITION_MODEL__NAME, oldName, name));
 	}
 
 	/**
@@ -223,6 +263,8 @@ public class OperationDefinitionModelImpl extends MinimalEObjectImpl.Container i
 				return getInputs_definitions();
 			case ModelPackage.OPERATION_DEFINITION_MODEL__INPUTS_ASSIGNMENTS:
 				return getInputs_assignments();
+			case ModelPackage.OPERATION_DEFINITION_MODEL__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -248,7 +290,10 @@ public class OperationDefinitionModelImpl extends MinimalEObjectImpl.Container i
 				return;
 			case ModelPackage.OPERATION_DEFINITION_MODEL__INPUTS_ASSIGNMENTS:
 				getInputs_assignments().clear();
-				getInputs_assignments().addAll((Collection<? extends PropertyAssignmentModel>)newValue);
+				getInputs_assignments().addAll((Collection<? extends PropertyModel>)newValue);
+				return;
+			case ModelPackage.OPERATION_DEFINITION_MODEL__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -274,6 +319,9 @@ public class OperationDefinitionModelImpl extends MinimalEObjectImpl.Container i
 			case ModelPackage.OPERATION_DEFINITION_MODEL__INPUTS_ASSIGNMENTS:
 				getInputs_assignments().clear();
 				return;
+			case ModelPackage.OPERATION_DEFINITION_MODEL__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -294,6 +342,8 @@ public class OperationDefinitionModelImpl extends MinimalEObjectImpl.Container i
 				return inputs_definitions != null && !inputs_definitions.isEmpty();
 			case ModelPackage.OPERATION_DEFINITION_MODEL__INPUTS_ASSIGNMENTS:
 				return inputs_assignments != null && !inputs_assignments.isEmpty();
+			case ModelPackage.OPERATION_DEFINITION_MODEL__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -312,6 +362,8 @@ public class OperationDefinitionModelImpl extends MinimalEObjectImpl.Container i
 		result.append(description);
 		result.append(", implementation: ");
 		result.append(implementation);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

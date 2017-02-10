@@ -100,8 +100,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case ModelPackage.STRING_ARRAY:
-				return createStringArrayFromString(eDataType, initialValue);
+			case ModelPackage.STRING2_ARRAY:
+				return createString2ArrayFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -115,8 +115,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case ModelPackage.STRING_ARRAY:
-				return convertStringArrayToString(eDataType, instanceValue);
+			case ModelPackage.STRING2_ARRAY:
+				return convertString2ArrayToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -445,7 +445,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String[] createStringArrayFromString(EDataType eDataType, String initialValue) {
+	public String[] createString2ArrayFromString(EDataType eDataType, String initialValue) {
 		return (String[])super.createFromString(initialValue);
 	}
 
@@ -454,11 +454,11 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertStringArrayToString(EDataType eDataType, Object instanceValue) {
+	public String convertString2ArrayToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
 	}
 
-//	/**
+	//	/**
 //	 * <!-- begin-user-doc -->
 //	 * <!-- end-user-doc -->
 //	 * @generated

@@ -964,13 +964,31 @@ public interface ModelPackage extends EPackage {
 	int INTERFACE_DEFINITION_MODEL__INPUTS = 0;
 
 	/**
+	 * The feature id for the '<em><b>Operations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_DEFINITION_MODEL__OPERATIONS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_DEFINITION_MODEL__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Interface Definition Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_DEFINITION_MODEL_FEATURE_COUNT = 1;
+	int INTERFACE_DEFINITION_MODEL_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Interface Definition Model</em>' class.
@@ -1346,13 +1364,22 @@ public interface ModelPackage extends EPackage {
 	int OPERATION_DEFINITION_MODEL__INPUTS_ASSIGNMENTS = 3;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_DEFINITION_MODEL__NAME = 4;
+
+	/**
 	 * The number of structural features of the '<em>Operation Definition Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_DEFINITION_MODEL_FEATURE_COUNT = 4;
+	int OPERATION_DEFINITION_MODEL_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Operation Definition Model</em>' class.
@@ -1519,7 +1546,7 @@ public interface ModelPackage extends EPackage {
 	int POLICY_DEFINITION_MODEL__PROPERTIES = 3;
 
 	/**
-	 * The feature id for the '<em><b>Targets</b></em>' attribute.
+	 * The feature id for the '<em><b>Targets</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2384,13 +2411,13 @@ public interface ModelPackage extends EPackage {
 	int TOPOLOGY_TEMPLATE_MODEL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '<em>String Array</em>' data type.
+	 * The meta object id for the '<em>String2 Array</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl#getStringArray()
+	 * @see kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl#getString2Array()
 	 * @generated
 	 */
-	int STRING_ARRAY = 30;
+	int STRING2_ARRAY = 30;
 
 
 	/**
@@ -3183,6 +3210,28 @@ public interface ModelPackage extends EPackage {
 	EReference getInterfaceDefinitionModel_Inputs();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link kr.ac.hanyang.tosca2camp.rest.model.InterfaceDefinitionModel#getOperations <em>Operations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Operations</em>'.
+	 * @see kr.ac.hanyang.tosca2camp.rest.model.InterfaceDefinitionModel#getOperations()
+	 * @see #getInterfaceDefinitionModel()
+	 * @generated
+	 */
+	EReference getInterfaceDefinitionModel_Operations();
+
+	/**
+	 * Returns the meta object for the attribute '{@link kr.ac.hanyang.tosca2camp.rest.model.InterfaceDefinitionModel#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see kr.ac.hanyang.tosca2camp.rest.model.InterfaceDefinitionModel#getName()
+	 * @see #getInterfaceDefinitionModel()
+	 * @generated
+	 */
+	EAttribute getInterfaceDefinitionModel_Name();
+
+	/**
 	 * Returns the meta object for class '{@link kr.ac.hanyang.tosca2camp.rest.model.InterfaceTypeModel <em>Interface Type Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3553,6 +3602,17 @@ public interface ModelPackage extends EPackage {
 	EReference getOperationDefinitionModel_Inputs_assignments();
 
 	/**
+	 * Returns the meta object for the attribute '{@link kr.ac.hanyang.tosca2camp.rest.model.OperationDefinitionModel#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see kr.ac.hanyang.tosca2camp.rest.model.OperationDefinitionModel#getName()
+	 * @see #getOperationDefinitionModel()
+	 * @generated
+	 */
+	EAttribute getOperationDefinitionModel_Name();
+
+	/**
 	 * Returns the meta object for class '{@link kr.ac.hanyang.tosca2camp.rest.model.ParameterDefinitionModel <em>Parameter Definition Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3715,10 +3775,10 @@ public interface ModelPackage extends EPackage {
 	EReference getPolicyDefinitionModel_Properties();
 
 	/**
-	 * Returns the meta object for the attribute '{@link kr.ac.hanyang.tosca2camp.rest.model.PolicyDefinitionModel#getTargets <em>Targets</em>}'.
+	 * Returns the meta object for the attribute list '{@link kr.ac.hanyang.tosca2camp.rest.model.PolicyDefinitionModel#getTargets <em>Targets</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Targets</em>'.
+	 * @return the meta object for the attribute list '<em>Targets</em>'.
 	 * @see kr.ac.hanyang.tosca2camp.rest.model.PolicyDefinitionModel#getTargets()
 	 * @see #getPolicyDefinitionModel()
 	 * @generated
@@ -4507,14 +4567,14 @@ public interface ModelPackage extends EPackage {
 	EReference getTopologyTemplateModel_Outputs();
 
 	/**
-	 * Returns the meta object for data type '<em>String Array</em>'.
+	 * Returns the meta object for data type '<em>String2 Array</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>String Array</em>'.
+	 * @return the meta object for data type '<em>String2 Array</em>'.
 	 * @model instanceClass="java.lang.String[]"
 	 * @generated
 	 */
-	EDataType getStringArray();
+	EDataType getString2Array();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -5152,6 +5212,22 @@ public interface ModelPackage extends EPackage {
 		EReference INTERFACE_DEFINITION_MODEL__INPUTS = eINSTANCE.getInterfaceDefinitionModel_Inputs();
 
 		/**
+		 * The meta object literal for the '<em><b>Operations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERFACE_DEFINITION_MODEL__OPERATIONS = eINSTANCE.getInterfaceDefinitionModel_Operations();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTERFACE_DEFINITION_MODEL__NAME = eINSTANCE.getInterfaceDefinitionModel_Name();
+
+		/**
 		 * The meta object literal for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.InterfaceTypeModelImpl <em>Interface Type Model</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5432,6 +5508,14 @@ public interface ModelPackage extends EPackage {
 		EReference OPERATION_DEFINITION_MODEL__INPUTS_ASSIGNMENTS = eINSTANCE.getOperationDefinitionModel_Inputs_assignments();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OPERATION_DEFINITION_MODEL__NAME = eINSTANCE.getOperationDefinitionModel_Name();
+
+		/**
 		 * The meta object literal for the '{@link kr.ac.hanyang.tosca2camp.rest.model.impl.ParameterDefinitionModelImpl <em>Parameter Definition Model</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5556,7 +5640,7 @@ public interface ModelPackage extends EPackage {
 		EReference POLICY_DEFINITION_MODEL__PROPERTIES = eINSTANCE.getPolicyDefinitionModel_Properties();
 
 		/**
-		 * The meta object literal for the '<em><b>Targets</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Targets</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6160,13 +6244,13 @@ public interface ModelPackage extends EPackage {
 		EReference TOPOLOGY_TEMPLATE_MODEL__OUTPUTS = eINSTANCE.getTopologyTemplateModel_Outputs();
 
 		/**
-		 * The meta object literal for the '<em>String Array</em>' data type.
+		 * The meta object literal for the '<em>String2 Array</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl#getStringArray()
+		 * @see kr.ac.hanyang.tosca2camp.rest.model.impl.ModelPackageImpl#getString2Array()
 		 * @generated
 		 */
-		EDataType STRING_ARRAY = eINSTANCE.getStringArray();
+		EDataType STRING2_ARRAY = eINSTANCE.getString2Array();
 
 	}
 

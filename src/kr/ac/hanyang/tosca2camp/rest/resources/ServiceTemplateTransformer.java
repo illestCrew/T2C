@@ -11,8 +11,10 @@ import kr.ac.hanyang.tosca2camp.definitiontypes.ConstraintDef;
 import kr.ac.hanyang.tosca2camp.definitiontypes.DataTypeDef;
 import kr.ac.hanyang.tosca2camp.definitiontypes.InterfaceDef;
 import kr.ac.hanyang.tosca2camp.definitiontypes.NodeDef;
+import kr.ac.hanyang.tosca2camp.definitiontypes.PolicyDef;
 import kr.ac.hanyang.tosca2camp.definitiontypes.PropertyDef;
 import kr.ac.hanyang.tosca2camp.definitiontypes.RelationshipDef;
+import kr.ac.hanyang.tosca2camp.definitiontypes.RequirementDef;
 import kr.ac.hanyang.tosca2camp.rest.model.ArtifactTypeModel;
 import kr.ac.hanyang.tosca2camp.rest.model.AttributeAssignmentModel;
 import kr.ac.hanyang.tosca2camp.rest.model.CapabilityAssignmentModel;
@@ -27,13 +29,17 @@ import kr.ac.hanyang.tosca2camp.rest.model.InterfaceTypeModel;
 import kr.ac.hanyang.tosca2camp.rest.model.ModelPackage;
 import kr.ac.hanyang.tosca2camp.rest.model.NodeDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.NodeTemplateModel;
+import kr.ac.hanyang.tosca2camp.rest.model.OperationDefinitionModel;
+import kr.ac.hanyang.tosca2camp.rest.model.PolicyDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.PropertyModel;
 import kr.ac.hanyang.tosca2camp.rest.model.RelationshipDefinitionModel;
 import kr.ac.hanyang.tosca2camp.rest.model.RelationshipTemplateModel;
+import kr.ac.hanyang.tosca2camp.rest.model.RequirementAssignmentModel;
 import kr.ac.hanyang.tosca2camp.rest.model.ServiceTemplateModel;
 import kr.ac.hanyang.tosca2camp.rest.model.TopologyTemplateModel;
 import kr.ac.hanyang.tosca2camp.templates.Function;
 import kr.ac.hanyang.tosca2camp.templates.ImportDef;
+import kr.ac.hanyang.tosca2camp.templates.OperationDef;
 import kr.ac.hanyang.tosca2camp.templates.ServiceTemplate;
 import kr.ac.hanyang.tosca2camp.templates.TopologyTemplate;
 
@@ -62,6 +68,7 @@ public class ServiceTemplateTransformer {
 		ttm.eSet(ModelPackage.Literals.TOPOLOGY_TEMPLATE_MODEL__DESCRIPTION, ttm.getDescription());
 		ttm.eSet(ModelPackage.Literals.TOPOLOGY_TEMPLATE_MODEL__NODE_TEMPLATES, getNodeTemplates(temp.getNodes()));
 		ttm.eSet(ModelPackage.Literals.TOPOLOGY_TEMPLATE_MODEL__RELATIONSHIP_TEMPLATES, getRelationshipTemplates(temp.getRelationships()));
+		ttm.eSet(ModelPackage.Literals.TOPOLOGY_TEMPLATE_MODEL__POLICIES, getPolicyDefinitions(temp.getPolicies()));
 		//resource.getContents().add(ttm);
 		return ttm;
 
@@ -78,11 +85,17 @@ public class ServiceTemplateTransformer {
 			ntm.eSet(ModelPackage.Literals.NODE_TEMPLATE_MODEL__DESCRIPTION, nDef.getDescription());
 			ntm.eSet(ModelPackage.Literals.NODE_TEMPLATE_MODEL__PROPERTIES, getPropertyAssignments(nDef.getProperties()));
 			List<CapabilityDef> configuredCaps = new ArrayList<CapabilityDef>();
+			List<RequirementDef> configuredReqs = new ArrayList<RequirementDef>();
 			for(CapabilityDef cap: nDef.getCapabilities())
 				if (cap.isConfigured())
 					configuredCaps.add(cap);
 			ntm.eSet(ModelPackage.Literals.NODE_TEMPLATE_MODEL__CAPABILITIES, getCapabilityAssignments(configuredCaps));
-			//resource.getContents().add(ntm);
+			for(RequirementDef req: nDef.getRequirements())
+				if (req.isConfigured())
+					configuredReqs.add(req);
+			ntm.eSet(ModelPackage.Literals.NODE_TEMPLATE_MODEL__REQUIREMENTS, getRequirementAssignments(configuredReqs));
+			ntm.eSet(ModelPackage.Literals.NODE_TEMPLATE_MODEL__INTERFACES, getInterfaceDefs(nDef.getInterfaceList()));
+			
 			toReturn.add(ntm);
 		}
 		return toReturn;
@@ -182,15 +195,31 @@ public class ServiceTemplateTransformer {
 		return toReturn;
 	}
 	
+	public static List<PolicyDefinitionModel> getPolicyDefinitions(List<PolicyDef> pols){
+		EFactory factory = ModelPackage.eINSTANCE.getEFactoryInstance();
+		List<PolicyDefinitionModel> toReturn = new ArrayList<PolicyDefinitionModel>();
+		for (PolicyDef pDef: pols){
+			PolicyDefinitionModel pdm = (PolicyDefinitionModel) factory.create(ModelPackage.Literals.POLICY_DEFINITION_MODEL);
+			pdm.eSet(ModelPackage.Literals.POLICY_DEFINITION_MODEL__TYPE, pDef.getTypeName());
+			pdm.eSet(ModelPackage.Literals.POLICY_DEFINITION_MODEL__PROPERTIES, getPropertyAssignments(pDef.getPropertiesList()));
+			pdm.eSet(ModelPackage.Literals.POLICY_DEFINITION_MODEL__TARGETS, pDef.getTargets());
+			toReturn.add(pdm);
+		}
+		return toReturn;
+	}
+	
 	public static List<PropertyModel> getPropertyAssignments(List<PropertyDef> properties){
 		EFactory factory = ModelPackage.eINSTANCE.getEFactoryInstance();
 		List<PropertyModel> toReturn = new ArrayList<PropertyModel>();
 		for (PropertyDef property: properties){
-			PropertyModel pm = (PropertyModel) factory.create(ModelPackage.Literals.PROPERTY_MODEL);
-			pm.eSet(ModelPackage.Literals.PROPERTY_MODEL__NAME, property.getName());
-			pm.eSet(ModelPackage.Literals.PROPERTY_MODEL__VALUE, getData(property.getPropertyValue()));
-			//resource.getContents().add(pm);
-			toReturn.add(pm);
+			if (property.hasValue()){
+				//configuredReqs.add(req);
+				PropertyModel pm = (PropertyModel) factory.create(ModelPackage.Literals.PROPERTY_MODEL);
+				pm.eSet(ModelPackage.Literals.PROPERTY_MODEL__NAME, property.getName());
+				pm.eSet(ModelPackage.Literals.PROPERTY_MODEL__VALUE, getData(property.getPropertyValue()));
+				//resource.getContents().add(pm);
+				toReturn.add(pm);
+			}
 		}
 		return toReturn;
 	}
@@ -215,6 +244,19 @@ public class ServiceTemplateTransformer {
 			cam.eSet(ModelPackage.Literals.CAPABILITY_ASSIGNMENT_MODEL__NAME, capability.getName());
 			//resource.getContents().add(cam);
 			toReturn.add(cam);
+		}
+		return toReturn;
+	}
+	
+	public static List<RequirementAssignmentModel> getRequirementAssignments(List<RequirementDef> requirements){
+		EFactory factory = ModelPackage.eINSTANCE.getEFactoryInstance();
+		List<RequirementAssignmentModel> toReturn = new ArrayList<RequirementAssignmentModel>();
+		for (RequirementDef requirement: requirements){
+			RequirementAssignmentModel ram = (RequirementAssignmentModel) factory.create(ModelPackage.Literals.REQUIREMENT_ASSIGNMENT_MODEL);
+			ram.eSet(ModelPackage.Literals.REQUIREMENT_ASSIGNMENT_MODEL__NODE, requirement.getNode());
+			ram.eSet(ModelPackage.Literals.REQUIREMENT_ASSIGNMENT_MODEL__RELATIONSHIP, requirement.getRelationshipType());
+			//resource.getContents().add(cam);
+			toReturn.add(ram);
 		}
 		return toReturn;
 	}
@@ -288,7 +330,9 @@ public class ServiceTemplateTransformer {
 		List<InterfaceDefinitionModel> toReturn = new ArrayList<InterfaceDefinitionModel>();
 		for(InterfaceDef iface: interfaces){
 			InterfaceDefinitionModel idf = (InterfaceDefinitionModel) factory.create(ModelPackage.Literals.INTERFACE_DEFINITION_MODEL);
-			idf.eSet(ModelPackage.Literals.INTERFACE_DEFINITION_MODEL__INPUTS, iface.getInputs());
+			idf.eSet(ModelPackage.Literals.INTERFACE_DEFINITION_MODEL__NAME, iface.getName());
+			idf.eSet(ModelPackage.Literals.INTERFACE_DEFINITION_MODEL__INPUTS, getInputs(iface.getInputs()));
+			idf.eSet(ModelPackage.Literals.INTERFACE_DEFINITION_MODEL__OPERATIONS, getOperations(iface.getOperations()));
 			//resource.getContents().add(idf);
 			toReturn.add(idf);
 		}
@@ -305,6 +349,22 @@ public class ServiceTemplateTransformer {
 			//resource.getContents().add(pm);
 			toReturn.add(pm);
 		}
+		return toReturn;
+	}
+	
+	public static List<OperationDefinitionModel> getOperations(List<OperationDef> operations){
+		EFactory factory = ModelPackage.eINSTANCE.getEFactoryInstance();
+		List<OperationDefinitionModel> toReturn = new ArrayList<OperationDefinitionModel>();
+		for (OperationDef operation: operations)
+			if (operation.isConfigured()){
+				OperationDefinitionModel odf = (OperationDefinitionModel) factory.create(ModelPackage.Literals.OPERATION_DEFINITION_MODEL);
+				odf.eSet(ModelPackage.Literals.OPERATION_DEFINITION_MODEL__NAME, operation.getName());
+				odf.eSet(ModelPackage.Literals.OPERATION_DEFINITION_MODEL__IMPLEMENTATION, (operation.getImplementation()).getPrimaryArtifact());
+				odf.eSet(ModelPackage.Literals.OPERATION_DEFINITION_MODEL__INPUTS_ASSIGNMENTS, getInputs(operation.getInputs()));
+				toReturn.add(odf);
+			}
+		
+			
 		return toReturn;
 	}
 	

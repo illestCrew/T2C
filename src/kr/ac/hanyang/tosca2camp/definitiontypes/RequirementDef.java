@@ -121,7 +121,7 @@ public class RequirementDef implements Cloneable{
 	public String getName(){return name;}
 	public String getCapability(){return capability;}
 	public String getNode(){return nodeType;}
-	public String getRelationshipName(){return relationship.getName();}
+	public String getRelationshipType(){return relationship.getType();}
 	public RelationshipDef getRelationship(){return relationship;}
 	
 	public void setNodeVal(String nodeType){

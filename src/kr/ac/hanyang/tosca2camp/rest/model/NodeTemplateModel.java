@@ -150,8 +150,8 @@ public interface NodeTemplateModel extends EObject{
 	 * @model
 	 */
 	@XmlElement(name="artifacts")
-	public EList<ArtifactTypeModel> getArtifacts();
+	public EList<ArtifactDefinitionModel> getArtifacts();
 	
-	public void eSet(int featureID, Object newValue);
+	//public void eSet(EClass interfaceDefinitionModel, Object newValue);
 		
 }
