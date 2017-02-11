@@ -3,8 +3,8 @@ package kr.ac.hanyang.tosca2camp;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.brooklyn.api.entity.EntityType;
-import org.apache.brooklyn.launcher.BrooklynLauncher;
+//import org.apache.brooklyn.api.entity.EntityType;
+//import org.apache.brooklyn.launcher.BrooklynLauncher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,26 +45,7 @@ public class ConverterPlatform {
 		toscaPlatform.createServiceTemplate(stPath);
 	}
 	
-	public void loadServiceCatalog(){
-		serviceCatalog = ((BaseEntityManager) campPlatform.getBrooklynManagementContext()).getServiceCatalog();
-	}
 	
-	public void convertServiceTemplate(String templateName){
-		ServiceTemplate st = toscaPlatform.getServiceTemplate(templateName);
-		if (st == null){
-			log.error(st+" is Null");
-		}
-		matchByType("Compute");
-	}
-	
-	private List<EntityType> matchByType(String nodeType){
-		List<EntityType> matches = new ArrayList<EntityType>();
-		for (EntityType entity: ((BaseEntityManager)campPlatform.getBrooklynManagementContext()).getServiceCatalog().getServices()){
-			if (entity.getName().equals(nodeType))
-				matches.add(entity);
-		}
-		return matches;
-	}
 	
 	
 	
